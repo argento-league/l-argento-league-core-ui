@@ -1,66 +1,67 @@
-export const TEAM_PARTICIPANTS = {
-    TEAM_1: {
+export const TEAM_PARTICIPANTS_LIST = {
+    RAW_CHICKENS: {
       id: "TEAM_1",
       name: "Raw chickens",
     },
-    TEAM_2: {
+    GUERREROS_Z: {
       id: "TEAM_2",
       name: "Guerreros Z",
     },
-    TEAM_3: {
+    EFECTO_DIVINE: {
       id: "TEAM_3",
       name: "3fecto Divine",
     },
-    TEAM_4: {
+    PLAYERS_LIBRES: {
       id: "TEAM_4",
       name: "Players libres",
     },
-    TEAM_5: {
+    HYDRA_E_SPORTS: {
       id: "TEAM_5",
       name: "Hydra E-sports",
     },
-    TEAM_6: {
+    FANTASMAS: {
       id: "TEAM_6",
       name: "Fantasmas",
     },
-    TEAM_7: {
+    SUSHI_BOYS: {
       id: "TEAM_7",
       name: "Sushi boys",
     },
-    TEAM_8: {
+    LA_LAKERS: {
       id: "TEAM_8",
       name: "LA Lakers",
     },
-    TEAM_9: {
+    CHILDREN_OF_THE_CORN: {
       id: "TEAM_9",
       name: "Children of the corn",
     },
-    TEAM_10: {
+    WINDFURY_ENJOYERS: {
       id: "TEAM_10",
       name: "Windfury enjoyers",
     },
-    TEAM_11: {
+    ADELA_GAMING: {
       id: "TEAM_11",
       name: "Aldea Gaming",
     },
-    TEAM_12: {
+    THE_RATS: {
       id: "TEAM_12",
       name: "The rats",
     },
-    TEAM_13: {
+    BRANCA_TEAM: {
       id: "TEAM_13",
       name: "Branca Team",
     },
-    TEAM_14: {
+    TEAM_SERVER: {
       id: "TEAM_14",
       name: "Team server",
     },
-    TEAM_15: {
+    CARPINCHOS_RAGE: {
       id: "TEAM_15",
       name: "Carpinchos Rage",
     },
-    TEAM_16: {
+    LA_GATONETA: {
       id: "TEAM_16",
       name: "La Gatoneta",
     },
   };
+  

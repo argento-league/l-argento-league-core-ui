@@ -1,7 +1,1 @@
-@font-face {
-  font-family: 'Vox Wide W06 Medium';
-  src: url('/fonts/VoxWideW06Medium.woff2') format('woff2'),
-       url('/fonts/VoxWideW06Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-} 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap'); 

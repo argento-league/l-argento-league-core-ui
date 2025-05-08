@@ -40,7 +40,7 @@ type SVGWrapperProps = {
 
 export default function DoubleElimination() {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div style={{ paddingLeft: "10px", paddingRight: "10px" }}>
       <DoubleEliminationBracket
         matches={
           doubleEliminationMatches as unknown as {
@@ -57,7 +57,8 @@ export default function DoubleElimination() {
               isShown: false,
               backgroundColor: GlootTheme.roundHeaders.background,
             },
-            width: 300,
+
+            width: 250,
             connectorColor: GlootTheme.border.color,
             connectorColorHighlight: GlootTheme.border.highlightedColor,
           },
@@ -70,14 +71,14 @@ export default function DoubleElimination() {
         }: SVGWrapperProps) => (
           <SVGViewer
             {...props}
-            width={1280}
-            height={720}
             bracketWidth={bracketWidth}
             bracketHeight={bracketHeight}
             backgroundColor={GlootTheme.canvasBackground}
             SVGBackground={GlootTheme.canvasBackground}
+            width={1280}
             startAt={[0, 0]}
-            scaleFactor={1}
+            scaleFactor={1.25}
+            height={720}
           >
             {children}
           </SVGViewer>

@@ -6,7 +6,7 @@
     "losses": 0,
     "draws": 2,
     "points": 18,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/logos liga s4/fantasmas.png"
+    "logo": "images/teams/fantasmas.png"
   },
   {
     "name": "3FECTO DIVINE",
@@ -15,7 +15,7 @@
     "losses": 1,
     "draws": 3,
     "points": 15,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/logos liga s4/3efecto Divine.png"
+    "logo": "images/teams/3fecto-divine.png"
   },
   {
     "name": "LA Lakers",
@@ -24,7 +24,7 @@
     "losses": 2,
     "draws": 2,
     "points": 14,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/logos liga s4/LA Lakers.png"
+    "logo": "images/teams/la-lakers.png"
   },
   {
     "name": "Guerreros Z",
@@ -33,7 +33,7 @@
     "losses": 1,
     "draws": 5,
     "points": 13,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/Temporada 3/guerreros_z.png"
+    "logo": "images/teams/guerreros-z.png"
   },
   {
     "name": "Branca Team",
@@ -42,7 +42,7 @@
     "losses": 2,
     "draws": 5,
     "points": 11,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/logos liga s4/branca team.png"
+    "logo": "images/teams/branca-team.png"
   },
   {
     "name": "Aldea Gaming",
@@ -51,7 +51,7 @@
     "losses": 2,
     "draws": 6,
     "points": 10,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/logos liga s4/ALDEA GAMING.png"
+    "logo": "images/teams/aldea-gaming.png"
   },
   {
     "name": "La Gatoneta",
@@ -60,7 +60,7 @@
     "losses": 4,
     "draws": 3,
     "points": 9,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/logos liga s4/la gatoneta.png"
+    "logo": "images/teams/la-gatoneta.png"
   },
   {
     "name": "Lemuria",
@@ -69,7 +69,7 @@
     "losses": 4,
     "draws": 5,
     "points": 7,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/logos liga s4/lemuria (1).png"
+    "logo": "images/teams/lemuria.png"
   },
   {
     "name": "Windfury Enjoyers",
@@ -78,7 +78,7 @@
     "losses": 4,
     "draws": 5,
     "points": 7,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/logos liga s4/windfury.png"
+    "logo": "images/teams/windfury.png"
   },
   {
     "name": "The Orphans",
@@ -87,7 +87,7 @@
     "losses": 5,
     "draws": 4,
     "points": 6,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/logos liga s4/the orphans.png"
+    "logo": "images/teams/the-orphans.png"
   },
   {
     "name": "DREAM",
@@ -96,6 +96,6 @@
     "losses": 10,
     "draws": 0,
     "points": 0,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/logos liga s4/dream logo def.png"
+    "logo": "images/teams/dream.png"
   }
 ]

@@ -47,6 +47,7 @@ const TabItem = styled.div<{ active: boolean }>`
   font-weight: 600;
   line-height: 24px;
   padding: 16px 32px;
+  cursor: pointer;
 `;
 
 enum SEASON_FOUR_TABS {
@@ -64,7 +65,7 @@ export const SeasonFour = () => {
   };
 
   return (
-    <SeasonFourContainer>
+    <SeasonFourContainer id="season-four">
       <SeasonFourBanner>
         <Title>Season 4</Title>
       </SeasonFourBanner>

@@ -6,7 +6,7 @@
     "losses": 1,
     "draws": 3,
     "points": 15,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/logos liga s4/the raw chikens.png"
+    "logo": "images/teams/the-raw-chickens.png"
   },
   {
     "name": "Sushi BoyS",
@@ -15,7 +15,7 @@
     "losses": 1,
     "draws": 4,
     "points": 14,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/logos liga s4/sushi boys.png"
+    "logo": "images/teams/sushi-boys.png"
   },
   {
     "name": "Carpinchos Rage",
@@ -24,7 +24,7 @@
     "losses": 2,
     "draws": 4,
     "points": 12,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/logos liga s4/Carpincho enojado.png"
+    "logo": "images/teams/carpinchos-rage.png"
   },
   {
     "name": "Players Libres",
@@ -33,7 +33,7 @@
     "losses": 3,
     "draws": 2,
     "points": 12,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/logos liga s4/player libre.png"
+    "logo": "images/teams/player-libre.png"
   },
   {
     "name": "Children of the Corn",
@@ -42,7 +42,7 @@
     "losses": 2,
     "draws": 4,
     "points": 12,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/logos liga s4/the crow.png"
+    "logo": "images/teams/cotc.png"
   },
   {
     "name": "Hydra E-sport",
@@ -51,7 +51,7 @@
     "losses": 0,
     "draws": 8,
     "points": 12,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/logos liga s4/hydra.png"
+    "logo": "images/teams/hydra.png"
   },
   {
     "name": "The Rats",
@@ -60,7 +60,7 @@
     "losses": 4,
     "draws": 3,
     "points": 9,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/Temporada 3/the_rats.png"
+    "logo": "images/teams/the-rats.png"
   },
   {
     "name": "Team Server",
@@ -69,7 +69,7 @@
     "losses": 4,
     "draws": 4,
     "points": 8,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/logos liga s4/team server.png"
+    "logo": "images/teams/team-server.png"
   },
   {
     "name": "Black holes",
@@ -78,7 +78,7 @@
     "losses": 4,
     "draws": 4,
     "points": 8,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/logos liga s4/black hole.png"
+    "logo": "images/teams/black-hole.png"
   },
   {
     "name": "ASA_Dance",
@@ -87,7 +87,7 @@
     "losses": 5,
     "draws": 5,
     "points": 5,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/logos liga s4/as dance.jpeg"
+    "logo": "images/teams/as-dance.jpeg"
   },
   {
     "name": "Veritas Gaming",
@@ -96,6 +96,6 @@
     "losses": 8,
     "draws": 1,
     "points": 3,
-    "logo": "https://raw.githubusercontent.com/Largentoleague/Largento/refs/heads/main/teams_icons/logos liga s4/Logo Veritas Gaming.png"
+    "logo": "images/teams/veritas-gaming.png"
   }
 ]

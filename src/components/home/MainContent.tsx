@@ -23,7 +23,7 @@ const MainContentContainer = styled.div`
 `;
 
 const MainImage = styled.img`
-  width: 200px;
+  width: 210px;
   height: 130px;
   object-fit: cover;
   display: block;

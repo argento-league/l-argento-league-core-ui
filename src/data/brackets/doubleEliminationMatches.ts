@@ -256,15 +256,15 @@ const LOWER_BRACKET_ROUND_1: MatchType[] = [
     participants: [
       {
         id: TEAM_PARTICIPANTS_LIST.ADELA_GAMING.id,
-        resultText: "VICTORIA",
-        isWinner: true,
+        resultText: "DERROTA",
+        isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.ADELA_GAMING.name,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.THE_RATS.id,
-        resultText: "DERROTA",
-        isWinner: false,
+        resultText: "VICTORIA",
+        isWinner: true,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.THE_RATS.name,
       },
@@ -306,15 +306,15 @@ const LOWER_BRACKET_ROUND_1: MatchType[] = [
     participants: [
       {
         id: TEAM_PARTICIPANTS_LIST.CARPINCHOS_RAGE.id,
-        resultText: "VICTORIA",
-        isWinner: true,
+        resultText: "DERROTA",
+        isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.CARPINCHOS_RAGE.name,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.LA_GATONETA.id,
-        resultText: "DERROTA",
-        isWinner: false,
+        resultText: "VICTORIA",
+        isWinner: true,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.LA_GATONETA.name,
       },
@@ -358,11 +358,11 @@ const LOWER_BRACKET_ROUND_2: MatchType[] = [
     state: "DONE",
     participants: [
       {
-        id: TEAM_PARTICIPANTS_LIST.ADELA_GAMING.id,
+        id: TEAM_PARTICIPANTS_LIST.THE_RATS.id,
         resultText: "",
         isWinner: true,
         status: null,
-        name: TEAM_PARTICIPANTS_LIST.ADELA_GAMING.name,
+        name: TEAM_PARTICIPANTS_LIST.THE_RATS.name,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.EFECTO_DIVINE.id,
@@ -390,11 +390,11 @@ const LOWER_BRACKET_ROUND_2: MatchType[] = [
         name: TEAM_PARTICIPANTS_LIST.HYDRA_E_SPORTS.name,
       },
       {
-        id: TEAM_PARTICIPANTS_LIST.TEAM_SERVER.id,
+        id: TEAM_PARTICIPANTS_LIST.BRANCA_TEAM.id,
         resultText: "",
         isWinner: true,
         status: null,
-        name: TEAM_PARTICIPANTS_LIST.TEAM_SERVER.name,
+        name: TEAM_PARTICIPANTS_LIST.BRANCA_TEAM.name,
       },
     ],
   },
@@ -408,11 +408,11 @@ const LOWER_BRACKET_ROUND_2: MatchType[] = [
     state: "DONE",
     participants: [
       {
-        id: TEAM_PARTICIPANTS_LIST.CARPINCHOS_RAGE.id,
+        id: TEAM_PARTICIPANTS_LIST.LA_GATONETA.id,
         resultText: "",
         isWinner: true,
         status: null,
-        name: TEAM_PARTICIPANTS_LIST.CARPINCHOS_RAGE.name,
+        name: TEAM_PARTICIPANTS_LIST.LA_GATONETA.name,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.LA_LAKERS.id,

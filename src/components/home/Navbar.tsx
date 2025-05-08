@@ -3,9 +3,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { StyledSvg } from "./CurrentState";
 import arrow from "../../assets/common/icons/arrow.svg";
+import { Container } from "../common/Container";
 
 export const NavBar = () => {
-
   const navigate = useNavigate();
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -32,39 +32,42 @@ export const NavBar = () => {
 
   return (
     <HeaderMainContainer>
-      <ItemsContainer>
-        <LogoContainer>
-          <img
-            src="/images/argento-logo.png"
-            height="48px"
-            width="76px"
-            style={{ objectFit: "contain", display: "block" }}
-          />
-        </LogoContainer>
-        <LinkContainer>
-          <HeaderLink to="/">Inicio</HeaderLink>
-          <DropdownContainer ref={dropdownRef}>
-            <DropdownButton
-              onClick={handleDropdownClick}
-              aria-expanded={dropdownOpen}
-            >
-              Ligas{" "}
-              <span style={{ marginLeft: 6, fontSize: 14 }}>
-                <StyledSvg src={arrow} />
-              </span>
-            </DropdownButton>
-            {dropdownOpen && (
-              <DropdownMenu>
-                <DropdownItemDisabled>Season 3</DropdownItemDisabled>
-                <DropdownItem onClick={handleSeason4Click}>
-                  Season 4
-                </DropdownItem>
-              </DropdownMenu>
-            )}
-          </DropdownContainer>
-          <HeaderLink to="/">Staff</HeaderLink>
-        </LinkContainer>
-      </ItemsContainer>
+      <Container>
+        <ItemsContainer>
+          <LogoContainer>
+            <Link to="/">
+              <img
+                src="/images/argento-logo.png"
+                height="48px"
+                width="76px"
+                style={{ objectFit: "contain", display: "block" }}
+              />
+            </Link>
+          </LogoContainer>
+          <LinkContainer>
+            <HeaderLink to="/">Inicio</HeaderLink>
+            <DropdownContainer ref={dropdownRef}>
+              <DropdownButton
+                onClick={handleDropdownClick}
+                aria-expanded={dropdownOpen}
+              >
+                Ligas{" "}
+                <span style={{ marginLeft: 6, fontSize: 14 }}>
+                  <StyledSvg src={arrow} />
+                </span>
+              </DropdownButton>
+              {dropdownOpen && (
+                <DropdownMenu>
+                  <DropdownItemDisabled>Season 3</DropdownItemDisabled>
+                  <DropdownItem onClick={handleSeason4Click}>
+                    Season 4
+                  </DropdownItem>
+                </DropdownMenu>
+              )}
+            </DropdownContainer>
+          </LinkContainer>
+        </ItemsContainer>
+      </Container>
     </HeaderMainContainer>
   );
 };
@@ -79,13 +82,13 @@ const ItemsContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12px 20px;
+  padding: 12px 0;
 `;
 
 // Home/logo stays top-left
 const LogoContainer = styled.div`
   position: absolute;
-  left: 20px;
+  left: 0;
 `;
 
 const LinkContainer = styled.div`

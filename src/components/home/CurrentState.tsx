@@ -1,11 +1,15 @@
 import styled from "styled-components";
 import SVG from "react-inlinesvg";
-
+import arrow from "../../assets/common/icons/arrow-right.svg";
 import discord from "../../assets/social-media-icons/discord.svg";
 import facebook from "../../assets/social-media-icons/facebook.svg";
 import instagram from "../../assets/social-media-icons/instagram.svg";
 import youtube from "../../assets/social-media-icons/youtube.svg";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+
+const StyledNavLink = styled(NavLink)`
+  text-decoration: none;
+`;
 
 const ActualStateContainer = styled.div`
   height: 280px;
@@ -89,9 +93,17 @@ export const CurrentState = () => {
       <ContentContainer>
         <ContentText>
           <ContentTextTitle>L'ARGENTO ACTUALMENTE</ContentTextTitle>
-          <ContentTextSubtitle>
-            Mirá como viena el evento principal de la season 4
-          </ContentTextSubtitle>
+          <StyledNavLink to="/season-4">
+            <ContentTextSubtitle>
+              Mirá como viena el evento principal de la season 4{" "}
+              <StyledSvg
+                src={arrow}
+                fill="#fabf4a"
+                width="16px"
+                height="16px"
+              />
+            </ContentTextSubtitle>
+          </StyledNavLink>
         </ContentText>
         <IconContainer>
           <IconText>Enterate de todo</IconText>

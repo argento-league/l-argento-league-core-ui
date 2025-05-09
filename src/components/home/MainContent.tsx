@@ -12,7 +12,6 @@ const MainRootContainer = styled.div`
 `;
 
 const MainContentContainer = styled.div`
-  width: 530px;
   height: 280px;
   padding-top: 32px;
   gap: 16px;
@@ -20,6 +19,13 @@ const MainContentContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+
+  @media (min-width: 720px) {
+    width: 530px;
+    max-width: 530px;
+  }
 `;
 
 const MainImage = styled.img`
@@ -30,7 +36,6 @@ const MainImage = styled.img`
 `;
 
 const MainContentText = styled.div`
-  width: 530px;
   height: 100px;
 `;
 

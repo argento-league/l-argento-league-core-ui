@@ -59,6 +59,7 @@ const ContentTextTitle = styled.h2`
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: #fff;
+  text-align: center;
 `;
 
 const ContentTextSubtitle = styled.h1`
@@ -67,6 +68,7 @@ const ContentTextSubtitle = styled.h1`
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: #fabf4a;
+  text-align: center;
 `;
 
 const IconText = styled.h1`
@@ -95,7 +97,7 @@ export const CurrentState = () => {
           <ContentTextTitle>L'ARGENTO ACTUALMENTE</ContentTextTitle>
           <StyledNavLink to="/season-4">
             <ContentTextSubtitle>
-              Mirá como viena el evento principal de la season 4{" "}
+              Mirá como viene el evento principal de la season 4{" "}
               <StyledSvg
                 src={arrow}
                 fill="#fabf4a"

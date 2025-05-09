@@ -83,6 +83,10 @@ const ItemsContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 12px 0;
+
+  @media (max-width: 720px) {
+    justify-content: flex-end;
+  }
 `;
 
 // Home/logo stays top-left

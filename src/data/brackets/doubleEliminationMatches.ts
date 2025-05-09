@@ -8,7 +8,7 @@ type MatchType = {
   tournamentRoundText: string;
   startTime: string;
   state: string;
-  participants: Participant[] | ParticipantTBD[];
+  participants: (Participant | ParticipantTBD)[];
 };
 
 type Participant = {
@@ -141,20 +141,20 @@ const UPPER_BRACKET_ROUND_2: MatchType[] = [
     nextLooserMatchId: "LB R4 M1",
     tournamentRoundText: "2",
     startTime: "",
-    state: "NO_SHOW",
+    state: "DONE",
     participants: [
       {
         id: TEAM_PARTICIPANTS_LIST.RAW_CHICKENS.id,
-        resultText: "",
-        isWinner: true,
-        status: "NO_PARTY",
+        resultText: "DERROTA",
+        isWinner: false,
+        status: "DONE",
         name: TEAM_PARTICIPANTS_LIST.RAW_CHICKENS.name,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.PLAYERS_LIBRES.id,
-        resultText: "",
+        resultText: "VICTORIA",
         isWinner: true,
-        status: "NO_PARTY",
+        status: "DONE",
         name: TEAM_PARTICIPANTS_LIST.PLAYERS_LIBRES.name,
       },
     ],
@@ -196,7 +196,13 @@ const UPPER_BRACKET_FINAL: MatchType[] = [
     startTime: "",
     state: "DONE",
     participants: [
-      NO_PARTICIPANT,
+      {
+        id: TEAM_PARTICIPANTS_LIST.PLAYERS_LIBRES.id,
+        resultText: "",
+        isWinner: true,
+        status: "DONE",
+        name: TEAM_PARTICIPANTS_LIST.PLAYERS_LIBRES.name,
+      },
       NO_PARTICIPANT,
     ],
   },
@@ -409,16 +415,16 @@ const LOWER_BRACKET_ROUND_2: MatchType[] = [
     participants: [
       {
         id: TEAM_PARTICIPANTS_LIST.LA_GATONETA.id,
-        resultText: "",
-        isWinner: true,
-        status: null,
+        resultText: "DERROTA",
+        isWinner: false,
+        status: "DONE",
         name: TEAM_PARTICIPANTS_LIST.LA_GATONETA.name,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.LA_LAKERS.id,
-        resultText: "",
+        resultText: "VICTORIA",
         isWinner: true,
-        status: null,
+        status: "DONE",
         name: TEAM_PARTICIPANTS_LIST.LA_LAKERS.name,
       },
     ],
@@ -449,7 +455,13 @@ const LOWER_BRACKET_ROUND_3: MatchType[] = [
     state: "DONE",
     participants: [
       NO_PARTICIPANT,
-      NO_PARTICIPANT,
+      {
+        id: TEAM_PARTICIPANTS_LIST.LA_LAKERS.id,
+        resultText: "",
+        isWinner: true,
+        status: "DONE",
+        name: TEAM_PARTICIPANTS_LIST.LA_LAKERS.name,
+      },
     ],
   },
 ];
@@ -464,7 +476,13 @@ const LOWER_BRACKET_ROUND_4: MatchType[] = [
     startTime: "",
     state: "DONE",
     participants: [
-      NO_PARTICIPANT,
+      {
+        id: TEAM_PARTICIPANTS_LIST.RAW_CHICKENS.id,
+        resultText: "",
+        isWinner: true,
+        status: "DONE",
+        name: TEAM_PARTICIPANTS_LIST.RAW_CHICKENS.name,
+      },
       NO_PARTICIPANT,
     ],
   },

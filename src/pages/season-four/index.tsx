@@ -35,6 +35,7 @@ const TabContainer = styled.div`
 `;
 
 const TabItem = styled.div<{ active: boolean }>`
+  text-align: center;
   display: flex;
   width: 100%;
   flex-direction: row;

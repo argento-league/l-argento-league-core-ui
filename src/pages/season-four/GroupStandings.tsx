@@ -7,9 +7,12 @@ const GROUP_A = groupAJson as TeamStanding[]
 const GROUP_B = groupBJson as TeamStanding[]
 
 const TableContainer = styled.div`
+  overflow-x: hidden;
+  width: 100%;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  align-items: center;
+  
   gap: 20px;
   background-color: #000000;
   font-family: ui-sans-serif, system-ui, sans-serif;
@@ -42,6 +45,9 @@ const TableHeader = styled.th`
   &:not(:first-child) {
     text-align: center;
   }
+  @media (max-width: 550px) {
+    font-size: 10px;
+  }
 `;
 
 const TableRow = styled.tr`
@@ -65,11 +71,14 @@ const TableCell = styled.td`
   @media (prefers-color-scheme: dark) {
     color: rgb(202, 138, 4);
   }
+  @media (max-width: 550px) {
+    font-size: 10px;
+  }
 `;
 
 const CellContent = styled.p<{ type?: 'wins' | 'losses' | 'draws'; isName?: boolean; position: number }>`
   text-align: ${props => props.isName ? 'left' : 'center'};
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 700;
   background-color: ${props => {
     if (props.position <= 4) return 'rgba(34, 197, 94, 0.5)';
@@ -96,6 +105,9 @@ const CellContent = styled.p<{ type?: 'wins' | 'losses' | 'draws'; isName?: bool
       return 'rgba(248, 114, 114, 0.2)';
     }};
   }
+  @media (min-width: 550px) {
+    font-size: 14px;
+  }
 `;
 
 const TeamLogo = styled.img`
@@ -114,8 +126,8 @@ const GroupTitle = styled.h2`
 
 export default function GroupStandings() {
   return (
-      <TableContainer>
-        <GroupTable>
+      <TableContainer id="table-container">
+        <GroupTable id="group-table">
           <GroupTitle>Grupo A</GroupTitle>
           <Table>
             <thead>

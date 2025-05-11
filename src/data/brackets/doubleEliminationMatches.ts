@@ -181,7 +181,7 @@ export const UPPER_BRACKET_ROUND_2: MatchType[] = [
     participants: [
       {
         id: TEAM_PARTICIPANTS_LIST.FANTASMAS.id,
-        resultText: "",
+        resultText: "VICTORIA",
         isWinner: true,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.FANTASMAS.name,
@@ -189,8 +189,8 @@ export const UPPER_BRACKET_ROUND_2: MatchType[] = [
       },
       {
         id: TEAM_PARTICIPANTS_LIST.SUSHI_BOYS.id,
-        resultText: "",
-        isWinner: true,
+        resultText: "DERROTA",
+        isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.SUSHI_BOYS.name,
         score: 0,
@@ -230,10 +230,7 @@ export const GRAND_FINAL: MatchType[] = [
     tournamentRoundText: "Grand Final",
     startTime: "",
     state: "DONE",
-    participants: [
-      NO_PARTICIPANT,
-      NO_PARTICIPANT,
-    ],
+    participants: [NO_PARTICIPANT, NO_PARTICIPANT],
   },
 ];
 
@@ -258,7 +255,7 @@ export const LOWER_BRACKET_ROUND_1: MatchType[] = [
       },
       {
         id: TEAM_PARTICIPANTS_LIST.WINDFURY_ENJOYERS.id,
-        resultText: "DERROTA",
+        resultText: "ELIMINADO",
         isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.WINDFURY_ENJOYERS.name,
@@ -277,7 +274,7 @@ export const LOWER_BRACKET_ROUND_1: MatchType[] = [
     participants: [
       {
         id: TEAM_PARTICIPANTS_LIST.ADELA_GAMING.id,
-        resultText: "DERROTA",
+        resultText: "ELIMINADO",
         isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.ADELA_GAMING.name,
@@ -312,7 +309,7 @@ export const LOWER_BRACKET_ROUND_1: MatchType[] = [
       },
       {
         id: TEAM_PARTICIPANTS_LIST.TEAM_SERVER.id,
-        resultText: "DERROTA",
+        resultText: "ELIMINADO",
         isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.TEAM_SERVER.name,
@@ -331,7 +328,7 @@ export const LOWER_BRACKET_ROUND_1: MatchType[] = [
     participants: [
       {
         id: TEAM_PARTICIPANTS_LIST.CARPINCHOS_RAGE.id,
-        resultText: "DERROTA",
+        resultText: "ELIMINADO",
         isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.CARPINCHOS_RAGE.name,
@@ -388,16 +385,16 @@ export const LOWER_BRACKET_ROUND_2: MatchType[] = [
     participants: [
       {
         id: TEAM_PARTICIPANTS_LIST.THE_RATS.id,
-        resultText: "VICTORIA",
-        isWinner: true,
+        resultText: "ELIMINADO",
+        isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.THE_RATS.name,
-        score: 2,
+        score: 1,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.EFECTO_DIVINE.id,
-        resultText: "ELIMINADO",
-        isWinner: false,
+        resultText: "VICTORIA",
+        isWinner: true,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.EFECTO_DIVINE.name,
         score: 1,
@@ -424,7 +421,7 @@ export const LOWER_BRACKET_ROUND_2: MatchType[] = [
       {
         id: TEAM_PARTICIPANTS_LIST.BRANCA_TEAM.id,
         resultText: "ELIMINADO",
-        isWinner: true,
+        isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.BRANCA_TEAM.name,
         score: 1,
@@ -470,8 +467,20 @@ export const LOWER_BRACKET_ROUND_3: MatchType[] = [
     startTime: "",
     state: "DONE",
     participants: [
-      NO_PARTICIPANT,
-      NO_PARTICIPANT,
+      {
+        id: TEAM_PARTICIPANTS_LIST.GUERREROS_Z.id,
+        resultText: "",
+        isWinner: true,
+        status: null,
+        name: TEAM_PARTICIPANTS_LIST.GUERREROS_Z.name,
+      },
+      {
+        id: TEAM_PARTICIPANTS_LIST.EFECTO_DIVINE.id,
+        resultText: "",
+        isWinner: true,
+        status: null,
+        name: TEAM_PARTICIPANTS_LIST.EFECTO_DIVINE.name,
+      },
     ],
   },
   {
@@ -483,7 +492,13 @@ export const LOWER_BRACKET_ROUND_3: MatchType[] = [
     startTime: "",
     state: "DONE",
     participants: [
-      NO_PARTICIPANT,
+      {
+        id: TEAM_PARTICIPANTS_LIST.HYDRA_E_SPORTS.id,
+        resultText: "",
+        isWinner: true,
+        status: null,
+        name: TEAM_PARTICIPANTS_LIST.HYDRA_E_SPORTS.name,
+      },
       {
         id: TEAM_PARTICIPANTS_LIST.LA_LAKERS.id,
         resultText: "",
@@ -524,7 +539,13 @@ export const LOWER_BRACKET_ROUND_4: MatchType[] = [
     startTime: "",
     state: "DONE",
     participants: [
-      NO_PARTICIPANT,
+      {
+        id: TEAM_PARTICIPANTS_LIST.SUSHI_BOYS.id,
+        resultText: "",
+        isWinner: true,
+        status: "DONE",
+        name: TEAM_PARTICIPANTS_LIST.SUSHI_BOYS.name,
+      },
       NO_PARTICIPANT,
     ],
   },
@@ -539,10 +560,7 @@ export const LOWER_BRACKET_ROUND_5: MatchType[] = [
     tournamentRoundText: "5",
     startTime: "",
     state: "DONE",
-    participants: [
-      NO_PARTICIPANT,
-      NO_PARTICIPANT,
-    ],
+    participants: [NO_PARTICIPANT, NO_PARTICIPANT],
   },
 ];
 
@@ -555,10 +573,7 @@ export const LOWER_BRACKET_FINAL: MatchType[] = [
     tournamentRoundText: "6",
     startTime: "",
     state: "DONE",
-    participants: [
-      NO_PARTICIPANT,
-      NO_PARTICIPANT,
-    ],
+    participants: [NO_PARTICIPANT, NO_PARTICIPANT],
   },
 ];
 

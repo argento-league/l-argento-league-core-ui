@@ -47,7 +47,7 @@ const TabItem = styled.div<{ active: boolean }>`
   background-color: ${({ active }) => (active ? "#281541" : "#321156")};
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 24px;
   padding: 16px 32px;

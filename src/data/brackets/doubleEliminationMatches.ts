@@ -17,6 +17,7 @@ type Participant = {
   isWinner: boolean;
   status: string | null;
   name: string;
+  score?: number;
 };
 
 type ParticipantTBD = {
@@ -30,7 +31,7 @@ const NO_PARTICIPANT: ParticipantTBD = {
 };
 
 // Upper Bracket Rounds
-const UPPER_BRACKET_ROUND_1: MatchType[] = [
+export const UPPER_BRACKET_ROUND_1: MatchType[] = [
   {
     id: "UB R1 M1",
     name: "Upper Bracket Round 1 - Match 1",
@@ -45,6 +46,7 @@ const UPPER_BRACKET_ROUND_1: MatchType[] = [
         resultText: "VICTORIA",
         isWinner: true,
         status: null,
+        score: 2,
         name: TEAM_PARTICIPANTS_LIST.RAW_CHICKENS.name,
       },
       {
@@ -52,6 +54,7 @@ const UPPER_BRACKET_ROUND_1: MatchType[] = [
         resultText: "DERROTA",
         isWinner: false,
         status: null,
+        score: 0,
         name: TEAM_PARTICIPANTS_LIST.GUERREROS_Z.name,
       },
     ],
@@ -70,6 +73,7 @@ const UPPER_BRACKET_ROUND_1: MatchType[] = [
         resultText: "DERROTA",
         isWinner: false,
         status: null,
+        score: 0,
         name: TEAM_PARTICIPANTS_LIST.EFECTO_DIVINE.name,
       },
       {
@@ -77,6 +81,7 @@ const UPPER_BRACKET_ROUND_1: MatchType[] = [
         resultText: "VICTORIA",
         isWinner: true,
         status: null,
+        score: 2,
         name: TEAM_PARTICIPANTS_LIST.PLAYERS_LIBRES.name,
       },
     ],
@@ -95,6 +100,7 @@ const UPPER_BRACKET_ROUND_1: MatchType[] = [
         resultText: "DERROTA",
         isWinner: false,
         status: null,
+        score: 0,
         name: TEAM_PARTICIPANTS_LIST.HYDRA_E_SPORTS.name,
       },
       {
@@ -102,6 +108,7 @@ const UPPER_BRACKET_ROUND_1: MatchType[] = [
         resultText: "VICTORIA",
         isWinner: true,
         status: null,
+        score: 2,
         name: TEAM_PARTICIPANTS_LIST.FANTASMAS.name,
       },
     ],
@@ -121,6 +128,7 @@ const UPPER_BRACKET_ROUND_1: MatchType[] = [
         isWinner: true,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.SUSHI_BOYS.name,
+        score: 2,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.LA_LAKERS.id,
@@ -128,12 +136,13 @@ const UPPER_BRACKET_ROUND_1: MatchType[] = [
         isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.LA_LAKERS.name,
+        score: 1,
       },
     ],
   },
 ];
 
-const UPPER_BRACKET_ROUND_2: MatchType[] = [
+export const UPPER_BRACKET_ROUND_2: MatchType[] = [
   {
     id: "UB R2 M1",
     name: "Upper Bracket Round 2 - Match 1",
@@ -148,6 +157,7 @@ const UPPER_BRACKET_ROUND_2: MatchType[] = [
         resultText: "DERROTA",
         isWinner: false,
         status: "DONE",
+        score: 1,
         name: TEAM_PARTICIPANTS_LIST.RAW_CHICKENS.name,
       },
       {
@@ -155,6 +165,7 @@ const UPPER_BRACKET_ROUND_2: MatchType[] = [
         resultText: "VICTORIA",
         isWinner: true,
         status: "DONE",
+        score: 2,
         name: TEAM_PARTICIPANTS_LIST.PLAYERS_LIBRES.name,
       },
     ],
@@ -174,6 +185,7 @@ const UPPER_BRACKET_ROUND_2: MatchType[] = [
         isWinner: true,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.FANTASMAS.name,
+        score: 2,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.SUSHI_BOYS.id,
@@ -181,12 +193,13 @@ const UPPER_BRACKET_ROUND_2: MatchType[] = [
         isWinner: true,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.SUSHI_BOYS.name,
+        score: 0,
       },
     ],
   },
 ];
 
-const UPPER_BRACKET_FINAL: MatchType[] = [
+export const UPPER_BRACKET_FINAL: MatchType[] = [
   {
     id: "UB R3 M1",
     name: "Upper Bracket Final",
@@ -208,7 +221,7 @@ const UPPER_BRACKET_FINAL: MatchType[] = [
   },
 ];
 
-const GRAND_FINAL: MatchType[] = [
+export const GRAND_FINAL: MatchType[] = [
   {
     id: "GRAND FINAL",
     name: "Grand Final",
@@ -225,7 +238,7 @@ const GRAND_FINAL: MatchType[] = [
 ];
 
 // Lower Bracket Rounds
-const LOWER_BRACKET_ROUND_1: MatchType[] = [
+export const LOWER_BRACKET_ROUND_1: MatchType[] = [
   {
     id: "LB R1 M1",
     name: "Lower Bracket Round 1 - Match 1",
@@ -241,6 +254,7 @@ const LOWER_BRACKET_ROUND_1: MatchType[] = [
         isWinner: true,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.CHILDREN_OF_THE_CORN.name,
+        score: 2,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.WINDFURY_ENJOYERS.id,
@@ -248,6 +262,7 @@ const LOWER_BRACKET_ROUND_1: MatchType[] = [
         isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.WINDFURY_ENJOYERS.name,
+        score: 1,
       },
     ],
   },
@@ -266,6 +281,7 @@ const LOWER_BRACKET_ROUND_1: MatchType[] = [
         isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.ADELA_GAMING.name,
+        score: 1,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.THE_RATS.id,
@@ -273,6 +289,7 @@ const LOWER_BRACKET_ROUND_1: MatchType[] = [
         isWinner: true,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.THE_RATS.name,
+        score: 2,
       },
     ],
   },
@@ -291,6 +308,7 @@ const LOWER_BRACKET_ROUND_1: MatchType[] = [
         isWinner: true,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.BRANCA_TEAM.name,
+        score: 2,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.TEAM_SERVER.id,
@@ -298,6 +316,7 @@ const LOWER_BRACKET_ROUND_1: MatchType[] = [
         isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.TEAM_SERVER.name,
+        score: 1,
       },
     ],
   },
@@ -316,6 +335,7 @@ const LOWER_BRACKET_ROUND_1: MatchType[] = [
         isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.CARPINCHOS_RAGE.name,
+        score: 1,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.LA_GATONETA.id,
@@ -323,12 +343,13 @@ const LOWER_BRACKET_ROUND_1: MatchType[] = [
         isWinner: true,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.LA_GATONETA.name,
+        score: 2,
       },
     ],
   },
 ];
 
-const LOWER_BRACKET_ROUND_2: MatchType[] = [
+export const LOWER_BRACKET_ROUND_2: MatchType[] = [
   {
     id: "LB R2 M1",
     name: "Lower Bracket Round 2 - Match 1",
@@ -340,17 +361,19 @@ const LOWER_BRACKET_ROUND_2: MatchType[] = [
     participants: [
       {
         id: TEAM_PARTICIPANTS_LIST.CHILDREN_OF_THE_CORN.id,
-        resultText: "",
-        isWinner: true,
+        resultText: "ELIMINADO",
+        isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.CHILDREN_OF_THE_CORN.name,
+        score: 0,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.GUERREROS_Z.id,
-        resultText: "",
+        resultText: "VICTORIA",
         isWinner: true,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.GUERREROS_Z.name,
+        score: 2,
       },
     ],
   },
@@ -365,17 +388,19 @@ const LOWER_BRACKET_ROUND_2: MatchType[] = [
     participants: [
       {
         id: TEAM_PARTICIPANTS_LIST.THE_RATS.id,
-        resultText: "",
+        resultText: "VICTORIA",
         isWinner: true,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.THE_RATS.name,
+        score: 2,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.EFECTO_DIVINE.id,
-        resultText: "",
-        isWinner: true,
+        resultText: "ELIMINADO",
+        isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.EFECTO_DIVINE.name,
+        score: 1,
       },
     ],
   },
@@ -390,17 +415,19 @@ const LOWER_BRACKET_ROUND_2: MatchType[] = [
     participants: [
       {
         id: TEAM_PARTICIPANTS_LIST.HYDRA_E_SPORTS.id,
-        resultText: "",
+        resultText: "VICTORIA",
         isWinner: true,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.HYDRA_E_SPORTS.name,
+        score: 2,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.BRANCA_TEAM.id,
-        resultText: "",
+        resultText: "ELIMINADO",
         isWinner: true,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.BRANCA_TEAM.name,
+        score: 1,
       },
     ],
   },
@@ -415,10 +442,11 @@ const LOWER_BRACKET_ROUND_2: MatchType[] = [
     participants: [
       {
         id: TEAM_PARTICIPANTS_LIST.LA_GATONETA.id,
-        resultText: "DERROTA",
+        resultText: "ELIMINADO",
         isWinner: false,
         status: "DONE",
         name: TEAM_PARTICIPANTS_LIST.LA_GATONETA.name,
+        score: 1,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.LA_LAKERS.id,
@@ -426,12 +454,13 @@ const LOWER_BRACKET_ROUND_2: MatchType[] = [
         isWinner: true,
         status: "DONE",
         name: TEAM_PARTICIPANTS_LIST.LA_LAKERS.name,
+        score: 2,
       },
     ],
   },
 ];
 
-const LOWER_BRACKET_ROUND_3: MatchType[] = [
+export const LOWER_BRACKET_ROUND_3: MatchType[] = [
   {
     id: "LB R3 M1",
     name: "Lower Bracket Round 3 - Match 1",
@@ -466,7 +495,7 @@ const LOWER_BRACKET_ROUND_3: MatchType[] = [
   },
 ];
 
-const LOWER_BRACKET_ROUND_4: MatchType[] = [
+export const LOWER_BRACKET_ROUND_4: MatchType[] = [
   {
     id: "LB R4 M1",
     name: "Lower Bracket Round 4 - Match 1",
@@ -501,7 +530,7 @@ const LOWER_BRACKET_ROUND_4: MatchType[] = [
   },
 ];
 
-const LOWER_BRACKET_ROUND_5: MatchType[] = [
+export const LOWER_BRACKET_ROUND_5: MatchType[] = [
   {
     id: "LB R5 M1",
     name: "Lower Bracket Round 5",
@@ -517,7 +546,7 @@ const LOWER_BRACKET_ROUND_5: MatchType[] = [
   },
 ];
 
-const LOWER_BRACKET_FINAL: MatchType[] = [
+export const LOWER_BRACKET_FINAL: MatchType[] = [
   {
     id: "LB R6 M1",
     name: "Lower Bracket Final",

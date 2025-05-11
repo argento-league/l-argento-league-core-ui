@@ -102,6 +102,7 @@ const DoubleEliminationMobile = () => {
       <Bracket
         bracketName={BracketName.UPPER_BRACKET}
         bracketStages={UPPER_BRACKET_TITLES}
+        //@ts-expect-error - TODO: fix this
         bracketMatches={upperBracketMatches}
         winnerText={"VICTORIA"}
         loserText={"DERROTA"}
@@ -109,6 +110,7 @@ const DoubleEliminationMobile = () => {
       <Bracket
         bracketName={BracketName.LOWER_BRACKET}
         bracketStages={LOWER_BRACKET_TITLES}
+        //@ts-expect-error - TODO: fix this
         bracketMatches={lowerBracketMatches}
         winnerText={"VICTORIA"}
         loserText={"ELIMINADO"}

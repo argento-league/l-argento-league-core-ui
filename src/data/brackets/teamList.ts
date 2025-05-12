@@ -39,7 +39,7 @@ export const TEAM_PARTICIPANTS_LIST = {
       id: "TEAM_10",
       name: "Windfury enjoyers",
     },
-    ADELA_GAMING: {
+    ALDEA_GAMING: {
       id: "TEAM_11",
       name: "Aldea Gaming",
     },

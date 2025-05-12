@@ -216,7 +216,13 @@ export const UPPER_BRACKET_FINAL: MatchType[] = [
         status: "DONE",
         name: TEAM_PARTICIPANTS_LIST.PLAYERS_LIBRES.name,
       },
-      NO_PARTICIPANT,
+      {
+        id: TEAM_PARTICIPANTS_LIST.FANTASMAS.id,
+        resultText: "",
+        isWinner: true,
+        status: null,
+        name: TEAM_PARTICIPANTS_LIST.FANTASMAS.name,
+      },
     ],
   },
 ];
@@ -273,11 +279,11 @@ export const LOWER_BRACKET_ROUND_1: MatchType[] = [
     state: "DONE",
     participants: [
       {
-        id: TEAM_PARTICIPANTS_LIST.ADELA_GAMING.id,
+        id: TEAM_PARTICIPANTS_LIST.ALDEA_GAMING.id,
         resultText: "ELIMINADO",
         isWinner: false,
         status: null,
-        name: TEAM_PARTICIPANTS_LIST.ADELA_GAMING.name,
+        name: TEAM_PARTICIPANTS_LIST.ALDEA_GAMING.name,
         score: 1,
       },
       {
@@ -397,7 +403,7 @@ export const LOWER_BRACKET_ROUND_2: MatchType[] = [
         isWinner: true,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.EFECTO_DIVINE.name,
-        score: 1,
+        score: 2,
       },
     ],
   },
@@ -469,17 +475,19 @@ export const LOWER_BRACKET_ROUND_3: MatchType[] = [
     participants: [
       {
         id: TEAM_PARTICIPANTS_LIST.GUERREROS_Z.id,
-        resultText: "",
+        resultText: "VICTORIA",
         isWinner: true,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.GUERREROS_Z.name,
+        score: 2,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.EFECTO_DIVINE.id,
-        resultText: "",
-        isWinner: true,
+        resultText: "ELIMINADO",
+        isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.EFECTO_DIVINE.name,
+        score: 1,
       },
     ],
   },
@@ -494,17 +502,19 @@ export const LOWER_BRACKET_ROUND_3: MatchType[] = [
     participants: [
       {
         id: TEAM_PARTICIPANTS_LIST.HYDRA_E_SPORTS.id,
-        resultText: "",
-        isWinner: true,
+        resultText: "ELIMINADO",
+        isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.HYDRA_E_SPORTS.name,
+        score: 1,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.LA_LAKERS.id,
-        resultText: "",
+        resultText: "VICTORIA",
         isWinner: true,
         status: "DONE",
         name: TEAM_PARTICIPANTS_LIST.LA_LAKERS.name,
+        score: 2,
       },
     ],
   },
@@ -527,7 +537,13 @@ export const LOWER_BRACKET_ROUND_4: MatchType[] = [
         status: "DONE",
         name: TEAM_PARTICIPANTS_LIST.RAW_CHICKENS.name,
       },
-      NO_PARTICIPANT,
+      {
+        id: TEAM_PARTICIPANTS_LIST.GUERREROS_Z.id,
+        resultText: "",
+        isWinner: true,
+        status: null,
+        name: TEAM_PARTICIPANTS_LIST.GUERREROS_Z.name,
+      },
     ],
   },
   {
@@ -546,7 +562,13 @@ export const LOWER_BRACKET_ROUND_4: MatchType[] = [
         status: "DONE",
         name: TEAM_PARTICIPANTS_LIST.SUSHI_BOYS.name,
       },
-      NO_PARTICIPANT,
+      {
+        id: TEAM_PARTICIPANTS_LIST.LA_LAKERS.id,
+        resultText: "",
+        isWinner: true,
+        status: null,
+        name: TEAM_PARTICIPANTS_LIST.LA_LAKERS.name,
+      },
     ],
   },
 ];

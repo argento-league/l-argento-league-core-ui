@@ -557,14 +557,14 @@ export const LOWER_BRACKET_ROUND_4: MatchType[] = [
     participants: [
       {
         id: TEAM_PARTICIPANTS_LIST.SUSHI_BOYS.id,
-        resultText: "",
-        isWinner: true,
+        resultText: "ELIMINADO",
+        isWinner: false,
         status: "DONE",
         name: TEAM_PARTICIPANTS_LIST.SUSHI_BOYS.name,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.LA_LAKERS.id,
-        resultText: "",
+        resultText: "VICTORIA",
         isWinner: true,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.LA_LAKERS.name,
@@ -590,7 +590,13 @@ export const LOWER_BRACKET_ROUND_5: MatchType[] = [
         status: "DONE",
         name: TEAM_PARTICIPANTS_LIST.RAW_CHICKENS.name,
       },
-      NO_PARTICIPANT,
+      {
+        id: TEAM_PARTICIPANTS_LIST.LA_LAKERS.id,
+        resultText: "",
+        isWinner: true,
+        status: null,
+        name: TEAM_PARTICIPANTS_LIST.LA_LAKERS.name,
+      },
     ],
   },
 ];

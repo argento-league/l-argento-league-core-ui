@@ -539,7 +539,7 @@ export const LOWER_BRACKET_ROUND_4: MatchType[] = [
       },
       {
         id: TEAM_PARTICIPANTS_LIST.GUERREROS_Z.id,
-        resultText: "DERROTA",
+        resultText: "ELIMINADO",
         isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.GUERREROS_Z.name,

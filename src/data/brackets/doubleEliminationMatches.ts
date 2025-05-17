@@ -536,6 +536,7 @@ export const LOWER_BRACKET_ROUND_4: MatchType[] = [
         isWinner: true,
         status: "DONE",
         name: TEAM_PARTICIPANTS_LIST.RAW_CHICKENS.name,
+        score: 2,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.GUERREROS_Z.id,
@@ -543,6 +544,7 @@ export const LOWER_BRACKET_ROUND_4: MatchType[] = [
         isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.GUERREROS_Z.name,
+        score: 1,
       },
     ],
   },
@@ -560,6 +562,7 @@ export const LOWER_BRACKET_ROUND_4: MatchType[] = [
         resultText: "ELIMINADO",
         isWinner: false,
         status: "DONE",
+        score: 1,
         name: TEAM_PARTICIPANTS_LIST.SUSHI_BOYS.name,
       },
       {
@@ -567,6 +570,7 @@ export const LOWER_BRACKET_ROUND_4: MatchType[] = [
         resultText: "VICTORIA",
         isWinner: true,
         status: null,
+        score: 2,
         name: TEAM_PARTICIPANTS_LIST.LA_LAKERS.name,
       },
     ],

@@ -532,15 +532,15 @@ export const LOWER_BRACKET_ROUND_4: MatchType[] = [
     participants: [
       {
         id: TEAM_PARTICIPANTS_LIST.RAW_CHICKENS.id,
-        resultText: "",
+        resultText: "VICTORIA",
         isWinner: true,
         status: "DONE",
         name: TEAM_PARTICIPANTS_LIST.RAW_CHICKENS.name,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.GUERREROS_Z.id,
-        resultText: "",
-        isWinner: true,
+        resultText: "ELIMINADO",
+        isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.GUERREROS_Z.name,
       },
@@ -582,7 +582,16 @@ export const LOWER_BRACKET_ROUND_5: MatchType[] = [
     tournamentRoundText: "5",
     startTime: "",
     state: "DONE",
-    participants: [NO_PARTICIPANT, NO_PARTICIPANT],
+    participants: [
+      {
+        id: TEAM_PARTICIPANTS_LIST.RAW_CHICKENS.id,
+        resultText: "",
+        isWinner: true,
+        status: "DONE",
+        name: TEAM_PARTICIPANTS_LIST.RAW_CHICKENS.name,
+      },
+      NO_PARTICIPANT,
+    ],
   },
 ];
 

@@ -25,11 +25,6 @@ type ParticipantTBD = {
   status: "NO_PARTY";
 };
 
-const NO_PARTICIPANT: ParticipantTBD = {
-  name: "TBD",
-  status: "NO_PARTY",
-};
-
 // Upper Bracket Rounds
 export const UPPER_BRACKET_ROUND_1: MatchType[] = [
   {
@@ -211,17 +206,19 @@ export const UPPER_BRACKET_FINAL: MatchType[] = [
     participants: [
       {
         id: TEAM_PARTICIPANTS_LIST.PLAYERS_LIBRES.id,
-        resultText: "",
-        isWinner: true,
+        resultText: "DERROTA",
+        isWinner: false,
         status: "DONE",
         name: TEAM_PARTICIPANTS_LIST.PLAYERS_LIBRES.name,
+        score: 0,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.FANTASMAS.id,
-        resultText: "",
+        resultText: "VICTORIA",
         isWinner: true,
-        status: null,
+        status: "DONE",
         name: TEAM_PARTICIPANTS_LIST.FANTASMAS.name,
+        score: 2,
       },
     ],
   },
@@ -236,7 +233,24 @@ export const GRAND_FINAL: MatchType[] = [
     tournamentRoundText: "Grand Final",
     startTime: "",
     state: "DONE",
-    participants: [NO_PARTICIPANT, NO_PARTICIPANT],
+    participants: [
+      {
+        id: TEAM_PARTICIPANTS_LIST.PLAYERS_LIBRES.id,
+        resultText: "DERROTA",
+        isWinner: false,
+        status: "DONE",
+        name: TEAM_PARTICIPANTS_LIST.PLAYERS_LIBRES.name,
+        score: 0,
+      },
+      {
+        id: TEAM_PARTICIPANTS_LIST.FANTASMAS.id,
+        resultText: "VICTORIA",
+        isWinner: true,
+        status: "DONE",
+        name: TEAM_PARTICIPANTS_LIST.FANTASMAS.name,
+        score: 3,
+      },
+    ],
   },
 ];
 
@@ -589,17 +603,19 @@ export const LOWER_BRACKET_ROUND_5: MatchType[] = [
     participants: [
       {
         id: TEAM_PARTICIPANTS_LIST.RAW_CHICKENS.id,
-        resultText: "",
+        resultText: "VICTORIA",
         isWinner: true,
         status: "DONE",
         name: TEAM_PARTICIPANTS_LIST.RAW_CHICKENS.name,
+        score: 2,
       },
       {
         id: TEAM_PARTICIPANTS_LIST.LA_LAKERS.id,
-        resultText: "",
-        isWinner: true,
+        resultText: "ELIMINADO",
+        isWinner: false,
         status: null,
         name: TEAM_PARTICIPANTS_LIST.LA_LAKERS.name,
+        score: 0,
       },
     ],
   },
@@ -614,7 +630,24 @@ export const LOWER_BRACKET_FINAL: MatchType[] = [
     tournamentRoundText: "6",
     startTime: "",
     state: "DONE",
-    participants: [NO_PARTICIPANT, NO_PARTICIPANT],
+    participants: [
+      {
+        id: TEAM_PARTICIPANTS_LIST.RAW_CHICKENS.id,
+        resultText: "ELIMINADO",
+        isWinner: false,
+        status: "DONE",
+        name: TEAM_PARTICIPANTS_LIST.RAW_CHICKENS.name,
+        score: 0
+      },
+      {
+        id: TEAM_PARTICIPANTS_LIST.PLAYERS_LIBRES.id,
+        resultText: "VICTORIA",
+        isWinner: true,
+        status: null,
+        name: TEAM_PARTICIPANTS_LIST.PLAYERS_LIBRES.name,
+        score: 2,
+      },
+    ],
   },
 ];
 

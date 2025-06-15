@@ -1,48 +1,95 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
+import { useIsMobile } from "../../hooks/useIsMobile";
+
+const NAV_LINKS = [
+  { to: "/", label: "Inicio" },
+  { to: "/about", label: "Season 5" },
+  { to: "/ligas-anteriores", label: "Ligas Anteriores" },
+  { to: "/staff", label: "Staff" },
+];
 
 export const NavBar = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!dropdownOpen) return;
-    function handleClickOutside(event: MouseEvent) {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
-        setDropdownOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [dropdownOpen]);
-
+  const isMobile = useIsMobile();
   return (
-    <div style={{ gap: "16px", display: "flex", flexDirection: "column", height: "70px" }}>
+    <HeaderWrapper>
       <HeaderMainContainer>
-          <LogoContainer>
-            <Link to="/">
-              <img
-                src="/images/argento-logo.png"
-                height="48px"
-                width="76px"
-                style={{ objectFit: "contain", display: "block" }}
-              />
-            </Link>
-          </LogoContainer>
-          <LinkContainer>
-            <HeaderLink to="/">Inicio</HeaderLink>
-            <HeaderLink to="/about">Season 5</HeaderLink>
-            <HeaderLink to="/ligas-anteriores">Ligas Anteriores</HeaderLink>
-            <HeaderLink to="/staff">Staff</HeaderLink>
-          </LinkContainer>
+        <LogoContainer>
+          <Link to="/">
+            <img
+              src="/images/argento-logo.png"
+              height="48px"
+              width="76px"
+              style={{ objectFit: "contain", display: "block" }}
+            />
+          </Link>
+        </LogoContainer>
+        {isMobile ? <BurgerMenu /> : <DesktopNavbarLinks />}
       </HeaderMainContainer>
-    </div>
+    </HeaderWrapper>
   );
 };
+
+function DesktopNavbarLinks() {
+  return (
+    <DesktopLinkContainer>
+      {NAV_LINKS.map((link) => (
+        <HeaderLink key={link.to} to={link.to}>
+          {link.label}
+        </HeaderLink>
+      ))}
+    </DesktopLinkContainer>
+  );
+}
+
+function MobileNavbarLinks({ onNavigate }: { onNavigate: () => void }) {
+  return (
+    <MobileLinkContainer>
+      {NAV_LINKS.map((link) => (
+        <HeaderLink key={link.to} to={link.to} onClick={onNavigate}>
+          {link.label}
+        </HeaderLink>
+      ))}
+    </MobileLinkContainer>
+  );
+}
+
+function BurgerMenu() {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const handleDrawerClose = () => {
+    setDrawerOpen(false);
+  };
+
+  const handleDrawerOpen = () => {
+    setDrawerOpen(true);
+  };
+
+  return (
+    <>
+      <BurgerButton onClick={handleDrawerOpen}>
+        <span />
+        <span />
+        <span />
+      </BurgerButton>
+      <Drawer open={drawerOpen}>
+        <DrawerHeader>
+          <CloseButton onClick={handleDrawerClose}>&times;</CloseButton>
+        </DrawerHeader>
+        <MobileNavbarLinks onNavigate={handleDrawerClose} />
+      </Drawer>
+      {drawerOpen && <DrawerBackdrop onClick={handleDrawerClose} />}
+    </>
+  );
+}
+
+const HeaderWrapper = styled.div`
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 70px;
+`;
 
 const HeaderMainContainer = styled.div`
   background-color: #000000;
@@ -54,15 +101,21 @@ const HeaderMainContainer = styled.div`
   justify-content: space-between;
 
   @media (max-width: 720px) {
-    justify-content: flex-end;
+    padding-right: 32px;
+    padding-left: 32px;
   }
 `;
 
-// Home/logo stays top-left
 const LogoContainer = styled.div``;
 
-const LinkContainer = styled.div`
+const DesktopLinkContainer = styled.div`
   display: flex;
+  gap: 8px;
+`;
+
+const MobileLinkContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   gap: 8px;
 `;
 
@@ -78,7 +131,68 @@ const HeaderLink = styled(Link)`
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   &:hover {
-    background-color: #095B824D;
+    background-color: #095b824d;
     font-weight: 700;
   }
+`;
+
+const BurgerButton = styled.button`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1201;
+  span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.2s;
+  }
+`;
+
+const Drawer = styled.div<{ open: boolean }>`
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 240px;
+  background: #111;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  transform: translateX(${(props) => (props.open ? "0" : "100%")});
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1202;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px 0 16px;
+`;
+
+const DrawerHeader = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+`;
+
+const CloseButton = styled.button`
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+`;
+
+const DrawerBackdrop = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1200;
 `;

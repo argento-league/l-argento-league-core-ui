@@ -128,7 +128,7 @@ const HeaderLink = styled(Link)`
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-weight: 700;
   &:hover {
     background-color: #095b824d;

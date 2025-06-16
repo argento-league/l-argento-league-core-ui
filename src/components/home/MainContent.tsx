@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import item1 from "../../assets/information/item-1.png";
-import item2 from "../../assets/information/item-2.png";
-import item3 from "../../assets/information/item-3.png";
-import item4 from "../../assets/information/item-4.png";
+import { SeasonWinner } from "./cards/season-winner";
+import { MainCard } from "./cards/main";
+import { FeatureCard } from "./cards/features";
+import { NewsCard } from "./cards/news";
+import { SocialCard } from "./cards/socials";
 
 const MainRootContainer = styled.div`
   width: 100%;
@@ -21,17 +22,18 @@ const MainRootContainer = styled.div`
 const MainContentGroup = styled.div`
   display: grid;
   grid-template-columns: repeat(20, 1fr);
-  grid-template-rows: repeat(5, 150px);
+  grid-template-rows: repeat(5, 120px);
   gap: 16px;
   width: 100%;
 
   @media (max-width: 1024px) {
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 150px);
+    grid-template-rows: repeat(11, 150px);
   }
 `;
 
 interface BoxProps {
+  backgroundColor?: string;
   col?: string;
   row?: string;
   colTablet?: string;
@@ -41,7 +43,7 @@ interface BoxProps {
 }
 
 const GridBox = styled.div<BoxProps>`
-  background: #00000080;
+  background-color: ${(props) => props.backgroundColor || "black"};
   color: white;
   border-radius: 8px;
 
@@ -66,27 +68,18 @@ export const MainContent = () => {
           colTablet="1 / 13"
           rowTablet="1 / 4"
           colMobile="1 / -1"
+          backgroundColor="#00000080"
         >
-          <div style={{paddingTop: "16px", paddingBottom:"32px", gap: "16px"}}>
-            <img
-              src="/images/argento-logo.png"
-              alt="Argento Logo"
-              width={"200px"}
-            />
-            <h1
-              style={{
-                fontSize: "44px",
-                color: "white",
-                marginTop: "16px",
-                letterSpacing: "0",
-              }}
-            >
-              Liga Argentina de Dota 2 para todo LATAM.
-            </h1>
-          </div>
+          <MainCard />
         </GridBox>
-        <GridBox col="13 / 21" row="1 / 1" colTablet="1 / 13" rowTablet="6 / 8">
-          2
+        <GridBox
+          col="13 / 21"
+          row="1 / 1"
+          colTablet="1 / 13"
+          rowTablet="6 / 8"
+          backgroundColor="transparent"
+        >
+          <SeasonWinner />
         </GridBox>
         <GridBox
           col="13 / 21"
@@ -94,7 +87,7 @@ export const MainContent = () => {
           colTablet="1 / 13"
           rowTablet="11 / 12"
         >
-          3
+          <SocialCard />
         </GridBox>
         <GridBox
           col="1 / 7"
@@ -103,36 +96,10 @@ export const MainContent = () => {
           rowTablet="4 / 5"
           colMobile="1 / -1"
         >
-          <div
-            style={{
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "16px",
-              gap: "10px",
-              flexDirection: "column",
-              boxSizing: "border-box",
-              backgroundColor: "black",
-              borderRadius: "16px",
-            }}
-          >
-            <img
-              src={item1}
-              alt="Item 1"
-              style={{ width: "28px", height: "28px" }}
-            />
-            <span
-              style={{
-                fontSize: "18px",
-                textAlign: "center",
-                letterSpacing: "0",
-              }}
-            >
-              Liga tier 4 abierta para todos
-            </span>
-          </div>
+          <FeatureCard
+            title={"🏆"}
+            description={"Liga tier 4 abierta \n para todos"}
+          />
         </GridBox>
         <GridBox
           col="7 / 13"
@@ -141,31 +108,10 @@ export const MainContent = () => {
           rowTablet="4 / 5"
           colMobile="1 / -1"
         >
-          <div
-            style={{
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "16px",
-              gap: "10px",
-              flexDirection: "column",
-              boxSizing: "border-box",
-              backgroundColor: "black",
-              borderRadius: "16px",
-            }}
-          >
-            <img
-              src={item2}
-              alt="Item 2"
-              style={{ width: "28px", height: "28px" }}
-            />
-
-            <span style={{ fontSize: "18px", textAlign: "center" }}>
-              Jugadores de toda Latinoamérica
-            </span>
-          </div>
+          <FeatureCard
+            title="🌎"
+            description={"Jugadores de toda \n Latinoamérica"}
+          />
         </GridBox>
         <GridBox
           col="1 / 7"
@@ -174,30 +120,12 @@ export const MainContent = () => {
           rowTablet="5 / 6"
           colMobile="1 / -1"
         >
-          <div
-            style={{
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "16px",
-              gap: "10px",
-              flexDirection: "column",
-              boxSizing: "border-box",
-              backgroundColor: "black",
-              borderRadius: "16px",
-            }}
-          >
-            <img
-              src={item3}
-              alt="Item 3"
-              style={{ width: "28px", height: "28px" }}
-            />
-            <span style={{ fontSize: "18px", textAlign: "center" }}>
-              Inscríbete con tu equipo o únete como jugador disponible
-            </span>
-          </div>
+          <FeatureCard
+            title="📝"
+            description={
+              "Inscríbete con tu equipo o únete como jugador disponible"
+            }
+          />
         </GridBox>
         <GridBox
           col="7 / 13"
@@ -206,30 +134,10 @@ export const MainContent = () => {
           rowTablet="5 / 6"
           colMobile="1 / -1"
         >
-          <div
-            style={{
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "16px",
-              gap: "10px",
-              flexDirection: "column",
-              boxSizing: "border-box",
-              backgroundColor: "black",
-              borderRadius: "16px",
-            }}
-          >
-            <img
-              src={item4}
-              alt="Item 4"
-              style={{ width: "28px", height: "28px" }}
-            />
-            <span style={{ fontSize: "18px", textAlign: "center" }}>
-              ¡Demuestra tu nivel y sube en la escena!
-            </span>
-          </div>
+          <FeatureCard
+            title="⚔️"
+            description={"¡Demuestra tu nivel y \n sube en la escena!"}
+          />
         </GridBox>
         <GridBox
           col="13 / 21"
@@ -237,17 +145,9 @@ export const MainContent = () => {
           colTablet="1 / 13"
           rowTablet="8 / 11"
         >
-          8
+          <NewsCard />
         </GridBox>
       </MainContentGroup>
-      {/* <MainContentContainer>
-        <MainImage src="/images/argento-logo.png" />
-        <MainContentText>
-          <MainContentTextTitle>
-            Liga Argentina de Dota 2 para todo LATAM.
-          </MainContentTextTitle>
-        </MainContentText>
-      </MainContentContainer> */}
     </MainRootContainer>
   );
 };

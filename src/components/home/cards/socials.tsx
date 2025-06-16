@@ -1,29 +1,15 @@
 import styled from "styled-components";
-import SVG from "react-inlinesvg";
 import discord from "../../../assets/social-media-icons/discord.svg";
 import facebook from "../../../assets/social-media-icons/facebook.svg";
 import instagram from "../../../assets/social-media-icons/instagram.svg";
 import youtube from "../../../assets/social-media-icons/youtube.svg";
 import { Link } from "react-router-dom";
+import { StyledSvg } from "../../common/StyledSVG";
 
 const SocialCardContainer = styled.div`
   height: 100%;
   background-color: #000000;
   border-radius: 16px;
-`;
-
-type SVGProps = {
-  color?: string;
-  width?: string;
-  height?: string;
-};
-
-export const StyledSvg = styled(SVG)<SVGProps>`
-  width: ${({ width }) => width || "24px"};
-  height: ${({ height }) => height || "24px"};
-  & path {
-    fill: ${({ color }) => color || "#FFFFFF"};
-  }
 `;
 
 const ContentContainer = styled.div`

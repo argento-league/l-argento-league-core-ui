@@ -8,8 +8,8 @@ export const HomePage = () => {
   return (
     <>
       <MainContent />
-      <LeagueInformation />
-      <CurrentState />
+      {/* <LeagueInformation />
+      <CurrentState /> */}
       <Container>
         <FAQ />
       </Container>

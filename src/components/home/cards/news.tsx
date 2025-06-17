@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { StyledSvg } from "../../common/StyledSVG";
+import discordIcon from "../../../assets/social-media-icons/discord.svg";
 
 const NewsCardContainer = styled.section`
   padding-top: 32px;
@@ -77,6 +79,10 @@ const NewsButtonsContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 16px;
+
+  @media (max-width: 720px) {
+    flex-direction: column;
+  }
 `;
 
 const NewsButton = styled.button`
@@ -91,6 +97,11 @@ const NewsButton = styled.button`
 const DiscordButton = styled(NewsButton)`
   background-color: black;
   color: #fabf4a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
 `;
 
 const RegisterButton = styled(NewsButton)`
@@ -112,7 +123,7 @@ export const NewsCard = () => {
         </NewsSubDescription>
       </NewsDescriptionContainer>
       <NewsButtonsContainer id="container-buttons">
-        <DiscordButton> Unirme a Discord</DiscordButton>
+        <DiscordButton> <StyledSvg src={discordIcon} color="#fabf4a"></StyledSvg> <span>Unirme a Discord</span></DiscordButton>
         <RegisterButton>Inscribirme</RegisterButton>
       </NewsButtonsContainer>
     </NewsCardContainer>

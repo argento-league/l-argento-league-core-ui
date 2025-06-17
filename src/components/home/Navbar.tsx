@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { useIsMobile } from "../../hooks/useIsMobile";
 import { Container } from "../common/Container";
@@ -15,6 +15,7 @@ const NAV_LINKS = [
 
 export const NavBar = () => {
   const isMobile = useIsMobile();
+  const location = useLocation();
   return (
     <Container>
       <HeaderWrapper>
@@ -29,30 +30,28 @@ export const NavBar = () => {
               />
             </Link>
           </LogoContainer>
-          {isMobile ? <BurgerMenu /> : <DesktopNavbarLinks />}
+          {isMobile ? <BurgerMenu currentPath={location.pathname} /> : <DesktopNavbarLinks currentPath={location.pathname} />}
         </HeaderMainContainer>
       </HeaderWrapper>
     </Container>
   );
 };
 
-function DesktopNavbarLinks() {
+function DesktopNavbarLinks({ currentPath }: { currentPath: string }) {
   return (
     <DesktopLinkContainer>
       {NAV_LINKS.map((link) => (
-        <HeaderLink key={link.to} to={link.to}>
-          {link.label}
-        </HeaderLink>
+        <HeaderLink key={link.to} to={link.to} $active={currentPath === link.to}>{link.label}</HeaderLink>
       ))}
     </DesktopLinkContainer>
   );
 }
 
-function MobileNavbarLinks({ onNavigate }: { onNavigate: () => void }) {
+function MobileNavbarLinks({ onNavigate, currentPath }: { onNavigate: () => void, currentPath: string }) {
   return (
     <MobileLinkContainer>
       {NAV_LINKS.map((link) => (
-        <HeaderLink key={link.to} to={link.to} onClick={onNavigate}>
+        <HeaderLink key={link.to} to={link.to} onClick={onNavigate} $active={currentPath === link.to}>
           {link.label}
         </HeaderLink>
       ))}
@@ -60,7 +59,7 @@ function MobileNavbarLinks({ onNavigate }: { onNavigate: () => void }) {
   );
 }
 
-function BurgerMenu() {
+function BurgerMenu({ currentPath }: { currentPath: string }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const handleDrawerClose = () => {
@@ -80,7 +79,7 @@ function BurgerMenu() {
         <DrawerHeader>
           <CloseButton onClick={handleDrawerClose}>&times;</CloseButton>
         </DrawerHeader>
-        <MobileNavbarLinks onNavigate={handleDrawerClose} />
+        <MobileNavbarLinks onNavigate={handleDrawerClose} currentPath={currentPath} />
       </Drawer>
       {drawerOpen && <DrawerBackdrop onClick={handleDrawerClose} />}
     </>
@@ -122,7 +121,7 @@ const MobileLinkContainer = styled.div`
   gap: 8px;
 `;
 
-const HeaderLink = styled(Link)`
+const HeaderLink = styled(Link)<{ $active?: boolean }>`
   display: flex;
   padding: 8px 16px;
   border-radius: 10px;
@@ -133,8 +132,10 @@ const HeaderLink = styled(Link)`
   font-size: 16px;
   font-family: "Outfit", sans-serif;
   font-weight: 700;
+  background-color: ${({ $active }) => $active ? '#FABF4A33' : 'transparent'};
+  transition: background 0.2s, color 0.2s;
   &:hover {
-    background-color: #095b824d;
+    background-color: ${({ $active }) => $active ? '#FABF4A33' : '#095b824d'};
     font-weight: 700;
   }
 `;

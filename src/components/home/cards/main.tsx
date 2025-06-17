@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
 const MainCardContainer = styled.div`
-  padding-top: 16px;
-  padding-bottom: 32px;
   gap: 16px;
-  padding-left: 60px;
-  padding-right: 60px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-family: "Outfit", sans-serif;
   font-weight: 600;
+
+  @media (max-width: 720px) {
+    align-items: center;
+  }
 `;
 
 const MainCardTitle = styled.h1`
@@ -20,13 +20,37 @@ const MainCardTitle = styled.h1`
   margin-top: 16px;
   letter-spacing: 0;
   font-family: "Outfit", sans-serif;
+  white-space: pre-line;
+
+  @media (max-width: 720px) {
+    font-size: 32px;
+    text-align: center;
+  }
+`;
+
+const CardContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  padding-top: 16px;
+  padding-bottom: 32px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 `;
 
 export const MainCard = () => {
   return (
-    <MainCardContainer>
-      <img src="/images/argento-logo.png" alt="Argento Logo" width={"200px"} />
-      <MainCardTitle>Liga Argentina de Dota 2 para todo LATAM.</MainCardTitle>
-    </MainCardContainer>
+    <CardContainer>
+      <MainCardContainer>
+        <img
+          src="/images/argento-logo.png"
+          alt="Argento Logo"
+          width={"200px"}
+        />
+        <MainCardTitle>
+          {"Liga Argentina de Dota 2 \n para todo LATAM."}
+        </MainCardTitle>
+      </MainCardContainer>
+    </CardContainer>
   );
 };

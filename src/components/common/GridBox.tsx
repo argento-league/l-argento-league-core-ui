@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-interface BoxProps {
+export interface BoxProps {
   backgroundColor?: string;
   col?: string;
   row?: string;

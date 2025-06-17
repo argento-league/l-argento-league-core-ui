@@ -26,8 +26,7 @@ const faqData = [
 ];
 
 const FAQSection = styled.section`
-  font-family: 'Montserrat', sans-serif;
-  max-width: 900px;
+  font-family: 'Outfit', sans-serif;
   margin: 3rem auto;
   color: #fff;
 `;

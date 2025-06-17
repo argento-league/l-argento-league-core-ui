@@ -6,14 +6,20 @@ import { NewsCard } from "./cards/news";
 import { SocialCard } from "./cards/socials";
 import { Container } from "../common/Container";
 
-const MainRootContainer = styled.div`
+type MainRootContainerProps = {
+  backgroundImage?: string;
+  backgroundBlendMode?: string;
+  background?: string;
+}
+
+export const MainRootContainer = styled.div<MainRootContainerProps>`
   width: 100%;
   padding: 32px;
   box-sizing: border-box;
   gap: 16px;
-  background: #3b6377;
-  background-image: url("/home-background.jpg");
-  background-blend-mode: multiply;
+  background: ${(props) => props.background || "#3b6377"};
+  background-image: url(${(props) => props.backgroundImage || "/home-background.jpg"});
+  background-blend-mode: ${(props) => props.backgroundBlendMode || "multiply"};
   background-size: cover;
 
   @media (max-width: 720px) {
@@ -40,8 +46,6 @@ interface BoxProps {
   row?: string;
   colTablet?: string;
   rowTablet?: string;
-  colMobile?: string;
-  rowMobile?: string;
 }
 
 const GridBox = styled.div<BoxProps>`
@@ -62,7 +66,7 @@ const GridBox = styled.div<BoxProps>`
 
 export const MainContent = () => {
   return (
-    <MainRootContainer>
+    <MainRootContainer background="#3b6377" backgroundImage="/home-background.jpg" backgroundBlendMode="multiply">
       <Container>
         <MainContentGroup>
           <GridBox
@@ -70,7 +74,6 @@ export const MainContent = () => {
             row="1 / 4"
             colTablet="1 / 13"
             rowTablet="1 / 3"
-            colMobile="1 / -1"
             backgroundColor="#00000080"
           >
             <MainCard />
@@ -97,7 +100,7 @@ export const MainContent = () => {
             row="4 / 5"
             colTablet="1 / 7"
             rowTablet="3 / 4"
-            colMobile="1 / -1"
+
           >
             <FeatureCard
               title={"🏆"}
@@ -109,7 +112,6 @@ export const MainContent = () => {
             row="4 / 5"
             colTablet="7 / 13"
             rowTablet="3 / 4"
-            colMobile="1 / -1"
           >
             <FeatureCard
               title="🌎"
@@ -121,7 +123,6 @@ export const MainContent = () => {
             row="5 / 6"
             colTablet="1 / 7"
             rowTablet="4 / 5"
-            colMobile="1 / -1"
           >
             <FeatureCard
               title="📝"
@@ -135,7 +136,6 @@ export const MainContent = () => {
             row="5 / 6"
             colTablet="7 / 13"
             rowTablet="4 / 5"
-            colMobile="1 / -1"
           >
             <FeatureCard
               title="⚔️"
@@ -147,6 +147,7 @@ export const MainContent = () => {
             row="3 / 6"
             colTablet="1 / 13"
             rowTablet="7 / 10"
+            backgroundColor="inherit"
           >
             <NewsCard />
           </GridBox>

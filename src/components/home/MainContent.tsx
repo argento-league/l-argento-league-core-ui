@@ -1,15 +1,16 @@
 import styled from "styled-components";
-import { SeasonWinner } from "./cards/season-winner";
-import { MainCard } from "./cards/main";
-import { FeatureCard } from "./cards/features";
-import { NewsCard } from "./cards/news";
-import { SocialCard } from "./cards/socials";
+import { SeasonWinner } from "./cards/SeasonWinner";
+import { MainCard } from "./cards/Main";
+import { FeatureCard } from "./cards/Features";
+import { NewsCard } from "./cards/News";
+import { SocialCard } from "./cards/Socials";
 import { Container } from "../common/Container";
 
 type MainRootContainerProps = {
   backgroundImage?: string;
   backgroundBlendMode?: string;
   background?: string;
+  backgroundPosition?: string;
 }
 
 export const MainRootContainer = styled.div<MainRootContainerProps>`
@@ -21,6 +22,7 @@ export const MainRootContainer = styled.div<MainRootContainerProps>`
   background-image: url(${(props) => props.backgroundImage || "/home-background.jpg"});
   background-blend-mode: ${(props) => props.backgroundBlendMode || "multiply"};
   background-size: cover;
+  ${(props) => props.backgroundPosition ? `background-position: ${props.backgroundPosition};` : ""};
 
   @media (max-width: 720px) {
     padding: 16px;

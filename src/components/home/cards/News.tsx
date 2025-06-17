@@ -94,7 +94,7 @@ const NewsButton = styled.button`
   cursor: pointer;
 `;
 
-const DiscordButton = styled(NewsButton)`
+export const DiscordButton = styled(NewsButton)`
   background-color: black;
   color: #fabf4a;
   display: flex;
@@ -104,7 +104,7 @@ const DiscordButton = styled(NewsButton)`
   font-weight: 700;
 `;
 
-const RegisterButton = styled(NewsButton)`
+export const RegisterButton = styled(NewsButton)`
   background-color: #fabf4a;
 `;
 

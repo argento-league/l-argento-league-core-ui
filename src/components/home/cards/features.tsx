@@ -30,6 +30,10 @@ const StyledFeatureCardDescription = styled.span`
   font-family: "Rethink Sans", sans-serif;
   font-weight: 600;
   white-space: pre-line;
+
+  @media (max-width: 720px) {
+    font-size: 14px;
+  }
 `;
 
 export const FeatureCard = ({ description, title }: FeatureCardProps) => {

@@ -2,6 +2,9 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useIsMobile } from "../../hooks/useIsMobile";
+import { Container } from "../common/Container";
+import { StyledSvg } from "../common/StyledSVG";
+import burgerIcon from "../../assets/common/icons/bars-3.svg";
 
 const NAV_LINKS = [
   { to: "/", label: "Inicio" },
@@ -13,21 +16,23 @@ const NAV_LINKS = [
 export const NavBar = () => {
   const isMobile = useIsMobile();
   return (
-    <HeaderWrapper>
-      <HeaderMainContainer>
-        <LogoContainer>
-          <Link to="/">
-            <img
-              src="/images/argento-logo.png"
-              height="48px"
-              width="76px"
-              style={{ objectFit: "contain", display: "block" }}
-            />
-          </Link>
-        </LogoContainer>
-        {isMobile ? <BurgerMenu /> : <DesktopNavbarLinks />}
-      </HeaderMainContainer>
-    </HeaderWrapper>
+    <Container>
+      <HeaderWrapper>
+        <HeaderMainContainer>
+          <LogoContainer>
+            <Link to="/">
+              <img
+                src="/images/argento-logo.png"
+                height="48px"
+                width="76px"
+                style={{ objectFit: "contain", display: "block" }}
+              />
+            </Link>
+          </LogoContainer>
+          {isMobile ? <BurgerMenu /> : <DesktopNavbarLinks />}
+        </HeaderMainContainer>
+      </HeaderWrapper>
+    </Container>
   );
 };
 
@@ -69,9 +74,7 @@ function BurgerMenu() {
   return (
     <>
       <BurgerButton onClick={handleDrawerOpen}>
-        <span />
-        <span />
-        <span />
+        <StyledSvg src={burgerIcon} color={"white"}/>
       </BurgerButton>
       <Drawer open={drawerOpen}>
         <DrawerHeader>

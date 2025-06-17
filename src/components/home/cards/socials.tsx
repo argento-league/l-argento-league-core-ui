@@ -8,7 +8,7 @@ import { StyledSvg } from "../../common/StyledSVG";
 
 const SocialCardContainer = styled.div`
   height: 100%;
-  background-color: #000000;
+  background-color: #101010;
   border-radius: 16px;
 `;
 

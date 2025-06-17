@@ -1,3 +1,9 @@
 html {
     overflow-y: scroll;
 }
+
+h1, p, span, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

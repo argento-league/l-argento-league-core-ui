@@ -53,7 +53,7 @@ export const SocialCard = () => {
         <IconContainer>
           <IconText>Enterate de todo</IconText>
           <IconLogoContainer>
-            <Link to="https://discord.gg/hYcW9P2keq">
+            <Link to="https://discord.gg/hYcW9P2keq" target="_blank">
               <StyledSvg
                 src={discord}
                 color={IconColor}
@@ -61,7 +61,7 @@ export const SocialCard = () => {
                 height="32px"
               />
             </Link>
-            <Link to="https://www.youtube.com/@Largentoleague">
+            <Link to="https://www.youtube.com/@Largentoleague" target="_blank">
               <StyledSvg
                 src={youtube}
                 color={IconColor}
@@ -69,7 +69,7 @@ export const SocialCard = () => {
                 height="32px"
               />
             </Link>
-            <Link to="https://www.facebook.com/profile.php?id=61565646000198">
+            <Link to="https://www.facebook.com/profile.php?id=61565646000198" target="_blank">
               <StyledSvg
                 src={facebook}
                 color={IconColor}
@@ -77,7 +77,7 @@ export const SocialCard = () => {
                 height="32px"
               />
             </Link>
-            <Link to="https://www.instagram.com/largentoleague/">
+            <Link to="https://www.instagram.com/largentoleague/" target="_blank">
               <StyledSvg
                 src={instagram}
                 color={IconColor}

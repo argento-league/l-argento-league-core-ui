@@ -420,7 +420,7 @@ const information: Record<INFORMATION_ENUM, Information> = {
   [INFORMATION_ENUM.ARMADO_DE_EQUIPO]: {
     title: "Medalla libre",
     description: [
-      "La medalla de los jugadores es libre. Los equipos pueden conformarse con jugadores de cualquier medalla, el único requisito es que el equipo en juego no debe superar la suma de 36.500 de mmr.",
+      "La medalla de los jugadores es libre. Los equipos pueden conformarse con jugadores de cualquier medalla, el único requisito es que el equipo en juego no debe superar la suma de 37.000 de mmr.",
       "El roster puede contar con 5 titulares y 3 suplentes.",
       "Esta limitado los jugadores peruanos nuevos por equipos a 2.",
     ],

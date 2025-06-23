@@ -53,13 +53,13 @@ export const DateCard = () => {
         <DateText>
           Inscripción por equipo
         </DateText>
-        <DateText style={{ textAlign: "end" }}>fecha estimada 23/06</DateText>
+        <DateText style={{ textAlign: "end" }}>del 23/06 al 30/06</DateText>
       </DatesRow>
       <DatesRow>
         <DateText>
           Inicio Season 5
         </DateText>
-        <DateText style={{ textAlign: "end" }}>TBD</DateText>
+        <DateText style={{ textAlign: "end" }}>Lunes 07/07</DateText>
       </DatesRow>
     </DatesBox>
   );

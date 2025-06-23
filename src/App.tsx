@@ -42,7 +42,15 @@ function App() {
           marginTop: "auto",
         }}
       >
-        <div style={{ width: "140px", height: "30px" }}>
+        <div
+          style={{
+            width: "140px",
+            height: "30px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <StyledSvg src={argentoLogo} width="120px" height="20px" />
         </div>
         |

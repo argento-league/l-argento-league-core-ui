@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const SeasonWinnerContainer = styled.section`
@@ -51,7 +52,7 @@ const WinnerSeason = styled.p`
   font-family: "Rethink Sans", sans-serif;
 `;
 
-const ViewMore = styled.a`
+const ViewMore = styled(Link)`
   font-size: 16px;
   color: #fabf4a;
   text-decoration: none;
@@ -77,7 +78,7 @@ export const SeasonWinner = () => {
           <WinnerSeason>Campeones Season 4</WinnerSeason>
         </WinnerTextContainer>
       </WinnerInfoContainer>
-      <ViewMore id="ver-mas" href="#">
+      <ViewMore id="ver-mas" target="_blank" to="/season-4">
         Ver season
       </ViewMore>
     </SeasonWinnerContainer>

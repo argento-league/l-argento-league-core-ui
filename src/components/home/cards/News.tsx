@@ -105,9 +105,14 @@ export const NewsButton = styled(Link)<NewsButtonProps>`
   cursor: pointer;
   justify-content: center;
   display: flex;
+  text-align: center;
 `;
 
-export const DiscordButton = styled(NewsButton)`
+type DiscordButtonProps = NewsButtonProps & {
+  hasBorder?: boolean;
+}
+export const DiscordButton = styled(NewsButton)<DiscordButtonProps>`
+  border: ${(props) => (props.hasBorder ? `1px solid ${props.color}` : "none")};
   color: #fabf4a;
   display: flex;
   align-items: center;
@@ -149,7 +154,7 @@ export const NewsCard = () => {
           <span>Unirme a Discord</span>
         </DiscordButton>
         <RegisterButton
-          to="https://tally.so/r/wop8Bx"
+          to="https://tally.so/r/wagJRv"
           target="_blank"
           // data-tally-open="wop8Bx"
           // data-tally-layout="modal"

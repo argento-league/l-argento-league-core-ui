@@ -42,15 +42,17 @@ const LookingForTeamDescription = styled.p`
 type JoinDiscordButton = {
   color?: string;
   backgroundColor?: string;
+  hasBorder?: boolean;
 };
 
 export const JoinDiscordButton = ({
   color,
   backgroundColor,
+  hasBorder = false,
 }: JoinDiscordButton) => {
-  console.log(color, backgroundColor);
+  console.log(color, backgroundColor, hasBorder);
   return (
-    <DiscordButton backgroundColor={backgroundColor} to={"https://discord.com/invite/hYcW9P2keq"} target="_blank">
+    <DiscordButton color={color} backgroundColor={backgroundColor} hasBorder={hasBorder} to={"https://discord.com/invite/hYcW9P2keq"} target="_blank">
       <StyledSvg src={discordIcon} color={color || "#fabf4a"} />
       <span style={{ color: color || "#fabf4a" }}>Unirme a Discord</span>
     </DiscordButton>

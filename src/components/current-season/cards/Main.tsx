@@ -68,7 +68,7 @@ export const MainCard = () => {
           {`, tenga o no equipo aún.`}
         </MainDescription>
       </MainTextGroup>
-      <NewsButton to="https://tally.so/r/wop8Bx" target="_blank" backgroundColor="#FF611D">Inscribirme</NewsButton>
+      <NewsButton to="https://tally.so/r/wagJRv" target="_blank" backgroundColor="#FF611D">Inscribirme</NewsButton>
     </MainGridBoxContent>
   );
 };

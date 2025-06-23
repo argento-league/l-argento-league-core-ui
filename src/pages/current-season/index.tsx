@@ -256,57 +256,65 @@ const CurrentSeasonDetails = () => {
       {isMobile && selectedTab === TabsEnum.InfoGeneral && (
         <InfoGeneralMobile />
       )}
-      {selectedTab === TabsEnum.Equipos && (
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "48px",
-            padding: "64px",
-            color: "white",
-          }}
-        >
-          <h1
-            style={{
-              fontFamily: "Outfit, sans-serif",
-              fontWeight: 700,
-              fontSize: "24px",
-            }}
-          >
-            Inscripciones Abiertas
-          </h1>
-          <p
-            style={{
-              fontFamily: "Rethink Sans, sans-serif",
-              fontSize: "24px",
-              fontWeight: 500,
-              maxWidth: "50ch",
-              textAlign: "center",
-            }}
-          >
-            Inscribí a tu equipo para formar parte de la season 5. Unite a
-            nuestro Discord si estas buscando equipo o un player que te falta, y
-            enterarte de todo.
-          </p>
-          <div style={{ display: "flex", gap: "16px" }}>
-            <NewsButton
-              to="https://tally.so/r/mD9dPj"
-              target="_blank"
-              backgroundColor="#FF611D"
-            >
-              Inscribir equipo
-            </NewsButton>
-            <JoinDiscordButton
-              backgroundColor="black"
-              color="#FF611D"
-              hasBorder={true}
-            />
-          </div>
-        </div>
-      )}
+      {selectedTab === TabsEnum.Equipos && <TeamsTab />}
     </div>
+  );
+};
+
+const TeamTabContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 64px;
+  color: white;
+
+  @media (max-width: 720px) {
+    padding: 32px 16px;
+  }
+`;
+
+const TeamsTab = () => {
+  return (
+    <TeamTabContainer>
+      <h1
+        style={{
+          fontFamily: "Outfit, sans-serif",
+          fontWeight: 700,
+          fontSize: "24px",
+        }}
+      >
+        Inscripciones Abiertas
+      </h1>
+      <p
+        style={{
+          fontFamily: "Rethink Sans, sans-serif",
+          fontSize: "24px",
+          fontWeight: 500,
+          maxWidth: "50ch",
+          textAlign: "center",
+        }}
+      >
+        Inscribí a tu equipo para formar parte de la season 5. Unite a nuestro
+        Discord si estas buscando equipo o un player que te falta, y enterarte
+        de todo.
+      </p>
+      <div style={{ display: "flex", gap: "16px" }}>
+        <NewsButton
+          to="https://tally.so/r/mD9dPj"
+          target="_blank"
+          backgroundColor="#FF611D"
+        >
+          Inscribir equipo
+        </NewsButton>
+        <JoinDiscordButton
+          backgroundColor="black"
+          color="#FF611D"
+          hasBorder={true}
+        />
+      </div>
+    </TeamTabContainer>
   );
 };
 

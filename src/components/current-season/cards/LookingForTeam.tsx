@@ -50,7 +50,6 @@ export const JoinDiscordButton = ({
   backgroundColor,
   hasBorder = false,
 }: JoinDiscordButton) => {
-  console.log(color, backgroundColor, hasBorder);
   return (
     <DiscordButton color={color} backgroundColor={backgroundColor} hasBorder={hasBorder} to={"https://discord.com/invite/hYcW9P2keq"} target="_blank">
       <StyledSvg src={discordIcon} color={color || "#fabf4a"} />

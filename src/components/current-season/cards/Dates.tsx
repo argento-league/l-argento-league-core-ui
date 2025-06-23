@@ -47,19 +47,19 @@ export const DateCard = () => {
         >
           Pre-inscripción individual
         </DateText>
-        <DateText style={{ textAlign: "end" }}>hasta el 23/06</DateText>
+        <DateText style={{ textAlign: "end" }}>hasta el 01/07</DateText>
       </DatesRow>
       <DatesRow>
         <DateText>
           Inscripción por equipo
         </DateText>
-        <DateText style={{ textAlign: "end" }}>del 23/06 al 30/06</DateText>
+        <DateText style={{ textAlign: "end" }}>del 23/06 al 1/07</DateText>
       </DatesRow>
       <DatesRow>
         <DateText>
           Inicio Season 5
         </DateText>
-        <DateText style={{ textAlign: "end" }}>Lunes 07/07</DateText>
+        <DateText style={{ textAlign: "end" }}>Lunes 06/07</DateText>
       </DatesRow>
     </DatesBox>
   );

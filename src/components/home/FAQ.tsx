@@ -74,7 +74,7 @@ const Icon = styled.span`
 `;
 
 const AnswerPanel = styled.div<{ open: boolean }>`
-  max-height: ${({ open }) => (open ? '200px' : '0')};
+  max-height: ${({ open }) => (open ? '600px' : '0')};
   opacity: ${({ open }) => (open ? 1 : 0)};
   overflow: hidden;
   transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s 0.1s;

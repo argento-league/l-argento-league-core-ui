@@ -103,6 +103,8 @@ export const NewsButton = styled(Link)<NewsButtonProps>`
   font-weight: 700;
   border: none;
   cursor: pointer;
+  justify-content: center;
+  display: flex;
 `;
 
 export const DiscordButton = styled(NewsButton)`

@@ -3,33 +3,36 @@ import styled from "styled-components";
 
 const faqData = [
   {
-    question: "¿Si no soy argentino puedo inscribir mi equipo igual?",
+    question: "¿La liga es solo para Argentinos?",
     answer:
-       "La liga esta abierta a cualquier persona, el requisito mínimo es que el capitán sea hispanohablante. A tener en cuenta, en caso de que el equipo no pueda realizar la inscripción utilizando pesos argentinos, la misma se convertirá a dólar, según el tc a la fecha. También deben tener en cuenta que el horario acordado para las partidas será por predeterminado el de Argentina (GMT-3). Por último, se utilizara como predeterminado el servidor de Argentina, exceptuando que el mismo tenga problemas o que ambos capitanes den su expresa confirmación de cambiar el servidor.",
+      "No, la liga esta abierta a cualquier persona, el requisito mínimo es que el capitán sea hispanohablante. A tener en cuenta, en caso de que el equipo no pueda realizar la inscripción utilizando pesos argentinos, la misma se convertirá a dólar, según el tc a la fecha. También deben tener en cuenta que el horario acordado para las partidas será por predeterminado el de Argentina (GMT-3). Por último, se utilizara como predeterminado el servidor de Argentina, exceptuando que el mismo tenga problemas o que ambos capitanes den su expresa confirmación de cambiar el servidor.",
   },
   {
-    question: "¿Hasta cuando tengo tiempo para anotar mi equipo?",
-    answer: "Las inscripciones se cerraran el dia 13/12",
-  },
-  {
-    question: "¿Cuánto va a durar la liga?",
-    answer: "La edición actual se compondrá de 3 partes. 1ra parte, fase de grupos, la misma se realizara en 3 fechas con una duración de 14 días. 16/12 a 29/12. 2da parte, clasificatoria , la misma se realizara un enfrentamiento entre 16 equipos y su duración será de 7 días.  30/12 a 05/01. 3ra parte, evento principal, el mismo tendra un formato de doble eliminación (upper y lower bracket), comenzara el 06/01 y se pregramara los cruces.",
+    question: "¿Cuándo empieza y cuánto dura la liga?",
+    answer:
+      "La liga se compone de 2 partes, Fase de grupos y Evento Principal, que duran entre 2 y 3 meses. Las fechas se podrán ver dentro del apartado de la season vigente.",
   },
   {
     question: "¿Las fechas de los partidos ya vienen predeterminadas?",
-    answer: "Ya se realizo el sorteo de grupos y el sorteo de las fechas por lo que las mismas ya están establecidas.",
+    answer:
+      "No, el staff definirá el rango de fechas en los que se deban acordar los games para cada instancia. Dentro de ese rango, los capitanes de los equipos deberán arreglar entre ellos día y horario para el game, y notificar al staff en el grupo de capitanes.En caso de no acordar un día y horario entre capitanes, el staff definirá uno por defecto.",
   },
   {
     question: "¿Cómo me comunico con el staff?",
-    answer: "Se pueden comunicar con nosotros mediante el discord escribiendo al usuario (Cervecero) o (Messi Gordo). También nos pueden enviar MD a cualquiera de nuestras redes sociales (WSP - IG - FB).",
+    answer:
+      "Se pueden comunicar con nosotros mediante el discord de la liga o escribiendo al usuario (Cervecero) o (Messi Gordo). También nos pueden enviar MD a cualquiera de nuestras redes sociales (WSP - IG - FB).",
   },
 ];
 
 const FAQSection = styled.section`
-  font-family: 'Montserrat', sans-serif;
-  max-width: 900px;
-  margin: 3rem auto;
+  font-family: "Outfit", sans-serif;
+  margin: 0 auto;
   color: #fff;
+  max-width: 1000px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  padding-left: 32px;
+  padding-right: 32px;
 `;
 
 const FAQHeading = styled.h2`
@@ -39,8 +42,13 @@ const FAQHeading = styled.h2`
 `;
 
 const FAQContainer = styled.div`
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-width: 1px 0px 1px 0px;
+
+  border-style: solid;
+
+  border-color: var(--Grayscale-gray-3, #f0f0f0);
+
+  padding: 24px 16px;
 `;
 
 const QuestionButton = styled.button`
@@ -65,7 +73,7 @@ const Icon = styled.span`
 `;
 
 const AnswerPanel = styled.div<{ open: boolean }>`
-  max-height: ${({ open }) => (open ? '200px' : '0')};
+  max-height: ${({ open }) => (open ? "600px" : "0")};
   opacity: ${({ open }) => (open ? 1 : 0)};
   overflow: hidden;
   transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s 0.1s;
@@ -119,4 +127,4 @@ export const FAQ = () => {
       </FAQContainer>
     </FAQSection>
   );
-}; 
+};

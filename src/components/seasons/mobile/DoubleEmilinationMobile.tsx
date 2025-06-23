@@ -1,5 +1,4 @@
 import style from "styled-components";
-import { StyledSvg } from "../../../components/home/CurrentState";
 import arrowLeft from "../../../assets/common/icons/arrow-left.svg";
 import arrowRight from "../../../assets/common/icons/arrow-right.svg";
 import { useState } from "react";
@@ -17,6 +16,7 @@ import {
 import { LOWER_BRACKET_ROUND_1 } from "../../../data/brackets/doubleEliminationMatches";
 import { Match } from "./match";
 import { MatchType } from "react-tournament-brackets";
+import { StyledSvg } from "../../common/StyledSVG";
 
 const MainContainer = style.div`
     display: flex;

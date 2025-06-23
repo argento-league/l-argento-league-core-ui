@@ -14,7 +14,7 @@ const SeasonWinnerContainer = styled.section`
 
   @media (max-width: 1024px) {
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
   }
 `;
 
@@ -23,6 +23,7 @@ const WinnerInfoContainer = styled.div`
   gap: 16px;
   @media (max-width: 1024px) {
     flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -34,17 +35,20 @@ const WinnerTextContainer = styled.div`
 
   @media (max-width: 1024px) {
     flex-direction: column;
+    align-items: center;
   }
 `;
 
 const WinnerTeam = styled.h2`
   font-size: 18px;
   margin: 0;
+  font-family: "Rethink Sans", sans-serif;
 `;
 
 const WinnerSeason = styled.p`
   font-size: 16px;
   margin: 0;
+  font-family: "Rethink Sans", sans-serif;
 `;
 
 const ViewMore = styled.a`
@@ -52,13 +56,12 @@ const ViewMore = styled.a`
   color: #fabf4a;
   text-decoration: none;
   cursor: pointer;
+  padding: 8px 16px;
+  font-family: "Rethink Sans", sans-serif;
 `;
 
 const SeasonWinnerImage = styled.img`
-  height: 64px;
-  @media (max-width: 1024px) {
-    height: 120px;
-  }
+  width: 84px;
 `;
 
 export const SeasonWinner = () => {

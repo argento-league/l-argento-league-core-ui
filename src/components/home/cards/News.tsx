@@ -153,7 +153,7 @@ export const NewsCard = () => {
           <span>Unirme a Discord</span>
         </DiscordButton>
         <RegisterButton
-          to="https://tally.so/r/wagJRv"
+          to="https://tally.so/r/mD9dPj"
           target="_blank"
           // data-tally-open="wop8Bx"
           // data-tally-layout="modal"

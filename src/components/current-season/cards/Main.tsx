@@ -77,7 +77,7 @@ export const MainCard = () => {
         </MainSubDescription>
       </MainTextGroup>
       <NewsButton
-        to="https://tally.so/r/wagJRv"
+        to="https://tally.so/r/mD9dPj"
         target="_blank"
         backgroundColor="#FF611D"
       >

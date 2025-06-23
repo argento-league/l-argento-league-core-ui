@@ -16,7 +16,7 @@ import { NewsButton } from "../../components/home/cards/News";
 
 export const ContentContainer = styled.div`
   padding: 24px;
-  border: 1px solid #FF611D;
+  border: 1px solid #ff611d;
   border-radius: 16px;
   font-family: Rethink Sans, sans-serif;
   gap: 10px;
@@ -174,6 +174,7 @@ export const CurrentSeasonPage = () => {
 
 type TabsProps = {
   selected?: boolean;
+  disabled?: boolean;
 };
 
 const MobileTabsWrapper = styled(TabsWrapper)`
@@ -181,6 +182,8 @@ const MobileTabsWrapper = styled(TabsWrapper)`
 `;
 
 const Tabs = styled.div<TabsProps>`
+  pointer-events: ${({ disabled }) => (disabled ? "none" : "auto")};
+  opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
   display: flex;
   fontsize: 14px;
   justify-content: center;
@@ -221,6 +224,10 @@ const CurrentSeasonDetails = () => {
                 key={tab}
                 selected={selectedTab === tab}
                 onClick={() => setSelectedTab(tab as TabsEnum)}
+                disabled={
+                  tab === TabsEnum.FaseDeGrupos ||
+                  tab === TabsEnum.EventoPrincipal
+                }
               >
                 {tab}
               </MobileTabs>
@@ -233,6 +240,10 @@ const CurrentSeasonDetails = () => {
                 key={tab}
                 selected={selectedTab === tab}
                 onClick={() => setSelectedTab(tab as TabsEnum)}
+                disabled={
+                  tab === TabsEnum.FaseDeGrupos ||
+                  tab === TabsEnum.EventoPrincipal
+                }
               >
                 {tab}
               </Tabs>

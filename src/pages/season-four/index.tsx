@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import GroupStandings from "./GroupStandings";
 import DoubleElimination from "./DoubleEliminationBracket";
+import { Container } from "../../components/common/Container";
 
 const SeasonFourContainer = styled.div`
   display: flex;
@@ -66,26 +67,28 @@ export const SeasonFour = () => {
   };
 
   return (
-    <SeasonFourContainer id="season-four">
-      <SeasonFourBanner>
-        <Title>Season 4</Title>
-      </SeasonFourBanner>
-      <TabContainer>
-        <TabItem
-          active={activeTab === SEASON_FOUR_TABS.FASE}
-          onClick={() => handleTabClick(SEASON_FOUR_TABS.FASE)}
-        >
-          Fase de grupos
-        </TabItem>
-        <TabItem
-          active={activeTab === SEASON_FOUR_TABS.EVENTO}
-          onClick={() => setActiveTab(SEASON_FOUR_TABS.EVENTO)}
-        >
-          Evento principal
-        </TabItem>
-      </TabContainer>
-      {activeTab === SEASON_FOUR_TABS.FASE && <GroupStandings />}
-      {activeTab === SEASON_FOUR_TABS.EVENTO && <DoubleElimination />}
-    </SeasonFourContainer>
+    <Container>
+      <SeasonFourContainer id="season-four">
+        <SeasonFourBanner>
+          <Title>Season 4</Title>
+        </SeasonFourBanner>
+        <TabContainer>
+          <TabItem
+            active={activeTab === SEASON_FOUR_TABS.FASE}
+            onClick={() => handleTabClick(SEASON_FOUR_TABS.FASE)}
+          >
+            Fase de grupos
+          </TabItem>
+          <TabItem
+            active={activeTab === SEASON_FOUR_TABS.EVENTO}
+            onClick={() => setActiveTab(SEASON_FOUR_TABS.EVENTO)}
+          >
+            Evento principal
+          </TabItem>
+        </TabContainer>
+        {activeTab === SEASON_FOUR_TABS.FASE && <GroupStandings />}
+        {activeTab === SEASON_FOUR_TABS.EVENTO && <DoubleElimination />}
+      </SeasonFourContainer>
+    </Container>
   );
 };

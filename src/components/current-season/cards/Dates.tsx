@@ -1,11 +1,11 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const DatesBox = styled.div`
   padding: 24px 32px;
   gap: 16px;
   display: flex;
   flex-direction: column;
-  background-color: #000000;
+  background-color: #101010;
   height: 100%;
   border-radius: 12px;
   box-sizing: border-box;
@@ -17,7 +17,7 @@ const DatesBox = styled.div`
 
 const DatesTitle = styled.div`
   padding-bottom: 8px;
-  border-bottom: 1px solid #947A45;
+  border-bottom: 1px solid #ff611d;
 `;
 
 const DatesRow = styled.div`
@@ -31,21 +31,35 @@ const DatesRow = styled.div`
   font-size: 16px;
 `;
 
+const DateText = styled.p`
+  font-family: Outfit, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  max-width: 15ch;
+`
+
 export const DateCard = () => {
   return (
     <DatesBox>
       <DatesTitle>Fechas</DatesTitle>
       <DatesRow>
-        <p>Pre-inscripción individual</p>
-        <p>hasta el 20/06</p>
+        <DateText
+        >
+          Pre-inscripción individual
+        </DateText>
+        <DateText style={{ textAlign: "end" }}>hasta el 23/06</DateText>
       </DatesRow>
       <DatesRow>
-        <p>Inscripción por equipo</p>
-        <p>fecha estimada 20/06</p>
+        <DateText>
+          Inscripción por equipo
+        </DateText>
+        <DateText style={{ textAlign: "end" }}>fecha estimada 23/06</DateText>
       </DatesRow>
       <DatesRow>
-        <p>Inicio Season 5</p>
-        <p>TBD</p>
+        <DateText>
+          Inicio Season 5
+        </DateText>
+        <DateText style={{ textAlign: "end" }}>TBD</DateText>
       </DatesRow>
     </DatesBox>
   );

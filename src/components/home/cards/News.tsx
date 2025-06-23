@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { StyledSvg } from "../../common/StyledSVG";
 import discordIcon from "../../../assets/social-media-icons/discord.svg";
+import { Link } from "react-router-dom";
+// import { useEffect } from "react";
 
 const NewsCardContainer = styled.section`
   padding-top: 32px;
@@ -85,7 +87,16 @@ const NewsButtonsContainer = styled.div`
   }
 `;
 
-const NewsButton = styled.button`
+type NewsButtonProps = {
+  backgroundColor?: string;
+  color?: string;
+};
+
+export const NewsButton = styled(Link)<NewsButtonProps>`
+  font-family: "Outfit", sans-serif;
+  text-decoration: none;
+  color: ${(props) => props.color || "#000000"};
+  background-color: ${(props) => props.backgroundColor || "#000000"};
   padding: 8px 16px;
   border-radius: 8px;
   font-size: 18px;
@@ -95,7 +106,6 @@ const NewsButton = styled.button`
 `;
 
 export const DiscordButton = styled(NewsButton)`
-  background-color: black;
   color: #fabf4a;
   display: flex;
   align-items: center;
@@ -109,6 +119,12 @@ export const RegisterButton = styled(NewsButton)`
 `;
 
 export const NewsCard = () => {
+  // useEffect(() => {
+  //   // Re-initialize Tally modal (important for SPAs)
+  //   //@ts-ignore
+  //   if (window.Tally) window.Tally.loadEmbeds();
+  // }, []);
+
   return (
     <NewsCardContainer>
       <NewsTitleContainer id="container-title">
@@ -116,15 +132,31 @@ export const NewsCard = () => {
         <NewsSeason>SEASON 5</NewsSeason>
       </NewsTitleContainer>
       <NewsDescriptionContainer id="container-description">
-        <NewsDescription>Pre-inscripciones individuales abiertas.</NewsDescription>
+        <NewsDescription>
+          Pre-inscripciones individuales abiertas.
+        </NewsDescription>
         <NewsSubDescription>
           Unite a nuestro Discord para anotarte como jugador libre, o enterarte
           cuando comiencen las inscripciones por equipo.
         </NewsSubDescription>
       </NewsDescriptionContainer>
       <NewsButtonsContainer id="container-buttons">
-        <DiscordButton> <StyledSvg src={discordIcon} color="#fabf4a"></StyledSvg> <span>Unirme a Discord</span></DiscordButton>
-        <RegisterButton>Inscribirme</RegisterButton>
+        <DiscordButton to="https://discord.gg/hYcW9P2keq" target="_blank">
+          {" "}
+          <StyledSvg src={discordIcon} color="#fabf4a"></StyledSvg>{" "}
+          <span>Unirme a Discord</span>
+        </DiscordButton>
+        <RegisterButton
+          to="https://tally.so/r/wop8Bx"
+          target="_blank"
+          // data-tally-open="wop8Bx"
+          // data-tally-layout="modal"
+          // data-tally-width="600"
+          // data-tally-height="600"
+          // className="tally-button"
+        >
+          Inscribirme
+        </RegisterButton>
       </NewsButtonsContainer>
     </NewsCardContainer>
   );

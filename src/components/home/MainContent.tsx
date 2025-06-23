@@ -51,7 +51,7 @@ interface BoxProps {
 }
 
 const GridBox = styled.div<BoxProps>`
-  background-color: ${(props) => props.backgroundColor || "black"};
+  background-color: ${(props) => props.backgroundColor || "inherit"};
   color: white;
   border-radius: 8px;
 

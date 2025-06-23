@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { RegisterButton } from "../../home/cards/News";
+import { NewsButton } from "../../home/cards/News";
 
 const MainGridBoxContent = styled.div`
   padding: 16px 0px 32px 0px;
@@ -12,14 +12,22 @@ const MainGridBoxContent = styled.div`
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 16px 32px;
+  }
 `;
 
 const SeasonTitle = styled.p`
-  color: #fabf4a;
+  color: #FF611D;
   font-family: Outfit, sans-serif;
   font-weight: 700;
   font-size: 36px;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
 `;
 
 const MainTextGroup = styled.div`
@@ -33,6 +41,10 @@ const MainHeading = styled.h1`
   font-weight: 600;
   white-space: pre-line;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
 `;
 
 const MainDescription = styled.p`
@@ -41,6 +53,7 @@ const MainDescription = styled.p`
   font-weight: 400;
   text-align: center;
   white-space: pre-line;
+  max-width: 40ch;
 `;
 
 export const MainCard = () => {
@@ -50,12 +63,12 @@ export const MainCard = () => {
       <MainTextGroup>
         <MainHeading>{"Pre-inscripciones\n abiertas"}</MainHeading>
         <MainDescription>
-          {
-            "Preinscripción individual para todo aquel que esté \n interesado en participar de la liga, tenga o no \n equipo aún."
-          }
+          {`Preinscripción individual `}
+          <strong>{"para todo aquel que esté interesado en participar de la liga "}</strong>
+          {`, tenga o no equipo aún.`}
         </MainDescription>
       </MainTextGroup>
-      <RegisterButton>Inscribirme</RegisterButton>
+      <NewsButton to="https://tally.so/r/wop8Bx" target="_blank" backgroundColor="#FF611D">Inscribirme</NewsButton>
     </MainGridBoxContent>
   );
 };

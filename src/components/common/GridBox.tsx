@@ -11,9 +11,9 @@ export interface BoxProps {
 }
 
 export const GridBox = styled.div<BoxProps>`
-  background-color: ${(props) => props.backgroundColor || "black"};
-  color: white;
+  background-color: ${(props) => props.backgroundColor || "inherit"};
   border-radius: 8px;
+  color: white;
 
   /* Desktop */
   grid-column: ${(props) => props.col || "1 / 6"};

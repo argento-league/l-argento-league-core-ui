@@ -27,8 +27,13 @@ const faqData = [
 
 const FAQSection = styled.section`
   font-family: 'Outfit', sans-serif;
-  margin: 3rem auto;
+  margin: 0 auto;
   color: #fff;
+  max-width: 1000px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  padding-left: 32px;
+  padding-right: 32px;
 `;
 
 const FAQHeading = styled.h2`
@@ -38,8 +43,13 @@ const FAQHeading = styled.h2`
 `;
 
 const FAQContainer = styled.div`
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-width: 1px 0px 1px 0px;
+
+  border-style: solid;
+
+  border-color: var(--Grayscale-gray-3, #F0F0F0);
+
+  padding: 24px 16px;
 `;
 
 const QuestionButton = styled.button`

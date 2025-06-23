@@ -7,6 +7,18 @@ import { DateCard } from "../../components/current-season/cards/Dates";
 import { MainCard } from "../../components/current-season/cards/Main";
 import { LookingForTeamCard } from "../../components/current-season/cards/LookingForTeam";
 import { ReactNode, useState } from "react";
+import { useIsMobile } from "../../hooks/useIsMobile";
+import { InfoGeneralMobile } from "./mobile/GeneralInfo";
+
+export const ContentContainer = styled.div`
+  padding: 24px;
+  border: 1px solid #fabf4a;
+  border-radius: 16px;
+  font-family: Rethink Sans, sans-serif;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+`;
 
 const MainContentGroup = styled.div`
   display: grid;
@@ -22,11 +34,13 @@ const MainContentGroup = styled.div`
 `;
 
 const TabsContainer = styled.div`
+  background-color: #090909;
   padding-top: 16px;
   box-sizing: border-box;
   color: white;
   font-family: Outfit, sans-serif;
   display: flex;
+  overflow-x: auto;
 `;
 
 const TabsWrapper = styled.div`
@@ -52,50 +66,22 @@ const MenuContainer = styled.div`
   width: 100%;
 `;
 
-const ContentContainer = styled.div`
-  padding: 24px;
-  border: 1px solid #fabf4a;
-  border-radius: 16px;
-  font-family: Rethink Sans, sans-serif;
-  gap: 10px;
-  display: flex;
-  flex-direction: column;
-`;
-
-const ContentTitle = styled.p`
+export const ContentTitle = styled.p`
   font-size: 18px;
   font-weight: 600;
-`;
-
-const ContentText = styled.p`
-  font-size: 16px;
-  font-weight: 400;
-`;
-
-const ContentListItem = styled.li`
-  font-size: 16px;
-  font-weight: 400;
-`;
-
-const NotImplementedContainer = styled.div`
-  min-height: 300px;
-  padding: 64px;
   color: white;
-  font-family: Outfit, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 `;
 
-const NotImplementedTitle = styled.h1`
-  font-size: 36px;
-  font-weight: 600;
-`;
-
-const NotImplementedText = styled.p`
-  font-size: 18px;
+export const ContentText = styled.p`
+  font-size: 16px;
   font-weight: 400;
+  color: white;
+`;
+
+export const ContentListItem = styled.li`
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
 `;
 
 type GridElementProps = {
@@ -117,17 +103,6 @@ const bentoElements: GridElementProps[] = [
     component: <MainCard />,
   },
   {
-    card: "DateCard",
-    gridProps: {
-      col: "13 / 21",
-      row: "1 / 3",
-      colTablet: "1 / 13",
-      rowTablet: "3 / 5",
-      backgroundColor: "inherit",
-    },
-    component: <DateCard />,
-  },
-  {
     card: "LookingForTeamCard",
     gridProps: {
       col: "13 / 21",
@@ -147,7 +122,7 @@ const bentoElements: GridElementProps[] = [
       rowTablet: "7 / 8",
       backgroundColor: "inherit",
     },
-    component: <SocialCard />,
+    component: <SocialCard iconColor="#FF611D" />,
   },
   {
     card: "DateCard",
@@ -163,24 +138,33 @@ const bentoElements: GridElementProps[] = [
 ];
 
 export const CurrentSeasonPage = () => {
+  const isMobile = useIsMobile(720);
+  const backgroundImage = isMobile
+    ? "/mobile-season-5-background.png"
+    : "/current-season-background.jpg";
+
   return (
-    <MainRootContainer
-      backgroundImage="/current-season-background.jpg"
-      backgroundBlendMode="lighten"
-      background="#000000"
-      backgroundPosition="center"
-    >
+    <div>
+      <MainRootContainer
+        backgroundImage={backgroundImage}
+        backgroundBlendMode="lighten"
+        background="#000000"
+        backgroundPosition="center"
+      >
+        <Container>
+          <MainContentGroup>
+            {bentoElements.map((element) => (
+              <GridBox key={element.card} {...element.gridProps}>
+                {element.component}
+              </GridBox>
+            ))}
+          </MainContentGroup>
+        </Container>
+      </MainRootContainer>
       <Container>
-        <MainContentGroup>
-          {bentoElements.map((element) => (
-            <GridBox key={element.card} {...element.gridProps}>
-              {element.component}
-            </GridBox>
-          ))}
-        </MainContentGroup>
         <CurrentSeasonDetails />
       </Container>
-    </MainRootContainer>
+    </div>
   );
 };
 
@@ -188,17 +172,26 @@ type TabsProps = {
   selected?: boolean;
 };
 
+const MobileTabsWrapper = styled(TabsWrapper)`
+  padding: 0px;
+`;
+
 const Tabs = styled.div<TabsProps>`
   display: flex;
+  fontsize: 14px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  padding: 16px 32px;
+  padding: 16px;
   width: 100%;
   text-align: center;
   font-family: "Outfit", sans-serif;
   font-weight: ${(props) => (props.selected ? "600" : "300")};
-  ${(props) => (props.selected ? "border-bottom: 1px solid #fabf4a;" : "")};
+  ${(props) => (props.selected ? "border-bottom: 1px solid #FF611D;" : "")};
+`;
+
+const MobileTabs = styled(Tabs)`
+  padding: 16px;
 `;
 
 enum TabsEnum {
@@ -212,42 +205,75 @@ const CurrentSeasonDetails = () => {
   const [selectedTab, setSelectedTab] = useState<TabsEnum>(
     TabsEnum.InfoGeneral
   );
+  const isMobile = useIsMobile(720);
+
   return (
     <div>
       <TabsContainer>
-        <TabsWrapper>
-          {Object.values(TabsEnum).map((tab) => (
-            <Tabs
-              key={tab}
-              selected={selectedTab === tab}
-              onClick={() => setSelectedTab(tab as TabsEnum)}
-            >
-              {tab}
-            </Tabs>
-          ))}
-        </TabsWrapper>
+        {isMobile ? (
+          <MobileTabsWrapper>
+            {Object.values(TabsEnum).map((tab) => (
+              <MobileTabs
+                key={tab}
+                selected={selectedTab === tab}
+                onClick={() => setSelectedTab(tab as TabsEnum)}
+              >
+                {tab}
+              </MobileTabs>
+            ))}
+          </MobileTabsWrapper>
+        ) : (
+          <TabsWrapper>
+            {Object.values(TabsEnum).map((tab) => (
+              <Tabs
+                key={tab}
+                selected={selectedTab === tab}
+                onClick={() => setSelectedTab(tab as TabsEnum)}
+              >
+                {tab}
+              </Tabs>
+            ))}
+          </TabsWrapper>
+        )}
       </TabsContainer>
-      {selectedTab === TabsEnum.InfoGeneral ? (
-        <InfoGeneral />
-      ) : (
-        <NotImplemented />
-      )}
+
+      {!isMobile ? <InfoGeneral /> : <InfoGeneralMobile />}
     </div>
   );
 };
 
+export const AnswerText = styled.div<{ open: boolean }>`
+  opacity: ${({ open }) => (open ? 1 : 0)};
+  max-height: ${({ open }) => (open ? "800px" : "0px")};
+  overflow: hidden;
+  font-size: 16px;
+  background-color: black;
+`;
+
 type MenuItemContainerProps = {
   isSelected: boolean;
+  hasBorder?: boolean;
 };
 
 const MenuItemContainer = styled.div<MenuItemContainerProps>`
   padding: 16px;
-  background-color: ${(props) => (props.isSelected ? "#FABF4A33" : "inherit")};
-  border-radius: 8px;
+  background-color: ${(props) => (props.isSelected ? "#FABF4A33" : "black")};
+  border: ${(props) => (props.hasBorder ? "1px solid #FF611D" : "none")};
+  color: "white";
+  border-radius: 16px;
   cursor: pointer;
   font-family: Outfit, sans-serif;
   font-size: 18px;
   font-weight: 600;
+`;
+
+export const MobileMenuItemContainer = styled(
+  MenuItemContainer
+)<MenuItemContainerProps>`
+  border-radius: ${(props) =>
+    props.isSelected ? "16px 16px 0px 0px" : "16px"};
+  background-color: ${(props) => (props.isSelected ? "#FF611D" : "black")};
+  color: ${(props) => (props.isSelected ? "black" : "#FF611D")};
 `;
 
 const InfoGeneral = () => {
@@ -283,7 +309,7 @@ const InfoGeneral = () => {
           <span>Fechas de juego</span>
         </MenuItemContainer>
       </MenuContainer>
-      <div style={{width: "100%"}}>
+      <div style={{ width: "100%" }}>
         <ContentContainer>
           <ContentTitle>{information[selectedSubject].title}</ContentTitle>
           {information[selectedSubject].description?.length > 1 ? (
@@ -344,17 +370,4 @@ const information: Record<INFORMATION_ENUM, Information> = {
       "En caso de no acordar un día y horario entre capitanes, el staff definirá uno por defecto.",
     ],
   },
-};
-
-const NotImplemented = () => {
-  return (
-    <NotImplementedContainer>
-      <NotImplementedTitle>
-        Esta sección aún no está implementada
-      </NotImplementedTitle>
-      <NotImplementedText>
-        Estamos trabajando para traerte la mejor experiencia posible.
-      </NotImplementedText>
-    </NotImplementedContainer>
-  );
 };

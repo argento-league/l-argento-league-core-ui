@@ -6,10 +6,14 @@ import youtube from "../../../assets/social-media-icons/youtube.svg";
 import { Link } from "react-router-dom";
 import { StyledSvg } from "../../common/StyledSVG";
 
-const SocialCardContainer = styled.div`
+const SocialCardContainer = styled.div` 
   height: 100%;
-  background-color: #101010;
+  background-color: #000000;
   border-radius: 16px;
+
+  @media (max-width: 768px) {
+    background-color: #101010;
+  }
 `;
 
 const ContentContainer = styled.div`
@@ -44,11 +48,15 @@ const IconLogoContainer = styled.div`
   gap: 16px;
 `;
 
-const IconColor = "#fabf4a";
+const defaultIconColor = "#fabf4a";
 
-export const SocialCard = () => {
+type SocialCardProps = {
+  iconColor?: string;
+};
+
+export const SocialCard = ({ iconColor }: SocialCardProps) => {
   return (
-    <SocialCardContainer>
+    <SocialCardContainer >
       <ContentContainer>
         <IconContainer>
           <IconText>Enterate de todo</IconText>
@@ -56,7 +64,7 @@ export const SocialCard = () => {
             <Link to="https://discord.gg/hYcW9P2keq" target="_blank">
               <StyledSvg
                 src={discord}
-                color={IconColor}
+                color={iconColor || defaultIconColor}
                 width="32px"
                 height="32px"
               />
@@ -64,23 +72,29 @@ export const SocialCard = () => {
             <Link to="https://www.youtube.com/@Largentoleague" target="_blank">
               <StyledSvg
                 src={youtube}
-                color={IconColor}
+                color={iconColor || defaultIconColor}
                 width="32px"
                 height="32px"
               />
             </Link>
-            <Link to="https://www.facebook.com/profile.php?id=61565646000198" target="_blank">
+            <Link
+              to="https://www.facebook.com/profile.php?id=61565646000198"
+              target="_blank"
+            >
               <StyledSvg
                 src={facebook}
-                color={IconColor}
+                color={iconColor || defaultIconColor}
                 width="32px"
                 height="32px"
               />
             </Link>
-            <Link to="https://www.instagram.com/largentoleague/" target="_blank">
+            <Link
+              to="https://www.instagram.com/largentoleague/"
+              target="_blank"
+            >
               <StyledSvg
                 src={instagram}
-                color={IconColor}
+                color={iconColor || defaultIconColor}
                 width="32px"
                 height="32px"
               />

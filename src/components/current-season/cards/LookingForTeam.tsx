@@ -2,15 +2,21 @@ import styled from "styled-components";
 import { DiscordButton } from "../../home/cards/News";
 import { StyledSvg } from "../../common/StyledSVG";
 import discordIcon from "../../../assets/social-media-icons/discord.svg";
+import { useIsMobile } from "../../../hooks/useIsMobile";
 
-const LookingForTeamBox = styled.div`
+type LookingForTeamBoxProps = {
+  color?: string;
+  backgroundColor?: string;
+};
+
+const LookingForTeamBox = styled.div<LookingForTeamBoxProps>`
   padding: 32px;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  border: 1px solid #fabf4a;
+  border: 1px solid ${(props) => props.color || "#ff611d"};
+  background-color: ${(props) => props.backgroundColor || "#00000033"};
   border-radius: 12px;
-  background-color: #00000033;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -33,7 +39,26 @@ const LookingForTeamDescription = styled.p`
   text-align: center;
 `;
 
+type JoinDiscordButton = {
+  color?: string;
+  backgroundColor?: string;
+};
+
+export const JoinDiscordButton = ({
+  color,
+  backgroundColor,
+}: JoinDiscordButton) => {
+  console.log(color, backgroundColor);
+  return (
+    <DiscordButton backgroundColor={backgroundColor} to={"https://discord.com/invite/hYcW9P2keq"} target="_blank">
+      <StyledSvg src={discordIcon} color={color || "#fabf4a"} />
+      <span style={{ color: color || "#fabf4a" }}>Unirme a Discord</span>
+    </DiscordButton>
+  );
+};
+
 export const LookingForTeamCard = () => {
+  const isMobile = useIsMobile(720);
   return (
     <LookingForTeamBox>
       <div>
@@ -42,11 +67,10 @@ export const LookingForTeamCard = () => {
           Unite a nuestra comunidad para completar o crear tu equipo
         </LookingForTeamDescription>
       </div>
-      <DiscordButton>
-        {" "}
-        <StyledSvg src={discordIcon} color="#fabf4a"></StyledSvg>{" "}
-        <span>Unirme a Discord</span>
-      </DiscordButton>
+      <JoinDiscordButton
+        color={isMobile ? "black" : "#FF611D"}
+        backgroundColor={isMobile ? "#FF611D" : "black"}
+      />
     </LookingForTeamBox>
   );
 };

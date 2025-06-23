@@ -9,8 +9,8 @@ import burgerIcon from "../../assets/common/icons/bars-3.svg";
 const NAV_LINKS = [
   { to: "/", label: "Inicio" },
   { to: "/current-season", label: "Season 5" },
-  { to: "/ligas-anteriores", label: "Ligas Anteriores" },
-  { to: "/staff", label: "Staff" },
+  // { to: "/ligas-anteriores", label: "Ligas Anteriores" },
+  // { to: "/staff", label: "Staff" },
 ];
 
 export const NavBar = () => {

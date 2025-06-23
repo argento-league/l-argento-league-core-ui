@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { StyledSvg } from "../../common/StyledSVG";
+import argentoLogo from "../../../assets/l-argento-main.svg";
 
 const MainCardContainer = styled.div`
   gap: 16px;
@@ -43,10 +45,11 @@ export const MainCard = () => {
     <CardContainer>
       <MainCardContainer>
         <img
-          src="/images/argento-logo.png"
+          src="/images/l-argento-main.png"
           alt="Argento Logo"
           width={"200px"}
         />
+        
         <MainCardTitle>
           {"Liga Argentina de Dota 2 \n para todo LATAM."}
         </MainCardTitle>

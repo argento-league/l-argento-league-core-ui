@@ -19,7 +19,7 @@ const MainGridBoxContent = styled.div`
 `;
 
 const SeasonTitle = styled.p`
-  color: #FF611D;
+  color: #ff611d;
   font-family: Outfit, sans-serif;
   font-weight: 700;
   font-size: 36px;
@@ -48,12 +48,19 @@ const MainHeading = styled.h1`
 `;
 
 const MainDescription = styled.p`
-  font-size: 16px;
+  font-size: 20px;
   font-family: Rethink Sans, sans-serif;
   font-weight: 400;
   text-align: center;
   white-space: pre-line;
-  max-width: 40ch;
+  max-width: 30ch;
+`;
+
+const MainSubDescription = styled.p`
+  font-size: 16px;
+  font-family: Rethink Sans, sans-serif;
+  font-weight: 500;
+  text-align: center;
 `;
 
 export const MainCard = () => {
@@ -61,14 +68,21 @@ export const MainCard = () => {
     <MainGridBoxContent>
       <SeasonTitle> Season 5 </SeasonTitle>
       <MainTextGroup>
-        <MainHeading>{"Pre-inscripciones\n abiertas"}</MainHeading>
+        <MainHeading>{"Inscripciones abiertas"}</MainHeading>
         <MainDescription>
-          {`Preinscripción individual `}
-          <strong>{"para todo aquel que esté interesado en participar de la liga "}</strong>
-          {`, tenga o no equipo aún.`}
+          {"Inscribí a tu equipo para formar parte de la Season 5."}
         </MainDescription>
+        <MainSubDescription>
+          {"5 players + 3 standings permitidos por equipo"}
+        </MainSubDescription>
       </MainTextGroup>
-      <NewsButton to="https://tally.so/r/wagJRv" target="_blank" backgroundColor="#FF611D">Inscribirme</NewsButton>
+      <NewsButton
+        to="https://tally.so/r/wagJRv"
+        target="_blank"
+        backgroundColor="#FF611D"
+      >
+        Inscribirme
+      </NewsButton>
     </MainGridBoxContent>
   );
 };

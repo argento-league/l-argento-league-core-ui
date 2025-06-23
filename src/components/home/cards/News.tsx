@@ -140,11 +140,10 @@ export const NewsCard = () => {
       </NewsTitleContainer>
       <NewsDescriptionContainer id="container-description">
         <NewsDescription>
-          Pre-inscripciones individuales abiertas.
+          Inscripciones de equipos abiertas.
         </NewsDescription>
         <NewsSubDescription>
-          Unite a nuestro Discord para anotarte como jugador libre, o enterarte
-          cuando comiencen las inscripciones por equipo.
+          Incribí a tu equipo para participar. Si aún estas buscando equipo o algun player, unite a nuestro Discord para encontrarlo!
         </NewsSubDescription>
       </NewsDescriptionContainer>
       <NewsButtonsContainer id="container-buttons">

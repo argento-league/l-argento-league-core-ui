@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { StyledSvg } from "../../common/StyledSVG";
-import argentoLogo from "../../../assets/l-argento-main.svg";
 
 const MainCardContainer = styled.div`
   gap: 16px;

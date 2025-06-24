@@ -79,7 +79,7 @@ export const MainCard = () => {
       <NewsButton
         to="https://tally.so/r/mD9dPj"
         target="_blank"
-        backgroundColor="#FF611D"
+        $backgroundColor={"#FF611D"}
       >
         Inscribirme
       </NewsButton>

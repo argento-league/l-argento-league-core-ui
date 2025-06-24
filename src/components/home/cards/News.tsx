@@ -88,15 +88,15 @@ const NewsButtonsContainer = styled.div`
 `;
 
 type NewsButtonProps = {
-  backgroundColor?: string;
-  color?: string;
+  $backgroundColor?: string;
+  $color?: string;
 };
 
 export const NewsButton = styled(Link)<NewsButtonProps>`
   font-family: "Outfit", sans-serif;
   text-decoration: none;
-  color: ${(props) => props.color || "#000000"};
-  background-color: ${(props) => props.backgroundColor || "#000000"};
+  color: ${(props) => props.$color || "#000000"};
+  background-color: ${(props) => props.$backgroundColor || "#000000"};
   padding: 8px 16px;
   border-radius: 8px;
   font-size: 18px;
@@ -109,10 +109,10 @@ export const NewsButton = styled(Link)<NewsButtonProps>`
 `;
 
 type DiscordButtonProps = NewsButtonProps & {
-  hasBorder?: boolean;
+  $hasBorder?: boolean;
 }
 export const DiscordButton = styled(NewsButton)<DiscordButtonProps>`
-  border: ${(props) => (props.hasBorder ? `1px solid ${props.color}` : "none")};
+  border: ${(props) => (props.$hasBorder ? `1px solid ${props.$color}` : "none")};
   color: #fabf4a;
   display: flex;
   align-items: center;

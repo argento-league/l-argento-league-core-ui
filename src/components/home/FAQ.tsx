@@ -9,7 +9,8 @@ const faqData = [
   },
   {
     question: "¿Cuándo empieza y cuánto dura la liga?",
-    answer: "La liga se compone de 3 partes, Fase de grupos, Clasificatoria y Evento Principal. Las fechas se podrán ver dentro del apartado de la season vigente.",
+    answer:
+      "La liga se compone de 2 partes, Fase de grupos y Evento Principal, que duran entre 2 y 3 meses. Las fechas se podrán ver dentro del apartado de la season vigente.",
   },
   {
     question: "¿Las fechas de los partidos ya vienen predeterminadas?",

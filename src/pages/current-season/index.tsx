@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-import { CurrentSeasonGrid } from "../../components/current-season/CurrentSeasonGrid";
-import { TabContent } from "../../components/current-season/tab-content";
-import { TabList } from "../../components/current-season/tab";
-import { TabsEnum } from "../../constants/current-season/information";
+import { CurrentSeasonGrid } from "@components/current-season/CurrentSeasonGrid";
+import { TabContent } from "@components/current-season/tab-content";
+import { TabList } from "@components/current-season/tab";
+import { TabsEnum } from "@constants/current-season/information";
 
 export const CurrentSeasonPage = () => {
   return (

@@ -1,12 +1,44 @@
 import { useState } from "react";
-import {
-  AnswerText,
-  ContentListItem,
-  ContentText,
-  ContentTitle,
-  MobileMenuItemContainer,
-} from "..";
 import styled from "styled-components";
+import {
+  INFORMATION,
+  INFORMATION_ENUM,
+} from "../../../../constants/current-season/information";
+import { ContentListItem, ContentText, ContentTitle } from "../Info";
+
+type MenuItemContainerProps = {
+  isSelected: boolean;
+  hasBorder?: boolean;
+};
+
+const AnswerText = styled.div<{ open: boolean }>`
+  opacity: ${({ open }) => (open ? 1 : 0)};
+  max-height: ${({ open }) => (open ? "800px" : "0px")};
+  overflow: hidden;
+  font-size: 16px;
+  background-color: black;
+`;
+
+const MenuItemContainer = styled.div<MenuItemContainerProps>`
+  padding: 16px;
+  background-color: ${(props) => (props.isSelected ? "#FABF4A33" : "black")};
+  border: ${(props) => (props.hasBorder ? "1px solid #FF611D" : "none")};
+  color: "white";
+  border-radius: 16px;
+  cursor: pointer;
+  font-family: Outfit, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+`;
+
+const MobileMenuItemContainer = styled(
+  MenuItemContainer
+)<MenuItemContainerProps>`
+  border-radius: ${(props) =>
+    props.isSelected ? "16px 16px 0px 0px" : "16px"};
+  background-color: ${(props) => (props.isSelected ? "#FF611D" : "black")};
+  color: ${(props) => (props.isSelected ? "black" : "#FF611D")};
+`;
 
 export const ContentContainer = styled.div`
   padding: 24px;
@@ -22,52 +54,7 @@ const ContentContainerMobile = styled(ContentContainer)`
   border-radius: 0px 0px 16px 16px;
 `;
 
-type Information = {
-  subject?: string;
-  title: string;
-  description: string[];
-};
-
-enum INFORMATION_ENUM {
-  ARMADO_DE_EQUIPO = "Armado de equipos",
-  CAPITANES = "Capitanes",
-  CUENTAS_DE_STEAM = "Cuentas de Steam",
-  FECHAS_DE_JUEGO = "Fechas de juego",
-}
-
-const information: Record<INFORMATION_ENUM, Information> = {
-  [INFORMATION_ENUM.ARMADO_DE_EQUIPO]: {
-    title: "Medalla libre",
-    description: [
-      "La medalla de los jugadores es libre. Los equipos pueden conformarse con jugadores de cualquier medalla, el único requisito es que el equipo en juego no debe superar la suma de 37.000 de mmr.",
-      "El roster puede contar con 5 titulares y 3 suplentes.",
-      "Esta limitado los jugadores peruanos nuevos por equipos a 2.",
-    ],
-  },
-  [INFORMATION_ENUM.CAPITANES]: {
-    title: "Capitanes",
-    description: [
-      "Todos los capitanes de un equipo deben ser hispanohablantes y comunicarse con el staff para poder ser notificados de los eventos de la season.",
-    ],
-  },
-  [INFORMATION_ENUM.CUENTAS_DE_STEAM]: {
-    title: "Players en la liga",
-    description: [
-      "Todas las cuentas tienen que estar calibradas, tener mas de 5k horas y 4k de partidas (cualquier duda consultar con el Staff).",
-      "Perfil de dota y steam tienen que ser públicos al momento de la inscripción.",
-    ],
-  },
-  [INFORMATION_ENUM.FECHAS_DE_JUEGO]: {
-    title: "Días y horarios",
-    description: [
-      "El staff definirá las semanas en las que se deba jugar cada instancia de la season.",
-      "Los días y horarios serán arreglados por los capitanes de los equipos y notificados al staff.",
-      "En caso de no acordar un día y horario entre capitanes, el staff definirá uno por defecto.",
-    ],
-  },
-};
-
-export const InfoGeneralMobile = () => {
+export const InfoTabContentMobile = () => {
   const [value, setValue] = useState<INFORMATION_ENUM | null>(
     INFORMATION_ENUM.ARMADO_DE_EQUIPO
   );
@@ -95,32 +82,32 @@ export const InfoGeneralMobile = () => {
         subject={INFORMATION_ENUM.ARMADO_DE_EQUIPO}
         onClick={() => handleItemOnClick(INFORMATION_ENUM.ARMADO_DE_EQUIPO)}
         isSelected={value === INFORMATION_ENUM.ARMADO_DE_EQUIPO}
-        title={information[INFORMATION_ENUM.ARMADO_DE_EQUIPO].title}
-        description={information[INFORMATION_ENUM.ARMADO_DE_EQUIPO].description}
+        title={INFORMATION[INFORMATION_ENUM.ARMADO_DE_EQUIPO].title}
+        description={INFORMATION[INFORMATION_ENUM.ARMADO_DE_EQUIPO].description}
       ></InformationMobile>
 
       <InformationMobile
         subject={INFORMATION_ENUM.CAPITANES}
         onClick={() => handleItemOnClick(INFORMATION_ENUM.CAPITANES)}
         isSelected={value === INFORMATION_ENUM.CAPITANES}
-        title={information[INFORMATION_ENUM.CAPITANES].title}
-        description={information[INFORMATION_ENUM.CAPITANES].description}
+        title={INFORMATION[INFORMATION_ENUM.CAPITANES].title}
+        description={INFORMATION[INFORMATION_ENUM.CAPITANES].description}
       ></InformationMobile>
 
       <InformationMobile
         subject={INFORMATION_ENUM.CUENTAS_DE_STEAM}
         onClick={() => handleItemOnClick(INFORMATION_ENUM.CUENTAS_DE_STEAM)}
         isSelected={value === INFORMATION_ENUM.CUENTAS_DE_STEAM}
-        title={information[INFORMATION_ENUM.CUENTAS_DE_STEAM].title}
-        description={information[INFORMATION_ENUM.CUENTAS_DE_STEAM].description}
+        title={INFORMATION[INFORMATION_ENUM.CUENTAS_DE_STEAM].title}
+        description={INFORMATION[INFORMATION_ENUM.CUENTAS_DE_STEAM].description}
       ></InformationMobile>
 
       <InformationMobile
         subject={INFORMATION_ENUM.FECHAS_DE_JUEGO}
         onClick={() => handleItemOnClick(INFORMATION_ENUM.FECHAS_DE_JUEGO)}
         isSelected={value === INFORMATION_ENUM.FECHAS_DE_JUEGO}
-        title={information[INFORMATION_ENUM.FECHAS_DE_JUEGO].title}
-        description={information[INFORMATION_ENUM.FECHAS_DE_JUEGO].description}
+        title={INFORMATION[INFORMATION_ENUM.FECHAS_DE_JUEGO].title}
+        description={INFORMATION[INFORMATION_ENUM.FECHAS_DE_JUEGO].description}
       ></InformationMobile>
     </div>
   );

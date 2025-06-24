@@ -30,7 +30,11 @@ export const NavBar = () => {
               />
             </Link>
           </LogoContainer>
-          {isMobile ? <BurgerMenu currentPath={location.pathname} /> : <DesktopNavbarLinks currentPath={location.pathname} />}
+          {isMobile ? (
+            <BurgerMenu currentPath={location.pathname} />
+          ) : (
+            <DesktopNavbarLinks currentPath={location.pathname} />
+          )}
         </HeaderMainContainer>
       </HeaderWrapper>
     </Container>
@@ -41,17 +45,34 @@ function DesktopNavbarLinks({ currentPath }: { currentPath: string }) {
   return (
     <DesktopLinkContainer>
       {NAV_LINKS.map((link) => (
-        <HeaderLink key={link.to} to={link.to} $active={currentPath === link.to}>{link.label}</HeaderLink>
+        <HeaderLink
+          key={link.to}
+          to={link.to}
+          active={currentPath === link.to ? "true" : undefined}
+        >
+          {link.label}
+        </HeaderLink>
       ))}
     </DesktopLinkContainer>
   );
 }
 
-function MobileNavbarLinks({ onNavigate, currentPath }: { onNavigate: () => void, currentPath: string }) {
+function MobileNavbarLinks({
+  onNavigate,
+  currentPath,
+}: {
+  onNavigate: () => void;
+  currentPath: string;
+}) {
   return (
     <MobileLinkContainer>
       {NAV_LINKS.map((link) => (
-        <HeaderLink key={link.to} to={link.to} onClick={onNavigate} $active={currentPath === link.to}>
+        <HeaderLink
+          key={link.to}
+          to={link.to}
+          onClick={onNavigate}
+          active={currentPath === link.to ? "true" : undefined}
+        >
           {link.label}
         </HeaderLink>
       ))}
@@ -73,13 +94,16 @@ function BurgerMenu({ currentPath }: { currentPath: string }) {
   return (
     <>
       <BurgerButton onClick={handleDrawerOpen}>
-        <StyledSvg src={burgerIcon} color={"white"}/>
+        <StyledSvg src={burgerIcon} color={"white"} />
       </BurgerButton>
       <Drawer open={drawerOpen}>
         <DrawerHeader>
           <CloseButton onClick={handleDrawerClose}>&times;</CloseButton>
         </DrawerHeader>
-        <MobileNavbarLinks onNavigate={handleDrawerClose} currentPath={currentPath} />
+        <MobileNavbarLinks
+          onNavigate={handleDrawerClose}
+          currentPath={currentPath}
+        />
       </Drawer>
       {drawerOpen && <DrawerBackdrop onClick={handleDrawerClose} />}
     </>
@@ -121,7 +145,7 @@ const MobileLinkContainer = styled.div`
   gap: 8px;
 `;
 
-const HeaderLink = styled(Link)<{ $active?: boolean }>`
+const HeaderLink = styled(Link)<{ active?: string | undefined }>`
   display: flex;
   padding: 8px 16px;
   border-radius: 10px;
@@ -132,10 +156,10 @@ const HeaderLink = styled(Link)<{ $active?: boolean }>`
   font-size: 16px;
   font-family: "Outfit", sans-serif;
   font-weight: 700;
-  background-color: ${({ $active }) => $active ? '#FABF4A33' : 'transparent'};
+  background-color: ${({ active }) => (active ? "#FABF4A33" : "transparent")};
   transition: background 0.2s, color 0.2s;
   &:hover {
-    background-color: ${({ $active }) => $active ? '#FABF4A33' : '#095b824d'};
+    background-color: ${({ active }) => (active ? "#FABF4A33" : "#095b824d")};
     font-weight: 700;
   }
 `;

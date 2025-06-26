@@ -6,9 +6,7 @@ import { HomePage } from "./pages/home/index";
 import { NavBar } from "./components/navbar";
 import { SeasonFour } from "./pages/season-four";
 import { CurrentSeasonPage } from "./pages/current-season";
-import { StyledSvg } from "./components/common/StyledSVG";
-import argentoLogo from "./assets/footer/l-argento-text.svg";
-import dota2logo from "./assets/footer/dota-2-logo.svg";
+import { Footer } from "@components/footer";
 
 const AppContainer = styled.div`
   min-height: 100vh;
@@ -28,34 +26,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       }
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          paddingTop: "16px",
-          paddingBottom: "16px",
-          width: "100%",
-          backgroundColor: "#101010",
-          gap: "16px",
-          color: "white",
-          marginTop: "auto",
-        }}
-      >
-        <div
-          style={{
-            width: "140px",
-            height: "30px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <StyledSvg src={argentoLogo} width="120px" height="20px" />
-        </div>
-        |
-        <StyledSvg src={dota2logo} width="105px" />
-      </div>
+      <Footer />
     </AppContainer>
   );
 }

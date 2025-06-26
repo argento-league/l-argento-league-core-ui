@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { NewsButton } from "../../home/cards/News";
-import { JoinDiscordButton } from "../cards/LookingForTeam";
+import { JoinDiscordButton } from "@components/common/JoinDiscordButton";
+import { Button } from "@components/common/Button";
 
 const TeamTabContainer = styled.div`
   display: flex;
@@ -45,13 +45,13 @@ export const TeamsTabContent = () => {
         de todo.
       </Description>
       <ButtonContainer>
-        <NewsButton
+        <Button
           to="https://tally.so/r/mD9dPj"
           target="_blank"
           backgroundColor="#FF611D"
         >
           Inscribir equipo
-        </NewsButton>
+        </Button>
         <JoinDiscordButton
           backgroundColor="black"
           color="#FF611D"

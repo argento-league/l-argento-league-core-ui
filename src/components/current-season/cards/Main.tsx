@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { NewsButton } from "../../home/cards/News";
+import { Button } from "@components/common/Button";
 
 const MainGridBoxContent = styled.div`
   padding: 16px 0px 32px 0px;
@@ -76,13 +76,13 @@ export const MainCard = () => {
           {"5 players + 3 standings permitidos por equipo"}
         </MainSubDescription>
       </MainTextGroup>
-      <NewsButton
+      <Button
         to="https://tally.so/r/mD9dPj"
         target="_blank"
         backgroundColor={"#FF611D"}
       >
         Inscribirme
-      </NewsButton>
+      </Button>
     </MainGridBoxContent>
   );
 };

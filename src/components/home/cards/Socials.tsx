@@ -6,7 +6,7 @@ import youtube from "../../../assets/social-media-icons/youtube.svg";
 import { Link } from "react-router-dom";
 import { StyledSvg } from "../../common/StyledSVG";
 
-const SocialCardContainer = styled.div` 
+const SocialCardContainer = styled.div`
   height: 100%;
   background-color: #000000;
   border-radius: 16px;
@@ -55,13 +55,15 @@ type SocialCardProps = {
 };
 
 export const SocialCard = ({ iconColor }: SocialCardProps) => {
+  const DISCORD_INVITATION_URL: string = import.meta.env
+    .VITE_DISCORD_INVITATION_URL;
   return (
-    <SocialCardContainer >
+    <SocialCardContainer>
       <ContentContainer>
         <IconContainer>
           <IconText>Enterate de todo</IconText>
           <IconLogoContainer>
-            <Link to="https://discord.gg/hYcW9P2keq" target="_blank">
+            <Link to={DISCORD_INVITATION_URL} target="_blank">
               <StyledSvg
                 src={discord}
                 color={iconColor || defaultIconColor}

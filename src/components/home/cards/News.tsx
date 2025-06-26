@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import { StyledSvg } from "../../common/StyledSVG";
-import discordIcon from "../../../assets/social-media-icons/discord.svg";
-import { Link } from "react-router-dom";
-// import { useEffect } from "react";
+import { JoinDiscordButton } from "@components/common/JoinDiscordButton";
+import { Button } from "@components/common/Button";
 
 const NewsCardContainer = styled.section`
   padding-top: 32px;
@@ -87,51 +85,11 @@ const NewsButtonsContainer = styled.div`
   }
 `;
 
-type NewsButtonProps = {
-  backgroundColor?: string;
-  color?: string;
-};
-
-export const NewsButton = styled(Link)<NewsButtonProps>`
-  font-family: "Outfit", sans-serif;
-  text-decoration: none;
-  color: ${(props) => props.color || "#000000"};
-  background-color: ${(props) => props.backgroundColor || "#000000"};
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
-  justify-content: center;
-  display: flex;
-  text-align: center;
-`;
-
-type DiscordButtonProps = NewsButtonProps & {
-  hasBorder?: boolean;
-}
-export const DiscordButton = styled(NewsButton)<DiscordButtonProps>`
-  border: ${(props) => (props.hasBorder ? `1px solid ${props.color}` : "none")};
-  color: #fabf4a;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: "Outfit", sans-serif;
-  font-weight: 700;
-`;
-
-export const RegisterButton = styled(NewsButton)`
+export const RegisterButton = styled(Button)`
   background-color: #fabf4a;
 `;
 
 export const NewsCard = () => {
-  // useEffect(() => {
-  //   // Re-initialize Tally modal (important for SPAs)
-  //   //@ts-ignore
-  //   if (window.Tally) window.Tally.loadEmbeds();
-  // }, []);
-
   return (
     <NewsCardContainer>
       <NewsTitleContainer id="container-title">
@@ -139,28 +97,16 @@ export const NewsCard = () => {
         <NewsSeason>SEASON 5</NewsSeason>
       </NewsTitleContainer>
       <NewsDescriptionContainer id="container-description">
-        <NewsDescription>
-          Inscripciones de equipos abiertas.
-        </NewsDescription>
+        <NewsDescription>Inscripciones de equipos abiertas.</NewsDescription>
         <NewsSubDescription>
-          Incribí a tu equipo para participar. Si aún estas buscando equipo o algun player, unite a nuestro Discord para encontrarlo!
+          Incribí a tu equipo para participar. Si aún estas buscando equipo o
+          algun player, unite a nuestro Discord para encontrarlo!
         </NewsSubDescription>
       </NewsDescriptionContainer>
+
       <NewsButtonsContainer id="container-buttons">
-        <DiscordButton to="https://discord.gg/hYcW9P2keq" target="_blank">
-          {" "}
-          <StyledSvg src={discordIcon} color="#fabf4a"></StyledSvg>{" "}
-          <span>Unirme a Discord</span>
-        </DiscordButton>
-        <RegisterButton
-          to="https://tally.so/r/mD9dPj"
-          target="_blank"
-          // data-tally-open="wop8Bx"
-          // data-tally-layout="modal"
-          // data-tally-width="600"
-          // data-tally-height="600"
-          // className="tally-button"
-        >
+        <JoinDiscordButton color="#fabf4a" />
+        <RegisterButton to="https://tally.so/r/mD9dPj" target="_blank">
           Inscribirme
         </RegisterButton>
       </NewsButtonsContainer>

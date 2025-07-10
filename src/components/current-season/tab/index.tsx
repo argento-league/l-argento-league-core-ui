@@ -16,7 +16,6 @@ const DesktopTabList = ({ selectedTab, tabList, onSelectTab }: TabProps) => {
               selected={selectedTab === tabList[i]}
               onClick={() => onSelectTab(tab as TabsEnum)}
               disabled={
-                tab === TabsEnum.FaseDeGrupos ||
                 tab === TabsEnum.EventoPrincipal
               }
             >

@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import { DiscordButton } from "../../home/cards/News";
-import { StyledSvg } from "../../common/StyledSVG";
-import discordIcon from "../../../assets/social-media-icons/discord.svg";
 import { useIsMobile } from "../../../hooks/useIsMobile";
+import { JoinDiscordButton } from "@components/common/JoinDiscordButton";
 
 type LookingForTeamBoxProps = {
   color?: string;
@@ -38,25 +36,6 @@ const LookingForTeamDescription = styled.p`
   font-size: 24px;
   text-align: center;
 `;
-
-type JoinDiscordButton = {
-  color?: string;
-  backgroundColor?: string;
-  hasBorder?: boolean;
-};
-
-export const JoinDiscordButton = ({
-  color,
-  backgroundColor,
-  hasBorder = false,
-}: JoinDiscordButton) => {
-  return (
-    <DiscordButton color={color} backgroundColor={backgroundColor} hasBorder={hasBorder} to={"https://discord.com/invite/hYcW9P2keq"} target="_blank">
-      <StyledSvg src={discordIcon} color={color || "#fabf4a"} />
-      <span style={{ color: color || "#fabf4a" }}>Unirme a Discord</span>
-    </DiscordButton>
-  );
-};
 
 export const LookingForTeamCard = () => {
   const isMobile = useIsMobile(720);

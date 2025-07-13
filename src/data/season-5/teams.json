@@ -1,0 +1,366 @@
+{
+  "FANTASMAS": {
+    "name": "FANTASMAS",
+    "logo": "fantasmas.png",
+    "players": [
+      { "nick": "Oli", "nationality": "ar" },
+      { "nick": "ALE", "nationality": "pe" },
+      { "nick": "Subradota2", "nationality": "pe" },
+      { "nick": "Adv.Khal", "nationality": "pe" },
+      { "nick": "Who is Ari?", "nationality": "ar" },
+      { "nick": "rucula", "nationality": "ar" }
+    ]
+  },
+  "GUERREROS_Z": {
+    "name": "GUERREROS Z",
+    "logo": "guerreros-z.png",
+    "players": [
+      { "nick": "Profesor", "nationality": "ar" },
+      { "nick": "L24DTR", "nationality": "pe" },
+      { "nick": "thenewpipi", "nationality": "pe" },
+      { "nick": "Zeromercy", "nationality": "pe" },
+      { "nick": "SamusPrime", "nationality": "ar" },
+      { "nick": "Hito", "nationality": "ar" },
+      { "nick": "Aui", "nationality": "ar" },
+      { "nick": "pixulong", "nationality": "pe" }
+    ]
+  },
+  "THE_RATS": {
+    "name": "THE RATS",
+    "logo": "the-rats.png",
+    "players": [
+      { "nick": "13", "nationality": "ar" },
+      { "nick": "Mirlacra", "nationality": "ar" },
+      { "nick": "Cervecero", "nationality": "ar" },
+      { "nick": "Nexus", "nationality": "bo" },
+      { "nick": "MarcE", "nationality": "ar" },
+      { "nick": "Kz", "nationality": "pe" },
+      { "nick": "Descobridor", "nationality": "pe" },
+      { "nick": "George", "nationality": "pe" }
+    ]
+  },
+  "THE_TETHER": {
+    "name": "THE TETHER",
+    "logo": "the-tether.png",
+    "players": [
+      { "nick": "WrWr", "nationality": "ar" },
+      { "nick": "SkD-X", "nationality": "ar" },
+      { "nick": "Dotem", "nationality": "ar" },
+      { "nick": "CRISTHIAN", "nationality": "bo" },
+      { "nick": "Ducho", "nationality": "pe" },
+      { "nick": "JukePlz", "nationality": "ar" },
+      { "nick": "D34D", "nationality": "pe" }
+    ]
+  },
+  "OBESHO_+_4_NARIGONES": {
+    "name": "OBESHO + 4 NARIGONES",
+    "logo": "obesho.png",
+    "players": [
+      { "nick": "Riquelme", "nationality": "ar" },
+      { "nick": "Rena", "nationality": "pe" },
+      { "nick": "Thebag", "nationality": "ar" },
+      { "nick": "Tk'", "nationality": "ar" },
+      { "nick": "Bande", "nationality": "ar" },
+      { "nick": "Rober Francis Prevost", "nationality": "ar" }
+    ]
+  },
+  "ELITE_WOLVES": {
+    "name": "Elite Wolves",
+    "logo": "elite-wolves.png",
+    "players": [
+      { "nick": "correNTA", "nationality": "ar" },
+      { "nick": "ShineDi", "nationality": "cl" },
+      { "nick": "Ligthining", "nationality": "ar" },
+      { "nick": "Sayonara", "nationality": "ar" },
+      { "nick": "NerØ", "nationality": "bo" },
+      { "nick": "MessiGordo", "nationality": "ar" },
+      { "nick": "maraboli", "nationality": "ar" },
+      { "nick": "Markuz!", "nationality": "bo" }
+    ]
+  },
+  "ESCUADRON_ANTI-TONKAS": {
+    "name": "Escuadrón Anti-Tonkas",
+    "logo": "escuadron-anti-tonkas.png",
+    "players": [
+      { "nick": "dgN", "nationality": "ar" },
+      { "nick": "balenci", "nationality": "ar" },
+      { "nick": "Meew", "nationality": "ar" },
+      { "nick": "runawaY", "nationality": "ar" },
+      { "nick": "Rico-", "nationality": "ar" },
+      { "nick": "WISKO", "nationality": "ar" },
+      { "nick": "frizolini", "nationality": "ar" },
+      { "nick": "GaBO", "nationality": "ar" }
+    ]
+  },
+  "RACXONDICIPLES": {
+    "name": "RACXONDICIPLES",
+    "logo": "racson-disciples.png",
+    "players": [
+      { "nick": "Nanako", "nationality": "ar" },
+      { "nick": "Dsk", "nationality": "ar" },
+      { "nick": "Tabu", "nationality": "ar" },
+      { "nick": "Snitter", "nationality": "ar" },
+      { "nick": "elgoat", "nationality": "ar" },
+      { "nick": "Femof.Chan", "nationality": "ar" }
+    ]
+  },
+  "VA_A_JUGAR": {
+    "name": "Va a Jugar",
+    "logo": "va-jugar.png",
+    "players": [
+      { "nick": "Chari", "nationality": "ar" },
+      { "nick": "Docer", "nationality": "ar" },
+      { "nick": "DTS-", "nationality": "ar" },
+      { "nick": "Trescatorce", "nationality": "ar" },
+      { "nick": "techiescnrapier", "nationality": "ar" },
+      { "nick": "quakerONE", "nationality": "ar" },
+      { "nick": "Banana Joe", "nationality": "ar" },
+      { "nick": "4fra1D.Gazalle", "nationality": "ar" }
+    ]
+  },
+  "PURE_TEAM": {
+    "name": "Pure Team",
+    "logo": "pure-team.png",
+    "players": [
+      { "nick": "Cokuu", "nationality": "cl" },
+      { "nick": "basu", "nationality": "cl" },
+      { "nick": "Sans", "nationality": "cl" },
+      { "nick": "noia", "nationality": "cl" },
+      { "nick": "Blasfemia", "nationality": "cl" },
+      { "nick": "gaudi", "nationality": "cl" },
+      { "nick": "Fruu", "nationality": "cl" },
+      { "nick": "Serena", "nationality": "cl" }
+    ]
+  },
+  "BLINK_DOTA": {
+    "name": "Blink Dota",
+    "logo": "blink-dota.png",
+    "players": [
+      { "nick": "Jp愛", "nationality": "it" },
+      { "nick": "Gustee", "nationality": "ar" },
+      { "nick": "Toxy", "nationality": "ar" },
+      { "nick": "Bichuny", "nationality": "ar" },
+      { "nick": "Yoh", "nationality": "ar" }
+    ]
+  },
+  "REYES_DE_LAS_OLAS": {
+    "name": "Reyes de las Olas",
+    "logo": "olas.png",
+    "players": [
+      { "nick": "KTZ", "nationality": "ar" },
+      { "nick": "Skippah", "nationality": "ar" },
+      { "nick": "mtE", "nationality": "ar" },
+      { "nick": "Fumigator", "nationality": "ar" },
+      { "nick": "LittLeHopes", "nationality": "ar" }
+    ]
+  },
+  "FPS_ENJOYERS": {
+    "name": "FPS ENJOYERS",
+    "logo": "fps-enjoyers.png",
+    "players": [
+      { "nick": "Rigan", "nationality": "ar" },
+      { "nick": "Zurdo", "nationality": "ar" },
+      { "nick": "RampaGeee", "nationality": "ar" },
+      { "nick": "Kanishka", "nationality": "ar" },
+      { "nick": "Merlino", "nationality": "ar" },
+      { "nick": "Valky", "nationality": "ar" },
+      { "nick": "Destroyermondota", "nationality": "pe" },
+      { "nick": "M3L", "nationality": "ar" }
+    ]
+  },
+  "PUNISHHH_PRODUCTIONS": {
+    "name": "Punishhh Productions",
+    "logo": "punish.png",
+    "players": [
+      { "nick": "Meshik", "nationality": "ar" },
+      { "nick": "msz", "nationality": "ar" },
+      { "nick": "Punishhh", "nationality": "ar" },
+      { "nick": "wrbber", "nationality": "ar" },
+      { "nick": "adolfitwo", "nationality": "ar" }
+    ]
+  },
+  "PORLAGORDA": {
+    "name": "PorLaGorda",
+    "logo": "por-la-gorda.png",
+    "players": [
+      { "nick": "Kabuto", "nationality": "ar" },
+      { "nick": "UnGato", "nationality": "ar" },
+      { "nick": "Marmota", "nationality": "ar" },
+      { "nick": "Jugo Boss", "nationality": "ar" },
+      { "nick": "Puntito", "nationality": "ar" }
+    ]
+  },
+  "HYDRA_REBORN": {
+    "name": "Hydra Reborn",
+    "logo": "hydra-reborn.png",
+    "players": [
+      { "nick": "hawkeye", "nationality": "ar" },
+      { "nick": "El Alessi", "nationality": "ar" },
+      { "nick": "kid", "nationality": "ar" },
+      { "nick": "Oppie", "nationality": "ar" },
+      { "nick": "roy", "nationality": "ar" },
+      { "nick": "Mantra", "nationality": "pe" },
+      { "nick": "Fox", "nationality": "ar" }
+    ]
+  },
+  "EFECTO_DIVINE": {
+    "name": "3fecto Divine",
+    "logo": "3fecto-divine.png",
+    "players": [
+      { "nick": "3mpty", "nationality": "ar" },
+      { "nick": "Miru", "nationality": "ar" },
+      { "nick": "Future", "nationality": "ar" },
+      { "nick": "Ovo1de", "nationality": "ar" },
+      { "nick": "Daxas", "nationality": "ar" },
+      { "nick": "Ashlom", "nationality": "ar" }
+    ]
+  },
+  "MIRO_TIKTOK_Y_WEBEO": {
+    "name": "Miro TikTok y Webeo",
+    "logo": "miro-tiktok.png",
+    "players": [
+      { "nick": "Zero", "nationality": "pe" },
+      { "nick": "Taku.-", "nationality": "ar" },
+      { "nick": "FachaBoy", "nationality": "pe" },
+      { "nick": "Beyondgod", "nationality": "pe" },
+      { "nick": "Mac tonight", "nationality": "pe" },
+      { "nick": "peace and love", "nationality": "pe" },
+      { "nick": "PIGNAL", "nationality": "ar" }
+    ]
+  },
+  "TEAM_SERVER": {
+    "name": "Team Server",
+    "logo": "team-server.png",
+    "players": [
+      { "nick": "GNX", "nationality": "ar" },
+      { "nick": "LetMe 丶", "nationality": "ar" },
+      { "nick": "Walterms", "nationality": "ar" },
+      { "nick": "Tizzer", "nationality": "ar" },
+      { "nick": "SICK TUFI", "nationality": "ar" },
+      { "nick": "DcnT", "nationality": "ar" },
+      { "nick": "live", "nationality": "pe" }
+    ]
+  },
+  "dragon_wings": {
+    "name": "DRAGON WINGS",
+    "logo": "dragon-wings.png",
+    "players": [
+      { "nick": "Tachibana-", "nationality": "pe" },
+      { "nick": "TK JeLiTo ジェリート", "nationality": "pe" },
+      { "nick": "Lykke.", "nationality": "ar" },
+      { "nick": "MoneyForNoth1ng", "nationality": "ar" },
+      { "nick": "giulinho", "nationality": "ar" },
+      { "nick": "MOIIY <3", "nationality": "pe" },
+      { "nick": "ZETA", "nationality": "ar" }
+    ]
+  },
+  "LA_MANADA": {
+    "name": "La Manada",
+    "logo": "la-manada.png",
+    "players": [
+      { "nick": "Hermit", "nationality": "ar" },
+      { "nick": "Khantus", "nationality": "ar" },
+      { "nick": "Carnicero", "nationality": "ar" },
+      { "nick": "Rico kaboom", "nationality": "bo" },
+      { "nick": "ShaMaNz", "nationality": "ar" },
+      { "nick": "Atlas", "nationality": "pe" },
+      { "nick": "Lulu", "nationality": "ar" },
+      { "nick": "PorcoRex", "nationality": "ar" }
+    ]
+  },
+  "DREAM": {
+    "name": "DREAM",
+    "logo": "dream-team.png",
+    "players": [
+      { "nick": "sgg", "nationality": "ar" },
+      { "nick": "NirVaNa", "nationality": "ar" },
+      { "nick": "kerrigan", "nationality": "pa" },
+      { "nick": "Misery", "nationality": "pe" },
+      { "nick": "Lice", "nationality": "uy" },
+      { "nick": "N4N", "nationality": "ar" },
+      { "nick": "Gokuzao", "nationality": "ar" },
+      { "nick": "bilu", "nationality": "ar" }
+    ]
+  },
+  "CIRCO_JUJEÑO": {
+    "name": "Circo Jujeño",
+    "logo": "circo-jujeno.png",
+    "players": [
+      { "nick": "picado", "nationality": "ar" },
+      { "nick": "IroHHa", "nationality": "ar" },
+      { "nick": "JANN", "nationality": "ar" },
+      { "nick": "MDFK pipi", "nationality": "ar" },
+      { "nick": "dracosao", "nationality": "ar" },
+      { "nick": "ziwar", "nationality": "ar" },
+      { "nick": "Gssi", "nationality": "bo" },
+      { "nick": "LittleM", "nationality": "ar" }
+    ]
+  },
+  "TEAM_WAGNER": {
+    "name": "Team Wagner",
+    "logo": "team-wagner.png",
+    "players": [
+      { "nick": "REVOLVER", "nationality": "ar" },
+      { "nick": "Eno", "nationality": "ar" },
+      { "nick": "(\"HACHI\")", "nationality": "bo" },
+      { "nick": "FROM-TUCUMAN", "nationality": "ar" },
+      { "nick": "Makellos-", "nationality": "bo" },
+      { "nick": "phenom", "nationality": "ar" },
+      { "nick": "DeSerT", "nationality": "ar" }
+    ]
+  },
+  "NYMERIA": {
+    "name": "Nymeria",
+    "logo": "nymeria.png",
+    "players": [
+      { "nick": "Worlock", "nationality": "ar" },
+      { "nick": "S4TVRN0", "nationality": "ar" },
+      { "nick": "Andino", "nationality": "ar" },
+      { "nick": "SyndraMoon", "nationality": "ar" },
+      { "nick": "Sandevistan", "nationality": "ar" },
+      { "nick": "El Papu", "nationality": "ar" },
+      { "nick": "Papita", "nationality": "ar" },
+      { "nick": "Shifu", "nationality": "ar" }
+    ]
+  },
+  "EPICENTER": {
+    "name": "Epicenter",
+    "logo": "epicenter.png",
+    "players": [
+      { "nick": "Lionel Dota", "nationality": "ar" },
+      { "nick": "Neko", "nationality": "pe" },
+      { "nick": "Quoarine_Oficial", "nationality": "ar" },
+      { "nick": "osidis", "nationality": "pe" },
+      { "nick": "dk3r", "nationality": "ar" },
+      { "nick": "nikito-CHJ", "nationality": "ar" },
+      { "nick": "jonathan", "nationality": "ar" },
+      { "nick": "alexandr1a", "nationality": "bo" }
+    ]
+  },
+  "GORDO_SQUAD": {
+    "name": "Gordo Squad",
+    "logo": "gordo-squad.png",
+    "players": [
+      { "nick": "NikeGG", "nationality": "ar" },
+      { "nick": "tecla", "nationality": "ar" },
+      { "nick": "midas", "nationality": "ar" },
+      { "nick": "jordy", "nationality": "br" },
+      { "nick": "Arthur Leywin", "nationality": "br" },
+      { "nick": "KNK", "nationality": "ar" },
+      { "nick": "Onfire", "nationality": "ar" }
+    ]
+  },
+  "SUDAMERICA_V": {
+    "name": "Sudamerica V",
+    "logo": "sudamerica.png",
+    "players": [
+      { "nick": "cHelO.gg", "nationality": "ar" },
+      { "nick": "Radamanthys", "nationality": "ar" },
+      { "nick": "Depresive", "nationality": "pe" },
+      { "nick": "Traviesso", "nationality": "pe" },
+      { "nick": "STERVEN", "nationality": "pe" },
+      { "nick": "Sakkarot", "nationality": "uy" },
+      { "nick": "maraboli", "nationality": "ar" }
+    ]
+  }
+}

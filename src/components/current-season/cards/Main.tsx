@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button } from "@components/common/Button";
+import { JoinDiscordButton } from "@components/common/JoinDiscordButton";
 
 const MainGridBoxContent = styled.div`
   padding: 16px 0px 32px 0px;
@@ -56,33 +56,27 @@ const MainDescription = styled.p`
   max-width: 30ch;
 `;
 
-const MainSubDescription = styled.p`
-  font-size: 16px;
-  font-family: Rethink Sans, sans-serif;
-  font-weight: 500;
-  text-align: center;
-`;
-
 export const MainCard = () => {
   return (
     <MainGridBoxContent>
       <SeasonTitle> Season 5 </SeasonTitle>
       <MainTextGroup>
-        <MainHeading>{"Inscripciones abiertas"}</MainHeading>
+        <MainHeading>{"En progreso"}</MainHeading>
         <MainDescription>
-          {"Inscribí a tu equipo para formar parte de la Season 5."}
+          {"Unite a nuestro Discord para ver los días de juego y streams."}
         </MainDescription>
-        <MainSubDescription>
+        {/* <MainSubDescription>
           {"5 players + 3 standings permitidos por equipo"}
-        </MainSubDescription>
+        </MainSubDescription> */}
       </MainTextGroup>
-      <Button
+      {/* <Button
         to="https://tally.so/r/mD9dPj"
         target="_blank"
         backgroundColor={"#FF611D"}
       >
         Inscribirme
-      </Button>
+      </Button> */}
+			<JoinDiscordButton color="#ff611d" />
     </MainGridBoxContent>
   );
 };

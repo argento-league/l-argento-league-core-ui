@@ -19,8 +19,7 @@ export const MobileTabList = ({
               selected={selectedTab === tab}
               onClick={() => onSelectTab(tab as TabsEnum)}
               disabled={
-                tab === TabsEnum.EventoPrincipal ||
-								tab === TabsEnum.FaseDeGrupos
+                tab === TabsEnum.EventoPrincipal
               }
             >
               {tab}

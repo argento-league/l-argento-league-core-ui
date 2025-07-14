@@ -1,0 +1,576 @@
+{
+  "Jornada-1": {
+    "grupo-a": [
+      {
+        "team1": "Efecto Divine",
+        "score1": "1",
+        "team2": "Sudamerica V",
+        "score2": "1"
+      },
+      {
+        "team1": "FPS Enjoyers",
+        "score1": "2",
+        "team2": "Va a Jugar",
+        "score2": "0"
+      },
+      {
+        "team1": "Por La Gorda",
+        "score1": "0",
+        "team2": "Gordo Squad",
+        "score2": "2"
+      }
+    ],
+    "grupo-b": [
+      {
+        "team1": "Elite Wolves",
+        "score1": "0",
+        "team2": "La Manada",
+        "score2": "2"
+      },
+      {
+        "team1": "Obesho + 4 Narigones",
+        "score1": "1",
+        "team2": "Punishhh Productions",
+        "score2": "1"
+      },
+      {
+        "team1": "Racxon Disciples",
+        "score1": "1",
+        "team2": "Guerreros Z",
+        "score2": "1"
+      }
+    ],
+    "grupo-c": [
+      {
+        "team1": "Blink Dota",
+        "score1": "0",
+        "team2": "Dream",
+        "score2": "2"
+      },
+      {
+        "team1": "Reyes de las Olas",
+        "score1": "0",
+        "team2": "Pure Team",
+        "score2": "2"
+      },
+      {
+        "team1": "The Tether",
+        "score1": "1",
+        "team2": "Circo Jujeño",
+        "score2": "1"
+      }
+    ],
+    "grupo-d": [
+      {
+        "team1": "Dragon Wings",
+        "score1": "0",
+        "team2": "Epicenter",
+        "score2": "2"
+      },
+      {
+        "team1": "Hydra Reborn",
+        "score1": "2",
+        "team2": "Team Server",
+        "score2": "0"
+      },
+      {
+        "team1": "Miro Tik Tok y Webeo",
+        "score1": null,
+        "team2": "Team Wagner",
+        "score2": null
+      }
+    ]
+  },
+  "Jornada-2": {
+    "grupo-a": [
+      {
+        "team1": "Fantasmas",
+        "score1": null,
+        "team2": "Efecto Divine",
+        "score2": null
+      },
+      {
+        "team1": "Sudamerica V",
+        "score1": null,
+        "team2": "Por La Gorda",
+        "score2": null
+      },
+      {
+        "team1": "Gordo Squad",
+        "score1": null,
+        "team2": "Va a Jugar",
+        "score2": null
+      }
+    ],
+    "grupo-b": [
+      {
+        "team1": "The Rats",
+        "score1": null,
+        "team2": "Elite Wolves",
+        "score2": null
+      },
+      {
+        "team1": "La Manada",
+        "score1": null,
+        "team2": "Racxon Disciples",
+        "score2": null
+      },
+      {
+        "team1": "Guerreros Z",
+        "score1": null,
+        "team2": "Punishhh Productions",
+        "score2": null
+      }
+    ],
+    "grupo-c": [
+      {
+        "team1": "Escuadron Anti Tonkas",
+        "score1": null,
+        "team2": "Blink Dota",
+        "score2": null
+      },
+      {
+        "team1": "Dream",
+        "score1": null,
+        "team2": "The Tether",
+        "score2": null
+      },
+      {
+        "team1": "Circo Jujeño",
+        "score1": null,
+        "team2": "Pure Team",
+        "score2": null
+      }
+    ],
+    "grupo-d": [
+      {
+        "team1": "Nymeria",
+        "score1": null,
+        "team2": "Dragon Wings",
+        "score2": null
+      },
+      {
+        "team1": "Epicenter",
+        "score1": null,
+        "team2": "Miro Tik Tok y Webeo",
+        "score2": null
+      },
+      {
+        "team1": "Team Wagner",
+        "score1": null,
+        "team2": "Team Server",
+        "score2": null
+      }
+    ]
+  },
+  "Jornada-3": {
+    "grupo-a": [
+      {
+        "team1": "FPS Enjoyers",
+        "score1": null,
+        "team2": "Fantasmas",
+        "score2": null
+      },
+      {
+        "team1": "Por La Gorda",
+        "score1": null,
+        "team2": "Efecto Divine",
+        "score2": null
+      },
+      {
+        "team1": "Va a Jugar",
+        "score1": null,
+        "team2": "Sudamerica V",
+        "score2": null
+      }
+    ],
+    "grupo-b": [
+      {
+        "team1": "Obesho + 4 Narigones",
+        "score1": null,
+        "team2": "The Rats",
+        "score2": null
+      },
+      {
+        "team1": "Racxon Disciples",
+        "score1": null,
+        "team2": "Elite Wolves",
+        "score2": null
+      },
+      {
+        "team1": "Punishhh Productions",
+        "score1": null,
+        "team2": "La Manada",
+        "score2": null
+      }
+    ],
+    "grupo-c": [
+      {
+        "team1": "Reyes de las Olas",
+        "score1": null,
+        "team2": "Escuadron Anti Tonkas",
+        "score2": null
+      },
+      {
+        "team1": "The Tether",
+        "score1": null,
+        "team2": "Blink Dota",
+        "score2": null
+      },
+      {
+        "team1": "Pure Team",
+        "score1": null,
+        "team2": "Dream",
+        "score2": null
+      }
+    ],
+    "grupo-d": [
+      {
+        "team1": "Hydra Reborn",
+        "score1": null,
+        "team2": "Nymeria",
+        "score2": null
+      },
+      {
+        "team1": "Miro Tik Tok y Webeo",
+        "score1": null,
+        "team2": "Dragon Wings",
+        "score2": null
+      },
+      {
+        "team1": "Team Server",
+        "score1": null,
+        "team2": "Epicenter",
+        "score2": null
+      }
+    ]
+  },
+  "Jornada-4": {
+    "grupo-a": [
+      {
+        "team1": "Fantasmas",
+        "score1": null,
+        "team2": "Por La Gorda",
+        "score2": null
+      },
+      {
+        "team1": "Gordo Squad",
+        "score1": null,
+        "team2": "FPS Enjoyers",
+        "score2": null
+      },
+      {
+        "team1": "Va a Jugar",
+        "score1": null,
+        "team2": "Efecto Divine",
+        "score2": null
+      }
+    ],
+    "grupo-b": [
+      {
+        "team1": "The Rats",
+        "score1": null,
+        "team2": "Racxon Disciples",
+        "score2": null
+      },
+      {
+        "team1": "Guerreros Z",
+        "score1": null,
+        "team2": "Obesho + 4 Narigones",
+        "score2": null
+      },
+      {
+        "team1": "Punishhh Productions",
+        "score1": null,
+        "team2": "Elite Wolves",
+        "score2": null
+      }
+    ],
+    "grupo-c": [
+      {
+        "team1": "Escuadron Anti Tonkas",
+        "score1": null,
+        "team2": "Circo Jujeño",
+        "score2": null
+      },
+      {
+        "team1": "Pure Team",
+        "score1": null,
+        "team2": "The Tether",
+        "score2": null
+      },
+      {
+        "team1": "Reyes de las Olas",
+        "score1": null,
+        "team2": "Blink Dota",
+        "score2": null
+      }
+    ],
+    "grupo-d": [
+      {
+        "team1": "Nymeria",
+        "score1": null,
+        "team2": "Miro Tik Tok y Webeo",
+        "score2": null
+      },
+      {
+        "team1": "Team Wagner",
+        "score1": null,
+        "team2": "Hydra Reborn",
+        "score2": null
+      },
+      {
+        "team1": "Team Server",
+        "score1": null,
+        "team2": "Dragon Wings",
+        "score2": null
+      }
+    ]
+  },
+  "Jornada-5": {
+    "grupo-a": [
+      {
+        "team1": "Gordo Squad",
+        "score1": null,
+        "team2": "Fantasmas",
+        "score2": null
+      },
+      {
+        "team1": "Va a Jugar",
+        "score1": null,
+        "team2": "Por La Gorda",
+        "score2": null
+      },
+      {
+        "team1": "Sudamerica V",
+        "score1": null,
+        "team2": "FPS Enjoyers",
+        "score2": null
+      }
+    ],
+    "grupo-b": [
+      {
+        "team1": "Guerreros Z",
+        "score1": null,
+        "team2": "The Rats",
+        "score2": null
+      },
+      {
+        "team1": "Punishhh Productions",
+        "score1": null,
+        "team2": "Racxon Disciples",
+        "score2": null
+      },
+      {
+        "team1": "La Manada",
+        "score1": null,
+        "team2": "Obesho + 4 Narigones",
+        "score2": null
+      }
+    ],
+    "grupo-c": [
+      {
+        "team1": "Circo Jujeño",
+        "score1": null,
+        "team2": "Escuadron Anti Tonkas",
+        "score2": null
+      },
+      {
+        "team1": "Pure Team",
+        "score1": null,
+        "team2": "The Tether",
+        "score2": null
+      },
+      {
+        "team1": "Dream",
+        "score1": null,
+        "team2": "Reyes de las Olas",
+        "score2": null
+      }
+    ],
+    "grupo-d": [
+      {
+        "team1": "Team Wagner",
+        "score1": null,
+        "team2": "Nymeria",
+        "score2": null
+      },
+      {
+        "team1": "Team Server",
+        "score1": null,
+        "team2": "Miro Tik Tok y Webeo",
+        "score2": null
+      },
+      {
+        "team1": "Epicenter",
+        "score1": null,
+        "team2": "Hydra Reborn",
+        "score2": null
+      }
+    ]
+  },
+  "Jornada-6": {
+    "grupo-a": [
+      {
+        "team1": "Fantasmas",
+        "score1": null,
+        "team2": "Va a Jugar",
+        "score2": null
+      },
+      {
+        "team1": "Sudamerica V",
+        "score1": null,
+        "team2": "Gordo Squad",
+        "score2": null
+      },
+      {
+        "team1": "Efecto Divine",
+        "score1": null,
+        "team2": "FPS Enjoyers",
+        "score2": null
+      }
+    ],
+    "grupo-b": [
+      {
+        "team1": "The Rats",
+        "score1": null,
+        "team2": "Punishhh Productions",
+        "score2": null
+      },
+      {
+        "team1": "La Manada",
+        "score1": null,
+        "team2": "Guerreros Z",
+        "score2": null
+      },
+      {
+        "team1": "Elite Wolves",
+        "score1": null,
+        "team2": "Obesho + 4 Narigones",
+        "score2": null
+      }
+    ],
+    "grupo-c": [
+      {
+        "team1": "Escuadron Anti Tonkas",
+        "score1": null,
+        "team2": "Pure Team",
+        "score2": null
+      },
+      {
+        "team1": "Dream",
+        "score1": null,
+        "team2": "Circo Jujeño",
+        "score2": null
+      },
+      {
+        "team1": "Blink Dota",
+        "score1": null,
+        "team2": "Reyes de las Olas",
+        "score2": null
+      }
+    ],
+    "grupo-d": [
+      {
+        "team1": "Nymeria",
+        "score1": null,
+        "team2": "Team Server",
+        "score2": null
+      },
+      {
+        "team1": "Epicenter",
+        "score1": null,
+        "team2": "Team Wagner",
+        "score2": null
+      },
+      {
+        "team1": "Dragon Wings",
+        "score1": null,
+        "team2": "Hydra Reborn",
+        "score2": null
+      }
+    ]
+  },
+  "Jornada-7": {
+    "grupo-a": [
+      {
+        "team1": "Sudamerica V",
+        "score1": null,
+        "team2": "Fantasmas",
+        "score2": null
+      },
+      {
+        "team1": "Efecto Divine",
+        "score1": null,
+        "team2": "Gordo Squad",
+        "score2": null
+      },
+      {
+        "team1": "FPS Enjoyers",
+        "score1": null,
+        "team2": "Por La Gorda",
+        "score2": null
+      }
+    ],
+    "grupo-b": [
+      {
+        "team1": "La Manada",
+        "score1": null,
+        "team2": "The Rats",
+        "score2": null
+      },
+      {
+        "team1": "Elite Wolves",
+        "score1": null,
+        "team2": "Guerreros Z",
+        "score2": null
+      },
+      {
+        "team1": "Obesho + 4 Narigones",
+        "score1": null,
+        "team2": "Racxon Disciples",
+        "score2": null
+      }
+    ],
+    "grupo-c": [
+      {
+        "team1": "Dream",
+        "score1": null,
+        "team2": "Escuadron Anti Tonkas",
+        "score2": null
+      },
+      {
+        "team1": "Blink Dota",
+        "score1": null,
+        "team2": "Circo Jujeño",
+        "score2": null
+      },
+      {
+        "team1": "Reyes de las Olas",
+        "score1": null,
+        "team2": "The Tether",
+        "score2": null
+      }
+    ],
+    "grupo-d": [
+      {
+        "team1": "Epicenter",
+        "score1": null,
+        "team2": "Nymeria",
+        "score2": null
+      },
+      {
+        "team1": "Dragon Wings",
+        "score1": null,
+        "team2": "Team Wagner",
+        "score2": null
+      },
+      {
+        "team1": "Hydra Reborn",
+        "score1": null,
+        "team2": "Miro TikTok y Webeo",
+        "score2": null
+      }
+    ]
+  }
+}

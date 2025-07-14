@@ -4,7 +4,6 @@ import { Container } from "../common/Container";
 import { SocialCard } from "../home/cards/Socials";
 import { MainRootContainer } from "../home/MainContent";
 import { DateCard } from "./cards/Dates";
-import { LookingForTeamCard } from "./cards/LookingForTeam";
 import { MainCard } from "./cards/Main";
 import { BoxProps, GridBox } from "../common/GridBox";
 import styled from "styled-components";
@@ -27,17 +26,17 @@ const bentoElements: GridElementProps[] = [
     },
     component: <MainCard />,
   },
-  {
-    card: "LookingForTeamCard",
-    gridProps: {
-      col: "13 / 21",
-      row: "3 / 5",
-      colTablet: "1 / 13",
-      rowTablet: "5 / 7",
-      backgroundColor: "inherit",
-    },
-    component: <LookingForTeamCard />,
-  },
+  // {
+  //   card: "LookingForTeamCard",
+  //   gridProps: {
+  //     col: "13 / 21",
+  //     row: "3 / 5",
+  //     colTablet: "1 / 13",
+  //     rowTablet: "5 / 7",
+  //     backgroundColor: "inherit",
+  //   },
+  //   component: <LookingForTeamCard />,
+  // },
   {
     card: "SocialCard",
     gridProps: {
@@ -53,9 +52,9 @@ const bentoElements: GridElementProps[] = [
     card: "DateCard",
     gridProps: {
       col: "13 / 21",
-      row: "1 / 3",
+      row: "1 / 5",
       colTablet: "1 / 13",
-      rowTablet: "3 / 5",
+      rowTablet: "3 / 7",
       backgroundColor: "inherit",
     },
     component: <DateCard />,

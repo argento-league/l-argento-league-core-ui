@@ -75,9 +75,9 @@
       },
       {
         "team1": "Miro Tik Tok y Webeo",
-        "score1": null,
+        "score1": "2",
         "team2": "Team Wagner",
-        "score2": null
+        "score2": "0"
       }
     ]
   },
@@ -85,9 +85,9 @@
     "grupo-a": [
       {
         "team1": "Fantasmas",
-        "score1": null,
+        "score1": "1",
         "team2": "Efecto Divine",
-        "score2": null
+        "score2": "1"
       },
       {
         "team1": "Sudamerica V",
@@ -111,9 +111,9 @@
       },
       {
         "team1": "La Manada",
-        "score1": null,
+        "score1": "1",
         "team2": "Racxon Disciples",
-        "score2": null
+        "score2": "1"
       },
       {
         "team1": "Guerreros Z",
@@ -125,9 +125,9 @@
     "grupo-c": [
       {
         "team1": "Escuadron Anti Tonkas",
-        "score1": null,
+        "score1": "2",
         "team2": "Blink Dota",
-        "score2": null
+        "score2": "0"
       },
       {
         "team1": "Dream",

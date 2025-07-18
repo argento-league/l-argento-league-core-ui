@@ -97,9 +97,9 @@
       },
       {
         "team1": "Gordo Squad",
-        "score1": null,
+        "score1": "2",
         "team2": "Va a Jugar",
-        "score2": null
+        "score2": "0"
       }
     ],
     "grupo-b": [
@@ -131,23 +131,23 @@
       },
       {
         "team1": "Dream",
-        "score1": null,
+        "score1": "1",
         "team2": "The Tether",
-        "score2": null
+        "score2": "1"
       },
       {
         "team1": "Circo Jujeño",
-        "score1": null,
+        "score1": "2",
         "team2": "Pure Team",
-        "score2": null
+        "score2": "0"
       }
     ],
     "grupo-d": [
       {
         "team1": "Nymeria",
-        "score1": null,
+        "score1": "2",
         "team2": "Dragon Wings",
-        "score2": null
+        "score2": "0"
       },
       {
         "team1": "Epicenter",
@@ -193,9 +193,9 @@
       },
       {
         "team1": "Racxon Disciples",
-        "score1": null,
+        "score1": "2",
         "team2": "Elite Wolves",
-        "score2": null
+        "score2": "0"
       },
       {
         "team1": "Punishhh Productions",

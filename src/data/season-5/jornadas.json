@@ -91,9 +91,9 @@
       },
       {
         "team1": "Sudamerica V",
-        "score1": null,
+        "score1": "2",
         "team2": "Por La Gorda",
-        "score2": null
+        "score2": "0"
       },
       {
         "team1": "Gordo Squad",
@@ -199,9 +199,9 @@
       },
       {
         "team1": "Punishhh Productions",
-        "score1": null,
+        "score1": "0",
         "team2": "La Manada",
-        "score2": null
+        "score2": "2"
       }
     ],
     "grupo-c": [
@@ -233,9 +233,9 @@
       },
       {
         "team1": "Miro Tik Tok y Webeo",
-        "score1": null,
+        "score1": "1",
         "team2": "Dragon Wings",
-        "score2": null
+        "score2": "1"
       },
       {
         "team1": "Team Server",

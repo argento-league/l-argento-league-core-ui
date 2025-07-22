@@ -315,9 +315,9 @@
       },
       {
         "team1": "Team Wagner",
-        "score1": null,
+        "score1": "0",
         "team2": "Hydra Reborn",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "Team Server",

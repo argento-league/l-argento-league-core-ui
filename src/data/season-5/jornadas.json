@@ -249,15 +249,15 @@
     "grupo-a": [
       {
         "team1": "Fantasmas",
-        "score1": null,
+        "score1": "2",
         "team2": "Por La Gorda",
-        "score2": null
+        "score2": "0"
       },
       {
         "team1": "Gordo Squad",
-        "score1": null,
+        "score1": "2",
         "team2": "FPS Enjoyers",
-        "score2": null
+        "score2": "0"
       },
       {
         "team1": "Va a Jugar",
@@ -295,9 +295,9 @@
       },
       {
         "team1": "Circo Jujeño",
-        "score1": null,
+        "score1": "2",
         "team2": "Reyes de las Olas",
-        "score2": null
+        "score2": "0"
       },
       {
         "team1": "Pure Team",

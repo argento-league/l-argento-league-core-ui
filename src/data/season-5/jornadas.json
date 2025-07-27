@@ -351,21 +351,21 @@
     "grupo-b": [
       {
         "team1": "Guerreros Z",
-        "score1": null,
+        "score1": "2",
         "team2": "The Rats",
-        "score2": null
+        "score2": "0"
       },
       {
         "team1": "Punishhh Productions",
-        "score1": null,
+        "score1": "0",
         "team2": "Racxon Disciples",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "La Manada",
-        "score1": null,
+        "score1": "1",
         "team2": "Obesho + 4 Narigones",
-        "score2": null
+        "score2": "1"
       }
     ],
     "grupo-c": [
@@ -377,9 +377,9 @@
       },
       {
         "team1": "Pure Team",
-        "score1": null,
+        "score1": "1",
         "team2": "The Tether",
-        "score2": null
+        "score2": "1"
       },
       {
         "team1": "Dream",

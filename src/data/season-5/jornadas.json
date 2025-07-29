@@ -473,9 +473,9 @@
     "grupo-d": [
       {
         "team1": "Nymeria",
-        "score1": null,
+        "score1": "2",
         "team2": "Team Server",
-        "score2": null
+        "score2": "0"
       },
       {
         "team1": "Epicenter",

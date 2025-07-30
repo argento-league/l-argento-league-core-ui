@@ -479,9 +479,9 @@
       },
       {
         "team1": "Epicenter",
-        "score1": null,
+        "score1": "2",
         "team2": "Team Wagner",
-        "score2": null
+        "score2": "0"
       },
       {
         "team1": "Dragon Wings",
@@ -495,9 +495,9 @@
     "grupo-a": [
       {
         "team1": "Sudamerica V",
-        "score1": null,
+        "score1": "0",
         "team2": "Fantasmas",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "Efecto Divine",

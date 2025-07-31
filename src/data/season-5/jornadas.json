@@ -485,9 +485,9 @@
       },
       {
         "team1": "Dragon Wings",
-        "score1": null,
+        "score1": "1",
         "team2": "Hydra Reborn",
-        "score2": null
+        "score2": "1"
       }
     ]
   },
@@ -527,9 +527,9 @@
       },
       {
         "team1": "Obesho + 4 Narigones",
-        "score1": null,
+        "score1": "2",
         "team2": "Racxon Disciples",
-        "score2": null
+        "score2": "0"
       }
     ],
     "grupo-c": [

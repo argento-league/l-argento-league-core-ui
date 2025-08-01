@@ -413,9 +413,9 @@
     "grupo-a": [
       {
         "team1": "Fantasmas",
-        "score1": null,
+        "score1": "1",
         "team2": "Va a Jugar",
-        "score2": null
+        "score2": "1"
       },
       {
         "team1": "Sudamerica V",
@@ -439,9 +439,9 @@
       },
       {
         "team1": "La Manada",
-        "score1": null,
+        "score1": "0",
         "team2": "Guerreros Z",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "Elite Wolves",
@@ -465,9 +465,9 @@
       },
       {
         "team1": "Blink Dota",
-        "score1": null,
+        "score1": "0",
         "team2": "Reyes de las Olas",
-        "score2": null
+        "score2": "2"
       }
     ],
     "grupo-d": [
@@ -507,9 +507,9 @@
       },
       {
         "team1": "FPS Enjoyers",
-        "score1": null,
+        "score1": "0",
         "team2": "Por La Gorda",
-        "score2": null
+        "score2": "2"
       }
     ],
     "grupo-b": [
@@ -535,9 +535,9 @@
     "grupo-c": [
       {
         "team1": "Dream",
-        "score1": null,
+        "score1": "0',
         "team2": "Escuadron Anti Tonkas",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "Blink Dota",

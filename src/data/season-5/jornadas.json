@@ -433,9 +433,9 @@
     "grupo-b": [
       {
         "team1": "The Rats",
-        "score1": null,
+        "score1": "0",
         "team2": "Punishhh Productions",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "La Manada",
@@ -521,9 +521,9 @@
       },
       {
         "team1": "Elite Wolves",
-        "score1": null,
+        "score1": "0",
         "team2": "Guerreros Z",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "Obesho + 4 Narigones",

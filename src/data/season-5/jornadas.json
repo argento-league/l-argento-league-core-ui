@@ -419,9 +419,9 @@
       },
       {
         "team1": "Sudamerica V",
-        "score1": null,
+        "score1": "0",
         "team2": "Gordo Squad",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "Efecto Divine",
@@ -547,17 +547,17 @@
       },
       {
         "team1": "Reyes de las Olas",
-        "score1": null,
+        "score1": "1",
         "team2": "The Tether",
-        "score2": null
+        "score2": "1"
       }
     ],
     "grupo-d": [
       {
         "team1": "Epicenter",
-        "score1": null,
+        "score1": "0",
         "team2": "Nymeria",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "Dragon Wings",
@@ -567,9 +567,9 @@
       },
       {
         "team1": "Hydra Reborn",
-        "score1": null,
+        "score1": "2",
         "team2": "Miro TikTok y Webeo",
-        "score2": null
+        "score2": "0"
       }
     ]
   }

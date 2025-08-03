@@ -453,15 +453,15 @@
     "grupo-c": [
       {
         "team1": "Escuadron Anti Tonkas",
-        "score1": null,
+        "score1": "1",
         "team2": "Pure Team",
-        "score2": null
+        "score2": "1"
       },
       {
         "team1": "Dream",
-        "score1": null,
+        "score1": "0",
         "team2": "Circo Jujeño",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "Blink Dota",
@@ -501,9 +501,9 @@
       },
       {
         "team1": "Efecto Divine",
-        "score1": null,
+        "score1": "0",
         "team2": "Gordo Squad",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "FPS Enjoyers",
@@ -515,9 +515,9 @@
     "grupo-b": [
       {
         "team1": "La Manada",
-        "score1": null,
+        "score1": "1",
         "team2": "The Rats",
-        "score2": null
+        "score2": "1"
       },
       {
         "team1": "Elite Wolves",

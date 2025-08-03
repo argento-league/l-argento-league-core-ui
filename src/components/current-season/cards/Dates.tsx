@@ -43,7 +43,8 @@ export const DateCard = () => {
     <DatesBox>
       <DatesTitle>Fechas</DatesTitle>
       <DatesRow>
-        <DateText>
+        <DateText
+        >
           Pre-inscripción individual
         </DateText>
         <DateText style={{ textAlign: "end" }}>hasta el 01/07</DateText>
@@ -52,31 +53,13 @@ export const DateCard = () => {
         <DateText>
           Inscripción por equipo
         </DateText>
-        <DateText style={{ textAlign: "end" }}>del 23/06 al 01/07</DateText>
+        <DateText style={{ textAlign: "end" }}>del 23/06 al 1/07</DateText>
       </DatesRow>
       <DatesRow>
         <DateText>
           Inicio Season 5
         </DateText>
         <DateText style={{ textAlign: "end" }}>Domingo 06/07</DateText>
-      </DatesRow>
-      <DatesRow>
-        <DateText>
-          Fase de grupos
-        </DateText>
-        <DateText style={{ textAlign: "end" }}>Del 07/07 al 03/08</DateText>
-      </DatesRow>
-      <DatesRow>
-        <DateText>
-          Evento principal
-        </DateText>
-        <DateText style={{ textAlign: "end" }}>Del 04/08 al 06/09</DateText>
-      </DatesRow>
-      <DatesRow>
-        <DateText>
-          Gran final
-        </DateText>
-        <DateText style={{ textAlign: "end" }}>Domingo 07/09</DateText>
       </DatesRow>
     </DatesBox>
   );

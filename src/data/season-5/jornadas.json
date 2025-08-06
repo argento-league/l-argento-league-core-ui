@@ -131,9 +131,9 @@
       },
       {
         "team1": "Dream",
-        "score1": "1",
+        "score1": "0",
         "team2": "The Tether",
-        "score2": "1"
+        "score2": "2"
       },
       {
         "team1": "Circo Jujeño",
@@ -261,37 +261,37 @@
       },
       {
         "team1": "Va a Jugar",
-        "score1": null,
+        "score1": "0",
         "team2": "Efecto Divine",
-        "score2": null
+        "score2": "2"
       }
     ],
     "grupo-b": [
       {
         "team1": "The Rats",
-        "score1": null,
+        "score1": "1",
         "team2": "Racxon Disciples",
-        "score2": null
+        "score2": "1"
       },
       {
         "team1": "Guerreros Z",
-        "score1": null,
+        "score1": "0",
         "team2": "Obesho + 4 Narigones",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "Punishhh Productions",
-        "score1": null,
+        "score1": "0",
         "team2": "Elite Wolves",
-        "score2": null
+        "score2": "2"
       }
     ],
     "grupo-c": [
       {
         "team1": "Escuadron Anti Tonkas",
-        "score1": null,
+        "score1": "2",
         "team2": "The Tether",
-        "score2": null
+        "score2": "0"
       },
       {
         "team1": "Circo Jujeño",
@@ -301,17 +301,17 @@
       },
       {
         "team1": "Pure Team",
-        "score1": null,
+        "score1": "2",
         "team2": "Blink Dota",
-        "score2": null
+        "score2": "0"
       }
     ],
     "grupo-d": [
       {
         "team1": "Nymeria",
-        "score1": null,
+        "score1": "2",
         "team2": "Miro Tik Tok y Webeo",
-        "score2": null
+        "score2": "0"
       },
       {
         "team1": "Team Wagner",
@@ -321,9 +321,9 @@
       },
       {
         "team1": "Team Server",
-        "score1": null,
+        "score1": "2",
         "team2": "Dragon Wings",
-        "score2": null
+        "score2": "0"
       }
     ]
   },
@@ -331,81 +331,81 @@
     "grupo-a": [
       {
         "team1": "Gordo Squad",
-        "score1": null,
+        "score1": "2",
         "team2": "Fantasmas",
-        "score2": null
+        "score2": "0"
       },
       {
         "team1": "Va a Jugar",
-        "score1": null,
+        "score1": "1",
         "team2": "Por La Gorda",
-        "score2": null
+        "score2": "1"
       },
       {
         "team1": "Sudamerica V",
-        "score1": null,
+        "score1": "1",
         "team2": "FPS Enjoyers",
-        "score2": null
+        "score2": "1"
       }
     ],
     "grupo-b": [
       {
         "team1": "Guerreros Z",
-        "score1": null,
+        "score1": "2",
         "team2": "The Rats",
-        "score2": null
+        "score2": "0"
       },
       {
         "team1": "Punishhh Productions",
-        "score1": null,
+        "score1": "0",
         "team2": "Racxon Disciples",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "La Manada",
-        "score1": null,
+        "score1": "1",
         "team2": "Obesho + 4 Narigones",
-        "score2": null
+        "score2": "1"
       }
     ],
     "grupo-c": [
       {
         "team1": "Circo Jujeño",
-        "score1": null,
+        "score1": "0",
         "team2": "Escuadron Anti Tonkas",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "Pure Team",
-        "score1": null,
+        "score1": "1",
         "team2": "The Tether",
-        "score2": null
+        "score2": "1"
       },
       {
         "team1": "Dream",
-        "score1": null,
+        "score1": "2",
         "team2": "Reyes de las Olas",
-        "score2": null
+        "score2": "0"
       }
     ],
     "grupo-d": [
       {
         "team1": "Team Wagner",
-        "score1": null,
+        "score1": "0",
         "team2": "Nymeria",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "Team Server",
-        "score1": null,
+        "score1": "1",
         "team2": "Miro Tik Tok y Webeo",
-        "score2": null
+        "score2": "1"
       },
       {
         "team1": "Epicenter",
-        "score1": null,
+        "score1": "1",
         "team2": "Hydra Reborn",
-        "score2": null
+        "score2": "1"
       }
     ]
   },
@@ -413,81 +413,81 @@
     "grupo-a": [
       {
         "team1": "Fantasmas",
-        "score1": null,
+        "score1": "1",
         "team2": "Va a Jugar",
-        "score2": null
+        "score2": "1"
       },
       {
         "team1": "Sudamerica V",
-        "score1": null,
+        "score1": "0",
         "team2": "Gordo Squad",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "Efecto Divine",
-        "score1": null,
+        "score1": "2",
         "team2": "FPS Enjoyers",
-        "score2": null
+        "score2": "0"
       }
     ],
     "grupo-b": [
       {
         "team1": "The Rats",
-        "score1": null,
+        "score1": "0",
         "team2": "Punishhh Productions",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "La Manada",
-        "score1": null,
+        "score1": "0",
         "team2": "Guerreros Z",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "Elite Wolves",
-        "score1": null,
+        "score1": "1",
         "team2": "Obesho + 4 Narigones",
-        "score2": null
+        "score2": "1"
       }
     ],
     "grupo-c": [
       {
         "team1": "Escuadron Anti Tonkas",
-        "score1": null,
+        "score1": "1",
         "team2": "Pure Team",
-        "score2": null
+        "score2": "1"
       },
       {
         "team1": "Dream",
-        "score1": null,
+        "score1": "0",
         "team2": "Circo Jujeño",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "Blink Dota",
-        "score1": null,
+        "score1": "0",
         "team2": "Reyes de las Olas",
-        "score2": null
+        "score2": "2"
       }
     ],
     "grupo-d": [
       {
         "team1": "Nymeria",
-        "score1": null,
+        "score1": "2",
         "team2": "Team Server",
-        "score2": null
+        "score2": "0"
       },
       {
         "team1": "Epicenter",
-        "score1": null,
+        "score1": "2",
         "team2": "Team Wagner",
-        "score2": null
+        "score2": "0"
       },
       {
         "team1": "Dragon Wings",
-        "score1": null,
+        "score1": "1",
         "team2": "Hydra Reborn",
-        "score2": null
+        "score2": "1"
       }
     ]
   },
@@ -495,81 +495,81 @@
     "grupo-a": [
       {
         "team1": "Sudamerica V",
-        "score1": null,
+        "score1": "0",
         "team2": "Fantasmas",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "Efecto Divine",
-        "score1": null,
+        "score1": "0",
         "team2": "Gordo Squad",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "FPS Enjoyers",
-        "score1": null,
+        "score1": "0",
         "team2": "Por La Gorda",
-        "score2": null
+        "score2": "2"
       }
     ],
     "grupo-b": [
       {
         "team1": "La Manada",
-        "score1": null,
+        "score1": "1",
         "team2": "The Rats",
-        "score2": null
+        "score2": "1"
       },
       {
         "team1": "Elite Wolves",
-        "score1": null,
+        "score1": "0",
         "team2": "Guerreros Z",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "Obesho + 4 Narigones",
-        "score1": null,
+        "score1": "2",
         "team2": "Racxon Disciples",
-        "score2": null
+        "score2": "0"
       }
     ],
     "grupo-c": [
       {
         "team1": "Dream",
-        "score1": null,
+        "score1": "0",
         "team2": "Escuadron Anti Tonkas",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "Blink Dota",
-        "score1": null,
+        "score1": "0",
         "team2": "Circo Jujeño",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "Reyes de las Olas",
-        "score1": null,
+        "score1": "1",
         "team2": "The Tether",
-        "score2": null
+        "score2": "1"
       }
     ],
     "grupo-d": [
       {
         "team1": "Epicenter",
-        "score1": null,
+        "score1": "0",
         "team2": "Nymeria",
-        "score2": null
+        "score2": "2"
       },
       {
         "team1": "Dragon Wings",
-        "score1": null,
+        "score1": "2",
         "team2": "Team Wagner",
-        "score2": null
+        "score2": "0"
       },
       {
         "team1": "Hydra Reborn",
-        "score1": null,
+        "score1": "2",
         "team2": "Miro TikTok y Webeo",
-        "score2": null
+        "score2": "0"
       }
     ]
   }

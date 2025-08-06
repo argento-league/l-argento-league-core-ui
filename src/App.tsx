@@ -7,7 +7,6 @@ import { NavBar } from "./components/navbar";
 import { SeasonFour } from "./pages/season-four";
 import { CurrentSeasonPage } from "./pages/current-season";
 import { Footer } from "@components/footer";
-import Snowfall from "react-snowfall";
 
 const AppContainer = styled.div`
   min-height: 100vh;
@@ -18,10 +17,6 @@ const AppContainer = styled.div`
 function App() {
   return (
     <AppContainer>
-			<Snowfall
-			>
-				
-			</Snowfall>
       <NavBar />
       {
         <Routes>

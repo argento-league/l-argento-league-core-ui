@@ -24,8 +24,10 @@ const MatchContainer = style.div`
 type MatchProps = {
   team1: string;
   team2: string;
-  score1: number | null;
-  score2: number | null;
+  score1: number | null | undefined;
+  score2: number | null | undefined;
+  isWinner1: boolean | undefined;
+  isWinner2: boolean | undefined;
   winnerText: string;
   loserText: string;
 };
@@ -35,30 +37,40 @@ export const Match = ({
   team2 = "Team Name 2",
   score1 = null,
   score2 = null,
+  isWinner1 = undefined,
+  isWinner2 = undefined,
   winnerText = "Victoria",
   loserText = "Derrota",
 }: MatchProps) => {
-  const winner =
-    score1 !== null && score2 !== null && score1 > score2 ? team1 : team2;
-
-  const isGamePlayed = score1 !== null && score2 !== null;
+  const isGamePlayed = score1 != null && score2 != null;
+  
+  // Check if both teams are losers (both isWinner are false or undefined)
+  const bothTeamsAreLosers = isWinner1 === false && isWinner2 === false;
+  
+  // Only show results if game has been played AND not both teams are losers
+  const shouldShowResults = isGamePlayed && !bothTeamsAreLosers;
+  
+  // Only determine winner if game has been played and results should be shown
+  const winner = shouldShowResults && score1 != null && score2 != null && score1 > score2 ? team1 : 
+                 shouldShowResults && score1 != null && score2 != null && score2 > score1 ? team2 : 
+                 null;
 
   return (
     <MatchContainer id="match">
       <Team
         teamName={team1}
         score={score1}
-        result={winner === team1 ? winnerText : loserText}
+        result={shouldShowResults ? (winner === team1 ? winnerText : loserText) : ""}
         isWinner={winner === team1}
-        isGamePlayed={isGamePlayed}
+        isGamePlayed={shouldShowResults}
       />
       <MatchSeparator />
       <Team
         teamName={team2}
         score={score2}
-        result={winner === team2 ? winnerText : loserText}
+        result={shouldShowResults ? (winner === team2 ? winnerText : loserText) : ""}
         isWinner={winner === team2}
-        isGamePlayed={isGamePlayed}
+        isGamePlayed={shouldShowResults}
       />
     </MatchContainer>
   );

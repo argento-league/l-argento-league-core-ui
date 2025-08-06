@@ -3,19 +3,23 @@ import arrowLeft from "../../../assets/common/icons/arrow-left.svg";
 import arrowRight from "../../../assets/common/icons/arrow-right.svg";
 import { useState } from "react";
 import {
-  GRAND_FINAL,
-  LOWER_BRACKET_FINAL,
-  LOWER_BRACKET_ROUND_2,
-  LOWER_BRACKET_ROUND_3,
-  LOWER_BRACKET_ROUND_4,
-  LOWER_BRACKET_ROUND_5,
-  UPPER_BRACKET_FINAL,
-  UPPER_BRACKET_ROUND_1,
-  UPPER_BRACKET_ROUND_2,
-} from "../../../data/brackets/doubleEliminationMatches";
-import { LOWER_BRACKET_ROUND_1 } from "../../../data/brackets/doubleEliminationMatches";
-import { Match } from "./match";
+  UPPER_BRACKET_R1_MATCHES,
+  UPPER_BRACKET_R2_MATCHES,
+  UPPER_BRACKET_R3_MATCHES,
+  UPPER_BRACKET_R4_MATCHES,
+  LOWER_BRACKET_R1_MATCHES,
+  LOWER_BRACKET_R2_MATCHES,
+  LOWER_BRACKET_R3_MATCHES,
+  LOWER_BRACKET_R4_MATCHES,
+  LOWER_BRACKET_R5_MATCHES,
+  LOWER_BRACKET_R6_MATCHES,
+  LOWER_BRACKET_R7_MATCHES,
+  GRAND_FINAL_MATCHES,
+  PARTICIPANTS,
+  type Match as TournamentMatch
+} from "../../../data/brackets/tournamentData";
 import { MatchType } from "react-tournament-brackets";
+import { Match } from "../mobile/match";
 import { StyledSvg } from "../../common/StyledSVG";
 
 const MainContainer = style.div`
@@ -96,13 +100,48 @@ enum BracketName {
   LOWER_BRACKET = "LOWER BRACKET",
 }
 
+// Helper function to get participant name
+const getParticipantName = (participantId: number | null): string => {
+  if (participantId === null) return 'TBD';
+  const participant = PARTICIPANTS.find(p => p.id === participantId);
+  return participant?.name || 'TBD';
+};
+
+// Helper function to transform Match data to MatchType format
+const transformMatchesToMobileFormat = (matches: TournamentMatch[]): MatchType[] => {
+  return matches.map((match) => {
+    // Check if match has been played (status 2 means completed)
+    const isMatchPlayed = match.status === 2;
+    
+    return {
+      id: match.id,
+      nextMatchId: null,
+      startTime: '',
+      state: isMatchPlayed ? 'DONE' : 'PENDING',
+      participants: [
+        {
+          id: match.opponent1?.id ?? '',
+          name: getParticipantName(match.opponent1?.id ?? null),
+          score: isMatchPlayed ? (match.opponent1?.score || 0) : undefined,
+          isWinner: isMatchPlayed ? (match.opponent1?.result === "win") : undefined
+        },
+        {
+          id: match.opponent2?.id ?? '',
+          name: getParticipantName(match.opponent2?.id ?? null),
+          score: isMatchPlayed ? (match.opponent2?.score || 0) : undefined,
+          isWinner: isMatchPlayed ? (match.opponent2?.result === "win") : undefined
+        }
+      ]
+    };
+  });
+};
+
 const DoubleEliminationMobile = () => {
   return (
     <>
       <Bracket
         bracketName={BracketName.UPPER_BRACKET}
         bracketStages={UPPER_BRACKET_TITLES}
-        //@ts-expect-error - TODO: fix this
         bracketMatches={upperBracketMatches}
         winnerText={"VICTORIA"}
         loserText={"DERROTA"}
@@ -110,7 +149,6 @@ const DoubleEliminationMobile = () => {
       <Bracket
         bracketName={BracketName.LOWER_BRACKET}
         bracketStages={LOWER_BRACKET_TITLES}
-        //@ts-expect-error - TODO: fix this
         bracketMatches={lowerBracketMatches}
         winnerText={"VICTORIA"}
         loserText={"ELIMINADO"}
@@ -128,35 +166,39 @@ type BracketProps = {
 };
 
 const LOWER_BRACKET_TITLES = {
-  round_1: "Ronda 1",
-  round_2: "Ronda 2",
-  round_3: "Ronda 3",
-  quarter_final: "Cuartos de final",
-  semifinal: "Semi final",
-  final: "Final",
+  ronda_1: "Ronda 1",
+  ronda_2: "Ronda 2", 
+  ronda_3: "Ronda 3",
+  ronda_4: "Ronda 4",
+  ronda_5: "Ronda 5",
+  lower_semi_final: "Lower Semi Final",
+  lower_final: "Lower Final",
 };
 
 const UPPER_BRACKET_TITLES = {
-  quarter_final: "Cuartos de final",
-  semifinal: "Semi final",
-  final: "Final",
-  "Gran Final": "Gran Final",
+  octavos: "Octavos",
+  cuartos: "Cuartos",
+  semi_final: "Semi Final", 
+  upper_final: "Upper Final",
+  gran_final: "Gran Final",
 };
 
-export const lowerBracketMatches = {
-  round_1: LOWER_BRACKET_ROUND_1,
-  round_2: LOWER_BRACKET_ROUND_2,
-  round_3: LOWER_BRACKET_ROUND_3,
-  quarter_final: LOWER_BRACKET_ROUND_4,
-  semifinal: LOWER_BRACKET_ROUND_5,
-  final: LOWER_BRACKET_FINAL,
+const lowerBracketMatches = {
+  ronda_1: transformMatchesToMobileFormat(LOWER_BRACKET_R1_MATCHES),
+  ronda_2: transformMatchesToMobileFormat(LOWER_BRACKET_R2_MATCHES),
+  ronda_3: transformMatchesToMobileFormat(LOWER_BRACKET_R3_MATCHES),
+  ronda_4: transformMatchesToMobileFormat(LOWER_BRACKET_R4_MATCHES),
+  ronda_5: transformMatchesToMobileFormat(LOWER_BRACKET_R5_MATCHES),
+  lower_semi_final: transformMatchesToMobileFormat(LOWER_BRACKET_R6_MATCHES),
+  lower_final: transformMatchesToMobileFormat(LOWER_BRACKET_R7_MATCHES),
 };
 
-export const upperBracketMatches = {
-  quarter_final: UPPER_BRACKET_ROUND_1,
-  semifinal: UPPER_BRACKET_ROUND_2,
-  final: UPPER_BRACKET_FINAL,
-  "Gran Final": GRAND_FINAL,
+const upperBracketMatches = {
+  octavos: transformMatchesToMobileFormat(UPPER_BRACKET_R1_MATCHES),
+  cuartos: transformMatchesToMobileFormat(UPPER_BRACKET_R2_MATCHES),
+  semi_final: transformMatchesToMobileFormat(UPPER_BRACKET_R3_MATCHES),
+  upper_final: transformMatchesToMobileFormat(UPPER_BRACKET_R4_MATCHES),
+  gran_final: transformMatchesToMobileFormat(GRAND_FINAL_MATCHES),
 };
 
 const StageTitle = style.span`
@@ -221,14 +263,15 @@ const Bracket = ({
         <MatchesContainer id="matchs-container">
           {bracketMatches[bracketStagesKeys[currentIndex]].map((match) => (
             <Match
+              key={match.id}
               team1={match.participants[0].name as string}
               team2={match.participants[1].name as string}
-              score1={match.participants[0].score as number}
-              score2={match.participants[1].score as number}
+              score1={match.participants[0].score as number | null | undefined}
+              score2={match.participants[1].score as number | null | undefined}
+              isWinner1={match.participants[0].isWinner}
+              isWinner2={match.participants[1].isWinner}
               winnerText={winnerText}
               loserText={loserText}
-              isWinner1={match.participants[0].score > match.participants[1].score}
-              isWinner2={match.participants[1].score > match.participants[0].score}
             />
           ))}
         </MatchesContainer>

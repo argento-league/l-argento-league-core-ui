@@ -34,7 +34,7 @@ const TeamName = style.p`
 
 type TeamProps = {
   teamName: string;
-  score: number | null;
+  score: number | null | undefined;
   result: string;
   isWinner: boolean;
   isGamePlayed: boolean;

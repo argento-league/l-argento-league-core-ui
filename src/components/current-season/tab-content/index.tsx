@@ -1,4 +1,11 @@
 import { ReactNode, useEffect, useState } from "react";
+
+// Add this declaration to extend the Window interface
+declare global {
+  interface Window {
+    bracketsViewer: any;
+  }
+}
 import { useIsMobile } from "../../../hooks/useIsMobile";
 import { InfoTabContentMobile } from "./mobile/Info";
 import { InfoTabContent } from "./Info";
@@ -8,13 +15,14 @@ import { GroupStageContent } from "./GroupStage";
 import { TeamSelectionContent } from "./TeamSelection";
 import styled from "styled-components";
 import { TOURNAMENT_DATA } from "../../../data/brackets/tournamentData";
+import MainEventMobile from "../../seasons/season-five/MainEventMobile";
 
 type TabContentProps = {
   selectedTab: TabsEnum;
 };
 
 export const TabContent = ({ selectedTab }: TabContentProps) => {
-  const isMobile = useIsMobile(768);
+  const isMobile = useIsMobile(1000);
   let children: ReactNode | null = null;
   switch (selectedTab) {
     case TabsEnum.InfoGeneral:
@@ -29,7 +37,7 @@ export const TabContent = ({ selectedTab }: TabContentProps) => {
     case TabsEnum.EventoPrincipal:
       children = (
         <MainEventContainer>
-          <MainEvent></MainEvent>
+          {isMobile ? <MainEventMobile /> : <MainEvent />}
         </MainEventContainer>
       );
       break;
@@ -40,8 +48,6 @@ export const TabContent = ({ selectedTab }: TabContentProps) => {
 };
 
 const MainEventContainer = styled.div`
-  display: flex;
-
   color: white;
 `;
 
@@ -79,6 +85,7 @@ const MainEvent = () => {
       {
         participantOriginPlacement: "none",
         showRankingTable: false,
+        // @ts-ignore
         customRoundName: (info) => {
           if (info.finalType === "grand_final") {
             return "Gran Final";
@@ -130,6 +137,7 @@ const MainEvent = () => {
       }
     );
     document.querySelectorAll(".participant .name").forEach((el) => {
+      // @ts-ignore idc
       el.textContent = el.textContent.replace(/Loser of WB.{0,3}/, "").trim();
     });
     setLoaded(true);

@@ -4,11 +4,13 @@
     "logo": "fantasmas.png",
     "players": [
       { "nick": "Oli", "nationality": "ar" },
+      { "nick": "Irohha", "nationality": "ar" },
       { "nick": "ALE", "nationality": "pe" },
       { "nick": "Subradota2", "nationality": "pe" },
       { "nick": "Adv.Khal", "nationality": "pe" },
       { "nick": "Who is Ari?", "nationality": "ar" },
-      { "nick": "rucula", "nationality": "ar" }
+      { "nick": "rucula", "nationality": "ar" },
+      { "nick": "SacK", "nationality": "pe" }
     ]
   },
   "GUERREROS_Z": {
@@ -35,7 +37,7 @@
       { "nick": "Nexus", "nationality": "bo" },
       { "nick": "MarcE", "nationality": "ar" },
       { "nick": "Kz", "nationality": "pe" },
-      { "nick": "Descobridor", "nationality": "pe" },
+      { "nick": "Toxy", "nationality": "ar" },
       { "nick": "Stepham", "nationality": "pe" }
     ]
   },
@@ -49,7 +51,8 @@
       { "nick": "CRISTHIAN", "nationality": "bo" },
       { "nick": "Ducho", "nationality": "pe" },
       { "nick": "JukePlz", "nationality": "ar" },
-      { "nick": "D34D", "nationality": "pe" }
+      { "nick": "D34D", "nationality": "pe" },
+       { "nick": "Meflayer", "nationality": "pe" }
     ]
   },
   "OBESHO_+_4_NARIGONES": {
@@ -68,12 +71,11 @@
     "name": "Elite Wolves",
     "logo": "elite-wolves.png",
     "players": [
-      { "nick": "correNTA", "nationality": "ar" },
+      { "nick": "66IRL", "nationality": "ar" },
       { "nick": "ShineDi", "nationality": "cl" },
       { "nick": "Ligthining", "nationality": "ar" },
       { "nick": "Sayonara", "nationality": "ar" },
       { "nick": "NerØ", "nationality": "bo" },
-      { "nick": "MessiGordo", "nationality": "ar" },
       { "nick": "kinkka", "nationality": "br" },
       { "nick": "Markuz!", "nationality": "bo" }
     ]
@@ -85,9 +87,9 @@
       { "nick": "dgN", "nationality": "ar" },
       { "nick": "balenci", "nationality": "ar" },
       { "nick": "Meew", "nationality": "ar" },
-      { "nick": "runawaY", "nationality": "ar" },
+      { "nick": "SokaD", "nationality": "ar" },
       { "nick": "Rico-", "nationality": "ar" },
-      { "nick": "WISKO", "nationality": "ar" },
+      { "nick": "MessiGordo ", "nationality": "ar" },
       { "nick": "frizolini", "nationality": "ar" },
       { "nick": "GaBO", "nationality": "ar" }
     ]
@@ -100,7 +102,6 @@
       { "nick": "Dsk", "nationality": "ar" },
       { "nick": "Tabu", "nationality": "ar" },
       { "nick": "Snitter", "nationality": "ar" },
-      { "nick": "elgoat", "nationality": "ar" },
       { "nick": "Femof.Chan", "nationality": "ar" },
       { "nick": "Akali simp", "nationality": "ar" }
     ]
@@ -139,7 +140,6 @@
     "players": [
       { "nick": "Jp愛", "nationality": "it" },
       { "nick": "Gustee", "nationality": "ar" },
-      { "nick": "Toxy", "nationality": "ar" },
       { "nick": "Bichuny", "nationality": "ar" },
       { "nick": "Yoh", "nationality": "ar" }
     ]
@@ -153,6 +153,7 @@
       { "nick": "mtE", "nationality": "ar" },
       { "nick": "SAIKEN", "nationality": "bo" },
       { "nick": "Fumigator", "nationality": "ar" },
+      { "nick": "Subradota2", "nationality": "pe" },
       { "nick": "LittLeHopes", "nationality": "ar" }
     ]
   },
@@ -166,7 +167,7 @@
       { "nick": "Kanishka", "nationality": "ar" },
       { "nick": "Merlino", "nationality": "ar" },
       { "nick": "Valky", "nationality": "ar" },
-      { "nick": "Destroyermondota", "nationality": "pe" },
+      { "nick": "Wij", "nationality": "pe" },
       { "nick": "M3L", "nationality": "ar" }
     ]
   },
@@ -189,6 +190,7 @@
       { "nick": "UnGato", "nationality": "ar" },
       { "nick": "Marmota", "nationality": "ar" },
       { "nick": "Jugo Boss", "nationality": "ar" },
+      { "nick": "flugel", "nationality": "ar" },
       { "nick": "Puntito", "nationality": "ar" }
     ]
   },
@@ -214,7 +216,9 @@
       { "nick": "Miru", "nationality": "ar" },
       { "nick": "Future", "nationality": "ar" },
       { "nick": "Ovo1de", "nationality": "ar" },
+      { "nick": "Enaici", "nationality": "ar" },
       { "nick": "Daxas", "nationality": "ar" },
+      { "nick": "Duvet", "nationality": "ar" },
       { "nick": "Ashlom", "nationality": "ar" }
     ]
   },
@@ -239,7 +243,7 @@
       { "nick": "LetMe 丶", "nationality": "ar" },
       { "nick": "Walterms", "nationality": "ar" },
       { "nick": "taboo", "nationality": "ar" },
-      { "nick": "Tizzer", "nationality": "ar" },
+      { "nick": "THENKS", "nationality": "pe" },
       { "nick": "SICK TUFI", "nationality": "ar" },
       { "nick": "DcnT", "nationality": "ar" },
       { "nick": "live", "nationality": "pe" }
@@ -250,13 +254,13 @@
     "logo": "dragon-wings.png",
     "players": [
       { "nick": "Tachibana-", "nationality": "pe" },
+      { "nick": "SoA", "nationality": "pe" },
       { "nick": "TK JeLiTo ジェリート", "nationality": "pe" },
       { "nick": "Lykke.", "nationality": "ar" },
       { "nick": "MoneyForNoth1ng", "nationality": "ar" },
       { "nick": "GASELEANO", "nationality": "ar" },
       { "nick": "giulinho", "nationality": "ar" },
-      { "nick": "MOIIY <3", "nationality": "pe" },
-      { "nick": "ZETA", "nationality": "ar" }
+      { "nick": "MOIIY <3", "nationality": "pe" }
     ]
   },
   "LA_MANADA": {
@@ -291,8 +295,7 @@
     "name": "Circo Jujeño",
     "logo": "circo-jujeno.png",
     "players": [
-      { "nick": "picado", "nationality": "ar" },
-      { "nick": "IroHHa", "nationality": "ar" },
+      { "nick": "nap", "nationality": "ar" },
       { "nick": "JANN", "nationality": "ar" },
       { "nick": "MDFK pipi", "nationality": "ar" },
       { "nick": "dracosao", "nationality": "ar" },
@@ -324,7 +327,7 @@
       { "nick": "SyndraMoon", "nationality": "ar" },
       { "nick": "Sandevistan", "nationality": "ar" },
       { "nick": "El Papu", "nationality": "ar" },
-      { "nick": "Papita", "nationality": "ar" },
+      { "nick": "picado", "nationality": "ar" },
       { "nick": "Shifu", "nationality": "ar" }
     ]
   },
@@ -335,7 +338,7 @@
       { "nick": "Lionel Dota", "nationality": "ar" },
       { "nick": "Neko", "nationality": "pe" },
       { "nick": "Quoarine_Oficial", "nationality": "ar" },
-      { "nick": "Perro flaco polveador ", "nationality": "pe" },
+      { "nick": "lzolver", "nationality": "pe" },
       { "nick": "dk3r", "nationality": "ar" },
       { "nick": "nikito-CHJ", "nationality": "ar" },
       { "nick": "jonathan", "nationality": "ar" },

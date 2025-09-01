@@ -305,8 +305,8 @@ export const UPPER_BRACKET_R4_MATCHES: Match[] = [
     round_id: 3,
     child_count: 0,
     status: 0,
-    opponent1: { id: 0 },
-    opponent2: { id: 14 },
+    opponent1: { id: 0, result: "win", score: 2 },
+    opponent2: { id: 14, result: "loss", score: 0 },
   },
 ];
 
@@ -534,8 +534,8 @@ export const LOWER_BRACKET_R5_MATCHES: Match[] = [
     round_id: 8,
     child_count: 0,
     status: 0,
-    opponent1: { id: 2 },
-    opponent2: { id: 8 },
+    opponent1: { id: 2, result: "loss", score: 1 },
+    opponent2: { id: 8, result: "win", score: 2 },
   },
   {
     id: 34,
@@ -545,8 +545,8 @@ export const LOWER_BRACKET_R5_MATCHES: Match[] = [
     round_id: 8,
     child_count: 0,
     status: 0,
-    opponent1: { id: 22 },
-    opponent2: { id: 4 },
+    opponent1: { id: 22, score: 1, result: "loss" },
+    opponent2: { id: 4, score: 2, result: "win" },
   },
 ];
 
@@ -559,8 +559,8 @@ export const LOWER_BRACKET_R6_MATCHES: Match[] = [
     round_id: 9,
     child_count: 0,
     status: 0,
-    opponent1: { id: null },
-    opponent2: { id: null },
+    opponent1: { id: 8, result: "win", score: 2 },
+    opponent2: { id: 4, result: "loss", score: 1 },
   },
 ];
 
@@ -573,8 +573,8 @@ export const LOWER_BRACKET_R7_MATCHES: Match[] = [
     round_id: 10,
     child_count: 0,
     status: 0,
-    opponent1: { id: null, position: 1 },
-    opponent2: { id: null },
+    opponent1: { id: 8 },
+    opponent2: { id: 14 },
   },
 ];
 
@@ -588,7 +588,7 @@ export const GRAND_FINAL_MATCHES: Match[] = [
     round_id: 11,
     child_count: 0,
     status: 0,
-    opponent1: { id: null },
+    opponent1: { id: 0 },
     opponent2: { id: null },
   },
 ];

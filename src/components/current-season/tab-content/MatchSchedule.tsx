@@ -113,7 +113,12 @@ const MatchScheduleContainer = styled.div`
   max-width: 800px;
   min-width: 600px;
 	width: 100%;
-	box-sizing: border-box;  
+	box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    min-width: unset;
+  }
 `;
 
 const NavigationContainer = styled.div`

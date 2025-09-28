@@ -287,6 +287,10 @@ const GroupStageContainer = styled.div`
   gap: 48px;
   max-width: 1400px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 5px;
+  }
 `;
 
 const GroupSection = styled.div`
@@ -320,6 +324,11 @@ const GroupTable = styled.div`
   flex: 1;
   max-width: 600px;
   min-width: 500px;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    min-width: unset;
+  }
 `;
 
 const TableContainer = styled.div`

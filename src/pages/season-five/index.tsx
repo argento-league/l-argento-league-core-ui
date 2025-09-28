@@ -43,6 +43,15 @@ const TabContainer = styled.div`
   width: 100%;
   height: 64px;
   background-color: #321156;
+  margin-bottom: 24px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 16px;
+  }
 `;
 
 const TabItem = styled.div<{ active: boolean }>`
@@ -56,9 +65,28 @@ const TabItem = styled.div<{ active: boolean }>`
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 600;
-  line-height: 24px;
-  padding: 16px 32px;
+  line-height: 1.2;
+  padding: 16px 8px;
   cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  min-height: 64px;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    padding: 10px 2px;
+    min-height: 64px;
+    white-space: normal;
+    line-height: 1.1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 480px) {
+    padding: 8px 1px;
+    min-height: 60px;
+  }
 `;
 
 enum SEASON_FIVE_TABS {

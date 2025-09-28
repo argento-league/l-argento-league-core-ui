@@ -1,0 +1,178 @@
+{
+  "TEAM_1": {
+    "name": "Team 1",
+    "logo": "team-1.png",
+    "players": [
+      { "nick": "Player1", "nationality": "ar" },
+      { "nick": "Player2", "nationality": "ar" },
+      { "nick": "Player3", "nationality": "ar" },
+      { "nick": "Player4", "nationality": "ar" },
+      { "nick": "Player5", "nationality": "ar" }
+    ]
+  },
+  "TEAM_2": {
+    "name": "Team 2",
+    "logo": "team-2.png",
+    "players": [
+      { "nick": "Player1", "nationality": "ar" },
+      { "nick": "Player2", "nationality": "ar" },
+      { "nick": "Player3", "nationality": "ar" },
+      { "nick": "Player4", "nationality": "ar" },
+      { "nick": "Player5", "nationality": "ar" }
+    ]
+  },
+  "TEAM_3": {
+    "name": "Team 3",
+    "logo": "team-3.png",
+    "players": [
+      { "nick": "Player1", "nationality": "ar" },
+      { "nick": "Player2", "nationality": "ar" },
+      { "nick": "Player3", "nationality": "ar" },
+      { "nick": "Player4", "nationality": "ar" },
+      { "nick": "Player5", "nationality": "ar" }
+    ]
+  },
+  "TEAM_4": {
+    "name": "Team 4",
+    "logo": "team-4.png",
+    "players": [
+      { "nick": "Player1", "nationality": "ar" },
+      { "nick": "Player2", "nationality": "ar" },
+      { "nick": "Player3", "nationality": "ar" },
+      { "nick": "Player4", "nationality": "ar" },
+      { "nick": "Player5", "nationality": "ar" }
+    ]
+  },
+  "TEAM_5": {
+    "name": "Team 5",
+    "logo": "team-5.png",
+    "players": [
+      { "nick": "Player1", "nationality": "ar" },
+      { "nick": "Player2", "nationality": "ar" },
+      { "nick": "Player3", "nationality": "ar" },
+      { "nick": "Player4", "nationality": "ar" },
+      { "nick": "Player5", "nationality": "ar" }
+    ]
+  },
+  "TEAM_6": {
+    "name": "Team 6",
+    "logo": "team-6.png",
+    "players": [
+      { "nick": "Player1", "nationality": "ar" },
+      { "nick": "Player2", "nationality": "ar" },
+      { "nick": "Player3", "nationality": "ar" },
+      { "nick": "Player4", "nationality": "ar" },
+      { "nick": "Player5", "nationality": "ar" }
+    ]
+  },
+  "TEAM_7": {
+    "name": "Team 7",
+    "logo": "team-7.png",
+    "players": [
+      { "nick": "Player1", "nationality": "ar" },
+      { "nick": "Player2", "nationality": "ar" },
+      { "nick": "Player3", "nationality": "ar" },
+      { "nick": "Player4", "nationality": "ar" },
+      { "nick": "Player5", "nationality": "ar" }
+    ]
+  },
+  "TEAM_8": {
+    "name": "Team 8",
+    "logo": "team-8.png",
+    "players": [
+      { "nick": "Player1", "nationality": "ar" },
+      { "nick": "Player2", "nationality": "ar" },
+      { "nick": "Player3", "nationality": "ar" },
+      { "nick": "Player4", "nationality": "ar" },
+      { "nick": "Player5", "nationality": "ar" }
+    ]
+  },
+  "TEAM_9": {
+    "name": "Team 9",
+    "logo": "team-9.png",
+    "players": [
+      { "nick": "Player1", "nationality": "ar" },
+      { "nick": "Player2", "nationality": "ar" },
+      { "nick": "Player3", "nationality": "ar" },
+      { "nick": "Player4", "nationality": "ar" },
+      { "nick": "Player5", "nationality": "ar" }
+    ]
+  },
+  "TEAM_10": {
+    "name": "Team 10",
+    "logo": "team-10.png",
+    "players": [
+      { "nick": "Player1", "nationality": "ar" },
+      { "nick": "Player2", "nationality": "ar" },
+      { "nick": "Player3", "nationality": "ar" },
+      { "nick": "Player4", "nationality": "ar" },
+      { "nick": "Player5", "nationality": "ar" }
+    ]
+  },
+  "TEAM_11": {
+    "name": "Team 11",
+    "logo": "team-11.png",
+    "players": [
+      { "nick": "Player1", "nationality": "ar" },
+      { "nick": "Player2", "nationality": "ar" },
+      { "nick": "Player3", "nationality": "ar" },
+      { "nick": "Player4", "nationality": "ar" },
+      { "nick": "Player5", "nationality": "ar" }
+    ]
+  },
+  "TEAM_12": {
+    "name": "Team 12",
+    "logo": "team-12.png",
+    "players": [
+      { "nick": "Player1", "nationality": "ar" },
+      { "nick": "Player2", "nationality": "ar" },
+      { "nick": "Player3", "nationality": "ar" },
+      { "nick": "Player4", "nationality": "ar" },
+      { "nick": "Player5", "nationality": "ar" }
+    ]
+  },
+  "TEAM_13": {
+    "name": "Team 13",
+    "logo": "team-13.png",
+    "players": [
+      { "nick": "Player1", "nationality": "ar" },
+      { "nick": "Player2", "nationality": "ar" },
+      { "nick": "Player3", "nationality": "ar" },
+      { "nick": "Player4", "nationality": "ar" },
+      { "nick": "Player5", "nationality": "ar" }
+    ]
+  },
+  "TEAM_14": {
+    "name": "Team 14",
+    "logo": "team-14.png",
+    "players": [
+      { "nick": "Player1", "nationality": "ar" },
+      { "nick": "Player2", "nationality": "ar" },
+      { "nick": "Player3", "nationality": "ar" },
+      { "nick": "Player4", "nationality": "ar" },
+      { "nick": "Player5", "nationality": "ar" }
+    ]
+  },
+  "TEAM_15": {
+    "name": "Team 15",
+    "logo": "team-15.png",
+    "players": [
+      { "nick": "Player1", "nationality": "ar" },
+      { "nick": "Player2", "nationality": "ar" },
+      { "nick": "Player3", "nationality": "ar" },
+      { "nick": "Player4", "nationality": "ar" },
+      { "nick": "Player5", "nationality": "ar" }
+    ]
+  },
+  "TEAM_16": {
+    "name": "Team 16",
+    "logo": "team-16.png",
+    "players": [
+      { "nick": "Player1", "nationality": "ar" },
+      { "nick": "Player2", "nationality": "ar" },
+      { "nick": "Player3", "nationality": "ar" },
+      { "nick": "Player4", "nationality": "ar" },
+      { "nick": "Player5", "nationality": "ar" }
+    ]
+  }
+}

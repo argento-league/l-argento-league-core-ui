@@ -303,7 +303,7 @@ const TeamLogoMobileContainer = styled.div`
   gap: 12px;
   width: 100%;
   overflow-x: auto;
-  padding: 12px 8px;
+  padding: 12px 0px;
   -webkit-overflow-scrolling: touch;
 
   /* Hide scrollbar while maintaining scroll functionality */

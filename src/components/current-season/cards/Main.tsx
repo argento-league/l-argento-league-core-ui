@@ -17,6 +17,10 @@ const MainGridBoxContent = styled.div`
   @media (max-width: 768px) {
     padding: 16px 32px;
   }
+
+  @media (max-width: 375px) {
+    padding: 40px 16px 16px 16px;
+  }
 `;
 
 const SeasonTitle = styled.p`
@@ -57,6 +61,16 @@ const MainDescription = styled.p`
   max-width: 30ch;
 `;
 
+const DiscordButtonContainer = styled.div`
+  @media (max-width: 768px) {
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: 375px) {
+    margin-bottom: 80px;
+  }
+`;
+
 export const MainCard = () => {
   return (
     <MainGridBoxContent>
@@ -77,10 +91,12 @@ export const MainCard = () => {
       >
         Inscribirme
       </Button> */}
-			<JoinDiscordButton 
-        color={CURRENT_SEASON_COLORS.primary} 
-        backgroundColor={CURRENT_SEASON_COLORS.secondary}
-      />
+			<DiscordButtonContainer>
+        <JoinDiscordButton 
+          color={CURRENT_SEASON_COLORS.primary} 
+          backgroundColor={CURRENT_SEASON_COLORS.secondary}
+        />
+      </DiscordButtonContainer>
     </MainGridBoxContent>
   );
 };

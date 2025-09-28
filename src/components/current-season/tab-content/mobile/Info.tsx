@@ -5,6 +5,7 @@ import {
   INFORMATION_ENUM,
 } from "../../../../constants/current-season/information";
 import { ContentListItem, ContentText, ContentTitle } from "../Info";
+import { CURRENT_SEASON_COLORS } from "../../../../constants/season-colors";
 
 type MenuItemContainerProps = {
   isSelected: boolean;
@@ -21,14 +22,19 @@ const AnswerText = styled.div<{ open: boolean }>`
 
 const MenuItemContainer = styled.div<MenuItemContainerProps>`
   padding: 16px;
-  background-color: ${(props) => (props.isSelected ? "#FABF4A33" : "black")};
-  border: ${(props) => (props.hasBorder ? "1px solid #FF611D" : "none")};
+  background-color: ${(props) => (props.isSelected ? "rgba(80, 255, 16, 0.2)" : "black")};
+  border: ${(props) => (props.hasBorder ? `1px solid ${CURRENT_SEASON_COLORS.primary}` : "none")};
   color: "white";
   border-radius: 16px;
   cursor: pointer;
   font-family: Outfit, sans-serif;
   font-size: 18px;
   font-weight: 600;
+  transition: background-color 0.2s ease;
+  
+  &:hover {
+    background-color: ${(props) => (props.isSelected ? "rgba(80, 255, 16, 0.2)" : "rgba(80, 255, 16, 0.1)")};
+  }
 `;
 
 const MobileMenuItemContainer = styled(
@@ -36,13 +42,13 @@ const MobileMenuItemContainer = styled(
 )<MenuItemContainerProps>`
   border-radius: ${(props) =>
     props.isSelected ? "16px 16px 0px 0px" : "16px"};
-  background-color: ${(props) => (props.isSelected ? "#FF611D" : "black")};
-  color: ${(props) => (props.isSelected ? "black" : "#FF611D")};
+  background-color: ${(props) => (props.isSelected ? CURRENT_SEASON_COLORS.primary : "black")};
+  color: ${(props) => (props.isSelected ? "black" : CURRENT_SEASON_COLORS.primary)};
 `;
 
 export const ContentContainer = styled.div`
   padding: 24px;
-  border: 1px solid #ff611d;
+  border: 1px solid ${CURRENT_SEASON_COLORS.primary};
   border-radius: 16px;
   font-family: Rethink Sans, sans-serif;
   gap: 10px;

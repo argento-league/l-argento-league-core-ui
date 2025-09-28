@@ -1,7 +1,9 @@
 import styled from "styled-components";
-import teamsData from "../../../data/season-5/teams.json";
-import jornadasData from "../../../data/season-5/jornadas.json";
 import { GroupTeam, GroupData } from "../../../types/teams";
+import season5Teams from "../../../data/season-5/teams.json";
+import season6Teams from "../../../data/season-6/teams.json";
+import season5Jornadas from "../../../data/season-5/jornadas.json";
+import season6Jornadas from "../../../data/season-6/jornadas.json";
 import { ReactNode } from "react";
 import { StyledSvg } from "@components/common/StyledSVG";
 import arrowUp from "@assets/common/icons/arrow-up.svg";
@@ -29,7 +31,7 @@ interface JornadasData {
 }
 
 // Helper function to find matching team data with specific mappings
-const findTeamData = (teamName: string, teams: typeof teamsData[keyof typeof teamsData][]) => {
+const findTeamData = (teamName: string, teams: any[]) => {
   // Specific mappings for known mismatches
   const nameMapping: { [key: string]: string } = {
     "Racxon Disciples": "RACXONDICIPLES",
@@ -82,7 +84,7 @@ const normalizeTeamName = (teamName: string): string => {
   return teamName;
 };
 
-const createGroupData = (): GroupData => {
+const createGroupData = (teamsData: any, jornadasData: any): GroupData => {
   const teams = Object.values(teamsData);
   const jornadas = jornadasData as JornadasData;
 
@@ -181,9 +183,18 @@ const createGroupData = (): GroupData => {
   return groups;
 };
 
-export const GroupStageContent = () => {
+type GroupStageContentProps = {
+  season?: number;
+};
+
+export const GroupStageContent = ({ season = 6 }: GroupStageContentProps) => {
   const isMobile = useIsMobile(768);
-  const groupsData = createGroupData();
+  
+  // Select data based on season
+  const teamsData = season === 5 ? season5Teams : season6Teams;
+  const jornadasData = season === 5 ? season5Jornadas : season6Jornadas;
+    
+  const groupsData = createGroupData(teamsData, jornadasData);
   
   const getGroupKey = (groupName: string): "grupo-a" | "grupo-b" | "grupo-c" | "grupo-d" => {
     switch (groupName) {
@@ -219,7 +230,7 @@ export const GroupStageContent = () => {
                   </PositionCell>
                   <TeamCell>
                     <TeamLogo
-                      src={`/images/teams/season-5/${team.logo}`}
+                      src={`/images/teams/season-${season}/${team.logo}`}
                       alt={team.name}
                     />
                     <TeamName>{team.name}</TeamName>
@@ -235,7 +246,7 @@ export const GroupStageContent = () => {
         </GroupTable>
       </GroupTableContainer>
 
-      <MatchScheduleContent currentGroup={getGroupKey(groupName)} />
+      <MatchScheduleContent currentGroup={getGroupKey(groupName)} season={season} />
     </GroupSection>
   );
 
@@ -298,7 +309,7 @@ const GroupTableContainer = styled.div`
   flex-direction: column;
   gap: 16px;
   flex: 1;
-  max-width: 600px;
+  max-width: 700px;
 `;
 
 const GroupTable = styled.div`
@@ -307,7 +318,8 @@ const GroupTable = styled.div`
   overflow: hidden;
   border: 1px solid #333;
   flex: 1;
-  max-width: 500px;
+  max-width: 600px;
+  min-width: 500px;
 `;
 
 const TableContainer = styled.div`

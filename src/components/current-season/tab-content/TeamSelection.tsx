@@ -2,16 +2,27 @@ import { useState } from "react";
 import styled from "styled-components";
 import { useIsMobile } from "../../../hooks/useIsMobile";
 import { useTeamNavigation } from "../../../hooks/useTeamNavigation";
-import teamJson from "@data/season-5/teams.json";
 import { TeamJsonType } from "../../../types/teams";
+import season5Teams from "../../../data/season-5/teams.json";
+import season6Teams from "../../../data/season-6/teams.json";
 
-export const TeamSelectionContent = () => {
+type TeamSelectionContentProps = {
+  season?: number;
+};
+
+export const TeamSelectionContent = ({ season = 6 }: TeamSelectionContentProps) => {
   const [selectedTeam, setSelectedTeam] = useState("");
   const isMobile = useIsMobile(768);
+  
+  // Select team data based on season
+  const teamJson = season === 5 ? season5Teams : season6Teams;
+    
   const { goToPreviousTeam, goToNextTeam, teams } = useTeamNavigation(
     selectedTeam,
-    setSelectedTeam
+    setSelectedTeam,
+    teamJson
   );
+  
   
   // Initialize selectedTeam if not set
   if (!selectedTeam && teams.length > 0) {
@@ -30,6 +41,7 @@ export const TeamSelectionContent = () => {
         goToNextTeam={goToNextTeam}
         typedTeamJson={typedTeamJson}
         teams={teams}
+        season={season}
       />
     );
   }
@@ -42,6 +54,7 @@ export const TeamSelectionContent = () => {
       goToNextTeam={goToNextTeam}
       typedTeamJson={typedTeamJson}
       teams={teams}
+      season={season}
     />
   );
 };
@@ -53,6 +66,7 @@ type TeamSelectionProps = {
   goToNextTeam: () => void;
   typedTeamJson: TeamJsonType;
   teams: string[];
+  season: number;
 };
 
 const TeamSelectionDesktop = ({
@@ -62,6 +76,7 @@ const TeamSelectionDesktop = ({
   goToNextTeam,
   typedTeamJson,
   teams,
+  season,
 }: TeamSelectionProps) => {
   return (
     <FaseDeGruposContainer>
@@ -69,7 +84,7 @@ const TeamSelectionDesktop = ({
         {teams.map((teamName: string) => (
           <TeamLogoCard key={teamName} isSelected={teamName === selectedTeam}>
             <TeamLogo
-              src={`/images/teams/season-5/${typedTeamJson[teamName].logo}`}
+              src={`/images/teams/season-${season}/${typedTeamJson[teamName].logo}`}
               alt={teamName}
               onClick={() => setSelectedTeam(teamName)}
             />
@@ -83,7 +98,7 @@ const TeamSelectionDesktop = ({
           <ArrowButton onClick={goToNextTeam}>{">"}</ArrowButton>
         </TeamHeader>
         <TeamLogo
-          src={`/images/teams/season-5/${typedTeamJson[selectedTeam]?.logo}`}
+          src={`/images/teams/season-${season}/${typedTeamJson[selectedTeam]?.logo}`}
           alt="Team Logo"
           style={{ width: "120px", height: "120px" }}
         />
@@ -110,6 +125,7 @@ const TeamSelectionMobile = ({
   goToNextTeam,
   typedTeamJson,
   teams,
+  season,
 }: TeamSelectionProps) => {
   return (
     <MobileContainer>
@@ -121,7 +137,7 @@ const TeamSelectionMobile = ({
             onClick={() => setSelectedTeam(teamName)}
           >
             <TeamLogoMobile
-              src={`/images/teams/season-5/${typedTeamJson[teamName].logo}`}
+              src={`/images/teams/season-${season}/${typedTeamJson[teamName].logo}`}
               alt={teamName}
             />
           </TeamLogoMobileCard>
@@ -136,7 +152,7 @@ const TeamSelectionMobile = ({
         </TeamHeader>
 
         <TeamLogoSelected
-          src={`/images/teams/season-5/${typedTeamJson[selectedTeam]?.logo}`}
+          src={`/images/teams/season-${season}/${typedTeamJson[selectedTeam]?.logo}`}
           alt="Team Logo"
         />
 
@@ -343,6 +359,31 @@ const TeamLogoSelected = styled.img`
   object-fit: contain;
   border-radius: 8px;
   margin: 16px 0;
+`;
+
+const ComingSoonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+`;
+
+const ComingSoonTitle = styled.h3`
+  font-size: 24px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  color: rgba(80, 255, 16, 1);
+`;
+
+const ComingSoonText = styled.p`
+  font-size: 16px;
+  font-family: "Rethink Sans", sans-serif;
+  margin: 0;
+  opacity: 0.8;
 `;
 
 const PlayersListMobile = styled.div`

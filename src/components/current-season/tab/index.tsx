@@ -3,22 +3,26 @@ import { useIsMobile } from "../../../hooks/useIsMobile";
 import { ReactNode } from "react";
 import { MobileTabList } from "./mobile";
 import { Tabs, TabsContainer, TabsWrapper } from "./styles";
-import { TabsEnum } from "../../../constants/current-season/information";
+import { TabsEnum, TABS_CONFIG } from "../../../constants/current-season/information";
 
 const DesktopTabList = ({ selectedTab, tabList, onSelectTab }: TabProps) => {
   return (
     <TabsContainer>
       <Container>
         <TabsWrapper>
-          {tabList.map((tab, i) => (
-            <Tabs
-              key={tab}
-              selected={selectedTab === tabList[i]}
-              onClick={() => onSelectTab(tab as TabsEnum)}
-            >
-              {tab}
-            </Tabs>
-          ))}
+          {tabList.map((tab, i) => {
+            const isEnabled = TABS_CONFIG[tab as TabsEnum]?.enabled ?? true;
+            return (
+              <Tabs
+                key={tab}
+                selected={selectedTab === tabList[i]}
+                disabled={!isEnabled}
+                onClick={() => isEnabled && onSelectTab(tab as TabsEnum)}
+              >
+                {tab}
+              </Tabs>
+            );
+          })}
         </TabsWrapper>
       </Container>
     </TabsContainer>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
-import jornadasData from "../../../data/season-5/jornadas.json";
+import season5Jornadas from "../../../data/season-5/jornadas.json";
+import season6Jornadas from "../../../data/season-6/jornadas.json";
 
 interface MatchResult {
   team1: string;
@@ -22,10 +23,14 @@ interface JornadasData {
 
 type MatchScheduleProps = {
   currentGroup?: "grupo-a" | "grupo-b" | "grupo-c" | "grupo-d";
+  season?: number;
 };
 
-export const MatchScheduleContent = ({ currentGroup = "grupo-a" }: MatchScheduleProps) => {
+export const MatchScheduleContent = ({ currentGroup = "grupo-a", season = 6 }: MatchScheduleProps) => {
   const [currentJornada, setCurrentJornada] = useState(1);
+  
+  // Select data based on season
+  const jornadasData = season === 5 ? season5Jornadas : season6Jornadas;
   
   // Get all jornada keys and sort them
   const jornadaKeys = Object.keys(jornadasData as JornadasData).sort((a, b) => {
@@ -105,7 +110,8 @@ export const MatchScheduleContent = ({ currentGroup = "grupo-a" }: MatchSchedule
 const MatchScheduleContainer = styled.div`
   color: white;
   font-family: "Outfit", sans-serif;
-  max-width: 500px;
+  max-width: 800px;
+  min-width: 600px;
 	width: 100%;
 	box-sizing: border-box;  
 `;
@@ -158,7 +164,8 @@ const MatchCard = styled.div`
   background-color: #000;
   border: 1px solid #333;
   border-radius: 8px;
-  padding: 16px;
+  padding: 20px;
+  min-width: 300px;
 `;
 
 const TeamRow = styled.div`
@@ -174,6 +181,10 @@ const TeamName = styled.span`
   font-weight: 500;
   color: white;
   flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 16px;
 `;
 
 const Score = styled.span<{ isPlayed: boolean }>`

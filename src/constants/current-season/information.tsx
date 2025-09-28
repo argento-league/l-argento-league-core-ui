@@ -5,6 +5,14 @@ export enum TabsEnum {
   EventoPrincipal = "Evento Principal",
 }
 
+// Configuración de pestañas habilitadas/deshabilitadas
+export const TABS_CONFIG = {
+  [TabsEnum.InfoGeneral]: { enabled: true },
+  [TabsEnum.Equipos]: { enabled: false },
+  [TabsEnum.FaseDeGrupos]: { enabled: false },
+  [TabsEnum.EventoPrincipal]: { enabled: false },
+} as const;
+
 type Information = {
   subject?: string;
   title: string;
@@ -22,7 +30,7 @@ export const INFORMATION: Record<INFORMATION_ENUM, Information> = {
   [INFORMATION_ENUM.ARMADO_DE_EQUIPO]: {
     title: "Medalla libre",
     description: [
-      "La medalla de los jugadores es libre. Los equipos pueden conformarse con jugadores de cualquier medalla, el único requisito es que el equipo en juego no debe superar la suma de 37.000 de mmr.",
+      "La medalla de los jugadores es libre. Los equipos pueden conformarse con jugadores de cualquier medalla, el único requisito es que el equipo en juego no debe superar la suma de 38.000 de mmr.",
       "El roster puede contar con 5 titulares y 3 suplentes.",
       "Esta limitado los jugadores peruanos nuevos por equipos a 2.",
     ],

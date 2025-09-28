@@ -1,11 +1,9 @@
-import teamJson from "@data/season-5/teams.json";
-
-const teams = Object.keys(teamJson);
-
 export const useTeamNavigation = (
   selectedTeam: string,
-  setSelectedTeam: (team: string) => void
+  setSelectedTeam: (team: string) => void,
+  teamJson: any
 ) => {
+  const teams = Object.keys(teamJson);
   const goToPreviousTeam = () => {
     const currentIndex = teams.indexOf(selectedTeam);
     const prevIndex = (currentIndex - 1 + teams.length) % teams.length;

@@ -13,11 +13,6 @@ const SeasonWinnerContainer = styled.section`
   border-radius: 16px;
   font-family: "Outfit", sans-serif;
   border: 1px solid #fabf4a;
-  background-image: url("/images/NewsCardBackgroundImage.png");
-  background-size: cover;
-  background-blend-mode: multiply;
-  background-color: rgba(0, 0, 0, 0.65);
-  background-position: center;
 
   @media (max-width: 1024px) {
     flex-direction: column;

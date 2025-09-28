@@ -55,15 +55,6 @@ const NewsDescriptionContainer = styled.div`
   gap: 8px;
 `;
 
-const NewsDescription = styled.p`
-  text-align: center;
-  font-size: 20px;
-  font-weight: 700;
-  font-family: "Outfit", sans-serif;
-  line-height: 24px;
-  letter-spacing: 0%;
-  margin: 0;
-`;
 
 const NewsSubDescription = styled.p`
   text-align: center;

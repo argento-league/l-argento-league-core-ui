@@ -1,28 +1,10 @@
 import styled from "styled-components";
 import teamsData from "../../data/season-5/teams.json";
-import jornadasData from "../../data/season-5/jornadas.json";
 import { GroupTeam, GroupData } from "../../types/teams";
-import { ReactNode } from "react";
-import { StyledSvg } from "../../components/common/StyledSVG";
-import arrowUp from "../../assets/common/icons/arrow-up.svg";
-import arrowDown from "../../assets/common/icons/arrow-down.svg";
-import close from "../../assets/common/icons/close.svg";
 import { MatchScheduleContent } from "../../components/current-season/tab-content/MatchSchedule";
 import { useIsMobile } from "../../hooks/useIsMobile";
 
-interface MatchResult {
-  team1: string;
-  score1: string | null;
-  team2: string;
-  score2: string | null;
-}
 
-interface GroupMatches {
-  "grupo-a": MatchResult[];
-  "grupo-b": MatchResult[];
-  "grupo-c": MatchResult[];
-  "grupo-d": MatchResult[];
-}
 
 const GroupStageContainer = styled.div`
   display: flex;
@@ -175,10 +157,9 @@ const PointsCell = styled.div`
 
 const createGroupData = (): GroupData => {
   const teams = Object.values(teamsData);
-  const jornadas = Object.values(jornadasData);
   
   // Crear datos de grupos simulados basados en los equipos disponibles
-  const groupA: GroupTeam[] = teams.slice(0, 4).map((team, index) => ({
+  const groupA: GroupTeam[] = teams.slice(0, 4).map((team) => ({
     name: team.name,
     logo: team.logo,
     wins: Math.floor(Math.random() * 6),
@@ -187,7 +168,7 @@ const createGroupData = (): GroupData => {
     points: 0
   }));
 
-  const groupB: GroupTeam[] = teams.slice(4, 8).map((team, index) => ({
+  const groupB: GroupTeam[] = teams.slice(4, 8).map((team) => ({
     name: team.name,
     logo: team.logo,
     wins: Math.floor(Math.random() * 6),

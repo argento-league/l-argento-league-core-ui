@@ -5,7 +5,6 @@ import { useIsMobile } from "../../hooks/useIsMobile";
 import { Container } from "../common/Container";
 import { StyledSvg } from "../common/StyledSVG";
 import burgerIcon from "../../assets/common/icons/bars-3.svg";
-import { CURRENT_SEASON_COLORS } from "../../constants/season-colors";
 
 const NAV_LINKS = [
   { to: "/", label: "Inicio" },

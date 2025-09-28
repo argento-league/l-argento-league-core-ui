@@ -361,30 +361,6 @@ const TeamLogoSelected = styled.img`
   margin: 16px 0;
 `;
 
-const ComingSoonContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 20px;
-  text-align: center;
-  color: white;
-`;
-
-const ComingSoonTitle = styled.h3`
-  font-size: 24px;
-  font-family: "Outfit", sans-serif;
-  font-weight: 600;
-  margin: 0 0 16px 0;
-  color: rgba(80, 255, 16, 1);
-`;
-
-const ComingSoonText = styled.p`
-  font-size: 16px;
-  font-family: "Rethink Sans", sans-serif;
-  margin: 0;
-  opacity: 0.8;
-`;
 
 const PlayersListMobile = styled.div`
   width: 100%;

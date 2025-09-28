@@ -136,7 +136,7 @@ const transformMatchesToMobileFormat = (matches: TournamentMatch[]): MatchType[]
   });
 };
 
-const DoubleEliminationMobile = () => {
+const MainEventMobile = () => {
   return (
     <>
       <Bracket
@@ -217,7 +217,7 @@ const Bracket = ({
 }: BracketProps) => {
   const bracketStagesKeys = Object.keys(bracketStages);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-  console.log(bracketStages[bracketStagesKeys[currentIndex]]);
+  //console.log(bracketStages[bracketStagesKeys[currentIndex]]);
 
   const handleSelectNextBracketStage = (index: number) => {
     setCurrentIndex(index % bracketStagesKeys.length);
@@ -280,4 +280,4 @@ const Bracket = ({
   );
 };
 
-export default DoubleEliminationMobile;
+export default MainEventMobile;

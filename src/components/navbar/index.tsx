@@ -1,16 +1,21 @@
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useIsMobile } from "../../hooks/useIsMobile";
 import { Container } from "../common/Container";
 import { StyledSvg } from "../common/StyledSVG";
 import burgerIcon from "../../assets/common/icons/bars-3.svg";
+import { CURRENT_SEASON_COLORS } from "../../constants/season-colors";
 
 const NAV_LINKS = [
   { to: "/", label: "Inicio" },
-  { to: "/current-season", label: "Season 5" },
-  // { to: "/ligas-anteriores", label: "Ligas Anteriores" },
+  { to: "/current-season", label: "Season 6" },
   // { to: "/staff", label: "Staff" },
+];
+
+const SEASONS_DROPDOWN = [
+  { to: "/season-5", label: "Season 5" },
+  { to: "/season-4", label: "Season 4" },
 ];
 
 export const NavBar = () => {
@@ -42,6 +47,8 @@ export const NavBar = () => {
 };
 
 function DesktopNavbarLinks({ currentPath }: { currentPath: string }) {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
   return (
     <DesktopLinkContainer>
       {NAV_LINKS.map((link) => (
@@ -53,7 +60,68 @@ function DesktopNavbarLinks({ currentPath }: { currentPath: string }) {
           {link.label}
         </HeaderLink>
       ))}
+      <SeasonsDropdown 
+        currentPath={currentPath}
+        dropdownOpen={dropdownOpen}
+        setDropdownOpen={setDropdownOpen}
+      />
     </DesktopLinkContainer>
+  );
+}
+
+function SeasonsDropdown({ 
+  currentPath, 
+  dropdownOpen, 
+  setDropdownOpen 
+}: { 
+  currentPath: string; 
+  dropdownOpen: boolean; 
+  setDropdownOpen: (open: boolean) => void; 
+}) {
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const isHistoricalSeason = SEASONS_DROPDOWN.some(season => 
+    currentPath === season.to && season.to !== "/current-season"
+  );
+  
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setDropdownOpen(false);
+      }
+    }
+
+    if (dropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [dropdownOpen, setDropdownOpen]);
+  
+  return (
+    <DropdownContainer ref={dropdownRef}>
+      <DropdownButton 
+        onClick={() => setDropdownOpen(!dropdownOpen)}
+        active={isHistoricalSeason ? "true" : undefined}
+      >
+        Ligas Anteriores
+      </DropdownButton>
+      {dropdownOpen && (
+        <DropdownMenu>
+          {SEASONS_DROPDOWN.map((season) => (
+            <DropdownItem
+              key={season.to}
+              to={season.to}
+              onClick={() => setDropdownOpen(false)}
+              active={currentPath === season.to ? "true" : undefined}
+            >
+              {season.label}
+            </DropdownItem>
+          ))}
+        </DropdownMenu>
+      )}
+    </DropdownContainer>
   );
 }
 
@@ -74,6 +142,16 @@ function MobileNavbarLinks({
           active={currentPath === link.to ? "true" : undefined}
         >
           {link.label}
+        </HeaderLink>
+      ))}
+      {SEASONS_DROPDOWN.map((season) => (
+        <HeaderLink
+          key={season.to}
+          to={season.to}
+          onClick={onNavigate}
+          active={currentPath === season.to ? "true" : undefined}
+        >
+          {season.label}
         </HeaderLink>
       ))}
     </MobileLinkContainer>
@@ -156,10 +234,10 @@ const HeaderLink = styled(Link)<{ active?: string | undefined }>`
   font-size: 16px;
   font-family: "Outfit", sans-serif;
   font-weight: 700;
-  background-color: ${({ active }) => (active ? "#FABF4A33" : "transparent")};
+  background-color: ${({ active }) => (active ? "rgba(80, 255, 16, 0.2)" : "transparent")};
   transition: background 0.2s, color 0.2s;
   &:hover {
-    background-color: ${({ active }) => (active ? "#FABF4A33" : "#095b824d")};
+    background-color: ${({ active }) => (active ? "rgba(80, 255, 16, 0.2)" : "rgba(80, 255, 16, 0.1)")};
     font-weight: 700;
   }
 `;
@@ -223,4 +301,72 @@ const DrawerBackdrop = styled.div`
   height: 100vh;
   background: rgba(0, 0, 0, 0.3);
   z-index: 1200;
+`;
+
+const DropdownContainer = styled.div`
+  position: relative;
+  display: inline-block;
+`;
+
+const DropdownButton = styled.button<{ active?: string }>`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  background-color: ${({ active }) => (active ? "rgba(80, 255, 16, 0.2)" : "transparent")};
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  
+  &:hover {
+    background-color: ${({ active }) => (active ? "rgba(80, 255, 16, 0.2)" : "rgba(80, 255, 16, 0.1)")};
+    font-weight: 700;
+  }
+`;
+
+const DropdownMenu = styled.div`
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #111;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  min-width: 200px;
+  overflow: hidden;
+  margin-top: 4px;
+`;
+
+const DropdownItem = styled(Link)<{ active?: string }>`
+  display: block;
+  padding: 12px 16px;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: ${({ active }) => (active ? "rgba(80, 255, 16, 0.2)" : "transparent")};
+  transition: background 0.2s;
+  
+  &:hover {
+    background-color: ${({ active }) => (active ? "rgba(80, 255, 16, 0.2)" : "rgba(80, 255, 16, 0.1)")};
+  }
+  
+  &:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  &:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
 `;

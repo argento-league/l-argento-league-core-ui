@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { JoinDiscordButton } from "@components/common/JoinDiscordButton";
+import { CURRENT_SEASON_COLORS } from "../../../constants/season-colors";
 
 const MainGridBoxContent = styled.div`
   padding: 16px 0px 32px 0px;
@@ -19,7 +20,7 @@ const MainGridBoxContent = styled.div`
 `;
 
 const SeasonTitle = styled.p`
-  color: #ff611d;
+  color: ${CURRENT_SEASON_COLORS.primary};
   font-family: Outfit, sans-serif;
   font-weight: 700;
   font-size: 36px;
@@ -59,9 +60,9 @@ const MainDescription = styled.p`
 export const MainCard = () => {
   return (
     <MainGridBoxContent>
-      <SeasonTitle> Season 5 </SeasonTitle>
+      <SeasonTitle> Season 6 </SeasonTitle>
       <MainTextGroup>
-        <MainHeading>{"En progreso"}</MainHeading>
+        <MainHeading>{"Comienza pronto"}</MainHeading>
         <MainDescription>
           {"Unite a nuestro Discord para ver los días de juego y streams."}
         </MainDescription>
@@ -76,7 +77,10 @@ export const MainCard = () => {
       >
         Inscribirme
       </Button> */}
-			<JoinDiscordButton color="#ff611d" />
+			<JoinDiscordButton 
+        color={CURRENT_SEASON_COLORS.primary} 
+        backgroundColor={CURRENT_SEASON_COLORS.secondary}
+      />
     </MainGridBoxContent>
   );
 };

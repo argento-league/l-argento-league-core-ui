@@ -8,7 +8,8 @@ type DiscordButtonProps = ButtonProps & {
 };
 export const DiscordButton = styled(Button)<DiscordButtonProps>`
   border: ${(props) => (props.hasBorder ? `1px solid ${props.color}` : "none")};
-  color: #fabf4a;
+  color: ${(props) => props.color || "#fabf4a"};
+  background-color: ${(props) => props.backgroundColor || "transparent"};
   display: flex;
   align-items: center;
   gap: 8px;

@@ -7,6 +7,7 @@ import { DateCard } from "./cards/Dates";
 import { MainCard } from "./cards/Main";
 import { BoxProps, GridBox } from "../common/GridBox";
 import styled from "styled-components";
+import { CURRENT_SEASON_COLORS } from "../../constants/season-colors";
 
 type GridElementProps = {
   card: string;
@@ -41,20 +42,20 @@ const bentoElements: GridElementProps[] = [
     card: "SocialCard",
     gridProps: {
       col: "13 / 21",
-      row: "5 / 6",
+      row: "4 / 5",
       colTablet: "1 / 13",
-      rowTablet: "7 / 8",
+      rowTablet: "6 / 7",
       backgroundColor: "inherit",
     },
-    component: <SocialCard iconColor="#FF611D" />,
+    component: <SocialCard iconColor={CURRENT_SEASON_COLORS.primary} />,
   },
   {
     card: "DateCard",
     gridProps: {
       col: "13 / 21",
-      row: "1 / 5",
+      row: "1 / 4",
       colTablet: "1 / 13",
-      rowTablet: "3 / 7",
+      rowTablet: "3 / 6",
       backgroundColor: "inherit",
     },
     component: <DateCard />,
@@ -64,13 +65,13 @@ const bentoElements: GridElementProps[] = [
 const MainContentGroup = styled.div`
   display: grid;
   grid-template-columns: repeat(20, 1fr);
-  grid-template-rows: repeat(5, 120px);
-  gap: 16px;
+  grid-template-rows: repeat(5, 90px);
+  gap: 8px;
   width: 100%;
 
   @media (max-width: 1024px) {
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(7, 150px);
+    grid-template-rows: repeat(7, 90px);
   }
 `;
 
@@ -78,13 +79,13 @@ export const CurrentSeasonGrid = () => {
   const isMobile = useIsMobile(720);
   const backgroundImage = isMobile
     ? "/mobile-season-5-background.png"
-    : "/current-season-background.jpg";
+    : "/images/NewsCardBackgroundImage.png";
 
   return (
     <MainRootContainer
       backgroundImage={backgroundImage}
-      backgroundBlendMode="lighten"
-      background="#000000"
+      backgroundBlendMode="normal"
+      background="rgba(0, 0, 0, 0.3)"
       backgroundPosition="center"
     >
       <Container>

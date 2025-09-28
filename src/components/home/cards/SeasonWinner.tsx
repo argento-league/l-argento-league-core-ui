@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const SeasonWinnerContainer = styled.section`
   height: 100%;
-  background-color: #321156;
+  background: transparent;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -12,6 +12,12 @@ const SeasonWinnerContainer = styled.section`
   box-sizing: border-box;
   border-radius: 16px;
   font-family: "Outfit", sans-serif;
+  border: 1px solid #fabf4a;
+  background-image: url("/images/NewsCardBackgroundImage.png");
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.65);
+  background-position: center;
 
   @media (max-width: 1024px) {
     flex-direction: column;
@@ -70,15 +76,15 @@ export const SeasonWinner = () => {
     <SeasonWinnerContainer>
       <WinnerInfoContainer id="contenedor">
         <SeasonWinnerImage
-          src={"/images/teams/fantasmas.png"}
+          src={"/images/teams/season-5/escuadron-anti-tonkas.png"}
           aria-label="fastasmas-logo"
         />
         <WinnerTextContainer>
-          <WinnerTeam>Team FANTASMAS</WinnerTeam>
-          <WinnerSeason>Campeones Season 4</WinnerSeason>
+          <WinnerTeam>Team E. Anti-Tonkas</WinnerTeam>
+          <WinnerSeason>Campeones Season 5</WinnerSeason>
         </WinnerTextContainer>
       </WinnerInfoContainer>
-      <ViewMore id="ver-mas" target="_blank" to="/season-4">
+      <ViewMore id="ver-mas" to="/season-5">
         Ver season
       </ViewMore>
     </SeasonWinnerContainer>

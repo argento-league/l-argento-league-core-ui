@@ -1,15 +1,16 @@
 import styled from "styled-components";
+import { CURRENT_SEASON_COLORS } from "../../../constants/season-colors";
 
 const DatesBox = styled.div`
   padding: 24px 32px;
   gap: 16px;
   display: flex;
   flex-direction: column;
-  background-color: #101010;
-  height: 100%;
-  border-radius: 12px;
+  background-color: #000000;
+  height: fit-content;
+  border-radius: 16px;
   box-sizing: border-box;
-  justify-content: space-around;
+  justify-content: flex-start;
   font-size: 18px;
   font-family: Outfit, sans-serif;
   font-weight: 500;
@@ -17,7 +18,11 @@ const DatesBox = styled.div`
 
 const DatesTitle = styled.div`
   padding-bottom: 8px;
-  border-bottom: 1px solid #ff611d;
+  border-bottom: 1px solid ${CURRENT_SEASON_COLORS.primary};
+  color: #ffffff;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
 `;
 
 const DatesRow = styled.div`
@@ -43,23 +48,34 @@ export const DateCard = () => {
     <DatesBox>
       <DatesTitle>Fechas</DatesTitle>
       <DatesRow>
-        <DateText
-        >
-          Pre-inscripción individual
-        </DateText>
-        <DateText style={{ textAlign: "end" }}>hasta el 01/07</DateText>
-      </DatesRow>
-      <DatesRow>
         <DateText>
           Inscripción por equipo
         </DateText>
-        <DateText style={{ textAlign: "end" }}>del 23/06 al 1/07</DateText>
+        <DateText style={{ textAlign: "end" }}>del 17/09 al 26/09</DateText>
       </DatesRow>
       <DatesRow>
         <DateText>
-          Inicio Season 5
+          Inicio Season 6
         </DateText>
-        <DateText style={{ textAlign: "end" }}>Domingo 06/07</DateText>
+        <DateText style={{ textAlign: "end" }}>Domingo 05/09</DateText>
+      </DatesRow>
+      <DatesRow>
+        <DateText>
+          Fase de grupos
+        </DateText>
+        <DateText style={{ textAlign: "end" }}>Del 06/09 al TBD</DateText>
+      </DatesRow>
+      <DatesRow>
+        <DateText>
+          Evento principal
+        </DateText>
+        <DateText style={{ textAlign: "end" }}>TBD</DateText>
+      </DatesRow>
+      <DatesRow>
+        <DateText>
+          Gan final
+        </DateText>
+        <DateText style={{ textAlign: "end" }}>TBD</DateText>
       </DatesRow>
     </DatesBox>
   );

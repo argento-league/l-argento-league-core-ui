@@ -18,12 +18,12 @@ const NewsCardContainer = styled.section`
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
   font-weight: 600;
-  background-image: url("/home-proximamente.jpg");
+  background-image: url("/images/NewsCardBackgroundImage.png");
   background-size: cover;
-  border: 1px solid #fabf4a;
+  border: 1px solid rgba(80, 255, 16, 1);
   background-blend-mode: multiply;
   background-color: rgba(0, 0, 0, 0.65);
-  background-position: bottom;
+  background-position: center;
 `;
 
 const NewsTitleContainer = styled.div`
@@ -37,7 +37,7 @@ const NewsTitle = styled.h2`
   font-weight: 500;
   font-family: "Outfit", sans-serif;
   text-align: center;
-  color: #fabf4a;
+  color: rgba(80, 255, 16, 1);
   margin: 0;
 `;
 
@@ -45,7 +45,7 @@ const NewsSeason = styled.h1`
   font-size: 36px;
   font-weight: 700;
   font-family: "Outfit", sans-serif;
-  color: #fabf4a;
+  color: rgba(80, 255, 16, 1);
   margin: 0;
 `;
 
@@ -86,28 +86,32 @@ const NewsButtonsContainer = styled.div`
 `;
 
 export const RegisterButton = styled(Button)`
-  background-color: #fabf4a;
+  background-color: rgba(80, 255, 16, 1);
+  color: #000000;
 `;
 
 export const NewsCard = () => {
   return (
     <NewsCardContainer>
       <NewsTitleContainer id="container-title">
-        <NewsTitle>próximamente</NewsTitle>
-        <NewsSeason>SEASON 5</NewsSeason>
+        <NewsTitle>Comienza pronto</NewsTitle>
+        <NewsSeason>SEASON 6</NewsSeason>
       </NewsTitleContainer>
       <NewsDescriptionContainer id="container-description">
-        <NewsDescription>Inscripciones de equipos abiertas.</NewsDescription>
+        {/*<NewsDescription>Inscripciones de equipos abiertas.</NewsDescription>*/}
         <NewsSubDescription>
-          Incribí a tu equipo para participar. Si aún estas buscando equipo o
-          algun player, unite a nuestro Discord para encontrarlo!
+          Enterate de cuáles son los equipos, sus jornadas
+          y resultados de juegos.
         </NewsSubDescription>
       </NewsDescriptionContainer>
 
       <NewsButtonsContainer id="container-buttons">
-        <JoinDiscordButton color="#fabf4a" />
-        <RegisterButton to="https://tally.so/r/mD9dPj" target="_blank">
-          Inscribirme
+        <JoinDiscordButton 
+          color="rgba(80, 255, 16, 1)" 
+          backgroundColor="#000000"
+        />
+        <RegisterButton to="/current-season" target="_self">
+          Ver Season
         </RegisterButton>
       </NewsButtonsContainer>
     </NewsCardContainer>

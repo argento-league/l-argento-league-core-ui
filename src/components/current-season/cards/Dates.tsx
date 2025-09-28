@@ -73,7 +73,7 @@ export const DateCard = () => {
       </DatesRow>
       <DatesRow>
         <DateText>
-          Gan final
+          Gran final
         </DateText>
         <DateText style={{ textAlign: "end" }}>TBD</DateText>
       </DatesRow>

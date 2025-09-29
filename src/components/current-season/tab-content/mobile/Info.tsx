@@ -42,7 +42,6 @@ const MobileMenuItemContainer = styled(
 )<MenuItemContainerProps>`
   border-radius: ${(props) =>
     props.isSelected ? "16px 16px 0px 0px" : "16px"};
-  background-color: ${(props) => (props.isSelected ? CURRENT_SEASON_COLORS.primary : "black")};
   color: ${(props) => (props.isSelected ? "black" : CURRENT_SEASON_COLORS.primary)};
 `;
 
@@ -58,6 +57,7 @@ export const ContentContainer = styled.div`
 
 const ContentContainerMobile = styled(ContentContainer)`
   border-radius: 0px 0px 16px 16px;
+  color: black;
 `;
 
 export const InfoTabContentMobile = () => {
@@ -77,7 +77,7 @@ export const InfoTabContentMobile = () => {
     <div
       style={{
         padding: "32px 16px",
-        gap: "16px",
+        gap: "10px",
         display: "flex",
         flexDirection: "column",
         color: "#FABF4A",

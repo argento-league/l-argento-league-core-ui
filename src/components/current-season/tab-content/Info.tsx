@@ -70,6 +70,9 @@ const InfoGeneralContainer = styled.div`
 const MenuContainer = styled.div`
   max-width: 384px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 `;
 
 export const InfoTabContent = () => {

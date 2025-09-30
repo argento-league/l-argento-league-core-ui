@@ -46,36 +46,36 @@ const DateText = styled.p`
 export const DateCard = () => {
   return (
     <DatesBox>
-      <DatesTitle>Fechas</DatesTitle>
+      <DatesTitle>Calendario</DatesTitle>
       <DatesRow>
         <DateText>
-          Inscripción por equipo
+          Inscripción de equipos
         </DateText>
-        <DateText style={{ textAlign: "end" }}>del 17/09 al 26/09</DateText>
+        <DateText style={{ textAlign: "end" }}>Finalizada</DateText>
       </DatesRow>
       <DatesRow>
         <DateText>
-          Inicio Season 6
+          Presentación
         </DateText>
-        <DateText style={{ textAlign: "end" }}>Domingo 05/09</DateText>
+        <DateText style={{ textAlign: "end" }}>Domingo 05 sep</DateText>
       </DatesRow>
       <DatesRow>
         <DateText>
           Fase de grupos
         </DateText>
-        <DateText style={{ textAlign: "end" }}>Del 06/09 al TBD</DateText>
+        <DateText style={{ textAlign: "end" }}>06 oct - 26 oct</DateText>
       </DatesRow>
       <DatesRow>
         <DateText>
           Evento principal
         </DateText>
-        <DateText style={{ textAlign: "end" }}>TBD</DateText>
+        <DateText style={{ textAlign: "end" }}>27 oct - 22 nov</DateText>
       </DatesRow>
       <DatesRow>
         <DateText>
           Gran final
         </DateText>
-        <DateText style={{ textAlign: "end" }}>TBD</DateText>
+        <DateText style={{ textAlign: "end" }}>Domingo 23 nov</DateText>
       </DatesRow>
     </DatesBox>
   );

@@ -57,7 +57,7 @@ export const DateCard = () => {
         <DateText>
           Presentación
         </DateText>
-        <DateText style={{ textAlign: "end" }}>Domingo 05 sep</DateText>
+        <DateText style={{ textAlign: "end" }}>Domingo 05 oct</DateText>
       </DatesRow>
       <DatesRow>
         <DateText>

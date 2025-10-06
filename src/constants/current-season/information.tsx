@@ -9,7 +9,7 @@ export enum TabsEnum {
 export const TABS_CONFIG = {
   [TabsEnum.InfoGeneral]: { enabled: true },
   [TabsEnum.Equipos]: { enabled: true },
-  [TabsEnum.FaseDeGrupos]: { enabled: false },
+  [TabsEnum.FaseDeGrupos]: { enabled: true },
   [TabsEnum.EventoPrincipal]: { enabled: false },
 } as const;
 

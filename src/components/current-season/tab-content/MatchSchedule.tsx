@@ -2,6 +2,8 @@ import { useState } from "react";
 import styled from "styled-components";
 import season5Jornadas from "../../../data/season-5/jornadas.json";
 import season6Jornadas from "../../../data/season-6/jornadas.json";
+import season5Teams from "../../../data/season-5/teams.json";
+import season6Teams from "../../../data/season-6/teams.json";
 
 interface MatchResult {
   team1: string;
@@ -26,11 +28,32 @@ type MatchScheduleProps = {
   season?: number;
 };
 
+// Helper function to find team logo
+const findTeamLogo = (teamName: string, teams: any[]): string => {
+  // First try exact match
+  let match = teams.find(team => team.name === teamName);
+  if (match) return match.logo || 'default-logo.png';
+
+  // Try case-insensitive match
+  match = teams.find(team => team.name.toLowerCase() === teamName.toLowerCase());
+  if (match) return match.logo || 'default-logo.png';
+
+  // Try partial match (contains)
+  match = teams.find(team => 
+    team.name.toLowerCase().includes(teamName.toLowerCase()) ||
+    teamName.toLowerCase().includes(team.name.toLowerCase())
+  );
+  if (match) return match.logo || 'default-logo.png';
+
+  return 'default-logo.png';
+};
+
 export const MatchScheduleContent = ({ currentGroup = "grupo-a", season = 6 }: MatchScheduleProps) => {
   const [currentJornada, setCurrentJornada] = useState(1);
   
   // Select data based on season
   const jornadasData = season === 5 ? season5Jornadas : season6Jornadas;
+  const teamsData = season === 5 ? season5Teams : season6Teams;
   
   // Get all jornada keys and sort them
   const jornadaKeys = Object.keys(jornadasData as JornadasData).sort((a, b) => {
@@ -85,23 +108,40 @@ export const MatchScheduleContent = ({ currentGroup = "grupo-a", season = 6 }: M
       </NavigationContainer>
 
       <MatchesContainer>
-        {currentMatches.map((match, index) => (
-          <MatchCard key={index}>
-            <TeamRow>
-              <TeamName>{match.team1}</TeamName>
-              <Score isPlayed={match.score1 !== null}>
-                {match.score1 ?? "-"}
-              </Score>
-            </TeamRow>
-            <Divider />
-            <TeamRow>
-              <TeamName>{match.team2}</TeamName>
-              <Score isPlayed={match.score2 !== null}>
-                {match.score2 ?? "-"}
-              </Score>
-            </TeamRow>
-          </MatchCard>
-        ))}
+        {currentMatches.map((match, index) => {
+          const team1Logo = findTeamLogo(match.team1, Object.values(teamsData));
+          const team2Logo = findTeamLogo(match.team2, Object.values(teamsData));
+          
+          return (
+            <MatchCard key={index}>
+              <TeamRow>
+                <TeamInfo>
+                  <TeamLogo
+                    src={`/images/teams/season-${season}/${team1Logo}`}
+                    alt={match.team1}
+                  />
+                  <TeamName>{match.team1}</TeamName>
+                </TeamInfo>
+                <Score isPlayed={match.score1 !== null}>
+                  {match.score1 ?? "-"}
+                </Score>
+              </TeamRow>
+              <Divider />
+              <TeamRow>
+                <TeamInfo>
+                  <TeamLogo
+                    src={`/images/teams/season-${season}/${team2Logo}`}
+                    alt={match.team2}
+                  />
+                  <TeamName>{match.team2}</TeamName>
+                </TeamInfo>
+                <Score isPlayed={match.score2 !== null}>
+                  {match.score2 ?? "-"}
+                </Score>
+              </TeamRow>
+            </MatchCard>
+          );
+        })}
       </MatchesContainer>
     </MatchScheduleContainer>
   );
@@ -110,8 +150,8 @@ export const MatchScheduleContent = ({ currentGroup = "grupo-a", season = 6 }: M
 const MatchScheduleContainer = styled.div`
   color: white;
   font-family: "Outfit", sans-serif;
-  max-width: 800px;
-  min-width: 600px;
+  max-width: 400px;
+  min-width: 300px;
 	width: 100%;
 	box-sizing: border-box;
 
@@ -178,6 +218,21 @@ const TeamRow = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 8px 0;
+`;
+
+const TeamInfo = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+`;
+
+const TeamLogo = styled.img`
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0;
 `;
 
 const TeamName = styled.span`

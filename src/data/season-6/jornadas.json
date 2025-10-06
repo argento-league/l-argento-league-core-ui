@@ -30,7 +30,7 @@
     ],
     "grupo-c": [
       {
-        "team1": "LosChinwenwenchas",
+        "team1": "Los Chinwenwenchas",
         "score1": "TBD",
         "team2": "Ravage Gaming",
         "score2": "TBD"
@@ -38,7 +38,7 @@
       {
         "team1": "The Real Server",
         "score1": "TBD",
-        "team2": "La Manada",
+        "team2": "La Plaga",
         "score2": "TBD"
       }
     ],
@@ -52,7 +52,7 @@
       {
         "team1": "Ezio Doggies",
         "score1": "TBD",
-        "team2": "Epicenter",
+        "team2": "Falta Envido",
         "score2": "TBD"
       }
     ]
@@ -90,7 +90,7 @@
       {
         "team1": "La Manada",
         "score1": "TBD",
-        "team2": "LosChinwenwenchas",
+        "team2": "Los Chinwenwenchas",
         "score2": "TBD"
       },
       {
@@ -154,21 +154,21 @@
       {
         "team1": "La Plaga",
         "score1": "TBD",
-        "team2": "LosChinwenwenchas",
+        "team2": "Los Chinwenwenchas",
         "score2": "TBD"
       }
     ],
     "grupo-d": [
       {
-        "team1": "Epicenter",
+        "team1": "Ezio Doggies",
         "score1": "TBD",
-        "team2": "La falopa de Ehkar",
+        "team2": "Epicenter",
         "score2": "TBD"
       },
       {
         "team1": "Falta Envido",
         "score1": "TBD",
-        "team2": "Team Mafia",
+        "team2": "La falopa de Ehkar",
         "score2": "TBD"
       }
     ]
@@ -268,7 +268,7 @@
         "score2": "TBD"
       },
       {
-        "team1": "LosChinwenwenchas",
+        "team1": "Los Chinwenwenchas",
         "score1": "TBD",
         "team2": "The Real Server",
         "score2": "TBD"

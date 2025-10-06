@@ -11,6 +11,7 @@ import arrowDown from "@assets/common/icons/arrow-down.svg";
 import close from "@assets/common/icons/close.svg";
 import { MatchScheduleContent } from "./MatchSchedule";
 import { useIsMobile } from "@hooks/useIsMobile";
+import { CURRENT_SEASON_COLORS } from "../../../constants/season-colors";
 
 interface MatchResult {
   team1: string;
@@ -324,10 +325,12 @@ const GroupTable = styled.div`
   flex: 1;
   max-width: 600px;
   min-width: 500px;
+  width: 100%;
 
   @media (max-width: 768px) {
     max-width: 100%;
     min-width: unset;
+    width: 100%;
   }
 `;
 
@@ -338,9 +341,15 @@ const TableContainer = styled.div`
 const TableHeader = styled.div`
   display: grid;
   grid-template-columns: 40px 1fr 80px 80px;
-  background-color: #ff611d;
+  background-color: ${CURRENT_SEASON_COLORS.primary};
   padding: 8px 16px;
   gap: 16px;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 30px 1fr 60px 60px;
+    gap: 8px;
+    padding: 8px 12px;
+  }
 `;
 
 const HeaderCell = styled.div`
@@ -352,6 +361,10 @@ const HeaderCell = styled.div`
 
   &.team {
     text-align: left;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 12px;
   }
 `;
 
@@ -372,7 +385,9 @@ const TableRow = styled.div`
   }
 
   @media (max-width: 768px) {
-    gap: 4px;
+    grid-template-columns: 30px 1fr 60px 60px;
+    gap: 8px;
+    padding: 12px;
   }
 `;
 
@@ -382,6 +397,10 @@ const PositionCell = styled.div`
   font-size: 14px;
   font-weight: 500;
   text-align: center;
+
+  @media (max-width: 375px) {
+    font-size: 12px;
+  }
 `;
 
 const TeamCell = styled.div`
@@ -402,6 +421,10 @@ const TeamName = styled.span`
   font-family: "Outfit", sans-serif;
   font-size: 14px;
   font-weight: 400;
+
+  @media (max-width: 375px) {
+    font-size: 12px;
+  }
 `;
 
 const RecordCell = styled.div`
@@ -410,6 +433,10 @@ const RecordCell = styled.div`
   font-size: 14px;
   font-weight: 500;
   text-align: center;
+
+  @media (max-width: 375px) {
+    font-size: 12px;
+  }
 `;
 
 const PointsCell = styled.div`
@@ -418,6 +445,10 @@ const PointsCell = styled.div`
   font-size: 14px;
   font-weight: 500;
   text-align: center;
+
+  @media (max-width: 375px) {
+    font-size: 12px;
+  }
 `;
 
 type TeamStatusProps = { position: number; isMobile?: boolean };
@@ -442,10 +473,10 @@ const TeamStatusContainer = styled.div<TeamStatusContainerProps>`
 const TeamStatus = ({ position, isMobile }: TeamStatusProps): ReactNode => {
   let svg = null;
   let backgroundColor: string;
-  if (position <= 4) {
+  if (position <= 2) {
     svg = arrowUp;
     backgroundColor = "#156733";
-  } else if (position <= 6) {
+  } else if (position <= 4) {
     svg = arrowDown;
     backgroundColor = "#795E08";
   } else {

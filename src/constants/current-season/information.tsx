@@ -8,7 +8,7 @@ export enum TabsEnum {
 // Configuración de pestañas habilitadas/deshabilitadas
 export const TABS_CONFIG = {
   [TabsEnum.InfoGeneral]: { enabled: true },
-  [TabsEnum.Equipos]: { enabled: false },
+  [TabsEnum.Equipos]: { enabled: true },
   [TabsEnum.FaseDeGrupos]: { enabled: false },
   [TabsEnum.EventoPrincipal]: { enabled: false },
 } as const;

@@ -5,6 +5,7 @@ import { useTeamNavigation } from "../../../hooks/useTeamNavigation";
 import { TeamJsonType } from "../../../types/teams";
 import season5Teams from "../../../data/season-5/teams.json";
 import season6Teams from "../../../data/season-6/teams.json";
+import { CURRENT_SEASON_COLORS } from "../../../constants/season-colors";
 
 type TeamSelectionContentProps = {
   season?: number;
@@ -209,11 +210,11 @@ const TeamLogoCard = styled.div<TeamLogoCardProps>`
   align-items: center;
   padding: 16px 16px 8px 16px;
   border-radius: 8px;
-  border: 1px solid #ff611d;
+  border: 1px solid ${CURRENT_SEASON_COLORS.primary};
   min-width: 200px;
   height: 124px;
   text-align: center;
-  background-color: ${(props) => (props.isSelected ? "#FF611D1A" : "inherit")};
+  background-color: ${(props) => (props.isSelected ? `${CURRENT_SEASON_COLORS.primary}1A` : "inherit")};
 `;
 
 const TeamInformationContainer = styled.div`
@@ -253,7 +254,7 @@ const ArrowButton = styled.button`
   padding: 4px 8px;
 
   &:hover {
-    color: #ff611d;
+    color: ${CURRENT_SEASON_COLORS.primary};
   }
 `;
 
@@ -268,7 +269,7 @@ const PlayerItem = styled.div`
   align-items: center;
   gap: 12px;
   padding: 12px;
-  border-bottom: 1px solid #ff611d;
+  border-bottom: 1px solid ${CURRENT_SEASON_COLORS.primary};
 `;
 
 const CountryFlag = styled.img`
@@ -319,14 +320,14 @@ const TeamLogoMobileCard = styled.div<TeamLogoCardProps>`
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  border: 2px solid ${(props) => (props.isSelected ? "#FF611D" : "#555")};
+  border: 2px solid ${(props) => (props.isSelected ? CURRENT_SEASON_COLORS.primary : "#555")};
   padding: 8px;
   min-width: 70px;
   height: 70px;
   flex-shrink: 0;
   cursor: pointer;
   background-color: ${(props) =>
-    props.isSelected ? "#FF611D1A" : "transparent"};
+    props.isSelected ? `${CURRENT_SEASON_COLORS.primary}1A` : "transparent"};
   transition: all 0.2s ease;
 
   &:active {
@@ -372,7 +373,7 @@ const PlayerItemMobile = styled.div`
   align-items: center;
   gap: 12px;
   padding: 12px;
-  border-bottom: 1px solid #ff611d;
+  border-bottom: 1px solid ${CURRENT_SEASON_COLORS.primary};
 
   &:last-child {
     border-bottom: none;

@@ -122,8 +122,8 @@ export const MatchScheduleContent = ({ currentGroup = "grupo-a", season = 6 }: M
                   />
                   <TeamName>{match.team1}</TeamName>
                 </TeamInfo>
-                <Score isPlayed={match.score1 !== null}>
-                  {match.score1 ?? "-"}
+                <Score isPlayed={match.score1 !== null && match.score1 !== "TBD"}>
+                  {match.score1 === "TBD" ? "TBD" : (match.score1 ?? "-")}
                 </Score>
               </TeamRow>
               <Divider />
@@ -135,8 +135,8 @@ export const MatchScheduleContent = ({ currentGroup = "grupo-a", season = 6 }: M
                   />
                   <TeamName>{match.team2}</TeamName>
                 </TeamInfo>
-                <Score isPlayed={match.score2 !== null}>
-                  {match.score2 ?? "-"}
+                <Score isPlayed={match.score2 !== null && match.score2 !== "TBD"}>
+                  {match.score2 === "TBD" ? "TBD" : (match.score2 ?? "-")}
                 </Score>
               </TeamRow>
             </MatchCard>

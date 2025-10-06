@@ -119,8 +119,9 @@ const createGroupData = (teamsData: any, jornadasData: any): GroupData => {
     // Calculate stats from all jornadas
     Object.values(jornadas).forEach(jornada => {
       jornada[groupKey]?.forEach(match => {
-        // Only process matches with results
-        if (match.score1 !== null && match.score2 !== null) {
+        // Only process matches with results (not TBD or null)
+        if (match.score1 !== null && match.score2 !== null && 
+            match.score1 !== "TBD" && match.score2 !== "TBD") {
           const score1 = parseInt(match.score1);
           const score2 = parseInt(match.score2);
           

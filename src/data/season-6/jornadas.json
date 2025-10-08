@@ -2,7 +2,7 @@
   "Jornada-1": {
     "grupo-a": [
       {
-        "team1": "TEAM_HORROR_FOX",
+        "team1": "TEAM HORROR FOX",
         "score1": "TBD",
         "team2": "THE RATS",
         "score2": "TBD"
@@ -30,7 +30,7 @@
     ],
     "grupo-c": [
       {
-        "team1": "LosChinwenwenchas",
+        "team1": "Los Chinwenwenchas",
         "score1": "TBD",
         "team2": "Ravage Gaming",
         "score2": "TBD"
@@ -62,7 +62,7 @@
       {
         "team1": "Las divinas",
         "score1": "TBD",
-        "team2": "TEAM_HORROR_FOX",
+        "team2": "TEAM HORROR FOX",
         "score2": "TBD"
       },
       {
@@ -90,7 +90,7 @@
       {
         "team1": "La Manada",
         "score1": "TBD",
-        "team2": "LosChinwenwenchas",
+        "team2": "Los Chinwenwenchas",
         "score2": "TBD"
       },
       {
@@ -126,7 +126,7 @@
       {
         "team1": "Veritas Gaming",
         "score1": "TBD",
-        "team2": "TEAM_HORROR_FOX",
+        "team2": "TEAM HORROR FOX",
         "score2": "TBD"
       }
     ],
@@ -154,7 +154,7 @@
       {
         "team1": "La Plaga",
         "score1": "TBD",
-        "team2": "LosChinwenwenchas",
+        "team2": "Los Chinwenwenchas",
         "score2": "TBD"
       }
     ],
@@ -240,7 +240,7 @@
         "score2": "TBD"
       },
       {
-        "team1": "TEAM_HORROR_FOX",
+        "team1": "TEAM HORROR FOX",
         "score1": "TBD",
         "team2": "Lemuria",
         "score2": "TBD"
@@ -268,7 +268,7 @@
         "score2": "TBD"
       },
       {
-        "team1": "LosChinwenwenchas",
+        "team1": "Los Chinwenwenchas",
         "score1": "TBD",
         "team2": "The Real Server",
         "score2": "TBD"

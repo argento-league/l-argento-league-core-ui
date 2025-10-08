@@ -1,6 +1,6 @@
 {
   "TEAM_HORROR_FOX": {
-    "name": "TEAM_HORROR_FOX",
+    "name": "TEAM HORROR FOX",
     "logo": "team-horror-fox.png",
     "players": [
       { "nick": "meshik", "nationality": "ar", "mmr": 6233, "id_dota": "109727171" },
@@ -52,7 +52,7 @@
     ]
   },
   "LOS_CHINWENWENCHAS": {
-    "name": "LosChinwenwenchas",
+    "name": "Los Chinwenwenchas",
     "logo": "los-chinwenwenchas.png",
     "players": [
       { "nick": "Taboo", "nationality": "ar", "mmr": 7063, "id_dota": "157114950" },

@@ -257,11 +257,11 @@
     "players": [
       { "nick": "runawaY", "nationality": "ar", "mmr": 10229, "id_dota": "193490297" },
       { "nick": "frizolini", "nationality": "ar", "mmr": 5565, "id_dota": "135450573" },
-      { "nick": "Benny", "nationality": "pe", "mmr": 11849, "id_dota": "203851397" },
+      { "nick": "shroud", "nationality": "pe", "mmr": 11849, "id_dota": "203851397" },
       { "nick": "SHIRO", "nationality": "bo", "mmr": 6264, "id_dota": "1260321332" },
       { "nick": "Meew", "nationality": "ar", "mmr": 8559, "id_dota": "160482724" },
       { "nick": "Makiev", "nationality": "ar", "mmr": 6399, "id_dota": "144980187" },
-      { "nick": "Alekasuma", "nationality": "ar", "mmr": 3528, "id_dota": "139437169" },
+      { "nick": "Alekasuma", "nationality": "pe", "mmr": 3528, "id_dota": "139437169" },
       { "nick": "MessiGordo", "nationality": "ar", "mmr": 3912, "id_dota": "363362292" }
     ]
   }

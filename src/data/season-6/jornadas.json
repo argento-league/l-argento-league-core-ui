@@ -3,9 +3,9 @@
     "grupo-a": [
       {
         "team1": "TEAM HORROR FOX",
-        "score1": "TBD",
+        "score1": "0",
         "team2": "THE RATS",
-        "score2": "TBD"
+        "score2": "2"
       },
       {
         "team1": "Lemuria",
@@ -51,9 +51,9 @@
       },
       {
         "team1": "Ezio Doggies",
-        "score1": "TBD",
+        "score1": "1",
         "team2": "Falta Envido",
-        "score2": "TBD"
+        "score2": "1"
       }
     ]
   },
@@ -103,9 +103,9 @@
     "grupo-d": [
       {
         "team1": "Epicenter",
-        "score1": "TBD",
+        "score1": "2",
         "team2": "La falopa de Ehkar",
-        "score2": "TBD"
+        "score2": "0"
       },
       {
         "team1": "Falta Envido",

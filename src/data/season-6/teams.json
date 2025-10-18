@@ -113,6 +113,7 @@
       { "nick": "Maraboli", "nationality": "ar", "mmr": 5320, "id_dota": "128766615" },
       { "nick": "Kinkka", "nationality": "br", "mmr": 9714, "id_dota": "123097213" },
       { "nick": "Markuz", "nationality": "ar", "mmr": 6275, "id_dota": "176600947" },
+      { "nick": "Knight0", "nationality": "ar", "mmr": 4768, "id_dota": "99077578" },
       { "nick": "Nero", "nationality": "ar", "mmr": 8167, "id_dota": "338567565" },
       { "nick": "Snitter", "nationality": "ar", "mmr": 8525, "id_dota": "211257730" }
     ]
@@ -139,6 +140,7 @@
       { "nick": "NikeGG", "nationality": "ar", "mmr": 7565, "id_dota": "93344921" },
       { "nick": "Kanishka", "nationality": "ar", "mmr": 4632, "id_dota": "100971733" },
       { "nick": "3mpty", "nationality": "ar", "mmr": 3104, "id_dota": "139160605" }
+      { "nick": "AMZ", "nationality": "ar", "mmr": 3023, "id_dota": "225494054" }
     ]
   },
   "LAS_JOYAS_DEL_ABUELO": {
@@ -175,6 +177,7 @@
       { "nick": "Sayonara", "nationality": "ar", "mmr": 7542, "id_dota": "115133660" },
       { "nick": "ShineDi", "nationality": "cl", "mmr": 10314, "id_dota": "101071453" },
       { "nick": "BLE$$ED", "nationality": "cl", "mmr": 8776, "id_dota": "860814988" },
+      { "nick": "Kezia", "nationality": "cl", "mmr": 10114, "id_dota": "102382586" },
       { "nick": "LeCachuflet", "nationality": "ar", "mmr": 2078, "id_dota": "192417817" },
       { "nick": "Nickbled", "nationality": "cl", "mmr": 7131, "id_dota": "171036855" },
       { "nick": "Sie7e", "nationality": "cl", "mmr": 9695, "id_dota": "203596299" },
@@ -214,10 +217,10 @@
     "logo": "la-falopa-de-ehkar.png",
     "players": [
       { "nick": "MoneyForNoth1ng", "nationality": "ar", "mmr": 6390, "id_dota": "91773235" },
-      { "nick": "Tachibana", "nationality": "pe", "mmr": 8638, "id_dota": "344701202" },
+      { "nick": "Rada", "nationality": "ar", "mmr": 8553, "id_dota": "114950886" },
       { "nick": "Lykke.", "nationality": "ar", "mmr": 4050, "id_dota": "118765448" },
       { "nick": "Giulinho", "nationality": "ar", "mmr": 7300, "id_dota": "112263262" },
-      { "nick": "Alerik", "nationality": "pe", "mmr": 9888, "id_dota": "124238143" },
+      { "nick": "IroHHa", "nationality": "ar", "mmr": 9070, "id_dota": "865511874" },
       { "nick": "DLC", "nationality": "ar", "mmr": 7702, "id_dota": "92241448" },
       { "nick": "Z-ta", "nationality": "ar", "mmr": 7251, "id_dota": "849500080" },
       { "nick": "Gankzter", "nationality": "ar", "mmr": 5800, "id_dota": "123346464" }

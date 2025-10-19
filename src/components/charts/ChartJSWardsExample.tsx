@@ -63,7 +63,7 @@ const WardsList = styled.div`
   flex-direction: column;
   gap: 12px;
   width: 100%;
-  padding: 30px;
+  padding: 30px 50px;
 `;
 
 const WardItem = styled.div`

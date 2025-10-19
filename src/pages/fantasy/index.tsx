@@ -163,10 +163,11 @@ const LeftHeroContent = styled.div`
   padding: 50px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
   text-align: center;
   border-radius: 20px;
   height: 100%;
+  min-height: 580px;
   box-sizing: border-box;
 `;
 

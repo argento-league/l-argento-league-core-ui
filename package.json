@@ -12,13 +12,18 @@
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",
     "brackets-viewer": "^1.6.2",
+    "chart.js": "^4.5.1",
+    "framer-motion": "^12.23.24",
     "react": "^19.0.0",
+    "react-chartjs-2": "^5.3.0",
     "react-dom": "^19.0.0",
+    "react-glassmorphism": "^0.0.1",
     "react-inlinesvg": "^4.2.0",
     "react-router-dom": "^7.5.3",
     "react-snowfall": "^2.2.0",
     "react-svg-pan-zoom": "^3.13.1",
     "react-tournament-brackets": "^1.0.41",
+    "recharts": "^3.2.1",
     "styled-components": "^4.4.1"
   },
   "devDependencies": {

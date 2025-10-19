@@ -1,0 +1,273 @@
+{
+  "currentRecords": [
+    {
+      "statistic": "Kills",
+      "player": "MonHty",
+      "record": 27,
+      "matchId": "8514630165",
+      "heroImage": "drow.png",
+      "team": "La Manada"
+    },
+    {
+      "statistic": "Asistencias",
+      "player": "AMAZING",
+      "record": 40,
+      "matchId": "8514669206",
+      "heroImage": "silencer.png",
+      "team": "Miro tik tok y webeo"
+    },
+    {
+      "statistic": "Muertes",
+      "player": "[L]obo",
+      "record": 16,
+      "matchId": "8503790328",
+      "heroImage": "naga.png",
+      "team": "The real server"
+    },
+    {
+      "statistic": "GPM",
+      "player": "MonHty",
+      "record": 971,
+      "matchId": "8514630165",
+      "heroImage": "drow.png",
+      "team": "La Manada"
+    },
+    {
+      "statistic": "Last Hits",
+      "player": "roy",
+      "record": 917,
+      "matchId": "8503705278",
+      "heroImage": "jugger.png",
+      "team": "La Guarderia SSG"
+    },
+    {
+      "statistic": "Valor Neto",
+      "player": "Sheol",
+      "record": 46382,
+      "matchId": "8503739753",
+      "heroImage": "tinker.png",
+      "team": "Las Divinas"
+    },
+    {
+      "statistic": "Wards Colocados",
+      "player": "[L]obo",
+      "record": 28,
+      "matchId": "8516235568",
+      "heroImage": "pugna.png",
+      "team": "The Real Server"
+    }
+  ],
+  "classification": [
+    {
+      "player": "the dark miracle",
+      "score": 20
+    },
+    {
+      "player": "MessiGordo",
+      "score": 10
+    },
+    {
+      "player": "PorcoRex",
+      "score": 10
+    },
+    {
+      "player": "Piojito",
+      "score": 10
+    },
+    {
+      "player": "Khantus",
+      "score": 10
+    },
+    {
+      "player": "3mpty",
+      "score": 5
+    },
+    {
+      "player": "Tabu",
+      "score": 5
+    }
+  ],
+  "rankings": {
+    "kills": [
+      {
+        "statistic": "Kills",
+        "player": "MonHty",
+        "record": 27,
+        "matchId": "8514630165",
+        "heroImage": "drow.png",
+        "team": "La Manada"
+      },
+      {
+        "player": "Stepham",
+        "record": 25,
+        "matchId": "8505312598",
+        "heroImage": "nature.png",
+        "team": "The Rats"
+      },
+      {
+        "player": "izolver",
+        "record": 25,
+        "matchId": "8516056440",
+        "heroImage": "lesh.png",
+        "team": "Epicenter"
+      }
+   ],
+    "assists": [
+      {
+        "player": "AMAZING",
+        "record": 40,
+        "matchId": "8514669206",
+        "heroImage": "silencer.png",
+        "team": "Miro tik tok y webeo"     
+      },
+      {
+        "player": "Kezia",
+        "record": 35,
+        "matchId": "8508866148",
+        "heroImage": "dark serr.png",
+        "team": "Ravage Gaming"
+      },
+      {
+        "player": "Kanishka",
+        "record": 33,
+        "matchId": "8511774191",
+        "heroImage": "silencer.png",
+        "team": "La Divinas"
+      }
+    ],
+    "deaths": [
+      {
+        "player": "[L]obo",
+        "record": 16,
+        "matchId": "8503790328",
+        "heroImage": "naga.png",
+        "team": "The real server"
+      },
+      {
+        "player": "Zancrow",
+        "record": 16,
+        "matchId": "8508866148",
+        "heroImage": "tusk.png",
+        "team": "La Plaga"
+      },
+      {
+        "player": "worlock",
+        "record": 15,
+        "matchId": "8506836889",
+        "heroImage": "clock.png",
+        "team": "The Royals"
+      }  
+   ],
+    "gpm": [
+      {
+        "player": "MonHty",
+        "record": 971,
+        "matchId": "8514630165",
+        "heroImage": "drow.png",
+        "team": "La Manada"
+      },
+      {
+        "player": "El Alessi",
+        "record": 966,
+        "matchId": "8514699784",
+        "heroImage": "drow.png",
+        "team": "La Plaga"
+      },
+      {
+        "player": "Sheol",
+        "record": 964,
+        "matchId": "8503739753",
+        "heroImage": "tinker.png",
+        "team": "Las Divinas"
+      }
+    ],
+    "netWorth": {
+      "timePoints": [
+        { "minute": 0, "time": "0:00" },
+        { "minute": 5, "time": "5:00" },
+        { "minute": 10, "time": "10:00" },
+        { "minute": 15, "time": "15:00" },
+        { "minute": 20, "time": "20:00" },
+        { "minute": 25, "time": "25:00" },
+        { "minute": 30, "time": "30:00" },
+        { "minute": 35, "time": "35:00" },
+        { "minute": 40, "time": "40:00" },
+        { "minute": 45, "time": "45:00" },
+        { "minute": 50, "time": "50:00" },
+        { "minute": 55, "time": "55:00" },
+        { "minute": 60, "time": "60:00" },
+        { "minute": 65, "time": "65:00" },
+        { "minute": 70, "time": "70:00" }
+      ],
+      "players": [
+        {
+          "name": "Sheol",
+          "matchId": "8503739753",
+          "heroImage": "tinker.png",
+          "team": "Las Divinas",
+          "netWorth": [760 , 2193, 4190, 6840, 11347, 15286, 19450, 25138, 30616, 37188, 42045, 46382]
+        },
+        {
+          "name": "KTZ",
+          "matchId": "8503705278",
+          "heroImage": "life.png",
+          "team": "Las Joyas del Abuelo",
+          "netWorth": [730, 2203, 4857, 7703, 11076, 15863, 20078, 23451, 25731, 31821, 35904, 35720, 38703, 46354]
+        },
+        {
+          "name": "ShineDi",
+          "matchId": "8516235568",
+          "heroImage": "am.png",
+          "team": "Ravage Gaming",
+          "netWorth": [881, 1840, 3381, 5178, 8056, 12604, 17330, 22650, 25842, 26315, 30977, 36144, 42851, 43930, 45383]
+        }
+      ]
+    },
+    "lastHits": [
+      {
+        "player": "roy roy",
+        "record": 917,
+        "matchId": "8503705278",
+        "heroImage": "jugger.png",
+        "team": "La Guarderia de SGG"
+      },
+      {
+        "player": "ShineDi",
+        "record": 899,
+        "matchId": "8516235568",
+        "heroImage": "am.png",
+        "team": "Ravage Gaming"
+      },
+      {
+        "player": "El Alessi",
+        "record": 741,
+        "matchId": "8503790328",
+        "heroImage": "nature.png",
+        "team": "La Plaga"
+      }
+      ],
+    "wards": [
+      {
+        "player": "[L]obo",
+        "record": 28,
+        "matchId": "8516235568",
+        "heroImage": "pugna.png",
+        "team": "The Real Server"
+      },
+      {
+        "player": "kidd",
+        "record": 25,
+        "matchId": "8503705278",
+        "heroImage": "jakiro.png",
+        "team": "Las Joyas del Abuelo"
+      },
+      {
+        "player": "Nickbled",
+        "record": 24,
+        "matchId": "8516235568",
+        "heroImage": "ardila.png",
+        "team": "Ravage Gaming"
+      }
+      ]
+  }
+}

@@ -9,6 +9,7 @@ import burgerIcon from "../../assets/common/icons/bars-3.svg";
 const NAV_LINKS = [
   { to: "/", label: "Inicio" },
   { to: "/current-season", label: "Season 6" },
+  { to: "/fantasy", label: "Fantasy" },
   // { to: "/staff", label: "Staff" },
 ];
 

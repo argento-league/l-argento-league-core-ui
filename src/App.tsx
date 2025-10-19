@@ -7,6 +7,7 @@ import { NavBar } from "./components/navbar";
 import { SeasonFour } from "./pages/season-four";
 import { SeasonFive } from "./pages/season-five";
 import { CurrentSeasonPage } from "./pages/current-season";
+import { FantasyPage } from "./pages/fantasy";
 import { Footer } from "@components/footer";
 
 const AppContainer = styled.div`
@@ -25,6 +26,7 @@ function App() {
           <Route path="/season-4" element={<SeasonFour />} />
           <Route path="/season-5" element={<SeasonFive />} />
           <Route path="/current-season" element={<CurrentSeasonPage />} />
+          <Route path="/fantasy" element={<FantasyPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       }

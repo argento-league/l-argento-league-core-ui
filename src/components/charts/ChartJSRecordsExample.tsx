@@ -1,18 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+
 // Styled components manteniendo tu estilo
-const RecordsCard = styled(motion.div)`
-  background: transparent;
-  padding: 0;
+const TableContainer = styled(motion.div)`
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px); /* AQUÍ MODIFICAS EL BLUR */
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  padding: 18px 32px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  height: auto;
-  margin-bottom: 48px;
   position: relative;
+  margin-bottom: 48px;
   
   &::before {
     content: '';
@@ -29,6 +36,38 @@ const RecordsCard = styled(motion.div)`
     opacity: 0.3;
     pointer-events: none;
   }
+`;
+
+const TabButtons = styled.div`
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  z-index: 10;
+  position: relative;
+`;
+
+
+const TabButton = styled.button<{ active: boolean }>`
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  ${props => props.active ? `
+    background: rgba(80, 255, 16, 0.2);
+    color: #ffffff;
+  ` : `
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  `}
 `;
 
 
@@ -140,21 +179,20 @@ const InfoIcon = styled.span`
 
 const TooltipWrapper = styled.div`
   position: fixed;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(31, 30, 30, 0.6);
   border-radius: 12px;
-  border: 2px solid rgba(80, 255, 16, 0.5);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(80, 255, 16, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
   padding: 12px;
   font-family: 'Rethink Sans', sans-serif;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   z-index: 2147483647;
-  pointer-events: none;
+  pointer-events: auto;
   max-width: 240px;
 `;
 
 const TooltipContent = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 8px;
 `;
 
 const TooltipLeft = styled.div`
@@ -162,29 +200,32 @@ const TooltipLeft = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  width: 80px;
+  width: 60px;
+  background: rgba(80, 255, 16, 0.3);
+  border-radius: 8px;
+  padding: 8px;
 `;
 
 const TooltipHeroImage = styled.img`
-  width: 55px;
-  height: 55px;
+  width: 60px;
+  height: 60px;
   border-radius: 8px;
-  border: 2px solid #50ff10;
-  box-shadow: 0 0 15px rgba(80, 255, 16, 0.5);
+  object-fit: cover;
 `;
 
 const TooltipStat = styled.div`
   font-size: 16px;
-  color: #ffffff;
+  color: #50ff10;
   font-family: 'Outfit', sans-serif;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
+  margin-bottom: 2px;
 `;
 
 const TooltipRight = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 3px;
   min-width: 150px;
 `;
 
@@ -200,10 +241,18 @@ const TooltipInfo = styled.div`
   color: #cccccc;
 `;
 
-const TooltipMatchId = styled.div`
+const TooltipMatchId = styled.a`
   font-size: 10px;
-  color: #888888;
+  color: #50ff10;
   font-family: 'Rethink Sans', sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+  
+  &:hover {
+    color: #70ff30;
+    text-decoration: underline;
+  }
 `;
 
 // Importar datos reales
@@ -230,7 +279,6 @@ const getBestRecords = () => {
       team: fantasyData.rankings.kills[0]?.team || 'N/A',
       matchId: fantasyData.rankings.kills[0]?.matchId || 'N/A',
       heroImage: fantasyData.rankings.kills[0]?.heroImage || '',
-      date: '2/10/25',
       emoji: '⚔️'
     },
     {
@@ -240,7 +288,6 @@ const getBestRecords = () => {
       team: fantasyData.rankings.assists[0]?.team || 'N/A',
       matchId: fantasyData.rankings.assists[0]?.matchId || 'N/A',
       heroImage: fantasyData.rankings.assists[0]?.heroImage || '',
-      date: '2/10/25',
       emoji: '🤝'
     },
     {
@@ -250,7 +297,6 @@ const getBestRecords = () => {
       team: fantasyData.rankings.deaths[0]?.team || 'N/A',
       matchId: fantasyData.rankings.deaths[0]?.matchId || 'N/A',
       heroImage: fantasyData.rankings.deaths[0]?.heroImage || '',
-      date: '2/10/25',
       emoji: '💀'
     },
     {
@@ -260,7 +306,6 @@ const getBestRecords = () => {
       team: fantasyData.rankings.gpm[0]?.team || 'N/A',
       matchId: fantasyData.rankings.gpm[0]?.matchId || 'N/A',
       heroImage: fantasyData.rankings.gpm[0]?.heroImage || '',
-      date: '2/10/25',
       emoji: '💰'
     },
     {
@@ -270,7 +315,6 @@ const getBestRecords = () => {
       team: fantasyData.rankings.lastHits[0]?.team || 'N/A',
       matchId: fantasyData.rankings.lastHits[0]?.matchId || 'N/A',
       heroImage: fantasyData.rankings.lastHits[0]?.heroImage || '',
-      date: '2/10/25',
       emoji: '💎'
     },
     {
@@ -280,7 +324,6 @@ const getBestRecords = () => {
       team: fantasyData.rankings.wards[0]?.team || 'N/A',
       matchId: fantasyData.rankings.wards[0]?.matchId || 'N/A',
       heroImage: fantasyData.rankings.wards[0]?.heroImage || '',
-      date: '2/10/25',
       emoji: '👁️'
     },
     {
@@ -290,7 +333,6 @@ const getBestRecords = () => {
       team: fantasyData.rankings.netWorth.players[0]?.team || 'N/A',
       matchId: fantasyData.rankings.netWorth.players[0]?.matchId || 'N/A',
       heroImage: fantasyData.rankings.netWorth.players[0]?.heroImage || '',
-      date: '2/10/25',
       emoji: '💵'
     }
   ];
@@ -307,20 +349,24 @@ interface TooltipPortalProps {
     team: string;
     matchId: string;
     heroImage: string;
-    date: string;
     emoji: string;
   };
   position: { x: number; y: number };
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
 }
 
-const TooltipPortal: React.FC<TooltipPortalProps> = ({ record, position }) => {
+const TooltipPortal: React.FC<TooltipPortalProps> = ({ record, position, onMouseEnter, onMouseLeave }) => {
   return ReactDOM.createPortal(
     <TooltipWrapper
+      data-tooltip="true"
       style={{
         left: `${position.x}px`,
         top: `${position.y - 10}px`,
         transform: 'translate(0%, -100%)' // Sin centrar horizontalmente
       }}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       <TooltipContent>
         <TooltipLeft>
@@ -328,15 +374,20 @@ const TooltipPortal: React.FC<TooltipPortalProps> = ({ record, position }) => {
             src={`/images/heroes/${record.heroImage}`}
             alt="Hero"
           />
-          <TooltipStat>
-            {record.emoji} {record.value.toLocaleString()}
-          </TooltipStat>
         </TooltipLeft>
         <TooltipRight>
           <TooltipPlayerName>{record.player}</TooltipPlayerName>
+          <TooltipStat>
+            {record.emoji} {record.value.toLocaleString()}
+          </TooltipStat>
           <TooltipInfo>🛡️ {record.team}</TooltipInfo>
-          <TooltipInfo>📅 {record.date}</TooltipInfo>
-          <TooltipMatchId>Match ID: {record.matchId}</TooltipMatchId>
+          <TooltipMatchId 
+            href={`https://www.dotabuff.com/matches/${record.matchId}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Match ID: {record.matchId}
+          </TooltipMatchId>
         </TooltipRight>
       </TooltipContent>
     </TooltipWrapper>,
@@ -346,10 +397,34 @@ const TooltipPortal: React.FC<TooltipPortalProps> = ({ record, position }) => {
 
 export const ChartJSRecordsExample: React.FC = () => {
   const records = getBestRecords();
+  const [activeTab, setActiveTab] = useState<'fantasy' | 'participantes'>('fantasy');
   const [hoveredRecord, setHoveredRecord] = useState<number | null>(null);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
+  // Función para obtener datos de participantes
+  const getParticipantsData = () => {
+    return fantasyData.classification.map((participant, index) => {
+      let emoji = '🏆'; // Default para posiciones 4+
+      if (index === 0) emoji = '🥇'; // 1er lugar - Oro
+      else if (index === 1) emoji = '🥈'; // 2do lugar - Plata
+      else if (index === 2) emoji = '🥉'; // 3er lugar - Bronce
+      
+      return {
+        position: index + 1,
+        player: participant.player,
+        score: participant.score,
+        emoji: emoji
+      };
+    });
+  };
+
   const handleMouseEnter = (index: number, event: React.MouseEvent) => {
+    // Hide all chart tooltips when showing table tooltip
+    const allTooltips = document.querySelectorAll('div[class*="chartjs-tooltip"]');
+    allTooltips.forEach((el: any) => {
+      el.style.opacity = '0';
+    });
+    
     const rect = event.currentTarget.getBoundingClientRect();
     setTooltipPosition({
       x: rect.left - 300, // Desplazar más a la izquierda
@@ -359,51 +434,101 @@ export const ChartJSRecordsExample: React.FC = () => {
   };
 
   const handleMouseLeave = () => {
-    setHoveredRecord(null);
+    // No timer - tooltip stays visible until another is shown or scroll
   };
+
+  const handleTooltipMouseEnter = () => {
+    // No timer needed
+  };
+
+  const handleTooltipMouseLeave = () => {
+    // No timer - tooltip stays visible until another is shown or scroll
+  };
+
+  // Hide tooltip when scrolling
+  useEffect(() => {
+    const handleScroll = () => {
+      setHoveredRecord(null);
+    };
+
+    window.addEventListener('scroll', handleScroll, true);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll, true);
+    };
+  }, []);
+
+
+  const participantsData = getParticipantsData();
 
   return (
     <>
-      <RecordsCard
+      <TabButtons>
+        <TabButton 
+          active={activeTab === 'fantasy'} 
+          onClick={() => setActiveTab('fantasy')}
+        >
+          Fantasy
+        </TabButton>
+        <TabButton 
+          active={activeTab === 'participantes'} 
+          onClick={() => setActiveTab('participantes')}
+        >
+          Participantes
+        </TabButton>
+      </TabButtons>
+
+      <TableContainer
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.9 }}
       >
         <RecordsTable>
           <RecordsHeader>
-            <span>Records actuales</span>
+            <span>{activeTab === 'fantasy' ? 'Records actuales' : 'Posición'}</span>
             <span>Player</span>
             <span>Valor</span>
           </RecordsHeader>
           
-          {records.map((record, index) => (
+          {(activeTab === 'fantasy' ? records : participantsData).map((record, index) => (
             <RecordRow key={index}>
               <RecordType>
                 <RecordIcon>
-                  {recordIcons[record.type as keyof typeof recordIcons]}
+                  {activeTab === 'fantasy' 
+                    ? recordIcons[(record as any).type as keyof typeof recordIcons]
+                    : (record as any).emoji
+                  }
                 </RecordIcon>
-                {record.type}
+                {activeTab === 'fantasy' ? (record as any).type : `#${(record as any).position}`}
               </RecordType>
               <RecordPlayer>{record.player}</RecordPlayer>
               <RecordValue>
-                <InfoIcon
-                  onMouseEnter={(e) => handleMouseEnter(index, e)}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  ?
-                </InfoIcon>
-                {record.value.toLocaleString()}
+                {activeTab === 'fantasy' && (
+                  <InfoIcon
+                    data-tooltip-trigger="true"
+                    onMouseEnter={(e) => handleMouseEnter(index, e)}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    ?
+                  </InfoIcon>
+                )}
+                {activeTab === 'fantasy' 
+                  ? (record as any).value.toLocaleString() 
+                  : (record as any).score.toLocaleString()
+                }
               </RecordValue>
             </RecordRow>
           ))}
         </RecordsTable>
-      </RecordsCard>
+      </TableContainer>
 
-      {/* Tooltip Portal */}
-      {hoveredRecord !== null && (
+      {/* Tooltip Portal - Solo en pestaña Fantasy */}
+      {hoveredRecord !== null && activeTab === 'fantasy' && (
         <TooltipPortal 
           record={records[hoveredRecord]} 
           position={tooltipPosition}
+          onMouseEnter={handleTooltipMouseEnter}
+          onMouseLeave={handleTooltipMouseLeave}
         />
       )}
     </>

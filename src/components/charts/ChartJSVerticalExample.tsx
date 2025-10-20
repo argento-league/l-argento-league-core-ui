@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -129,6 +129,7 @@ const LegendValue = styled.span<{ color: string }>`
 
 // Importar datos reales
 import fantasyData from '../../data/season-6/fantasy-data.json';
+import { CHART_NEON_COLORS } from '../../constants/chart-colors';
 
 // Usar datos reales del JSON (ordenados de mayor a menor)
 const deathsData = fantasyData.rankings.deaths.slice(0, 3).map(item => ({
@@ -136,33 +137,31 @@ const deathsData = fantasyData.rankings.deaths.slice(0, 3).map(item => ({
   deaths: item.record,
   team: item.team,
   matchId: item.matchId,
-  date: '2/10/25', // Placeholder
   heroImage: item.heroImage
 }));
 
 // Colores neón como en tu diseño
-const neonColors = ['#50ff10', '#ff6b35', '#4ecdc4'];
+const neonColors = CHART_NEON_COLORS;
 
 // Tooltip HTML personalizado con imagen del héroe
 const getOrCreateTooltip = (_chart: any) => {
-  let tooltipEl = document.querySelector('div.chartjs-tooltip') as HTMLElement | null;
+  let tooltipEl = document.querySelector('div.chartjs-tooltip-gpm') as HTMLElement | null;
 
   if (!tooltipEl) {
     tooltipEl = document.createElement('div') as HTMLElement;
-    tooltipEl.className = 'chartjs-tooltip';
-    tooltipEl.style.background = 'rgba(0, 0, 0, 0.95)';
+    tooltipEl.className = 'chartjs-tooltip-gpm';
+    tooltipEl.style.background = 'rgba(31, 30, 30, 0.6)';
     tooltipEl.style.borderRadius = '12px';
     tooltipEl.style.color = 'white';
     tooltipEl.style.opacity = '0';
-    tooltipEl.style.pointerEvents = 'none';
+    tooltipEl.style.pointerEvents = 'auto';
     tooltipEl.style.position = 'fixed';
     tooltipEl.style.transform = 'translate(-50%, 0)';
     tooltipEl.style.transition = 'all .1s ease';
-    tooltipEl.style.border = '2px solid rgba(80, 255, 16, 0.5)';
-    tooltipEl.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(80, 255, 16, 0.3)';
+    tooltipEl.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.5)';
     tooltipEl.style.padding = '12px';
     tooltipEl.style.fontFamily = 'Rethink Sans';
-    tooltipEl.style.backdropFilter = 'blur(10px)';
+    tooltipEl.style.backdropFilter = 'blur(5px)';
     tooltipEl.style.zIndex = '2147483647';
 
     const table = document.createElement('table');
@@ -170,18 +169,28 @@ const getOrCreateTooltip = (_chart: any) => {
 
     tooltipEl.appendChild(table);
     document.body.appendChild(tooltipEl);
+
+    // No timer needed - tooltip stays visible until another is shown or scroll
   }
 
   return tooltipEl;
 };
 
 const externalTooltipHandler = (context: any) => {
-  const { tooltip } = context;
+  const { tooltip} = context;
   const tooltipEl = getOrCreateTooltip(context.chart) as HTMLElement;
 
+  // Hide all other tooltips when showing a new one
+  const allTooltips = document.querySelectorAll('div[class*="chartjs-tooltip"]');
+  allTooltips.forEach((el: any) => {
+    if (el !== tooltipEl) {
+      el.style.opacity = '0';
+    }
+  });
+
+  // NO ocultar el tooltip cuando opacity es 0, mantenerlo visible
   if (tooltip.opacity === 0) {
-    tooltipEl.style.opacity = '0';
-    return;
+    return; // Mantener el tooltip visible
   }
 
   if (tooltip.body) {
@@ -200,27 +209,19 @@ const externalTooltipHandler = (context: any) => {
       leftCell.style.verticalAlign = 'top';
       leftCell.style.paddingRight = '10px';
       leftCell.style.textAlign = 'center';
-      leftCell.style.width = '80px';
+      leftCell.style.width = '60px';
+      leftCell.style.background = 'rgba(80, 255, 16, 0.3)';
+      leftCell.style.borderRadius = '8px';
+      leftCell.style.padding = '8px';
 
       // Hero icon
       const heroImg = document.createElement('img') as HTMLImageElement;
       heroImg.src = `/images/heroes/${data.heroImage}`;
-      heroImg.style.width = '55px';
-      heroImg.style.height = '55px';
+      heroImg.style.width = '60px';
+      heroImg.style.height = '60px';
       heroImg.style.borderRadius = '8px';
-      heroImg.style.border = `2px solid ${neonColors[dataIndex]}`;
-      heroImg.style.boxShadow = `0 0 15px ${neonColors[dataIndex]}80`;
-      heroImg.style.marginBottom = '8px';
+      heroImg.style.objectFit = 'cover';
       leftCell.appendChild(heroImg);
-
-      // Stat principal
-      const statDiv = document.createElement('div') as HTMLDivElement;
-      statDiv.style.fontSize = '16px';
-      statDiv.style.color = '#ffffff';
-      statDiv.style.fontFamily = 'Outfit';
-      statDiv.style.fontWeight = 'bold';
-      statDiv.textContent = `💀 ${data.deaths} deaths`;
-      leftCell.appendChild(statDiv);
 
       mainRow.appendChild(leftCell);
 
@@ -236,32 +237,47 @@ const externalTooltipHandler = (context: any) => {
       playerName.style.fontWeight = 'bold';
       playerName.style.fontSize = '14px';
       playerName.style.color = '#ffffff';
-      playerName.style.marginBottom = '6px';
+      playerName.style.marginBottom = '3px';
       playerName.textContent = data.player;
       rightCell.appendChild(playerName);
+
+      // Stat principal
+      const statDiv = document.createElement('div') as HTMLDivElement;
+      statDiv.style.fontSize = '16px';
+      statDiv.style.color = '#50ff10';
+      statDiv.style.fontFamily = 'Outfit';
+      statDiv.style.fontWeight = 'bold';
+      statDiv.style.marginBottom = '2px';
+      statDiv.textContent = `💀 ${data.deaths} deaths`;
+      rightCell.appendChild(statDiv);
 
       // Team name
       const teamDiv = document.createElement('div');
       teamDiv.style.fontSize = '12px';
       teamDiv.style.color = '#cccccc';
-      teamDiv.style.marginBottom = '4px';
+      teamDiv.style.marginBottom = '2px';
       teamDiv.textContent = `🛡️ ${data.team}`;
       rightCell.appendChild(teamDiv);
 
-      // Date
-      const dateDiv = document.createElement('div');
-      dateDiv.style.fontSize = '12px';
-      dateDiv.style.color = '#cccccc';
-      dateDiv.style.marginBottom = '4px';
-      dateDiv.textContent = `📅 ${data.date}`;
-      rightCell.appendChild(dateDiv);
-
-      // Match ID
-      const matchIdDiv = document.createElement('div');
+      // Match ID (clickeable para abrir Dotabuff)
+      const matchIdDiv = document.createElement('a') as HTMLAnchorElement;
+      matchIdDiv.href = `https://www.dotabuff.com/matches/${data.matchId}`;
+      matchIdDiv.target = '_blank';
+      matchIdDiv.rel = 'noopener noreferrer';
       matchIdDiv.style.fontSize = '10px';
-      matchIdDiv.style.color = '#888888';
+      matchIdDiv.style.color = '#50ff10';
       matchIdDiv.style.fontFamily = 'Rethink Sans';
-      matchIdDiv.textContent = `Match ID: ${data.matchId}`;
+      matchIdDiv.style.textDecoration = 'none';
+      matchIdDiv.style.cursor = 'pointer';
+      matchIdDiv.textContent = `🔗 Match ID: ${data.matchId}`;
+      matchIdDiv.addEventListener('mouseenter', () => {
+        matchIdDiv.style.textDecoration = 'underline';
+        matchIdDiv.style.color = '#70ff30';
+      });
+      matchIdDiv.addEventListener('mouseleave', () => {
+        matchIdDiv.style.textDecoration = 'none';
+        matchIdDiv.style.color = '#50ff10';
+      });
       rightCell.appendChild(matchIdDiv);
 
       mainRow.appendChild(rightCell);
@@ -275,6 +291,7 @@ const externalTooltipHandler = (context: any) => {
   tooltipEl.style.left = canvasRect.left + tooltip.caretX + 'px';
   tooltipEl.style.top = canvasRect.top + tooltip.caretY + 'px';
 };
+
 
 export const ChartJSVerticalExample: React.FC = () => {
   const data = {
@@ -294,7 +311,7 @@ export const ChartJSVerticalExample: React.FC = () => {
         barThickness: 35,
         maxBarThickness: 40,
         // Efectos más marcados
-        hoverBackgroundColor: neonColors.map(color => color + 'CC'),
+        hoverBackgroundColor: neonColors.map(color => color.replace('0.9)', '1)')),
         hoverBorderColor: neonColors.map(color => color + 'FF'),
         hoverBorderWidth: 3,
       },
@@ -305,6 +322,13 @@ export const ChartJSVerticalExample: React.FC = () => {
     responsive: true,
     maintainAspectRatio: false,
     // Barras verticales (sin indexAxis: 'y')
+    onClick: (_event: any, elements: any) => {
+      if (elements.length > 0) {
+        const dataIndex = elements[0].index;
+        const matchId = deathsData[dataIndex].matchId;
+        window.open(`https://www.dotabuff.com/matches/${matchId}`, '_blank');
+      }
+    },
     plugins: {
       legend: {
         display: false,
@@ -322,8 +346,9 @@ export const ChartJSVerticalExample: React.FC = () => {
         },
       },
       y: {
-        beginAtZero: true,
-        max: 35,
+        beginAtZero: false,  // Cambiar a false si quieres que NO comience en 0
+        min: 10,             // Cambiar este valor para empezar en otro número
+        max: 20,            // Cambiar para modificar el valor máximo
         reverse: true, // Invertir el eje Y para que vaya de mayor a menor
         display: true,
         grid: {
@@ -359,6 +384,37 @@ export const ChartJSVerticalExample: React.FC = () => {
       },
     },
   };
+
+  // Listener para scroll y click fuera
+  useEffect(() => {
+    const handleScroll = () => {
+      // Hide ALL tooltips when scrolling
+      const allTooltips = document.querySelectorAll('div[class*="chartjs-tooltip"]');
+      allTooltips.forEach((el: any) => {
+        el.style.opacity = '0';
+      });
+    };
+
+    const handleClickOutside = (event: MouseEvent) => {
+      // Hide ALL tooltips when clicking outside
+      const allTooltips = document.querySelectorAll('div[class*="chartjs-tooltip"]');
+      const clickedOnTooltip = Array.from(allTooltips).some(el => el.contains(event.target as Node));
+      
+      if (!clickedOnTooltip) {
+        allTooltips.forEach((el: any) => {
+          el.style.opacity = '0';
+        });
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, true);
+    document.addEventListener('click', handleClickOutside);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll, true);
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   return (
     <ChartCard

@@ -30,8 +30,8 @@ const FantasyContainer = styled.div`
 // Glass Effect Components
 const GlassCard = styled(motion.div)`
   background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 20px;
   box-shadow: 
@@ -67,7 +67,7 @@ const SecondaryNav = styled.div`
   align-items: center;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   border-bottom: 1px solid rgba(80, 255, 16, 0.2);
   margin-bottom: 32px;
 `;
@@ -208,8 +208,7 @@ const FantasyDescription = styled.p`
   margin: 0 auto;
 `;
 
-const RightHeroContent = styled(GlassCard)`
-  padding: 32px;
+const RightHeroWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -349,13 +348,13 @@ export const FantasyPage = () => {
               </motion.div>
 
               {/* Right Content - Current Records */}
-              <RightHeroContent
+              <RightHeroWrapper
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 <ChartJSRecordsExample />
-              </RightHeroContent>
+              </RightHeroWrapper>
             </HeroContent>
       </HeroSection>
 

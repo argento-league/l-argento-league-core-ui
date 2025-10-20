@@ -3,7 +3,7 @@ import { CURRENT_SEASON_COLORS } from "../../../constants/season-colors";
 
 export const TabsContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   border-bottom: 1px solid rgba(80, 255, 16, 0.2);
   padding-top: 16px;
   box-sizing: border-box;

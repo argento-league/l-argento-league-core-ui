@@ -18,11 +18,11 @@
     },
     {
       "statistic": "Muertes",
-      "player": "[L]obo",
-      "record": 16,
-      "matchId": "8503790328",
-      "heroImage": "naga.png",
-      "team": "The real server"
+      "player": "Lionel Dota",
+      "record": 18,
+      "matchId": "8517886859",
+      "heroImage": "shaman.png",
+      "team": "Epicenter"
     },
     {
       "statistic": "GPM",
@@ -63,28 +63,28 @@
       "score": 20
     },
     {
-      "player": "MessiGordo",
-      "score": 10
+      "player": "Khantus",
+      "score": 20
     },
     {
       "player": "PorcoRex",
-      "score": 10
+      "score": 15
     },
     {
       "player": "Piojito",
       "score": 10
     },
     {
-      "player": "Khantus",
+      "player": "Correnta",
       "score": 10
     },
     {
-      "player": "3mpty",
-      "score": 5
+      "player": "MessiGordo",
+      "score": 10
     },
     {
-      "player": "Tabu",
-      "score": 5
+      "player": "Meshick",
+      "score":  10
     }
   ],
   "rankings": {
@@ -137,25 +137,25 @@
     ],
     "deaths": [
       {
-        "player": "[L]obo",
+        "player": "Lionel Dota",
+        "record": 18,
+        "matchId": "8517886859",
+        "heroImage": "shaman.png",
+        "team": "Epicenter"
+      },
+      {
+       "player": "[L]obo",
         "record": 16,
         "matchId": "8503790328",
         "heroImage": "naga.png",
         "team": "The real server"
       },
       {
-        "player": "Zancrow",
+       "player": "Zancrow",
         "record": 16,
         "matchId": "8508866148",
         "heroImage": "tusk.png",
         "team": "La Plaga"
-      },
-      {
-        "player": "worlock",
-        "record": 15,
-        "matchId": "8506836889",
-        "heroImage": "clock.png",
-        "team": "The Royals"
       }  
    ],
     "gpm": [

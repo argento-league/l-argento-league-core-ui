@@ -83,9 +83,9 @@
     "logo": "epicenter.png",
     "players": [
       { "nick": "lZølveR", "nationality": "pe", "mmr": 7472, "id_dota": "302787678" },
-      { "nick": "THENKS", "nationality": "bo", "mmr": 8821, "id_dota": "1058625025" },
+      { "nick": "MidNight", "nationality": "pe", "mmr": 11232, "id_dota": "126378949" },
       { "nick": "Nanako.-", "nationality": "ar", "mmr": 4699, "id_dota": "100503830" },
-      { "nick": "IvanN420", "nationality": "pe", "mmr": 5667, "id_dota": "236844591" },
+      { "nick": "KPR", "nationality": "pe", "mmr": 13000, "id_dota": "124466264" },
       { "nick": "Neko", "nationality": "pe", "mmr": 13116, "id_dota": "874981361" },
       { "nick": "Lionel Dota", "nationality": "ar", "mmr": 2481, "id_dota": "130856536" },
       { "nick": "Navidad", "nationality": "pe", "mmr": 9582, "id_dota": "117372373" },
@@ -194,7 +194,7 @@
       { "nick": "Tabu", "nationality": "ar", "mmr": 7462, "id_dota": "115267494" },
       { "nick": "sgg", "nationality": "ar", "mmr": 8590, "id_dota": "117102307" },
       { "nick": "Synergy", "nationality": "pe", "mmr": 9110, "id_dota": "313433186" },
-      { "nick": "Frio Riko LV", "nationality": "pe", "mmr": 7391, "id_dota": "247650099" },
+      { "nick": "Merlino", "nationality": "ar", "mmr": 6039, "id_dota": "86738423" },
       { "nick": "D34D", "nationality": "pe", "mmr": 8171, "id_dota": "422575132" }
     ]
   },

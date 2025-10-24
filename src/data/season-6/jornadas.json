@@ -235,15 +235,15 @@
     "grupo-a": [
       {
         "team1": "THE RATS",
-        "score1": "TBD",
+        "score1": "0",
         "team2": "Las divinas",
-        "score2": "TBD"
+        "score2": "2"
       },
       {
         "team1": "TEAM HORROR FOX",
-        "score1": "TBD",
+        "score1": "2",
         "team2": "Lemuria",
-        "score2": "TBD"
+        "score2": "0"
       }
     ],
     "grupo-b": [
@@ -255,9 +255,9 @@
       },
       {
         "team1": "Brasil Prime",
-        "score1": "TBD",
+        "score1": "0",
         "team2": "La guardería de sgg",
-        "score2": "TBD"
+        "score2": "2"
       }
     ],
     "grupo-c": [
@@ -277,9 +277,9 @@
     "grupo-d": [
       {
         "team1": "Team Mafia",
-        "score1": "TBD",
+        "score1": "2",
         "team2": "Epicenter",
-        "score2": "TBD"
+        "score2": "0"
       },
       {
         "team1": "La falopa de Ehkar",

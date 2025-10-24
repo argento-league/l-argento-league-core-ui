@@ -58,45 +58,24 @@
     }
   ],
   "classification": [
-    {
-      "player": "Sanguito",
-      "score": 25
-    },
-    {
-      "player": "Khantus",
-      "score": 25
-    },
-    {
-      "player": "Who is Ari",
-      "score": 25
-    },
-    {
-      "player": "Saturno",
-      "score": 20
-    },
-    {
-      "player": "Rigan",
-      "score": 20
-    },
-    {
-      "player": "Marce",
-      "score": 20
-    },
-    {
-      "player": "Correnta",
-      "score":  20
-    }
+    { "player": "Sanguito", "score": 25 },
+    { "player": "Khantus", "score": 25 },
+    { "player": "Who is Ari", "score": 25 },
+    { "player": "Saturno", "score": 20 },
+    { "player": "Rigan", "score": 20 },
+    { "player": "Marce", "score": 20 },
+    { "player": "Correnta", "score": 20 }
   ],
   "rankings": {
     "kills": [
       {
-       "statistic": "Kills",
-       "player": "NilkeGG",
-       "record": 28,
-       "matchId": "8525372514",
-       "heroImage": "axe.png",
-       "team": "Las Divinas" 
-     },
+        "statistic": "Kills",
+        "player": "NilkeGG",
+        "record": 28,
+        "matchId": "8525372514",
+        "heroImage": "axe.png",
+        "team": "Las Divinas"
+      },
       {
         "statistic": "Kills",
         "player": "MonHty",
@@ -104,21 +83,23 @@
         "matchId": "8514630165",
         "heroImage": "drow.png",
         "team": "La Manada"
+      },
       {
+        "statistic": "Kills",
         "player": "Stepham",
         "record": 25,
         "matchId": "8505312598",
         "heroImage": "nature.png",
         "team": "The Rats"
       }
-   ],
+    ],
     "assists": [
       {
         "player": "AMAZING",
         "record": 40,
         "matchId": "8514669206",
         "heroImage": "silencer.png",
-        "team": "Miro tik tok y webeo"     
+        "team": "Miro tik tok y webeo"
       },
       {
         "player": "Kezia",
@@ -132,7 +113,7 @@
         "record": 33,
         "matchId": "8511774191",
         "heroImage": "silencer.png",
-        "team": "La Divinas"
+        "team": "Las Divinas"
       }
     ],
     "deaths": [
@@ -144,20 +125,20 @@
         "team": "Epicenter"
       },
       {
-       "player": "[L]obo",
+        "player": "[L]obo",
         "record": 16,
         "matchId": "8503790328",
         "heroImage": "naga.png",
-        "team": "The real server"
+        "team": "The Real Server"
       },
       {
-       "player": "Zancrow",
+        "player": "Zancrow",
         "record": 16,
         "matchId": "8508866148",
         "heroImage": "tusk.png",
         "team": "La Plaga"
-      }  
-   ],
+      }
+    ],
     "gpm": [
       {
         "player": "MonHty",
@@ -212,7 +193,7 @@
           "matchId": "8503739753",
           "heroImage": "tinker.png",
           "team": "Las Divinas",
-          "netWorth": [760 , 2193, 4190, 6840, 11347, 15286, 19450, 25138, 30616, 37188, 42045, 46382]
+          "netWorth": [760, 2193, 4190, 6840, 11347, 15286, 19450, 25138, 30616, 37188, 42045, 46382]
         },
         {
           "name": "KTZ",
@@ -225,27 +206,27 @@
     },
     "lastHits": [
       {
-      "player": "Cokuu",
-      "record": 941,
-      "matchId": "8522627941",
-      "heroImage": "nature.png",
-      "team": "ezio doggies"
+        "player": "Cokuu",
+        "record": 941,
+        "matchId": "8522627941",
+        "heroImage": "nature.png",
+        "team": "ezio doggies"
       },
       {
         "player": "roy roy",
         "record": 917,
         "matchId": "8503705278",
         "heroImage": "jugger.png",
-        "team": "La Guarderia de SGG" 
+        "team": "La Guarderia de SGG"
       },
       {
-         "player": "ShineDi",
+        "player": "ShineDi",
         "record": 899,
         "matchId": "8516235568",
         "heroImage": "am.png",
-        "team": "Ravage Gaming" 
+        "team": "Ravage Gaming"
       }
-      ],
+    ],
     "wards": [
       {
         "player": "[L]obo",
@@ -268,6 +249,7 @@
         "heroImage": "ardila.png",
         "team": "Ravage Gaming"
       }
-      ]
+    ]
   }
 }
+

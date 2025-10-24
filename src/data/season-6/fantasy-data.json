@@ -2,11 +2,11 @@
   "currentRecords": [
     {
       "statistic": "Kills",
-      "player": "MonHty",
-      "record": 27,
-      "matchId": "8514630165",
-      "heroImage": "drow.png",
-      "team": "La Manada"
+      "player": "NilkeGG",
+      "record": 28,
+      "matchId": "8525372514",
+      "heroImage": "axe.png",
+      "team": "Las Divinas"
     },
     {
       "statistic": "Asistencias",
@@ -34,19 +34,19 @@
     },
     {
       "statistic": "Last Hits",
-      "player": "roy",
-      "record": 917,
-      "matchId": "8503705278",
-      "heroImage": "jugger.png",
-      "team": "La Guarderia SSG"
+      "player": "Cokuu",
+      "record": 941,
+      "matchId": "8522627941",
+      "heroImage": "nature.png",
+      "team": "ezio doggies"
     },
     {
       "statistic": "Valor Neto",
-      "player": "Sheol",
-      "record": 46382,
-      "matchId": "8503739753",
-      "heroImage": "tinker.png",
-      "team": "Las Divinas"
+      "player": "Cokuu",
+      "record": 54561,
+      "matchId": "8522627941",
+      "heroImage": "nature.png",
+      "team": "ezio doggies"
     },
     {
       "statistic": "Wards Colocados",
@@ -59,36 +59,44 @@
   ],
   "classification": [
     {
-      "player": "Eternity",
-      "score": 20
+      "player": "Sanguito",
+      "score": 25
     },
     {
       "player": "Khantus",
+      "score": 25
+    },
+    {
+      "player": "Who is Ari",
+      "score": 25
+    },
+    {
+      "player": "Saturno",
       "score": 20
     },
     {
-      "player": "PorcoRex",
-      "score": 15
+      "player": "Rigan",
+      "score": 20
     },
     {
-      "player": "Piojito",
-      "score": 10
+      "player": "Marce",
+      "score": 20
     },
     {
       "player": "Correnta",
-      "score": 10
-    },
-    {
-      "player": "MessiGordo",
-      "score": 10
-    },
-    {
-      "player": "Meshick",
-      "score":  10
+      "score":  20
     }
   ],
   "rankings": {
     "kills": [
+      {
+       "statistic": "Kills",
+       "player": "NilkeGG",
+       "record": 28,
+       "matchId": "8525372514",
+       "heroImage": "axe.png",
+       "team": "Las Divinas" 
+     },
       {
         "statistic": "Kills",
         "player": "MonHty",
@@ -96,20 +104,12 @@
         "matchId": "8514630165",
         "heroImage": "drow.png",
         "team": "La Manada"
-      },
       {
         "player": "Stepham",
         "record": 25,
         "matchId": "8505312598",
         "heroImage": "nature.png",
         "team": "The Rats"
-      },
-      {
-        "player": "izolver",
-        "record": 25,
-        "matchId": "8516056440",
-        "heroImage": "lesh.png",
-        "team": "Epicenter"
       }
    ],
     "assists": [
@@ -201,6 +201,13 @@
       ],
       "players": [
         {
+          "name": "Cokuuu",
+          "matchId": "8522627941",
+          "heroImage": "nature.png",
+          "team": "ezio doggies",
+          "netWorth": [707, 2567, 5076, 8666, 12717, 16465, 20518, 22987, 28242, 34565, 41773, 47181, 54561]
+        },
+        {
           "name": "Sheol",
           "matchId": "8503739753",
           "heroImage": "tinker.png",
@@ -213,37 +220,30 @@
           "heroImage": "life.png",
           "team": "Las Joyas del Abuelo",
           "netWorth": [730, 2203, 4857, 7703, 11076, 15863, 20078, 23451, 25731, 31821, 35904, 35720, 38703, 46354]
-        },
-        {
-          "name": "ShineDi",
-          "matchId": "8516235568",
-          "heroImage": "am.png",
-          "team": "Ravage Gaming",
-          "netWorth": [881, 1840, 3381, 5178, 8056, 12604, 17330, 22650, 25842, 26315, 30977, 36144, 42851, 43930, 45383]
         }
       ]
     },
     "lastHits": [
       {
+      "player": "Cokuu",
+      "record": 941,
+      "matchId": "8522627941",
+      "heroImage": "nature.png",
+      "team": "ezio doggies"
+      },
+      {
         "player": "roy roy",
         "record": 917,
         "matchId": "8503705278",
         "heroImage": "jugger.png",
-        "team": "La Guarderia de SGG"
+        "team": "La Guarderia de SGG" 
       },
       {
-        "player": "ShineDi",
+         "player": "ShineDi",
         "record": 899,
         "matchId": "8516235568",
         "heroImage": "am.png",
-        "team": "Ravage Gaming"
-      },
-      {
-        "player": "El Alessi",
-        "record": 741,
-        "matchId": "8503790328",
-        "heroImage": "nature.png",
-        "team": "La Plaga"
+        "team": "Ravage Gaming" 
       }
       ],
     "wards": [

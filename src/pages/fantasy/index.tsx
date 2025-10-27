@@ -352,7 +352,7 @@ export const FantasyPage = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <ChartJSRecordsExample />
+                <ChartJSRecordsExample phase={activePhase} />
               </RightHeroWrapper>
             </HeroContent>
       </HeroSection>

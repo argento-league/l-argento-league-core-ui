@@ -257,6 +257,7 @@ const TooltipMatchId = styled.a`
 
 // Importar datos reales
 import fantasyData from '../../data/season-6/fantasy-data.json';
+import fantasyMainData from '../../data/season-6/fantasy-main-data.json';
 
 // Mapeo de tipos de records a iconos (emojis más visibles)
 const recordIcons = {
@@ -269,70 +270,77 @@ const recordIcons = {
   'Wards Colocados': '👁️',
 };
 
+type ChartJSRecordsExampleProps = {
+  phase?: 'fase' | 'evento';
+};
+
 // Función para obtener el mejor record de cada tipo
-const getBestRecords = () => {
+const getBestRecords = (phase: 'fase' | 'evento' = 'fase') => {
+  // Seleccionar el archivo de datos según la fase activa para los records
+  const recordsDataSource = phase === 'fase' ? fantasyData : fantasyMainData;
+  
   const records = [
     {
       type: 'Kills',
-      player: fantasyData.rankings.kills[0]?.player || 'N/A',
-      value: fantasyData.rankings.kills[0]?.record || 0,
-      team: fantasyData.rankings.kills[0]?.team || 'N/A',
-      matchId: fantasyData.rankings.kills[0]?.matchId || 'N/A',
-      heroImage: fantasyData.rankings.kills[0]?.heroImage || '',
+      player: recordsDataSource.rankings.kills[0]?.player || 'N/A',
+      value: recordsDataSource.rankings.kills[0]?.record || 0,
+      team: recordsDataSource.rankings.kills[0]?.team || 'N/A',
+      matchId: recordsDataSource.rankings.kills[0]?.matchId || 'N/A',
+      heroImage: recordsDataSource.rankings.kills[0]?.heroImage || '',
       emoji: '⚔️'
     },
     {
       type: 'Asistencias',
-      player: fantasyData.rankings.assists[0]?.player || 'N/A',
-      value: fantasyData.rankings.assists[0]?.record || 0,
-      team: fantasyData.rankings.assists[0]?.team || 'N/A',
-      matchId: fantasyData.rankings.assists[0]?.matchId || 'N/A',
-      heroImage: fantasyData.rankings.assists[0]?.heroImage || '',
+      player: recordsDataSource.rankings.assists[0]?.player || 'N/A',
+      value: recordsDataSource.rankings.assists[0]?.record || 0,
+      team: recordsDataSource.rankings.assists[0]?.team || 'N/A',
+      matchId: recordsDataSource.rankings.assists[0]?.matchId || 'N/A',
+      heroImage: recordsDataSource.rankings.assists[0]?.heroImage || '',
       emoji: '🤝'
     },
     {
       type: 'Muertes',
-      player: fantasyData.rankings.deaths[0]?.player || 'N/A',
-      value: fantasyData.rankings.deaths[0]?.record || 0,
-      team: fantasyData.rankings.deaths[0]?.team || 'N/A',
-      matchId: fantasyData.rankings.deaths[0]?.matchId || 'N/A',
-      heroImage: fantasyData.rankings.deaths[0]?.heroImage || '',
+      player: recordsDataSource.rankings.deaths[0]?.player || 'N/A',
+      value: recordsDataSource.rankings.deaths[0]?.record || 0,
+      team: recordsDataSource.rankings.deaths[0]?.team || 'N/A',
+      matchId: recordsDataSource.rankings.deaths[0]?.matchId || 'N/A',
+      heroImage: recordsDataSource.rankings.deaths[0]?.heroImage || '',
       emoji: '💀'
     },
     {
       type: 'OPM',
-      player: fantasyData.rankings.gpm[0]?.player || 'N/A',
-      value: fantasyData.rankings.gpm[0]?.record || 0,
-      team: fantasyData.rankings.gpm[0]?.team || 'N/A',
-      matchId: fantasyData.rankings.gpm[0]?.matchId || 'N/A',
-      heroImage: fantasyData.rankings.gpm[0]?.heroImage || '',
+      player: recordsDataSource.rankings.gpm[0]?.player || 'N/A',
+      value: recordsDataSource.rankings.gpm[0]?.record || 0,
+      team: recordsDataSource.rankings.gpm[0]?.team || 'N/A',
+      matchId: recordsDataSource.rankings.gpm[0]?.matchId || 'N/A',
+      heroImage: recordsDataSource.rankings.gpm[0]?.heroImage || '',
       emoji: '💰'
     },
     {
       type: 'Last Hits',
-      player: fantasyData.rankings.lastHits[0]?.player || 'N/A',
-      value: fantasyData.rankings.lastHits[0]?.record || 0,
-      team: fantasyData.rankings.lastHits[0]?.team || 'N/A',
-      matchId: fantasyData.rankings.lastHits[0]?.matchId || 'N/A',
-      heroImage: fantasyData.rankings.lastHits[0]?.heroImage || '',
+      player: recordsDataSource.rankings.lastHits[0]?.player || 'N/A',
+      value: recordsDataSource.rankings.lastHits[0]?.record || 0,
+      team: recordsDataSource.rankings.lastHits[0]?.team || 'N/A',
+      matchId: recordsDataSource.rankings.lastHits[0]?.matchId || 'N/A',
+      heroImage: recordsDataSource.rankings.lastHits[0]?.heroImage || '',
       emoji: '💎'
     },
     {
       type: 'Wards Colocados',
-      player: fantasyData.rankings.wards[0]?.player || 'N/A',
-      value: fantasyData.rankings.wards[0]?.record || 0,
-      team: fantasyData.rankings.wards[0]?.team || 'N/A',
-      matchId: fantasyData.rankings.wards[0]?.matchId || 'N/A',
-      heroImage: fantasyData.rankings.wards[0]?.heroImage || '',
+      player: recordsDataSource.rankings.wards[0]?.player || 'N/A',
+      value: recordsDataSource.rankings.wards[0]?.record || 0,
+      team: recordsDataSource.rankings.wards[0]?.team || 'N/A',
+      matchId: recordsDataSource.rankings.wards[0]?.matchId || 'N/A',
+      heroImage: recordsDataSource.rankings.wards[0]?.heroImage || '',
       emoji: '👁️'
     },
     {
       type: 'Valor Neto',
-      player: fantasyData.rankings.netWorth.players[0]?.name || 'N/A',
-      value: Math.max(...(fantasyData.rankings.netWorth.players[0]?.netWorth || [0])),
-      team: fantasyData.rankings.netWorth.players[0]?.team || 'N/A',
-      matchId: fantasyData.rankings.netWorth.players[0]?.matchId || 'N/A',
-      heroImage: fantasyData.rankings.netWorth.players[0]?.heroImage || '',
+      player: recordsDataSource.rankings.netWorth.players[0]?.name || 'N/A',
+      value: Math.max(...(recordsDataSource.rankings.netWorth.players[0]?.netWorth || [0])),
+      team: recordsDataSource.rankings.netWorth.players[0]?.team || 'N/A',
+      matchId: recordsDataSource.rankings.netWorth.players[0]?.matchId || 'N/A',
+      heroImage: recordsDataSource.rankings.netWorth.players[0]?.heroImage || '',
       emoji: '💵'
     }
   ];
@@ -395,8 +403,8 @@ const TooltipPortal: React.FC<TooltipPortalProps> = ({ record, position, onMouse
   );
 };
 
-export const ChartJSRecordsExample: React.FC = () => {
-  const records = getBestRecords();
+export const ChartJSRecordsExample: React.FC<ChartJSRecordsExampleProps> = ({ phase = 'fase' }) => {
+  const records = getBestRecords(phase);
   const [activeTab, setActiveTab] = useState<'fantasy' | 'participantes'>('fantasy');
   const [hoveredRecord, setHoveredRecord] = useState<number | null>(null);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });

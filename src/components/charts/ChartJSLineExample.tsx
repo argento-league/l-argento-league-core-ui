@@ -73,6 +73,7 @@ const ChartContainer = styled.div`
 
 // Importar datos reales
 import fantasyData from '../../data/season-6/fantasy-data.json';
+import fantasyMainData from '../../data/season-6/fantasy-main-data.json';
 import { CHART_NEON_COLORS } from '../../constants/chart-colors';
 
 // Colores neón como en tu diseño
@@ -112,142 +113,148 @@ const getOrCreateTooltip = (_chart: any) => {
   return tooltipEl;
 };
 
-// Handler para tooltip externo
-const externalTooltipHandler = (context: any) => {
-  const { tooltip } = context;
-  const tooltipEl = getOrCreateTooltip(context.chart) as HTMLElement;
-
-  // Hide all other tooltips when showing a new one
-  const allTooltips = document.querySelectorAll('div[class*="chartjs-tooltip"]');
-  allTooltips.forEach((el: any) => {
-    if (el !== tooltipEl) {
-      el.style.opacity = '0';
-    }
-  });
-
-  // NO ocultar el tooltip cuando opacity es 0, mantenerlo visible
-  if (tooltip.opacity === 0) {
-    return; // Mantener el tooltip visible
-  }
-
-  // Set caret Position
-  tooltipEl.classList.remove('above', 'below', 'no-transform');
-  if (tooltip.yAlign) {
-    tooltipEl.classList.add(tooltip.yAlign);
-  } else {
-    tooltipEl.classList.add('no-transform');
-  }
-
-  const canvasRect = context.chart.canvas.getBoundingClientRect();
-
-  // Display, position, and set styles for font
-  tooltipEl.style.opacity = '1';
-  tooltipEl.style.left = canvasRect.left + tooltip.caretX + 'px';
-  tooltipEl.style.top = (canvasRect.top + tooltip.caretY - 20) + 'px';
-  tooltipEl.style.font = tooltip.options.bodyFont.string;
-  tooltipEl.style.padding = tooltip.options.padding + 'px ' + tooltip.options.padding + 'px';
-  tooltipEl.style.pointerEvents = 'auto';
-
-  // Set Text
-  if (tooltip.body) {
-    const tableRoot = tooltipEl.querySelector('table') as HTMLTableElement;
-    if (tableRoot) {
-      tableRoot.innerHTML = '';
-
-      // Fila principal con hero icon + stat a la izquierda y player info a la derecha
-      const mainRow = document.createElement('tr');
-      
-      // Celda izquierda: Hero icon + stat principal
-      const leftCell = document.createElement('td') as HTMLTableCellElement;
-      leftCell.style.verticalAlign = 'top';
-      leftCell.style.paddingRight = '10px';
-      leftCell.style.textAlign = 'center';
-      leftCell.style.width = '60px';
-      leftCell.style.background = 'rgba(80, 255, 16, 0.3)';
-      leftCell.style.borderRadius = '8px';
-      leftCell.style.padding = '8px';
-
-      // Obtener datos del player
-      const datasetIndex = tooltip.dataPoints[0].datasetIndex;
-      const player = fantasyData.rankings.netWorth.players[datasetIndex];
-      const netWorthValue = Math.round(tooltip.dataPoints[0].parsed.y);
-
-      // Hero icon
-      const heroImg = document.createElement('img') as HTMLImageElement;
-      heroImg.src = `/images/heroes/${player.heroImage}`;
-      heroImg.style.width = '60px';
-      heroImg.style.height = '60px';
-      heroImg.style.borderRadius = '8px';
-      heroImg.style.objectFit = 'cover';
-      leftCell.appendChild(heroImg);
-
-      mainRow.appendChild(leftCell);
-
-      // Celda derecha: Player info
-      const rightCell = document.createElement('td') as HTMLTableCellElement;
-      rightCell.style.verticalAlign = 'top';
-      rightCell.style.paddingLeft = '8px';
-      rightCell.style.minWidth = '150px';
-
-      // Player Name
-      const playerName = document.createElement('div');
-      playerName.style.fontFamily = 'Outfit';
-      playerName.style.fontWeight = 'bold';
-      playerName.style.fontSize = '14px';
-      playerName.style.color = '#ffffff';
-      playerName.style.marginBottom = '3px';
-      playerName.textContent = player.name;
-      rightCell.appendChild(playerName);
-
-      // Stat principal
-      const statDiv = document.createElement('div') as HTMLDivElement;
-      statDiv.style.fontSize = '16px';
-      statDiv.style.color = '#50ff10';
-      statDiv.style.fontFamily = 'Outfit';
-      statDiv.style.fontWeight = 'bold';
-      statDiv.style.marginBottom = '2px';
-      statDiv.textContent = `💵 ${netWorthValue.toLocaleString()} gold`;
-      rightCell.appendChild(statDiv);
-
-      // Team name
-      const teamDiv = document.createElement('div');
-      teamDiv.style.fontSize = '12px';
-      teamDiv.style.color = '#cccccc';
-      teamDiv.style.marginBottom = '2px';
-      teamDiv.textContent = `🛡️ ${player.team}`;
-      rightCell.appendChild(teamDiv);
-
-      // Match ID (clickeable para abrir Dotabuff)
-      const matchIdDiv = document.createElement('a') as HTMLAnchorElement;
-      matchIdDiv.href = `https://www.dotabuff.com/matches/${player.matchId}`;
-      matchIdDiv.target = '_blank';
-      matchIdDiv.rel = 'noopener noreferrer';
-      matchIdDiv.style.fontSize = '10px';
-      matchIdDiv.style.color = '#50ff10';
-      matchIdDiv.style.fontFamily = 'Rethink Sans';
-      matchIdDiv.style.textDecoration = 'none';
-      matchIdDiv.style.cursor = 'pointer';
-      matchIdDiv.textContent = `🔗 Match ID: ${player.matchId}`;
-      matchIdDiv.addEventListener('mouseenter', () => {
-        matchIdDiv.style.textDecoration = 'underline';
-        matchIdDiv.style.color = '#70ff30';
-      });
-      matchIdDiv.addEventListener('mouseleave', () => {
-        matchIdDiv.style.textDecoration = 'none';
-        matchIdDiv.style.color = '#50ff10';
-      });
-      rightCell.appendChild(matchIdDiv);
-
-      mainRow.appendChild(rightCell);
-      tableRoot.appendChild(mainRow);
-    }
-  }
+type ChartJSLineExampleProps = {
+  phase?: 'fase' | 'evento';
 };
 
-
-export const ChartJSLineExample: React.FC = () => {
+export const ChartJSLineExample: React.FC<ChartJSLineExampleProps> = ({ phase = 'fase' }) => {
+  // Seleccionar el archivo de datos según la fase activa
+  const dataSource = phase === 'fase' ? fantasyData : fantasyMainData;
+  
   // Usar datos reales del JSON con la nueva estructura
-  const netWorthData = fantasyData.rankings.netWorth;
+  const netWorthData = dataSource.rankings.netWorth;
+  
+  // Tooltip handler con acceso a netWorthData
+  const externalTooltipHandler = (context: any) => {
+    const { tooltip } = context;
+    const tooltipEl = getOrCreateTooltip(context.chart) as HTMLElement;
+
+    // Hide all other tooltips when showing a new one
+    const allTooltips = document.querySelectorAll('div[class*="chartjs-tooltip"]');
+    allTooltips.forEach((el: any) => {
+      if (el !== tooltipEl) {
+        el.style.opacity = '0';
+      }
+    });
+
+    // NO ocultar el tooltip cuando opacity es 0, mantenerlo visible
+    if (tooltip.opacity === 0) {
+      return; // Mantener el tooltip visible
+    }
+
+    // Set caret Position
+    tooltipEl.classList.remove('above', 'below', 'no-transform');
+    if (tooltip.yAlign) {
+      tooltipEl.classList.add(tooltip.yAlign);
+    } else {
+      tooltipEl.classList.add('no-transform');
+    }
+
+    const canvasRect = context.chart.canvas.getBoundingClientRect();
+
+    // Display, position, and set styles for font
+    tooltipEl.style.opacity = '1';
+    tooltipEl.style.left = canvasRect.left + tooltip.caretX + 'px';
+    tooltipEl.style.top = (canvasRect.top + tooltip.caretY - 20) + 'px';
+    tooltipEl.style.font = tooltip.options.bodyFont.string;
+    tooltipEl.style.padding = tooltip.options.padding + 'px ' + tooltip.options.padding + 'px';
+    tooltipEl.style.pointerEvents = 'auto';
+
+    // Set Text
+    if (tooltip.body) {
+      const tableRoot = tooltipEl.querySelector('table') as HTMLTableElement;
+      if (tableRoot) {
+        tableRoot.innerHTML = '';
+
+        // Fila principal con hero icon + stat a la izquierda y player info a la derecha
+        const mainRow = document.createElement('tr');
+        
+        // Celda izquierda: Hero icon + stat principal
+        const leftCell = document.createElement('td') as HTMLTableCellElement;
+        leftCell.style.verticalAlign = 'top';
+        leftCell.style.paddingRight = '10px';
+        leftCell.style.textAlign = 'center';
+        leftCell.style.width = '60px';
+        leftCell.style.background = 'rgba(80, 255, 16, 0.3)';
+        leftCell.style.borderRadius = '8px';
+        leftCell.style.padding = '8px';
+
+        // Obtener datos del player
+        const datasetIndex = tooltip.dataPoints[0].datasetIndex;
+        const player = dataSource.rankings.netWorth.players[datasetIndex];
+        const netWorthValue = Math.round(tooltip.dataPoints[0].parsed.y);
+
+        // Hero icon
+        const heroImg = document.createElement('img') as HTMLImageElement;
+        heroImg.src = `/images/heroes/${player.heroImage}`;
+        heroImg.style.width = '60px';
+        heroImg.style.height = '60px';
+        heroImg.style.borderRadius = '8px';
+        heroImg.style.objectFit = 'cover';
+        leftCell.appendChild(heroImg);
+
+        mainRow.appendChild(leftCell);
+
+        // Celda derecha: Player info
+        const rightCell = document.createElement('td') as HTMLTableCellElement;
+        rightCell.style.verticalAlign = 'top';
+        rightCell.style.paddingLeft = '8px';
+        rightCell.style.minWidth = '150px';
+
+        // Player Name
+        const playerName = document.createElement('div');
+        playerName.style.fontFamily = 'Outfit';
+        playerName.style.fontWeight = 'bold';
+        playerName.style.fontSize = '14px';
+        playerName.style.color = '#ffffff';
+        playerName.style.marginBottom = '3px';
+        playerName.textContent = player.name;
+        rightCell.appendChild(playerName);
+
+        // Stat principal
+        const statDiv = document.createElement('div') as HTMLDivElement;
+        statDiv.style.fontSize = '16px';
+        statDiv.style.color = '#50ff10';
+        statDiv.style.fontFamily = 'Outfit';
+        statDiv.style.fontWeight = 'bold';
+        statDiv.style.marginBottom = '2px';
+        statDiv.textContent = `💵 ${netWorthValue.toLocaleString()} gold`;
+        rightCell.appendChild(statDiv);
+
+        // Team name
+        const teamDiv = document.createElement('div');
+        teamDiv.style.fontSize = '12px';
+        teamDiv.style.color = '#cccccc';
+        teamDiv.style.marginBottom = '2px';
+        teamDiv.textContent = `🛡️ ${player.team}`;
+        rightCell.appendChild(teamDiv);
+
+        // Match ID (clickeable para abrir Dotabuff)
+        const matchIdDiv = document.createElement('a') as HTMLAnchorElement;
+        matchIdDiv.href = `https://www.dotabuff.com/matches/${player.matchId}`;
+        matchIdDiv.target = '_blank';
+        matchIdDiv.rel = 'noopener noreferrer';
+        matchIdDiv.style.fontSize = '10px';
+        matchIdDiv.style.color = '#50ff10';
+        matchIdDiv.style.fontFamily = 'Rethink Sans';
+        matchIdDiv.style.textDecoration = 'none';
+        matchIdDiv.style.cursor = 'pointer';
+        matchIdDiv.textContent = `🔗 Match ID: ${player.matchId}`;
+        matchIdDiv.addEventListener('mouseenter', () => {
+          matchIdDiv.style.textDecoration = 'underline';
+          matchIdDiv.style.color = '#70ff30';
+        });
+        matchIdDiv.addEventListener('mouseleave', () => {
+          matchIdDiv.style.textDecoration = 'none';
+          matchIdDiv.style.color = '#50ff10';
+        });
+        rightCell.appendChild(matchIdDiv);
+
+        mainRow.appendChild(rightCell);
+        tableRoot.appendChild(mainRow);
+      }
+    }
+  };
   const timePoints = netWorthData?.timePoints || [];
   const players = netWorthData?.players || [];
   

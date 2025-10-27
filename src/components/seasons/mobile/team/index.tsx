@@ -1,6 +1,7 @@
 import style from "styled-components";
 import { Badge } from "../badge/badge";
 import season5Teams from "../../../../data/season-5/teams.json";
+import season6Teams from "../../../../data/season-6/teams.json";
 
 const TeamContainer = style.div`
     display: flex;
@@ -41,62 +42,53 @@ const TeamLogo = style.img`
     margin-right: 8px;
 `;
 
-// Helper function to find team logo - using same logic as other components
-const findTeamLogo = (teamName: string): string => {
-  // Try to find the team by exact name match first
-  for (const [, team] of Object.entries(season5Teams)) {
-    if (team.name === teamName) {
-      return team.logo;
+// Helper function to find team data with multiple fallbacks (same logic as other components)
+const findTeamData = (teamName: string, teams: any) => {
+  // First try exact match
+  for (const [, team] of Object.entries(teams)) {
+    if ((team as any).name === teamName) {
+      return team;
     }
   }
   
-  // Try to find by partial match (for cases like "E. ANTI-TONKAS" matching "Escuadrón Anti-Tonkas")
-  const normalizedTeamName = teamName.toLowerCase().replace(/[^a-z0-9]/g, '');
-  for (const [, team] of Object.entries(season5Teams)) {
-    const normalizedTeamDataName = team.name.toLowerCase().replace(/[^a-z0-9]/g, '');
-    if (normalizedTeamDataName.includes(normalizedTeamName) || normalizedTeamName.includes(normalizedTeamDataName)) {
-      return team.logo;
+  // Try case-insensitive match
+  for (const [, team] of Object.entries(teams)) {
+    if ((team as any).name.toLowerCase() === teamName.toLowerCase()) {
+      return team;
     }
   }
   
-  // Special cases for known mismatches
-  const specialCases: { [key: string]: string } = {
-    'E. Anti-tonkas': 'escuadron-anti-tonkas.png',
-    'E. ANTI-TONKAS': 'escuadron-anti-tonkas.png',
-    'Hydra': 'hydra-reborn.png',
-    'HYDRA': 'hydra-reborn.png',
-    'Obesho + 4': 'obesho.png',
-    'OBESHO + 4': 'obesho.png',
-    'Miro Tik Tok': 'miro-tiktok.png',
-    'MIRO TIK TOK': 'miro-tiktok.png',
-    'The Tether': 'the-tether.png',
-    'THE TETHER': 'the-tether.png',
-    'Pure Team': 'pure-team.png',
-    'PURE TEAM': 'pure-team.png',
-    'Racson Disciples': 'racson-disciples.png',
-    'RACSON DISCIPLES': 'racson-disciples.png',
-    'Guerreros Z': 'guerreros-z.png',
-    'GUERREROS Z': 'guerreros-z.png',
-    '3Fecto Divine': '3fecto-divine.png',
-    '3FECTO DIVINE': '3fecto-divine.png',
-    'Fantasmas': 'fantasmas.png',
-    'FANTASMAS': 'fantasmas.png',
-    'Sudamerica V': 'sudamerica.png',
-    'SUDAMERICA V': 'sudamerica.png',
-    'La Manada': 'la-manada.png',
-    'LA MANADA': 'la-manada.png',
-    'Nymeria': 'nymeria.png',
-    'NYMERIA': 'nymeria.png',
-    'Circo Jujeño': 'circo-jujeno.png',
-    'CIRCO JUJEÑO': 'circo-jujeno.png',
-    'Epicenter': 'epicenter.png',
-    'EPICENTER': 'epicenter.png',
-    'Gordo Squad': 'gordo-squad.png',
-    'GORDO SQUAD': 'gordo-squad.png'
-  };
+  // Try partial match (contains)
+  for (const [, team] of Object.entries(teams)) {
+    if (
+      (team as any).name.toLowerCase().includes(teamName.toLowerCase()) ||
+      teamName.toLowerCase().includes((team as any).name.toLowerCase())
+    ) {
+      return team;
+    }
+  }
   
-  if (specialCases[teamName]) {
-    return specialCases[teamName];
+  // Try removing common words and matching
+  const cleanName = (name: string) => name.toLowerCase()
+    .replace(/team|gaming|esports|e-sports|squad|clan/g, '')
+    .trim();
+  
+  for (const [, team] of Object.entries(teams)) {
+    if (cleanName((team as any).name) === cleanName(teamName)) {
+      return team;
+    }
+  }
+  
+  return null;
+};
+
+// Helper function to find team logo
+const findTeamLogo = (teamName: string, season: number = 5): string => {
+  const teams = season === 5 ? season5Teams : season6Teams;
+  const teamData = findTeamData(teamName, teams);
+  
+  if (teamData) {
+    return (teamData as any).logo;
   }
   
   // If not found, return default
@@ -109,6 +101,7 @@ type TeamProps = {
   result: string;
   isWinner: boolean;
   isGamePlayed: boolean;
+  season?: number;
 };
 
 export const Team = ({
@@ -117,15 +110,21 @@ export const Team = ({
   result,
   isWinner,
   isGamePlayed,
+  season = 5,
 }: TeamProps) => {
+  // Don't show logo for TBD teams
+  const shouldShowLogo = teamName !== 'TBD' && teamName !== 'tbd';
+  
   return (
     <TeamContainer id="team-1">
       <ScoreAndNameContainer id="score-and-name-container">
         {isGamePlayed && <Score id="score">{score}</Score>}
-        <TeamLogo 
-          src={`/images/teams/season-5/${findTeamLogo(teamName)}`}
-          alt={teamName}
-        />
+        {shouldShowLogo && (
+          <TeamLogo 
+            src={`/images/teams/season-${season}/${findTeamLogo(teamName, season)}`}
+            alt={teamName}
+          />
+        )}
         <TeamName id="team-1-name">{teamName}</TeamName>
       </ScoreAndNameContainer>
       {isGamePlayed && <Badge text={result} isWinner={isWinner} />}

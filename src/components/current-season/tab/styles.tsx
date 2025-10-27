@@ -45,14 +45,19 @@ export const Tabs = styled.div<TabsProps>`
   width: 100%;
   text-align: center;
   font-family: "Outfit", sans-serif;
-  font-weight: ${(props) => (props.selected ? "600" : "300")};
-  color: ${({ disabled }) => (disabled ? "#666" : "white")};
+  font-weight: ${(props) => (props.selected ? "700" : "300")};
+  color: ${({ disabled, selected }) => 
+    disabled 
+      ? "#666" 
+      : selected 
+        ? "#FFFFFF" 
+        : "rgba(255, 255, 255, 0.7)"};
   background-color: transparent;
   position: relative;
   transition: all 0.3s ease;
   text-shadow: ${({ selected, disabled }) => 
     selected && !disabled
-      ? "0 0 10px rgba(138, 43, 226, 0.8), 0 0 20px rgba(138, 43, 226, 0.6)" 
+      ? "none"
       : "none"};
   
   &:hover {

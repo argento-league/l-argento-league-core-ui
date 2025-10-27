@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@g-loot/react-tournament-brackets": "^1.0.31-rc",
     "@types/react-router-dom": "^5.3.3",
     "brackets-viewer": "^1.6.2",
     "chart.js": "^4.5.1",
@@ -22,6 +23,7 @@
     "react-router-dom": "^7.5.3",
     "react-snowfall": "^2.2.0",
     "react-svg-pan-zoom": "^3.13.1",
+    "react-svg-tournament-bracket": "^1.4.1",
     "react-tournament-brackets": "^1.0.41",
     "recharts": "^3.2.1",
     "styled-components": "^4.4.1"

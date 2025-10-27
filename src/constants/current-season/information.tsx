@@ -10,7 +10,7 @@ export const TABS_CONFIG = {
   [TabsEnum.InfoGeneral]: { enabled: true },
   [TabsEnum.Equipos]: { enabled: true },
   [TabsEnum.FaseDeGrupos]: { enabled: true },
-  [TabsEnum.EventoPrincipal]: { enabled: false },
+  [TabsEnum.EventoPrincipal]: { enabled: true },
 } as const;
 
 type Information = {

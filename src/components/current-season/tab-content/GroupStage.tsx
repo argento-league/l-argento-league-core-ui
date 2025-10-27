@@ -195,7 +195,7 @@ export const GroupStageContent = ({ season = 6 }: GroupStageContentProps) => {
   // Select data based on season
   const teamsData = season === 5 ? season5Teams : season6Teams;
   const jornadasData = season === 5 ? season5Jornadas : season6Jornadas;
-    
+  
   const groupsData = createGroupData(teamsData, jornadasData);
   
   const getGroupKey = (groupName: string): "grupo-a" | "grupo-b" | "grupo-c" | "grupo-d" => {

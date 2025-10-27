@@ -135,7 +135,7 @@ export const SeasonFive = () => {
         {activeTab === SEASON_FIVE_TABS.FASE && <GroupStageContent season={5} />}
         {activeTab === SEASON_FIVE_TABS.EVENTO && (
           <MainEventContainer>
-            {isMobile ? <MainEventMobile /> : <MainEvent />}
+            {isMobile ? <MainEventMobile /> : <MainEvent season={5} />}
           </MainEventContainer>
         )}
       </SeasonFiveContainer>

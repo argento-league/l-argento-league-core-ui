@@ -30,6 +30,7 @@ type MatchProps = {
   isWinner2: boolean | undefined;
   winnerText: string;
   loserText: string;
+  season?: number;
 };
 
 export const Match = ({
@@ -41,6 +42,7 @@ export const Match = ({
   isWinner2 = undefined,
   winnerText = "Victoria",
   loserText = "Derrota",
+  season = 5,
 }: MatchProps) => {
   const isGamePlayed = score1 != null && score2 != null;
   
@@ -63,6 +65,7 @@ export const Match = ({
         result={shouldShowResults ? (winner === team1 ? winnerText : loserText) : ""}
         isWinner={winner === team1}
         isGamePlayed={shouldShowResults}
+        season={season}
       />
       <MatchSeparator />
       <Team
@@ -71,6 +74,7 @@ export const Match = ({
         result={shouldShowResults ? (winner === team2 ? winnerText : loserText) : ""}
         isWinner={winner === team2}
         isGamePlayed={shouldShowResults}
+        season={season}
       />
     </MatchContainer>
   );

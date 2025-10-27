@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 
 // Importar datos reales
 import fantasyData from '../../data/season-6/fantasy-data.json';
+import fantasyMainData from '../../data/season-6/fantasy-main-data.json';
 
 // Styled components manteniendo tu estilo
 const ChartCard = styled(motion.div)`
@@ -107,13 +108,19 @@ const WardValue = styled.span<{ color: string }>`
   font-weight: 700;
 `;
 
-// Usar datos reales del JSON
-const wardsData = fantasyData.rankings.wards.slice(0, 3);
-
 // Colores neón como en tu diseño
 const neonColors = ['#50ff10', '#ff6b35', '#4ecdc4'];
 
-export const ChartJSWardsExample: React.FC = () => {
+type ChartJSWardsExampleProps = {
+  phase?: 'fase' | 'evento';
+};
+
+export const ChartJSWardsExample: React.FC<ChartJSWardsExampleProps> = ({ phase = 'fase' }) => {
+  // Seleccionar el archivo de datos según la fase activa
+  const dataSource = phase === 'fase' ? fantasyData : fantasyMainData;
+  
+  // Usar datos reales del JSON
+  const wardsData = dataSource.rankings.wards.slice(0, 3);
   return (
     <ChartCard
       initial={{ opacity: 0, y: 30 }}

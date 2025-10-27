@@ -315,7 +315,6 @@ export const FantasyPage = () => {
           </TabButton>
           <TabButton 
             active={activePhase === 'evento'} 
-            disabled
             onClick={() => setActivePhase('evento')}
           >
             Evento principal
@@ -367,13 +366,13 @@ export const FantasyPage = () => {
         <StatisticsContainer>
           <ChartsGrid>
           {/* Kills Chart - Chart.js */}
-          <ChartJSExample />
+          <ChartJSExample phase={activePhase} />
 
           {/* Deaths Chart - Chart.js con leyenda */}
-          <ChartJSVerticalExample />
+          <ChartJSVerticalExample phase={activePhase} />
 
           {/* Assists Chart - Chart.js con leyenda */}
-          <ChartJSAssistsExample />
+          <ChartJSAssistsExample phase={activePhase} />
 
           {/* Last Hits Chart - Chart.js */}
           <ChartJSPieExample 
@@ -382,6 +381,7 @@ export const FantasyPage = () => {
             delay={0.7}
             icon="💎"
             iconFilter="drop-shadow(0 0 4px rgba(255, 255, 255, 0.3))"
+            phase={activePhase}
           />
 
           {/* GPM Chart - Chart.js */}
@@ -391,15 +391,16 @@ export const FantasyPage = () => {
             delay={0.8}
             icon="💰"
             iconFilter="drop-shadow(0 0 4px rgba(255, 255, 255, 0.3))"
+            phase={activePhase}
           />
 
           {/* Wards Chart - Simple list style */}
-          <ChartJSWardsExample />
+          <ChartJSWardsExample phase={activePhase} />
         </ChartsGrid>
 
           {/* Net Worth Line Chart - Chart.js */}
           <NetWorthContainer>
-            <ChartJSLineExample />
+            <ChartJSLineExample phase={activePhase} />
           </NetWorthContainer>
         </StatisticsContainer>
       </StatisticsSection>

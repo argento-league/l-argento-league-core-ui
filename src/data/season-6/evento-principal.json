@@ -1,0 +1,189 @@
+{
+  "upper-bracket": {
+    "round-1": [
+      {
+        "match": 1,
+        "team1": "TBD",
+        "team2": "TBD",
+        "score1": 3,
+        "score2": 1
+      },
+      {
+        "match": 2,
+        "team1": "TBD",
+        "team2": "TBD",
+        "score1": null,
+        "score2": null
+      },
+      {
+        "match": 3,
+        "team1": "TBD",
+        "team2": "TBD",
+        "score1": null,
+        "score2": null
+      },
+      {
+        "match": 4,
+        "team1": "TBD",
+        "team2": "TBD",
+        "score1": null,
+        "score2": null
+      }
+    ],
+    "round-2": [
+      {
+        "match": 5,
+        "team1": "The Rats",
+        "team2": "Epicenter",
+        "score1": 1,
+        "score2": 2
+      },
+      {
+        "match": 6,
+        "team1": "TBD",
+        "team2": "TBD",
+        "score1": null,
+        "score2": null
+      }
+    ],
+    "round-3": [
+      {
+        "match": 7,
+        "team1": "TBD",
+        "team2": "TBD",
+        "score1": null,
+        "score2": null
+      }
+    ],
+    "Gran Final": [
+      {
+        "match": 8,
+        "team1": "TBD",
+        "team2": "TBD",
+        "score1": null,
+        "score2": null
+      }
+    ]
+  },
+  "lower-bracket": {
+    "round-1": [
+      {
+        "match": 9,
+        "team1": "TBD",
+        "team2": "TBD",
+        "score1": null,
+        "score2": null
+      },
+      {
+        "match": 10,
+        "team1": "TBD",
+        "team2": "TBD",
+        "score1": null,
+        "score2": null
+      },
+      {
+        "match": 11,
+        "team1": "TBD",
+        "team2": "TBD",
+        "score1": null,
+        "score2": null
+      },
+      {
+        "match": 12,
+        "team1": "TBD",
+        "team2": "TBD",
+        "score1": null,
+        "score2": null
+      }
+    ],
+    "round-2": [
+      {
+        "match": 13,
+        "team1": "TBD",
+        "team2": "TBD",
+        "score1": null,
+        "score2": null
+      },
+      {
+        "match": 14,
+        "team1": "TBD",
+        "team2": "TBD",
+        "score1": null,
+        "score2": null
+      },
+      {
+        "match": 15,
+        "team1": "TBD",
+        "team2": "TBD",
+        "score1": null,
+        "score2": null
+      },
+      {
+        "match": 16,
+        "team1": "TBD",
+        "team2": "TBD",
+        "score1": null,
+        "score2": null
+      }
+    ],
+    "round-3": [
+      {
+        "match": 17,
+        "team1": "TBD",
+        "team2": "TBD",
+        "score1": null,
+        "score2": null
+      },
+      {
+        "match": 18,
+        "team1": "TBD",
+        "team2": "TBD",
+        "score1": null,
+        "score2": null
+      }
+    ],
+    "round-4": [
+      {
+        "match": 19,
+        "team1": "TBD",
+        "team2": "TBD",
+        "score1": null,
+        "score2": null
+      },
+      {
+        "match": 20,
+        "team1": "TBD",
+        "team2": "TBD",
+        "score1": null,
+        "score2": null
+      }
+    ],
+    "round-5": [
+      {
+        "match": 21,
+        "team1": "TBD",
+        "team2": "TBD",
+        "score1": null,
+        "score2": null
+      }
+    ],
+    "round-6": [
+      {
+        "match": 22,
+        "team1": "TBD",
+        "team2": "TBD",
+        "score1": null,
+        "score2": null
+      }
+    ]
+  },
+  "grand-final": [
+    {
+      "match": 23,
+      "team1": "TBD",
+      "team2": "TBD",
+      "score1": null,
+      "score2": null
+    }
+  ]
+}

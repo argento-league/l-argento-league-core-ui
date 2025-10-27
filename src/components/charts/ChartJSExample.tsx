@@ -125,19 +125,28 @@ const LegendValue = styled.span<{ color: string }>`
 
 // Importar datos reales
 import fantasyData from '../../data/season-6/fantasy-data.json';
+import fantasyMainData from '../../data/season-6/fantasy-main-data.json';
 import { CHART_NEON_COLORS } from '../../constants/chart-colors';
 
-// Usar datos reales del JSON
-const killsData = fantasyData.rankings.kills.slice(0, 3).map(item => ({
-  player: item.player,
-  kills: item.record,
-  team: item.team,
-  matchId: item.matchId,
-  heroImage: item.heroImage
-}));
+type ChartJSExampleProps = {
+  phase?: 'fase' | 'evento';
+};
 
-// Colores neón como en tu diseño
-const neonColors = CHART_NEON_COLORS;
+export const ChartJSExample: React.FC<ChartJSExampleProps> = ({ phase = 'fase' }) => {
+  // Seleccionar el archivo de datos según la fase activa
+  const dataSource = phase === 'fase' ? fantasyData : fantasyMainData;
+  
+  // Usar datos reales del JSON
+  const killsData = dataSource.rankings.kills.slice(0, 3).map(item => ({
+    player: item.player,
+    kills: item.record,
+    team: item.team,
+    matchId: item.matchId,
+    heroImage: item.heroImage
+  }));
+
+  // Colores neón como en tu diseño
+  const neonColors = CHART_NEON_COLORS;
 
 // Tooltip HTML personalizado con imagen del héroe
 const getOrCreateTooltip = (_chart: any) => {
@@ -289,8 +298,6 @@ const externalTooltipHandler = (context: any) => {
   tooltipEl.style.top = canvasRect.top + tooltip.caretY + 'px';
 };
 
-
-export const ChartJSExample: React.FC = () => {
   const data = {
     labels: killsData.map(item => 
       item.player.length > 15 ? item.player.substring(0, 15) + '...' : item.player

@@ -1,0 +1,255 @@
+{
+  "currentRecords": [
+    {
+      "statistic": "Kills",
+      "player": "TBD",
+      "record": 0,
+      "matchId": "0",
+      "heroImage": "axe.png",
+      "team": "TBD"
+    },
+    {
+      "statistic": "Asistencias",
+      "player": "TBD",
+      "record": 0,
+      "matchId": "0",
+      "heroImage": "silencer.png",
+      "team": "TBD"
+    },
+    {
+      "statistic": "Muertes",
+      "player": "TBD",
+      "record": 0,
+      "matchId": "0",
+      "heroImage": "shaman.png",
+      "team": "TBD"
+    },
+    {
+      "statistic": "GPM",
+      "player": "TBD",
+      "record": 0,
+      "matchId": "0",
+      "heroImage": "drow.png",
+      "team": "TBD"
+    },
+    {
+      "statistic": "Last Hits",
+      "player": "TBD",
+      "record": 0,
+      "matchId": "0",
+      "heroImage": "nature.png",
+      "team": "TBD"
+    },
+    {
+      "statistic": "Valor Neto",
+      "player": "TBD",
+      "record": 0,
+      "matchId": "0",
+      "heroImage": "nature.png",
+      "team": "TBD"
+    },
+    {
+      "statistic": "Wards Colocados",
+      "player": "TBD",
+      "record": 0,
+      "matchId": "0",
+      "heroImage": "pugna.png",
+      "team": "TBD"
+    }
+  ],
+  "classification": [
+    { "player": "TBD", "score": 0 },
+    { "player": "TBD", "score": 0 },
+    { "player": "TBD", "score": 0 },
+    { "player": "TBD", "score": 0 },
+    { "player": "TBD", "score": 0 },
+    { "player": "TBD", "score": 0 },
+    { "player": "TBD", "score": 0 }
+  ],
+  "rankings": {
+    "kills": [
+      {
+        "statistic": "Kills",
+        "player": "TBD",
+        "record": 0,
+        "matchId": "0",
+        "heroImage": "axe.png",
+        "team": "TBD"
+      },
+      {
+        "statistic": "Kills",
+        "player": "TBD",
+        "record": 0,
+        "matchId": "0",
+        "heroImage": "drow.png",
+        "team": "TBD"
+      },
+      {
+        "statistic": "Kills",
+        "player": "TBD",
+        "record": 0,
+        "matchId": "0",
+        "heroImage": "nature.png",
+        "team": "TBD"
+      }
+    ],
+    "assists": [
+      {
+        "player": "TBD",
+        "record": 0,
+        "matchId": "0",
+        "heroImage": "silencer.png",
+        "team": "TBD"
+      },
+      {
+        "player": "TBD",
+        "record": 0,
+        "matchId": "0",
+        "heroImage": "cristal.png",
+        "team": "TBD"
+      },
+      {
+        "player": "TBD",
+        "record": 0,
+        "matchId": "0",
+        "heroImage": "winter.png",
+        "team": "TBD"
+      }
+    ],
+    "deaths": [
+      {
+        "player": "TBD",
+        "record": 0,
+        "matchId": "0",
+        "heroImage": "shaman.png",
+        "team": "TBD"
+      },
+      {
+        "player": "TBD",
+        "record": 0,
+        "matchId": "0",
+        "heroImage": "cm.png",
+        "team": "TBD"
+      },
+      {
+        "player": "TBD",
+        "record": 0,
+        "matchId": "0",
+        "heroImage": "lion.png",
+        "team": "TBD"
+      }
+    ],
+    "gpm": [
+      {
+        "player": "TBD",
+        "record": 0,
+        "matchId": "0",
+        "heroImage": "drow.png",
+        "team": "TBD"
+      },
+      {
+        "player": "TBD",
+        "record": 0,
+        "matchId": "0",
+        "heroImage": "tinker.png",
+        "team": "TBD"
+      },
+      {
+        "player": "TBD",
+        "record": 0,
+        "matchId": "0",
+        "heroImage": "naga.png",
+        "team": "TBD"
+      }
+    ],
+    "netWorth": {
+      "timePoints": [
+        { "minute": 0, "time": "0:00" },
+        { "minute": 5, "time": "5:00" },
+        { "minute": 10, "time": "10:00" },
+        { "minute": 15, "time": "15:00" },
+        { "minute": 20, "time": "20:00" },
+        { "minute": 25, "time": "25:00" },
+        { "minute": 30, "time": "30:00" },
+        { "minute": 35, "time": "35:00" },
+        { "minute": 40, "time": "40:00" },
+        { "minute": 45, "time": "45:00" },
+        { "minute": 50, "time": "50:00" },
+        { "minute": 55, "time": "55:00" },
+        { "minute": 60, "time": "60:00" },
+        { "minute": 65, "time": "65:00" },
+        { "minute": 70, "time": "70:00" }
+      ],
+      "players": [
+        {
+          "name": "TBD",
+          "matchId": "0",
+          "heroImage": "nature.png",
+          "team": "TBD",
+          "netWorth": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        },
+        {
+          "name": "TBD",
+          "matchId": "0",
+          "heroImage": "tinker.png",
+          "team": "TBD",
+          "netWorth": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        },
+        {
+          "name": "TBD",
+          "matchId": "0",
+          "heroImage": "life.png",
+          "team": "TBD",
+          "netWorth": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        }
+      ]
+    },
+    "lastHits": [
+      {
+        "player": "TBD",
+        "record": 0,
+        "matchId": "0",
+        "heroImage": "nature.png",
+        "team": "TBD"
+      },
+      {
+        "player": "TBD",
+        "record": 0,
+        "matchId": "0",
+        "heroImage": "jugger.png",
+        "team": "TBD"
+      },
+      {
+        "player": "TBD",
+        "record": 0,
+        "matchId": "0",
+        "heroImage": "am.png",
+        "team": "TBD"
+      }
+    ],
+    "wards": [
+      {
+        "player": "TBD",
+        "record": 0,
+        "matchId": "0",
+        "heroImage": "pugna.png",
+        "team": "TBD"
+      },
+      {
+        "player": "TBD",
+        "record": 0,
+        "matchId": "0",
+        "heroImage": "jakiro.png",
+        "team": "TBD"
+      },
+      {
+        "player": "TBD",
+        "record": 0,
+        "matchId": "0",
+        "heroImage": "ardila.png",
+        "team": "TBD"
+      }
+    ]
+  }
+}
+

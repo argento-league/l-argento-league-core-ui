@@ -129,19 +129,12 @@ const LegendValue = styled.span<{ color: string }>`
 
 // Importar datos reales
 import fantasyData from '../../data/season-6/fantasy-data.json';
+import fantasyMainData from '../../data/season-6/fantasy-main-data.json';
 import { CHART_NEON_COLORS } from '../../constants/chart-colors';
 
-// Usar datos reales del JSON
-const assistsData = fantasyData.rankings.assists.slice(0, 3).map(item => ({
-  player: item.player,
-  assists: item.record,
-  team: item.team,
-  matchId: item.matchId,
-  heroImage: item.heroImage
-}));
-
-// Colores neón como en tu diseño
-const neonColors = CHART_NEON_COLORS;
+type ChartJSAssistsExampleProps = {
+  phase?: 'fase' | 'evento';
+};
 
 // Tooltip HTML personalizado con imagen del héroe
 const getOrCreateTooltip = (_chart: any) => {
@@ -176,99 +169,116 @@ const getOrCreateTooltip = (_chart: any) => {
   return tooltipEl;
 };
 
-const externalTooltipHandler = (context: any) => {
-  const { tooltip } = context;
-  const tooltipEl = getOrCreateTooltip(context.chart) as HTMLElement;
+export const ChartJSAssistsExample: React.FC<ChartJSAssistsExampleProps> = ({ phase = 'fase' }) => {
+  // Seleccionar el archivo de datos según la fase activa
+  const dataSource = phase === 'fase' ? fantasyData : fantasyMainData;
+  
+  // Usar datos reales del JSON
+  const assistsData = dataSource.rankings.assists.slice(0, 3).map(item => ({
+    player: item.player,
+    assists: item.record,
+    team: item.team,
+    matchId: item.matchId,
+    heroImage: item.heroImage
+  }));
 
-  // Hide all other tooltips when showing a new one
-  const allTooltips = document.querySelectorAll('div[class*="chartjs-tooltip"]');
-  allTooltips.forEach((el: any) => {
-    if (el !== tooltipEl) {
-      el.style.opacity = '0';
+  // Colores neón como en tu diseño
+  const neonColors = CHART_NEON_COLORS;
+
+  // Tooltip handler con acceso a assistsData
+  const externalTooltipHandler = (context: any) => {
+    const { tooltip } = context;
+    const tooltipEl = getOrCreateTooltip(context.chart) as HTMLElement;
+
+    // Hide all other tooltips when showing a new one
+    const allTooltips = document.querySelectorAll('div[class*="chartjs-tooltip"]');
+    allTooltips.forEach((el: any) => {
+      if (el !== tooltipEl) {
+        el.style.opacity = '0';
+      }
+    });
+
+    // NO ocultar el tooltip cuando opacity es 0, mantenerlo visible
+    if (tooltip.opacity === 0) {
+      return; // Mantener el tooltip visible
     }
-  });
 
-  // NO ocultar el tooltip cuando opacity es 0, mantenerlo visible
-  if (tooltip.opacity === 0) {
-    return; // Mantener el tooltip visible
-  }
+    if (tooltip.body) {
+      const dataIndex = tooltip.dataPoints[0].dataIndex;
+      const data = assistsData[dataIndex];
 
-  if (tooltip.body) {
-    const dataIndex = tooltip.dataPoints[0].dataIndex;
-    const data = assistsData[dataIndex];
+      const tableRoot = tooltipEl.querySelector('table') as HTMLTableElement;
+      if (tableRoot) {
+        tableRoot.innerHTML = '';
 
-    const tableRoot = tooltipEl.querySelector('table') as HTMLTableElement;
-    if (tableRoot) {
-      tableRoot.innerHTML = '';
+        // Fila principal con hero icon + stat a la izquierda y player info a la derecha
+        const mainRow = document.createElement('tr');
+        
+        // Celda izquierda: Hero icon + stat principal
+        const leftCell = document.createElement('td') as HTMLTableCellElement;
+        leftCell.style.verticalAlign = 'top';
+        leftCell.style.paddingRight = '10px';
+        leftCell.style.textAlign = 'center';
+        leftCell.style.width = '60px';
+        leftCell.style.background = 'rgba(80, 255, 16, 0.3)';
+        leftCell.style.borderRadius = '8px';
+        leftCell.style.padding = '8px';
 
-      // Fila principal con hero icon + stat a la izquierda y player info a la derecha
-      const mainRow = document.createElement('tr');
-      
-      // Celda izquierda: Hero icon + stat principal
-      const leftCell = document.createElement('td') as HTMLTableCellElement;
-      leftCell.style.verticalAlign = 'top';
-      leftCell.style.paddingRight = '10px';
-      leftCell.style.textAlign = 'center';
-      leftCell.style.width = '60px';
-      leftCell.style.background = 'rgba(80, 255, 16, 0.3)';
-      leftCell.style.borderRadius = '8px';
-      leftCell.style.padding = '8px';
+        // Hero icon
+        const heroImg = document.createElement('img') as HTMLImageElement;
+        heroImg.src = `/images/heroes/${data.heroImage}`;
+        heroImg.style.width = '60px';
+        heroImg.style.height = '60px';
+        heroImg.style.borderRadius = '8px';
+        heroImg.style.objectFit = 'cover';
+        leftCell.appendChild(heroImg);
 
-      // Hero icon
-      const heroImg = document.createElement('img') as HTMLImageElement;
-      heroImg.src = `/images/heroes/${data.heroImage}`;
-      heroImg.style.width = '60px';
-      heroImg.style.height = '60px';
-      heroImg.style.borderRadius = '8px';
-      heroImg.style.objectFit = 'cover';
-      leftCell.appendChild(heroImg);
+        mainRow.appendChild(leftCell);
 
-      mainRow.appendChild(leftCell);
+        // Celda derecha: Player info
+        const rightCell = document.createElement('td') as HTMLTableCellElement;
+        rightCell.style.verticalAlign = 'top';
+        rightCell.style.paddingLeft = '8px';
+        rightCell.style.minWidth = '150px';
 
-      // Celda derecha: Player info
-      const rightCell = document.createElement('td') as HTMLTableCellElement;
-      rightCell.style.verticalAlign = 'top';
-      rightCell.style.paddingLeft = '8px';
-      rightCell.style.minWidth = '150px';
+        // Player Name
+        const playerName = document.createElement('div') as HTMLDivElement;
+        playerName.style.fontFamily = 'Outfit';
+        playerName.style.fontWeight = 'bold';
+        playerName.style.fontSize = '14px';
+        playerName.style.color = '#ffffff';
+        playerName.style.marginBottom = '3px';
+        playerName.textContent = data.player;
+        rightCell.appendChild(playerName);
 
-      // Player Name
-      const playerName = document.createElement('div') as HTMLDivElement;
-      playerName.style.fontFamily = 'Outfit';
-      playerName.style.fontWeight = 'bold';
-      playerName.style.fontSize = '14px';
-      playerName.style.color = '#ffffff';
-      playerName.style.marginBottom = '3px';
-      playerName.textContent = data.player;
-      rightCell.appendChild(playerName);
+        // Stat principal
+        const statDiv = document.createElement('div') as HTMLDivElement;
+        statDiv.style.fontSize = '16px';
+        statDiv.style.color = '#50ff10';
+        statDiv.style.fontFamily = 'Outfit';
+        statDiv.style.fontWeight = 'bold';
+        statDiv.style.marginBottom = '2px';
+        statDiv.textContent = `🤝 ${data.assists} assists`;
+        rightCell.appendChild(statDiv);
 
-      // Stat principal
-      const statDiv = document.createElement('div') as HTMLDivElement;
-      statDiv.style.fontSize = '16px';
-      statDiv.style.color = '#50ff10';
-      statDiv.style.fontFamily = 'Outfit';
-      statDiv.style.fontWeight = 'bold';
-      statDiv.style.marginBottom = '2px';
-      statDiv.textContent = `🤝 ${data.assists} assists`;
-      rightCell.appendChild(statDiv);
+        // Team name
+        const teamDiv = document.createElement('div') as HTMLDivElement;
+        teamDiv.style.fontSize = '12px';
+        teamDiv.style.color = '#cccccc';
+        teamDiv.style.marginBottom = '2px';
+        teamDiv.textContent = `🛡️ ${data.team}`;
+        rightCell.appendChild(teamDiv);
 
-      // Team name
-      const teamDiv = document.createElement('div') as HTMLDivElement;
-      teamDiv.style.fontSize = '12px';
-      teamDiv.style.color = '#cccccc';
-      teamDiv.style.marginBottom = '2px';
-      teamDiv.textContent = `🛡️ ${data.team}`;
-      rightCell.appendChild(teamDiv);
-
-      // Match ID (clickeable para abrir Dotabuff)
-      const matchIdDiv = document.createElement('a') as HTMLAnchorElement;
-      matchIdDiv.href = `https://www.dotabuff.com/matches/${data.matchId}`;
-      matchIdDiv.target = '_blank';
-      matchIdDiv.rel = 'noopener noreferrer';
-      matchIdDiv.style.fontSize = '10px';
-      matchIdDiv.style.color = '#50ff10';
-      matchIdDiv.style.fontFamily = 'Rethink Sans';
-      matchIdDiv.style.textDecoration = 'none';
-      matchIdDiv.style.cursor = 'pointer';
+        // Match ID (clickeable para abrir Dotabuff)
+        const matchIdDiv = document.createElement('a') as HTMLAnchorElement;
+        matchIdDiv.href = `https://www.dotabuff.com/matches/${data.matchId}`;
+        matchIdDiv.target = '_blank';
+        matchIdDiv.rel = 'noopener noreferrer';
+        matchIdDiv.style.fontSize = '10px';
+        matchIdDiv.style.color = '#50ff10';
+        matchIdDiv.style.fontFamily = 'Rethink Sans';
+        matchIdDiv.style.textDecoration = 'none';
+        matchIdDiv.style.cursor = 'pointer';
       matchIdDiv.textContent = `🔗 Match ID: ${data.matchId}`;
       matchIdDiv.addEventListener('mouseenter', () => {
         matchIdDiv.style.textDecoration = 'underline';
@@ -292,8 +302,6 @@ const externalTooltipHandler = (context: any) => {
   tooltipEl.style.top = canvasRect.top + tooltip.caretY + 'px';
 };
 
-
-export const ChartJSAssistsExample: React.FC = () => {
   const data = {
     labels: assistsData.map(item => 
       item.player.length > 15 ? item.player.substring(0, 15) + '...' : item.player

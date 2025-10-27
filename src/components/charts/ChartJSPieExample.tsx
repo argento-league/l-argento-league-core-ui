@@ -123,6 +123,7 @@ const LegendValue = styled.span<{ color: string }>`
 
 // Importar datos reales
 import fantasyData from '../../data/season-6/fantasy-data.json';
+import fantasyMainData from '../../data/season-6/fantasy-main-data.json';
 import { CHART_NEON_COLORS } from '../../constants/chart-colors';
 
 // Colores neón como en tu diseño
@@ -167,11 +168,14 @@ interface ChartJSPieExampleProps {
   delay: number;
   icon?: string;
   iconFilter?: string;
+  phase?: 'fase' | 'evento';
 }
 
 
-export const ChartJSPieExample: React.FC<ChartJSPieExampleProps> = ({ title, dataKey, delay, icon, iconFilter }) => {
-  const data = fantasyData.rankings[dataKey].slice(0, 3);
+export const ChartJSPieExample: React.FC<ChartJSPieExampleProps> = ({ title, dataKey, delay, icon, iconFilter, phase = 'fase' }) => {
+  // Seleccionar el archivo de datos según la fase activa
+  const dataSource = phase === 'fase' ? fantasyData : fantasyMainData;
+  const data = dataSource.rankings[dataKey].slice(0, 3);
   
 const externalTooltipHandler = (context: any) => {
   const { tooltip } = context;

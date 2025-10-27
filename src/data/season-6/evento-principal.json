@@ -5,8 +5,8 @@
         "match": 1,
         "team1": "TBD",
         "team2": "TBD",
-        "score1": 3,
-        "score2": 1
+        "score1": null,
+        "score2": null
       },
       {
         "match": 2,
@@ -35,8 +35,8 @@
         "match": 5,
         "team1": "The Rats",
         "team2": "Epicenter",
-        "score1": 1,
-        "score2": 2
+        "score1": null,
+        "score2": null
       },
       {
         "match": 6,

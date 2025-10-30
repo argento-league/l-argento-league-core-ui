@@ -124,6 +124,7 @@
       { "nick": "picado", "nationality": "ar", "mmr": 8071, "id_dota": "98780719" },
       { "nick": "Mdfk pipi", "nationality": "ar", "mmr": 3011, "id_dota": "375817604" },
       { "nick": "Adachijke", "nationality": "ar", "mmr": 10315, "id_dota": "270029316" },
+      { "nick": "Pablo", "nationality": "pe", "mmr": 9200, "id_dota": "441036394" },
       { "nick": "Shifu", "nationality": "ar", "mmr": 9470, "id_dota": "121952627" },
       { "nick": "Sanguchegg", "nationality": "ar", "mmr": 2995, "id_dota": "126686605" },
       { "nick": "Andino", "nationality": "ar", "mmr": 6779, "id_dota": "121672308" }
@@ -248,7 +249,6 @@
       { "nick": "Dk3r", "nationality": "ar", "mmr": 4200, "id_dota": "28283210" },
       { "nick": "Clancy", "nationality": "ar", "mmr": 4462, "id_dota": "1001127566" },
       { "nick": "Fox", "nationality": "ar", "mmr": 4300, "id_dota": "113074258" },
-      { "nick": "Pablo", "nationality": "pe", "mmr": 9200, "id_dota": "441036394" },
       { "nick": "SubraDoTA", "nationality": "pe", "mmr": 8589, "id_dota": "114950886" }
     ]
   },

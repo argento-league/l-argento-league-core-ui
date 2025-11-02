@@ -12,8 +12,8 @@
         "match": 2,
         "team1": "The Royals",
         "team2": "Epicenter",
-        "score1": null,
-        "score2": null
+        "score1": 2,
+        "score2": 0
       },
       {
         "match": 3,
@@ -34,7 +34,7 @@
       {
         "match": 5,
         "team1": "TBD",
-        "team2": "TBD",
+        "team2": "The Royals",
         "score1": null,
         "score2": null
       },
@@ -78,8 +78,8 @@
         "match": 10,
         "team1": "Las Joyas del Abuelo",
         "team2": "La Plaga",
-        "score1": null,
-        "score2": null
+        "score1": 2,
+        "score2": 0
       },
       {
         "match": 11,
@@ -106,8 +106,8 @@
       },
       {
         "match": 14,
-        "team1": "TBD",
-        "team2": "Perdedor llave 2",
+        "team1": "Las Joyas del Abuelo",
+        "team2": "Epicenter",
         "score1": null,
         "score2": null
       },

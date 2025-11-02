@@ -85,8 +85,8 @@
         "match": 11,
         "team1": "Ravage Gaming",
         "team2": "Lemuria",
-        "score1": null,
-        "score2": null
+        "score1": 2,
+        "score2": 0
       },
       {
         "match": 12,
@@ -113,7 +113,7 @@
       },
       {
         "match": 15,
-        "team1": "TBD",
+        "team1": "Ravage Gaming",
         "team2": "Perdedor llave 3",
         "score1": null,
         "score2": null

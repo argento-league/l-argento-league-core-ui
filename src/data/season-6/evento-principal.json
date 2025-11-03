@@ -92,8 +92,8 @@
         "match": 12,
         "team1": "TEAM HORROR FOX",
         "team2": "Falta Envido",
-        "score1": null,
-        "score2": null
+        "score1": 0,
+        "score2": 2
       }
     ],
     "round-2": [
@@ -120,7 +120,7 @@
       },
       {
         "match": 16,
-        "team1": "TBD",
+        "team1": "Falta Envido",
         "team2": "Las Divinas",
         "score1": null,
         "score2": null

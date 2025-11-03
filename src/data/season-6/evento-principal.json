@@ -19,8 +19,8 @@
         "match": 3,
         "team1": "La Manada",
         "team2": "The Rats",
-        "score1": null,
-        "score2": null
+        "score1": 0,
+        "score2": 2
       },
       {
         "match": 4,
@@ -41,7 +41,7 @@
       {
         "match": 6,
         "team1": "The Real Server",
-        "team2": "TBD",
+        "team2": "The Rats",
         "score1": null,
         "score2": null
       }
@@ -113,7 +113,7 @@
       },
       {
         "match": 15,
-        "team1": "Ravage Gaming",
+        "team1": "La Manada",
         "team2": "Perdedor llave 3",
         "score1": null,
         "score2": null

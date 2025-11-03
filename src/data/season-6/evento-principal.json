@@ -5,8 +5,8 @@
         "match": 1,
         "team1": "Team Mafia",
         "team2": "Miro Tik Tok y Webeo",
-        "score1": null,
-        "score2": null
+        "score1": 2,
+        "score2": 0
       },
       {
         "match": 2,
@@ -33,7 +33,7 @@
     "round-2": [
       {
         "match": 5,
-        "team1": "TBD",
+        "team1": "Team Mafia",
         "team2": "The Royals",
         "score1": null,
         "score2": null
@@ -100,7 +100,7 @@
       {
         "match": 13,
         "team1": "La guardería de sgg",
-        "team2": "Perdedor llave 1",
+        "team2": "Miro Tik Tok y Webeo",
         "score1": null,
         "score2": null
       },

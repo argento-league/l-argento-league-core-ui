@@ -2,164 +2,164 @@
   "currentRecords": [
     {
       "statistic": "Kills",
-      "player": "TBD",
-      "record": 0,
-      "matchId": "0",
-      "heroImage": "axe.png",
-      "team": "TBD"
+      "player": "Runaway",
+      "record": 28,
+      "matchId": "8540857552",
+      "heroImage": "bat.png",
+      "team": "Team Mafia"
     },
     {
       "statistic": "Asistencias",
-      "player": "TBD",
-      "record": 0,
-      "matchId": "0",
-      "heroImage": "silencer.png",
-      "team": "TBD"
+      "player": "Lobo",
+      "record": 39,
+      "matchId": "8537606125",
+      "heroImage": "bane.png",
+      "team": "The Real Server"
     },
     {
       "statistic": "Muertes",
-      "player": "TBD",
-      "record": 0,
-      "matchId": "0",
-      "heroImage": "shaman.png",
-      "team": "TBD"
+      "player": "Lobo",
+      "record": 16,
+      "matchId": "8537606125",
+      "heroImage": "bane.png",
+      "team": "The Real Server"
     },
     {
       "statistic": "GPM",
-      "player": "TBD",
-      "record": 0,
-      "matchId": "0",
-      "heroImage": "drow.png",
-      "team": "TBD"
+      "player": "KTZ",
+      "record": 947,
+      "matchId": "8540713444",
+      "heroImage": "templar.png",
+      "team": "Las Joyas del Abuelo"
     },
     {
       "statistic": "Last Hits",
-      "player": "TBD",
-      "record": 0,
-      "matchId": "0",
+      "player": "Letme",
+      "record": 720,
+      "matchId": "8537606125",
       "heroImage": "nature.png",
-      "team": "TBD"
+      "team": "The Real Server"
     },
     {
       "statistic": "Valor Neto",
-      "player": "TBD",
-      "record": 0,
-      "matchId": "0",
+      "player": "Letme",
+      "record": 44616,
+      "matchId": "8537606125",
       "heroImage": "nature.png",
-      "team": "TBD"
+      "team": "The Real Server"
     },
     {
       "statistic": "Wards Colocados",
-      "player": "TBD",
-      "record": 0,
-      "matchId": "0",
-      "heroImage": "pugna.png",
-      "team": "TBD"
+      "player": "Lobo",
+      "record": 19,
+      "matchId": "8537606125",
+      "heroImage": "bane.png",
+      "team": "The Real Server"
     }
   ],
   "classification": [
-    { "player": "TBD", "score": 0 },
-    { "player": "TBD", "score": 0 },
-    { "player": "TBD", "score": 0 },
-    { "player": "TBD", "score": 0 },
-    { "player": "TBD", "score": 0 },
-    { "player": "TBD", "score": 0 },
-    { "player": "TBD", "score": 0 }
+    { "player": "Khantus", "score": 15 },
+    { "player": "MessiWaton", "score": 10 },
+    { "player": "Roy Roy", "score": 10 },
+    { "player": "Hawkaye", "score": 10 },
+    { "player": "Un Gato", "score": 5 },
+    { "player": "Ovoide", "score": 5 },
+    { "player": "Sanguito", "score": 5 }
   ],
   "rankings": {
     "kills": [
       {
         "statistic": "Kills",
-        "player": "TBD",
-        "record": 0,
-        "matchId": "0",
-        "heroImage": "axe.png",
-        "team": "TBD"
+        "player": "Runaway",
+        "record": 28,
+        "matchId": "8540857552",
+        "heroImage": "bat.png",
+        "team": "Team Mafia"
       },
       {
         "statistic": "Kills",
-        "player": "TBD",
-        "record": 0,
-        "matchId": "0",
-        "heroImage": "drow.png",
-        "team": "TBD"
+        "player": "Luar",
+        "record": 24,
+        "matchId": "8540896746",
+        "heroImage": "life.png",
+        "team": "Falta Envido"
       },
       {
         "statistic": "Kills",
-        "player": "TBD",
-        "record": 0,
-        "matchId": "0",
+        "player": "Letme",
+        "record": 23,
+        "matchId": "8537606125",
         "heroImage": "nature.png",
-        "team": "TBD"
+        "team": "The Real Server"
       }
     ],
     "assists": [
       {
-        "player": "TBD",
-        "record": 0,
-        "matchId": "0",
-        "heroImage": "silencer.png",
-        "team": "TBD"
+        "player": "Lobo",
+        "record": 39,
+        "matchId": "8537606125",
+        "heroImage": "bane.png",
+        "team": "The Real Server"
       },
       {
-        "player": "TBD",
-        "record": 0,
-        "matchId": "0",
-        "heroImage": "cristal.png",
-        "team": "TBD"
+        "player": "Kid",
+        "record": 38,
+        "matchId": "8540713444",
+        "heroImage": "bane.png",
+        "team": "Las Joyas del Abuelo"
       },
       {
-        "player": "TBD",
-        "record": 0,
-        "matchId": "0",
-        "heroImage": "winter.png",
-        "team": "TBD"
+        "player": "Eternity",
+        "record": 36,
+        "matchId": "8537606125",
+        "heroImage": "ember.png",
+        "team": "The Real Server"
       }
     ],
     "deaths": [
       {
-        "player": "TBD",
-        "record": 0,
-        "matchId": "0",
-        "heroImage": "shaman.png",
-        "team": "TBD"
+        "player": "Lobo",
+        "record": 16,
+        "matchId": "8537606125",
+        "heroImage": "bane.png",
+        "team": "The Real Server"
       },
       {
-        "player": "TBD",
-        "record": 0,
-        "matchId": "0",
-        "heroImage": "cm.png",
-        "team": "TBD"
+        "player": "KANISHKA",
+        "record": 15,
+        "matchId": "8537606125",
+        "heroImage": "jakiro.png",
+        "team": "Las Divinas"
       },
       {
-        "player": "TBD",
-        "record": 0,
-        "matchId": "0",
-        "heroImage": "lion.png",
-        "team": "TBD"
+        "player": "3mpty",
+        "record": 13,
+        "matchId": "8537606125",
+        "heroImage": "bat.png",
+        "team": "Las Divinas"
       }
     ],
     "gpm": [
       {
-        "player": "TBD",
-        "record": 0,
-        "matchId": "0",
-        "heroImage": "drow.png",
-        "team": "TBD"
+       "player": "KTZ",
+       "record": 947,
+       "matchId": "8540713444",
+       "heroImage": "templar.png",
+       "team": "Las Joyas del Abuelo"
       },
       {
-        "player": "TBD",
-        "record": 0,
-        "matchId": "0",
-        "heroImage": "tinker.png",
-        "team": "TBD"
+        "player": "Letme",
+        "record": 907,
+        "matchId": "8537606125",
+        "heroImage": "nature.png",
+        "team": "The Real Server"
       },
       {
-        "player": "TBD",
-        "record": 0,
-        "matchId": "0",
-        "heroImage": "naga.png",
-        "team": "TBD"
+        "player": "Shifu",
+        "record": 866,
+        "matchId": "8540765645",
+        "heroImage": "templar.png",
+        "team": "The Royals"
       }
     ],
     "netWorth": {
@@ -182,72 +182,72 @@
       ],
       "players": [
         {
-          "name": "TBD",
-          "matchId": "0",
+          "name": "Letme",
+          "matchId": "8537606125",
           "heroImage": "nature.png",
-          "team": "TBD",
-          "netWorth": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+          "team": "The Real Server",
+          "netWorth": [728, 2164, 3830, 6628, 10737, 15921, 20107, 24627, 29810, 33837, 40396, 44058, 44616]
         },
         {
-          "name": "TBD",
-          "matchId": "0",
-          "heroImage": "tinker.png",
-          "team": "TBD",
-          "netWorth": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+          "name": "KTZ",
+          "matchId": "8540713444",
+          "heroImage": "templar.png",
+          "team": "Las Joyas del Abuelo",
+          "netWorth": [703, 2130, 4464, 8074, 12637, 18136, 24067, 28679, 33871, 42309]
         },
         {
-          "name": "TBD",
-          "matchId": "0",
-          "heroImage": "life.png",
-          "team": "TBD",
-          "netWorth": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+          "name": "Rena",
+          "matchId": "8537606125",
+          "heroImage": "jugger.png",
+          "team": "Las Divinas",
+          "netWorth": [743, 2250, 4261, 7546, 11943, 16342, 21492, 23094, 25051, 27621, 33032, 36242, 36593]
         }
       ]
     },
     "lastHits": [
       {
-        "player": "TBD",
-        "record": 0,
-        "matchId": "0",
+        "player": "Letme",
+        "record": 720,
+        "matchId": "8537606125",
         "heroImage": "nature.png",
-        "team": "TBD"
+        "team": "The Real Server"
       },
       {
-        "player": "TBD",
-        "record": 0,
-        "matchId": "0",
+        "player": "KTZ",
+        "record": 663,
+        "matchId": "8540713444",
+        "heroImage": "templar.png",
+        "team": "Las Joyas del Abuelo"
+      },
+      {
+        "player": "Rena",
+        "record": 602,
+        "matchId": "8537606125",
         "heroImage": "jugger.png",
-        "team": "TBD"
-      },
-      {
-        "player": "TBD",
-        "record": 0,
-        "matchId": "0",
-        "heroImage": "am.png",
-        "team": "TBD"
+        "team": "Las Divinas"
       }
     ],
     "wards": [
       {
-        "player": "TBD",
-        "record": 0,
-        "matchId": "0",
-        "heroImage": "pugna.png",
-        "team": "TBD"
+         "player": "Lobo",
+         "record": 19,
+         "matchId": "8537606125",
+         "heroImage": "bane.png",
+         "team": "The Real Server"
       },
       {
-        "player": "TBD",
-        "record": 0,
-        "matchId": "0",
+        "player": "Punishhh",
+        "record": 19,
+        "matchId": "8540846823",
+        "heroImage": "clock.png",
+        "team": "The Horror Fox"
+      },
+      {
+        "player": "KANISHKA",
+        "record": 18,
+        "matchId": "8537606125",
         "heroImage": "jakiro.png",
-        "team": "TBD"
-      },
-      {
-        "player": "TBD",
-        "record": 0,
-        "matchId": "0",
-        "heroImage": "ardila.png",
-        "team": "TBD"
+        "team": "Las Divinas"
       }
     ]
   }

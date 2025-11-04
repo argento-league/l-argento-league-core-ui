@@ -115,8 +115,8 @@
         "match": 15,
         "team1": "La Manada",
         "team2": "Ravage Gaming",
-        "score1": null,
-        "score2": null
+        "score1": 2,
+        "score2": 0
       },
       {
         "match": 16,
@@ -136,7 +136,7 @@
       },
       {
         "match": 18,
-        "team1": "TBD",
+        "team1": "La Manada",
         "team2": "TBD",
         "score1": null,
         "score2": null

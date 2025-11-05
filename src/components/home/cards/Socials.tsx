@@ -107,7 +107,7 @@ export const SocialCard = ({ iconColor }: SocialCardProps) => {
               />
             </Link>
             <Link
-              to="https://wa.me/1234567890"
+              to="https://chat.whatsapp.com/KU1UBzMeMEK2jUuBTRj8sj?mode=wwt"
               target="_blank"
             >
               <StyledSvg

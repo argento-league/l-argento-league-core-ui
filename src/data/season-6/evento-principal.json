@@ -101,8 +101,8 @@
         "match": 13,
         "team1": "La guardería de sgg",
         "team2": "Miro Tik Tok y Webeo",
-        "score1": null,
-        "score2": null
+        "score1": 2,
+        "score2": 0
       },
       {
         "match": 14,
@@ -129,7 +129,7 @@
     "round-3": [
       {
         "match": 17,
-        "team1": "TBD",
+        "team1": "La guardería de sgg",
         "team2": "TBD",
         "score1": null,
         "score2": null

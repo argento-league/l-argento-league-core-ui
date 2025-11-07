@@ -16,8 +16,6 @@
     "players": [
       { "nick": "Piojito", "nationality": "sa", "mmr": 7018, "id_dota": "90449925" },
       { "nick": "Virus", "nationality": "ar", "mmr": 7632, "id_dota": "348972714" },
-      { "nick": "Oppiee", "nationality": "ar", "mmr": 5842, "id_dota": "135179013" },
-      { "nick": "El AleSsi™", "nationality": "ar", "mmr": 6686, "id_dota": "82244318" },
       { "nick": "Zancrow", "nationality": "ar", "mmr": 6840, "id_dota": "1153490332" },
       { "nick": "Shariff", "nationality": "ar", "mmr": 7948, "id_dota": "426703087" },
       { "nick": "Dgn", "nationality": "ar", "mmr": 8311, "id_dota": "40521044" }
@@ -149,10 +147,11 @@
       { "nick": "Who is Ari", "nationality": "ar", "mmr": 7678, "id_dota": "454675942" },
       { "nick": "Kid", "nationality": "ar", "mmr": 5674, "id_dota": "240091805" },
       { "nick": "Manu", "nationality": "ar", "mmr": 8977, "id_dota": "126459729" },
+      { "nick": "El AleSsi™", "nationality": "ar", "mmr": 6686, "id_dota": "82244318" },
       { "nick": "KTZ", "nationality": "ar", "mmr": 7353, "id_dota": "119473376" },
+      { "nick": "Oppiee", "nationality": "ar", "mmr": 5842, "id_dota": "135179013" },
       { "nick": "Sandevistan", "nationality": "ar", "mmr": 8074, "id_dota": "130234748" },
-      { "nick": "Fumigator", "nationality": "ar", "mmr": 6251, "id_dota": "131672579" },
-      { "nick": "Eno", "nationality": "ar", "mmr": 7650, "id_dota": "420540542" }
+      { "nick": "Fumigator", "nationality": "ar", "mmr": 6251, "id_dota": "131672579" }
     ]
   },
   "FALTA_ENVIDO": {

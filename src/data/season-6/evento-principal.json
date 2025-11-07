@@ -108,8 +108,8 @@
         "match": 14,
         "team1": "Las Joyas del Abuelo",
         "team2": "Epicenter",
-        "score1": null,
-        "score2": null
+        "score1": 2,
+        "score2": 0
       },
       {
         "match": 15,
@@ -122,20 +122,20 @@
         "match": 16,
         "team1": "Falta Envido",
         "team2": "Las Divinas",
-        "score1": null,
-        "score2": null
+        "score1": 0,
+        "score2": 2
       }
     ],
     "round-3": [
       {
-        "match": 17,
+        "match": "Las Joyas del Abuelo",
         "team1": "La guardería de sgg",
         "team2": "TBD",
         "score1": null,
         "score2": null
       },
       {
-        "match": 18,
+        "match": "Las Dvivinas",
         "team1": "La Manada",
         "team2": "TBD",
         "score1": null,

@@ -35,22 +35,22 @@
         "match": 5,
         "team1": "Team Mafia",
         "team2": "The Royals",
-        "score1": null,
-        "score2": null
+        "score1": 1,
+        "score2": 2
       },
       {
         "match": 6,
         "team1": "The Real Server",
         "team2": "The Rats",
-        "score1": null,
-        "score2": null
+        "score1": 2,
+        "score2": 0
       }
     ],
     "round-3": [
       {
         "match": 7,
-        "team1": "TBD",
-        "team2": "TBD",
+        "team1": "The Royals",
+        "team2": "The Real Server",
         "score1": null,
         "score2": null
       }
@@ -131,29 +131,29 @@
         "match": "17",
         "team1": "La guardería de sgg",
         "team2": "Las Joyas del Abuelo",
-        "score1": null,
-        "score2": null
+        "score1": 2,
+        "score2": 1
       },
       {
         "match": "18",
         "team1": "La Manada",
         "team2": "Las Divinas",
-        "score1": null,
-        "score2": null
+        "score1": 2,
+        "score2": 1
       }
     ],
     "round-4": [
       {
         "match": 19,
-        "team1": "TBD",
-        "team2": "TBD",
+        "team1": "La guarderia de sgg",
+        "team2": "The Rats",
         "score1": null,
         "score2": null
       },
       {
         "match": 20,
-        "team1": "TBD",
-        "team2": "TBD",
+        "team1": "La Manada ",
+        "team2": "Team Mafia",
         "score1": null,
         "score2": null
       }

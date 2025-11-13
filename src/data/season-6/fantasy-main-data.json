@@ -182,18 +182,18 @@
       ],
       "players": [
         {
+        "player": "Monthy",
+        "matchId": "8549695062",
+        "heroImage": "drow.png",
+        "team": "La Manada"
+        "netWorth": [728, 2164, 3830, 6628, 10737, 15921, 20107, 24627, 29810, 33837, 40396, 44058, 50874]
+        },
+        {
           "name": "Letme",
           "matchId": "8537606125",
           "heroImage": "nature.png",
           "team": "The Real Server",
           "netWorth": [728, 2164, 3830, 6628, 10737, 15921, 20107, 24627, 29810, 33837, 40396, 44058, 44616]
-        },
-        {
-          "name": "KTZ",
-          "matchId": "8540713444",
-          "heroImage": "templar.png",
-          "team": "Las Joyas del Abuelo",
-          "netWorth": [703, 2130, 4464, 8074, 12637, 18136, 24067, 28679, 33871, 42309]
         },
         {
           "name": "Rena",

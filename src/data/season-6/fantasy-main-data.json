@@ -118,18 +118,18 @@
     ],
     "deaths": [
       {
+       "player": "Lobo",
+       "record": 17,
+       "matchId": "8555962971",
+       "heroImage": "lich.png",
+       "team": "The Real Server" 
+      },
+      {
         "player": "Lobo",
         "record": 16,
         "matchId": "8537606125",
         "heroImage": "bane.png",
         "team": "The Real Server"
-      },
-      {
-        "player": "KANISHKA",
-        "record": 15,
-        "matchId": "8537606125",
-        "heroImage": "jakiro.png",
-        "team": "Las Divinas"
       },
       {
         "player": "3mpty",

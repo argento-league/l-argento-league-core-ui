@@ -279,6 +279,24 @@ const getBestRecords = (phase: 'fase' | 'evento' = 'fase') => {
   // Seleccionar el archivo de datos según la fase activa para los records
   const recordsDataSource = phase === 'fase' ? fantasyData : fantasyMainData;
   
+  type NetWorthPlayer = {
+    name?: string;
+    player?: string;
+    team?: string;
+    matchId?: string;
+    heroImage?: string;
+    netWorth?: number[];
+  };
+
+  const netWorthLeader = (recordsDataSource.rankings.netWorth?.players?.[0] ??
+    {}) as NetWorthPlayer;
+  const netWorthValues = Array.isArray(netWorthLeader.netWorth)
+    ? (netWorthLeader.netWorth as number[])
+    : [];
+  const bestNetWorth = netWorthValues.length
+    ? Math.max(...netWorthValues)
+    : 0;
+
   const records = [
     {
       type: 'Kills',
@@ -336,11 +354,11 @@ const getBestRecords = (phase: 'fase' | 'evento' = 'fase') => {
     },
     {
       type: 'Valor Neto',
-      player: recordsDataSource.rankings.netWorth.players[0]?.name || 'N/A',
-      value: Math.max(...(recordsDataSource.rankings.netWorth.players[0]?.netWorth || [0])),
-      team: recordsDataSource.rankings.netWorth.players[0]?.team || 'N/A',
-      matchId: recordsDataSource.rankings.netWorth.players[0]?.matchId || 'N/A',
-      heroImage: recordsDataSource.rankings.netWorth.players[0]?.heroImage || '',
+      player: netWorthLeader.name || netWorthLeader.player || 'N/A',
+      value: bestNetWorth,
+      team: netWorthLeader.team || 'N/A',
+      matchId: netWorthLeader.matchId || 'N/A',
+      heroImage: netWorthLeader.heroImage || '',
       emoji: '💵'
     }
   ];

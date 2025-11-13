@@ -182,11 +182,15 @@ export const ChartJSLineExample: React.FC<ChartJSLineExampleProps> = ({ phase = 
         // Obtener datos del player
         const datasetIndex = tooltip.dataPoints[0].datasetIndex;
         const player = dataSource.rankings.netWorth.players[datasetIndex];
+        const playerNameValue = player.name ?? player.player ?? 'N/A';
+        const heroImageValue = player.heroImage ?? 'default.png';
+        const teamValue = player.team ?? 'N/A';
+        const matchIdValue = player.matchId ?? '';
         const netWorthValue = Math.round(tooltip.dataPoints[0].parsed.y);
 
         // Hero icon
         const heroImg = document.createElement('img') as HTMLImageElement;
-        heroImg.src = `/images/heroes/${player.heroImage}`;
+        heroImg.src = `/images/heroes/${heroImageValue}`;
         heroImg.style.width = '60px';
         heroImg.style.height = '60px';
         heroImg.style.borderRadius = '8px';
@@ -208,7 +212,7 @@ export const ChartJSLineExample: React.FC<ChartJSLineExampleProps> = ({ phase = 
         playerName.style.fontSize = '14px';
         playerName.style.color = '#ffffff';
         playerName.style.marginBottom = '3px';
-        playerName.textContent = player.name;
+        playerName.textContent = playerNameValue;
         rightCell.appendChild(playerName);
 
         // Stat principal
@@ -226,12 +230,14 @@ export const ChartJSLineExample: React.FC<ChartJSLineExampleProps> = ({ phase = 
         teamDiv.style.fontSize = '12px';
         teamDiv.style.color = '#cccccc';
         teamDiv.style.marginBottom = '2px';
-        teamDiv.textContent = `🛡️ ${player.team}`;
+        teamDiv.textContent = `🛡️ ${teamValue}`;
         rightCell.appendChild(teamDiv);
 
         // Match ID (clickeable para abrir Dotabuff)
         const matchIdDiv = document.createElement('a') as HTMLAnchorElement;
-        matchIdDiv.href = `https://www.dotabuff.com/matches/${player.matchId}`;
+        matchIdDiv.href = matchIdValue
+          ? `https://www.dotabuff.com/matches/${matchIdValue}`
+          : '#';
         matchIdDiv.target = '_blank';
         matchIdDiv.rel = 'noopener noreferrer';
         matchIdDiv.style.fontSize = '10px';
@@ -239,7 +245,9 @@ export const ChartJSLineExample: React.FC<ChartJSLineExampleProps> = ({ phase = 
         matchIdDiv.style.fontFamily = 'Rethink Sans';
         matchIdDiv.style.textDecoration = 'none';
         matchIdDiv.style.cursor = 'pointer';
-        matchIdDiv.textContent = `🔗 Match ID: ${player.matchId}`;
+        matchIdDiv.textContent = matchIdValue
+          ? `🔗 Match ID: ${matchIdValue}`
+          : 'Match ID no disponible';
         matchIdDiv.addEventListener('mouseenter', () => {
           matchIdDiv.style.textDecoration = 'underline';
           matchIdDiv.style.color = '#70ff30';

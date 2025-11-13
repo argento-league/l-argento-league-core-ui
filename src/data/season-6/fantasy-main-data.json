@@ -46,7 +46,7 @@
       "record": 50874,
       "matchId": "8549695062",
       "heroImage": "drow.png",
-      "team": "La Manada"
+      "team": "La Manada" ,
     },
     {
       "statistic": "Wards Colocados",
@@ -185,7 +185,7 @@
         "player": "Monthy",
         "matchId": "8549695062",
         "heroImage": "drow.png",
-        "team": "La Manada"
+        "team": "La Manada" ,
         "netWorth": [728, 2164, 3830, 6628, 10737, 15921, 20107, 24627, 29810, 33837, 40396, 44058, 50874]
         },
         {

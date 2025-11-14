@@ -147,22 +147,22 @@
         "match": 19,
         "team1": "La guardería de sgg",
         "team2": "The Rats",
-        "score1": null,
-        "score2": null
+        "score1": 2,
+        "score2": 0
       },
       {
         "match": 20,
         "team1": "La Manada ",
         "team2": "Team Mafia",
-        "score1": null,
-        "score2": null
+        "score1": 2,
+        "score2": 0
       }
     ],
     "round-5": [
       {
         "match": 21,
-        "team1": "TBD",
-        "team2": "TBD",
+        "team1": "La Manada",
+        "team2": "La guardería de sgg",
         "score1": null,
         "score2": null
       }

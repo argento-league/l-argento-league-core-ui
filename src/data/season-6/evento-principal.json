@@ -163,14 +163,14 @@
         "match": 21,
         "team1": "La Manada",
         "team2": "La guardería de sgg",
-        "score1": null,
-        "score2": null
+        "score1": 2,
+        "score2": 0
       }
     ],
     "round-6": [
       {
         "match": 22,
-        "team1": "TBD",
+        "team1": "La Manada",
         "team2": "The Real Server",
         "score1": null,
         "score2": null

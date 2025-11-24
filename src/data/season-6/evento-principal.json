@@ -182,8 +182,8 @@
       "match": 23,
       "team1": "La Manada",
       "team2": "The Royals",
-      "score1": null,
-      "score2": null
+      "score1": 2,
+      "score2": 3
     }
   ]
 }

@@ -60,8 +60,8 @@
         "match": 8,
         "team1": "The Royals",
         "team2": "La Manada",
-        "score1": null,
-        "score2": null
+        "score1": 3,
+        "score2": 2
       }
     ]
   },

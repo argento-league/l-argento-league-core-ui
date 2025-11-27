@@ -5,7 +5,6 @@ import { FeatureCard } from "./cards/Features";
 import { NewsCard } from "./cards/News";
 import { SocialCard } from "./cards/Socials";
 import { Container } from "../common/Container";
-import { CURRENT_SEASON_COLORS } from "../../constants/season-colors";
 
 type MainRootContainerProps = {
   backgroundImage?: string;
@@ -96,7 +95,7 @@ export const MainContent = () => {
             colTablet="1 / 13"
             rowTablet="10 / 11"
           >
-            <SocialCard iconColor={CURRENT_SEASON_COLORS.primary} />
+            <SocialCard iconColor="#fabf4a" />
           </GridBox>
           <GridBox
             col="1 / 7"

@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { CURRENT_SEASON_COLORS } from "../../../constants/season-colors";
 
 const SeasonWinnerContainer = styled.section`
   height: 100%;
-  background: transparent;
+  background: rgba(80, 255, 16, 0.05);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -12,7 +13,7 @@ const SeasonWinnerContainer = styled.section`
   box-sizing: border-box;
   border-radius: 16px;
   font-family: "Outfit", sans-serif;
-  border: 1px solid #fabf4a;
+  border: 1px solid ${CURRENT_SEASON_COLORS.primary};
 
   @media (max-width: 1024px) {
     flex-direction: column;
@@ -55,7 +56,7 @@ const WinnerSeason = styled.p`
 
 const ViewMore = styled(Link)`
   font-size: 16px;
-  color: #fabf4a;
+  color: ${CURRENT_SEASON_COLORS.primary};
   text-decoration: none;
   cursor: pointer;
   padding: 8px 16px;
@@ -71,15 +72,15 @@ export const SeasonWinner = () => {
     <SeasonWinnerContainer>
       <WinnerInfoContainer id="contenedor">
         <SeasonWinnerImage
-          src={"/images/teams/season-5/escuadron-anti-tonkas.png"}
-          aria-label="fastasmas-logo"
+          src={"/images/teams/season-6/the-royals.png"}
+          aria-label="the-royals-logo"
         />
         <WinnerTextContainer>
-          <WinnerTeam>Team E. Anti-Tonkas</WinnerTeam>
-          <WinnerSeason>Campeones Season 5</WinnerSeason>
+          <WinnerTeam>The Royals</WinnerTeam>
+          <WinnerSeason>Campeones Season 6</WinnerSeason>
         </WinnerTextContainer>
       </WinnerInfoContainer>
-      <ViewMore id="ver-mas" to="/season-5">
+      <ViewMore id="ver-mas" to="/current-season">
         Ver season
       </ViewMore>
     </SeasonWinnerContainer>

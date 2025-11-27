@@ -6,7 +6,6 @@ import youtube from "../../../assets/social-media-icons/youtube.svg";
 import whatsapp from "../../../assets/social-media-icons/whatsapp.svg";
 import { Link } from "react-router-dom";
 import { StyledSvg } from "../../common/StyledSVG";
-import { CURRENT_SEASON_COLORS } from "../../../constants/season-colors";
 
 const SocialCardContainer = styled.div`
   height: 100%;
@@ -53,7 +52,7 @@ const IconLogoContainer = styled.div`
   gap: 16px;
 `;
 
-const defaultIconColor = CURRENT_SEASON_COLORS.primary;
+const defaultIconColor = "#fabf4a"; // Amarillo
 
 type SocialCardProps = {
   iconColor?: string;

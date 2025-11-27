@@ -12,6 +12,10 @@ export const SEASON_COLORS = {
     primary: "rgba(80, 255, 16, 1)", // Verde brillante
     secondary: "#000000", // Negro
   },
+  season7: {
+    primary: "rgba(252, 167, 223, 1)", // Rosa (#FCA7DF)
+    secondary: "rgba(252, 167, 223, 0.6)", // Rosa con opacidad
+  },
 } as const;
 
 export type SeasonKey = keyof typeof SEASON_COLORS;

@@ -65,6 +65,7 @@ const NewsButtonsContainer = styled.div`
 export const RegisterButton = styled(Button)`
   background-color: ${SEASON_COLORS.season7.primary};
   color: #000000;
+  display: none;
 `;
 
 export const NewsCard = () => {

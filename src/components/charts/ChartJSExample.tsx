@@ -148,8 +148,8 @@ export const ChartJSExample: React.FC<ChartJSExampleProps> = ({ phase = 'fase' }
   // Colores neón como en tu diseño
   const neonColors = CHART_NEON_COLORS;
 
-// Tooltip HTML personalizado con imagen del héroe
-const getOrCreateTooltip = (_chart: any) => {
+  // Tooltip HTML personalizado con imagen del héroe
+  const getOrCreateTooltip = (_chart: any) => {
   let tooltipEl = document.querySelector('div.chartjs-tooltip-kills') as HTMLElement | null;
 
   if (!tooltipEl) {
@@ -184,7 +184,7 @@ const getOrCreateTooltip = (_chart: any) => {
       (tooltipEl as any).isMouseOverTooltip = false;
       // Ocultar después de un pequeño delay para permitir movimiento del mouse
       setTimeout(() => {
-        if (!(tooltipEl as any).isMouseOverTooltip) {
+        if (tooltipEl && !(tooltipEl as any).isMouseOverTooltip) {
           tooltipEl.style.opacity = '0';
         }
       }, 150);
@@ -192,9 +192,9 @@ const getOrCreateTooltip = (_chart: any) => {
   }
 
   return tooltipEl;
-};
+  };
 
-const externalTooltipHandler = (context: any) => {
+  const externalTooltipHandler = (context: any) => {
   const { tooltip } = context;
   const tooltipEl = getOrCreateTooltip(context.chart) as HTMLElement;
 
@@ -209,17 +209,22 @@ const externalTooltipHandler = (context: any) => {
   // Mantener tooltip visible si el mouse está sobre él
   const isMouseOverTooltip = (tooltipEl as any).isMouseOverTooltip;
   
-  // Si el tooltip debe ocultarse pero el mouse está sobre él, mantenerlo visible
-  if (tooltip.opacity === 0 && !isMouseOverTooltip) {
-    tooltipEl.style.opacity = '0';
-    return;
+  // Si hay datos del tooltip, siempre renderizarlo (incluso si opacity es 0 temporalmente)
+  // Esto previene que se oculte cuando se mueve rápido entre elementos
+  if (!tooltip.body) {
+    // Solo ocultar si no hay datos Y el mouse no está sobre el tooltip
+    if (tooltip.opacity === 0 && !isMouseOverTooltip) {
+      tooltipEl.style.opacity = '0';
+    }
+    return; // No hay datos, no renderizar
   }
   
-  // Si el mouse está sobre el tooltip, mantenerlo visible incluso si Chart.js dice opacity 0
+  // Si el mouse está sobre el tooltip, mantenerlo visible
   if (isMouseOverTooltip && tooltip.opacity === 0) {
     return; // Mantener visible
   }
 
+  // Si hay datos, renderizar el tooltip
   if (tooltip.body) {
     const dataIndex = tooltip.dataPoints[0].dataIndex;
     const data = killsData[dataIndex];
@@ -317,7 +322,7 @@ const externalTooltipHandler = (context: any) => {
   tooltipEl.style.opacity = '1';
   tooltipEl.style.left = canvasRect.left + tooltip.caretX + 'px';
   tooltipEl.style.top = canvasRect.top + tooltip.caretY + 'px';
-};
+  };
 
   const data = {
     labels: killsData.map(item => 

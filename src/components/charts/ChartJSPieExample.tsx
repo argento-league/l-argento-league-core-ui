@@ -142,7 +142,7 @@ const getOrCreateTooltip = (_chart: any) => {
     tooltipEl.style.opacity = '0';
     tooltipEl.style.pointerEvents = 'auto';
     tooltipEl.style.position = 'fixed';
-    tooltipEl.style.transform = 'translate(-50%, 0)';
+    tooltipEl.style.transform = 'translate(0, -50%)'; // Se ajustará dinámicamente en el handler
     tooltipEl.style.transition = 'all .1s ease';
     tooltipEl.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.5)';
     tooltipEl.style.padding = '12px';
@@ -164,7 +164,7 @@ const getOrCreateTooltip = (_chart: any) => {
     tooltipEl.addEventListener('mouseleave', () => {
       (tooltipEl as any).isMouseOverTooltip = false;
       setTimeout(() => {
-        if (!(tooltipEl as any).isMouseOverTooltip) {
+        if (tooltipEl && !(tooltipEl as any).isMouseOverTooltip) {
           tooltipEl.style.opacity = '0';
         }
       }, 150);
@@ -189,26 +189,32 @@ export const ChartJSPieExample: React.FC<ChartJSPieExampleProps> = ({ title, dat
   const dataSource = phase === 'fase' ? fantasyData : fantasyMainData;
   const data = dataSource.rankings[dataKey].slice(0, 3);
   
-const externalTooltipHandler = (context: any) => {
-  const { tooltip } = context;
-  const tooltipEl = getOrCreateTooltip(context.chart) as HTMLElement;
+  const externalTooltipHandler = (context: any) => {
+    const { tooltip } = context;
+    const tooltipEl = getOrCreateTooltip(context.chart) as HTMLElement;
 
-  // Hide all other tooltips when showing a new one
-  const allTooltips = document.querySelectorAll('div[class*="chartjs-tooltip"]');
-  allTooltips.forEach((el: any) => {
-    if (el !== tooltipEl) {
-      el.style.opacity = '0';
-    }
-  });
+    // Hide all other tooltips when showing a new one
+    const allTooltips = document.querySelectorAll('div[class*="chartjs-tooltip"]');
+    allTooltips.forEach((el: any) => {
+      if (el !== tooltipEl) {
+        el.style.opacity = '0';
+      }
+    });
 
   // Mantener tooltip visible si el mouse está sobre él
   const isMouseOverTooltip = (tooltipEl as any).isMouseOverTooltip;
   
-  if (tooltip.opacity === 0 && !isMouseOverTooltip) {
-    tooltipEl.style.opacity = '0';
-    return;
+  // Si hay datos del tooltip, siempre renderizarlo (incluso si opacity es 0 temporalmente)
+  // Esto previene que se oculte cuando se mueve rápido entre elementos
+  if (!tooltip.body) {
+    // Solo ocultar si no hay datos Y el mouse no está sobre el tooltip
+    if (tooltip.opacity === 0 && !isMouseOverTooltip) {
+      tooltipEl.style.opacity = '0';
+    }
+    return; // No hay datos, no renderizar
   }
   
+  // Si el mouse está sobre el tooltip, mantenerlo visible
   if (isMouseOverTooltip && tooltip.opacity === 0) {
     return; // Mantener visible
   }
@@ -230,17 +236,17 @@ const externalTooltipHandler = (context: any) => {
         leftCell.style.paddingRight = '10px';
         leftCell.style.textAlign = 'center';
         leftCell.style.width = '60px';
-      leftCell.style.background = 'rgba(80, 255, 16, 0.3)';
-      leftCell.style.borderRadius = '8px';
-      leftCell.style.padding = '8px';
+        leftCell.style.background = 'rgba(80, 255, 16, 0.3)';
+        leftCell.style.borderRadius = '8px';
+        leftCell.style.padding = '8px';
 
         // Hero icon
         const heroImg = document.createElement('img') as HTMLImageElement;
         heroImg.src = `/images/heroes/${itemData.heroImage}`;
-      heroImg.style.width = '60px';
-      heroImg.style.height = '60px';
-      heroImg.style.borderRadius = '8px';
-      heroImg.style.objectFit = 'cover';
+        heroImg.style.width = '60px';
+        heroImg.style.height = '60px';
+        heroImg.style.borderRadius = '8px';
+        heroImg.style.objectFit = 'cover';
         leftCell.appendChild(heroImg);
 
         mainRow.appendChild(leftCell);
@@ -309,11 +315,18 @@ const externalTooltipHandler = (context: any) => {
 
     const canvasRect = context.chart.canvas.getBoundingClientRect();
 
-  tooltipEl.style.opacity = '1';
-  tooltipEl.style.left = canvasRect.left + tooltip.caretX + 'px';
-  tooltipEl.style.top = canvasRect.top + tooltip.caretY + 'px';
+    // Mostrar tooltip si hay datos, incluso si Chart.js dice opacity 0
+    if (tooltip.body || isMouseOverTooltip) {
+      tooltipEl.style.opacity = '1';
+      // Posicionar a la derecha de la leyenda (a la derecha del canvas)
+      tooltipEl.style.left = (canvasRect.right + 20) + 'px'; // 20px de margen desde el borde derecho del canvas
+      tooltipEl.style.top = canvasRect.top + tooltip.caretY + 'px';
+      tooltipEl.style.transform = 'translate(0, -50%)'; // Centrar verticalmente
+    } else {
+      tooltipEl.style.opacity = '0';
+    }
   };
-  
+
   const chartData = {
     labels: data.map(item => 
       item.player.length > 15 ? item.player.substring(0, 15) + '...' : item.player

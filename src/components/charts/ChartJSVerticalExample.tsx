@@ -213,11 +213,17 @@ export const ChartJSVerticalExample: React.FC<ChartJSVerticalExampleProps> = ({ 
     // Mantener tooltip visible si el mouse está sobre él
     const isMouseOverTooltip = (tooltipEl as any).isMouseOverTooltip;
     
-    if (tooltip.opacity === 0 && !isMouseOverTooltip) {
-      tooltipEl.style.opacity = '0';
-      return;
+    // Si hay datos del tooltip, siempre renderizarlo (incluso si opacity es 0 temporalmente)
+    // Esto previene que se oculte cuando se mueve rápido entre elementos
+    if (!tooltip.body) {
+      // Solo ocultar si no hay datos Y el mouse no está sobre el tooltip
+      if (tooltip.opacity === 0 && !isMouseOverTooltip) {
+        tooltipEl.style.opacity = '0';
+      }
+      return; // No hay datos, no renderizar
     }
     
+    // Si el mouse está sobre el tooltip, mantenerlo visible
     if (isMouseOverTooltip && tooltip.opacity === 0) {
       return; // Mantener visible
     }

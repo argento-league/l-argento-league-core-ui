@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
@@ -212,6 +212,17 @@ export const ChartJSWardsExample: React.FC<ChartJSWardsExampleProps> = ({ phase 
   
   // Usar datos reales del JSON
   const wardsData = dataSource.rankings.wards.slice(0, 3);
+  
+  // Ocultar tooltips de otros charts cuando se muestra el tooltip de Wards
+  useEffect(() => {
+    if (hoveredIndex !== null) {
+      // Hide all chart tooltips when showing wards tooltip
+      const allTooltips = document.querySelectorAll('div[class*="chartjs-tooltip"]');
+      allTooltips.forEach((el: any) => {
+        el.style.opacity = '0';
+      });
+    }
+  }, [hoveredIndex]);
   
   return (
     <ChartCard

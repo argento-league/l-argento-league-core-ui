@@ -152,11 +152,17 @@ export const ChartJSLineExample: React.FC<ChartJSLineExampleProps> = ({ phase = 
     // Mantener tooltip visible si el mouse está sobre él
     const isMouseOverTooltip = (tooltipEl as any).isMouseOverTooltip;
     
-    if (tooltip.opacity === 0 && !isMouseOverTooltip) {
-      tooltipEl.style.opacity = '0';
-      return;
+    // Si hay datos del tooltip, siempre renderizarlo (incluso si opacity es 0 temporalmente)
+    // Esto previene que se oculte cuando se mueve rápido entre elementos
+    if (!tooltip.body) {
+      // Solo ocultar si no hay datos Y el mouse no está sobre el tooltip
+      if (tooltip.opacity === 0 && !isMouseOverTooltip) {
+        tooltipEl.style.opacity = '0';
+      }
+      return; // No hay datos, no renderizar
     }
     
+    // Si el mouse está sobre el tooltip, mantenerlo visible
     if (isMouseOverTooltip && tooltip.opacity === 0) {
       return; // Mantener visible
     }
@@ -173,8 +179,20 @@ export const ChartJSLineExample: React.FC<ChartJSLineExampleProps> = ({ phase = 
 
     // Display, position, and set styles for font
     tooltipEl.style.opacity = '1';
-    tooltipEl.style.left = canvasRect.left + tooltip.caretX + 'px';
-    tooltipEl.style.top = (canvasRect.top + tooltip.caretY - 20) + 'px';
+    // Posicionar tooltip fijo en la intersección de 50k networth y 0:00 tiempo
+    const chart = context.chart;
+    const xScale = chart.scales.x;
+    const yScale = chart.scales.y;
+    
+    // Calcular posición X para 0:00 (primer punto del eje X) + 30px a la derecha
+    const xPosition = xScale.getPixelForValue(0) + 175;
+    
+    // Calcular posición Y para 70k (máximo del eje Y)
+    const yPosition = yScale.getPixelForValue(60000);
+    
+    // Posicionar tooltip en esa intersección
+    tooltipEl.style.left = (canvasRect.left + xPosition) + 'px';
+    tooltipEl.style.top = (canvasRect.top + yPosition) + 'px';
     tooltipEl.style.font = tooltip.options.bodyFont.string;
     tooltipEl.style.padding = tooltip.options.padding + 'px ' + tooltip.options.padding + 'px';
     tooltipEl.style.pointerEvents = 'auto';
@@ -370,7 +388,7 @@ export const ChartJSLineExample: React.FC<ChartJSLineExampleProps> = ({ phase = 
       y: {
         beginAtZero: true,     // No comenzar en 0
         min: 0,             // Valor mínimo para el Net Worth (ajusta según tus datos)
-        max: 50000,             // Valor máximo para el Net Worth (ajusta según tus datos)
+        max: 60000,             // Valor máximo para el Net Worth (ajusta según tus datos)
         grid: {
           color: 'rgba(80, 255, 16, 0.2)',
           lineWidth: 1,

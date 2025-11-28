@@ -149,7 +149,7 @@ const getOrCreateTooltip = (_chart: any) => {
     tooltipEl.style.opacity = '0';
     tooltipEl.style.pointerEvents = 'auto';
     tooltipEl.style.position = 'fixed';
-    tooltipEl.style.transform = 'translate(-50%, 0)';
+    tooltipEl.style.transform = 'translate(-100%, 0)'; // Salir hacia la izquierda
     tooltipEl.style.transition = 'all .1s ease';
     tooltipEl.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.5)';
     tooltipEl.style.padding = '12px';
@@ -163,7 +163,19 @@ const getOrCreateTooltip = (_chart: any) => {
     tooltipEl.appendChild(table);
     document.body.appendChild(tooltipEl);
 
-    // No timer needed - tooltip stays visible until another is shown or scroll
+    // Mantener tooltip visible cuando el mouse está sobre él
+    (tooltipEl as any).isMouseOverTooltip = false;
+    tooltipEl.addEventListener('mouseenter', () => {
+      (tooltipEl as any).isMouseOverTooltip = true;
+    });
+    tooltipEl.addEventListener('mouseleave', () => {
+      (tooltipEl as any).isMouseOverTooltip = false;
+      setTimeout(() => {
+        if (!(tooltipEl as any).isMouseOverTooltip) {
+          tooltipEl.style.opacity = '0';
+        }
+      }, 150);
+    });
   }
 
   return tooltipEl;
@@ -198,9 +210,16 @@ export const ChartJSAssistsExample: React.FC<ChartJSAssistsExampleProps> = ({ ph
       }
     });
 
-    // NO ocultar el tooltip cuando opacity es 0, mantenerlo visible
-    if (tooltip.opacity === 0) {
-      return; // Mantener el tooltip visible
+    // Mantener tooltip visible si el mouse está sobre él
+    const isMouseOverTooltip = (tooltipEl as any).isMouseOverTooltip;
+    
+    if (tooltip.opacity === 0 && !isMouseOverTooltip) {
+      tooltipEl.style.opacity = '0';
+      return;
+    }
+    
+    if (isMouseOverTooltip && tooltip.opacity === 0) {
+      return; // Mantener visible
     }
 
     if (tooltip.body) {
@@ -299,7 +318,9 @@ export const ChartJSAssistsExample: React.FC<ChartJSAssistsExampleProps> = ({ ph
 
   tooltipEl.style.opacity = '1';
   tooltipEl.style.left = canvasRect.left + tooltip.caretX + 'px';
-  tooltipEl.style.top = canvasRect.top + tooltip.caretY + 'px';
+  // Posicionar arriba de la barra
+  tooltipEl.style.top = (canvasRect.top + tooltip.caretY - tooltipEl.offsetHeight - 10) + 'px';
+  tooltipEl.style.transform = 'translate(-100%, 0)'; // Mantener hacia la izquierda pero arriba
 };
 
   const data = {

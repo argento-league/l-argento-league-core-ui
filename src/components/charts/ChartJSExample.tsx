@@ -161,7 +161,7 @@ const getOrCreateTooltip = (_chart: any) => {
     tooltipEl.style.opacity = '0';
     tooltipEl.style.pointerEvents = 'auto';
     tooltipEl.style.position = 'fixed';
-    tooltipEl.style.transform = 'translate(-50%, 0)';
+    tooltipEl.style.transform = 'translate(0, 0)'; // Salir desde la derecha
     tooltipEl.style.transition = 'all .1s ease';
     tooltipEl.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.5)';
     tooltipEl.style.padding = '12px';
@@ -175,7 +175,20 @@ const getOrCreateTooltip = (_chart: any) => {
     tooltipEl.appendChild(table);
     document.body.appendChild(tooltipEl);
 
-    // No timer needed - tooltip stays visible until another is shown or scroll
+    // Mantener tooltip visible cuando el mouse está sobre él
+    (tooltipEl as any).isMouseOverTooltip = false;
+    tooltipEl.addEventListener('mouseenter', () => {
+      (tooltipEl as any).isMouseOverTooltip = true;
+    });
+    tooltipEl.addEventListener('mouseleave', () => {
+      (tooltipEl as any).isMouseOverTooltip = false;
+      // Ocultar después de un pequeño delay para permitir movimiento del mouse
+      setTimeout(() => {
+        if (!(tooltipEl as any).isMouseOverTooltip) {
+          tooltipEl.style.opacity = '0';
+        }
+      }, 150);
+    });
   }
 
   return tooltipEl;
@@ -193,10 +206,18 @@ const externalTooltipHandler = (context: any) => {
     }
   });
 
-  // NO ocultar el tooltip cuando opacity es 0, mantenerlo visible
-  // Solo actualizar cuando hay un nuevo tooltip
-  if (tooltip.opacity === 0) {
-    return; // Mantener el tooltip visible
+  // Mantener tooltip visible si el mouse está sobre él
+  const isMouseOverTooltip = (tooltipEl as any).isMouseOverTooltip;
+  
+  // Si el tooltip debe ocultarse pero el mouse está sobre él, mantenerlo visible
+  if (tooltip.opacity === 0 && !isMouseOverTooltip) {
+    tooltipEl.style.opacity = '0';
+    return;
+  }
+  
+  // Si el mouse está sobre el tooltip, mantenerlo visible incluso si Chart.js dice opacity 0
+  if (isMouseOverTooltip && tooltip.opacity === 0) {
+    return; // Mantener visible
   }
 
   if (tooltip.body) {

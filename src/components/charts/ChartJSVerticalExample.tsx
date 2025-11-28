@@ -149,7 +149,7 @@ const getOrCreateTooltip = (_chart: any) => {
     tooltipEl.style.opacity = '0';
     tooltipEl.style.pointerEvents = 'auto';
     tooltipEl.style.position = 'fixed';
-    tooltipEl.style.transform = 'translate(-50%, 0)';
+    tooltipEl.style.transform = 'translate(-50%, 0)'; // Posición original (centrado)
     tooltipEl.style.transition = 'all .1s ease';
     tooltipEl.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.5)';
     tooltipEl.style.padding = '12px';
@@ -163,7 +163,19 @@ const getOrCreateTooltip = (_chart: any) => {
     tooltipEl.appendChild(table);
     document.body.appendChild(tooltipEl);
 
-    // No timer needed - tooltip stays visible until another is shown or scroll
+    // Mantener tooltip visible cuando el mouse está sobre él
+    (tooltipEl as any).isMouseOverTooltip = false;
+    tooltipEl.addEventListener('mouseenter', () => {
+      (tooltipEl as any).isMouseOverTooltip = true;
+    });
+    tooltipEl.addEventListener('mouseleave', () => {
+      (tooltipEl as any).isMouseOverTooltip = false;
+      setTimeout(() => {
+        if (tooltipEl && !(tooltipEl as any).isMouseOverTooltip) {
+          tooltipEl.style.opacity = '0';
+        }
+      }, 150);
+    });
   }
 
   return tooltipEl;
@@ -198,9 +210,16 @@ export const ChartJSVerticalExample: React.FC<ChartJSVerticalExampleProps> = ({ 
       }
     });
 
-    // NO ocultar el tooltip cuando opacity es 0, mantenerlo visible
-    if (tooltip.opacity === 0) {
-      return; // Mantener el tooltip visible
+    // Mantener tooltip visible si el mouse está sobre él
+    const isMouseOverTooltip = (tooltipEl as any).isMouseOverTooltip;
+    
+    if (tooltip.opacity === 0 && !isMouseOverTooltip) {
+      tooltipEl.style.opacity = '0';
+      return;
+    }
+    
+    if (isMouseOverTooltip && tooltip.opacity === 0) {
+      return; // Mantener visible
     }
 
     if (tooltip.body) {

@@ -156,7 +156,19 @@ const getOrCreateTooltip = (_chart: any) => {
     tooltipEl.appendChild(table);
     document.body.appendChild(tooltipEl);
 
-    // No timer needed - tooltip stays visible until another is shown or scroll
+    // Mantener tooltip visible cuando el mouse está sobre él
+    (tooltipEl as any).isMouseOverTooltip = false;
+    tooltipEl.addEventListener('mouseenter', () => {
+      (tooltipEl as any).isMouseOverTooltip = true;
+    });
+    tooltipEl.addEventListener('mouseleave', () => {
+      (tooltipEl as any).isMouseOverTooltip = false;
+      setTimeout(() => {
+        if (!(tooltipEl as any).isMouseOverTooltip) {
+          tooltipEl.style.opacity = '0';
+        }
+      }, 150);
+    });
   }
 
   return tooltipEl;
@@ -189,9 +201,16 @@ const externalTooltipHandler = (context: any) => {
     }
   });
 
-  // NO ocultar el tooltip cuando opacity es 0, mantenerlo visible
-  if (tooltip.opacity === 0) {
-    return; // Mantener el tooltip visible
+  // Mantener tooltip visible si el mouse está sobre él
+  const isMouseOverTooltip = (tooltipEl as any).isMouseOverTooltip;
+  
+  if (tooltip.opacity === 0 && !isMouseOverTooltip) {
+    tooltipEl.style.opacity = '0';
+    return;
+  }
+  
+  if (isMouseOverTooltip && tooltip.opacity === 0) {
+    return; // Mantener visible
   }
 
     if (tooltip.body) {

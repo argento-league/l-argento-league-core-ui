@@ -177,6 +177,7 @@ const InfoIcon = styled.span`
   }
 `;
 
+
 const TooltipWrapper = styled.div`
   position: fixed;
   background: rgba(31, 30, 30, 0.6);
@@ -444,7 +445,7 @@ export const ChartJSRecordsExample: React.FC<ChartJSRecordsExampleProps> = ({ ph
     });
   };
 
-  const handleMouseEnter = (index: number, event: React.MouseEvent) => {
+  const handleIconMouseEnter = (index: number, event: React.MouseEvent) => {
     // Hide all chart tooltips when showing table tooltip
     const allTooltips = document.querySelectorAll('div[class*="chartjs-tooltip"]');
     allTooltips.forEach((el: any) => {
@@ -459,16 +460,28 @@ export const ChartJSRecordsExample: React.FC<ChartJSRecordsExampleProps> = ({ ph
     setHoveredRecord(index);
   };
 
-  const handleMouseLeave = () => {
-    // No timer - tooltip stays visible until another is shown or scroll
+  const handleRowMouseEnter = (index: number) => {
+    // Mantener tooltip visible cuando el mouse está sobre la fila
+    if (hoveredRecord === index) {
+      return; // Ya está visible
+    }
+    // Si el tooltip no está visible, no hacer nada (solo se activa desde el icono)
+  };
+
+  const handleRowMouseLeave = () => {
+    // Ocultar tooltip cuando el mouse sale de la fila (pero no si está sobre el tooltip)
+    setTimeout(() => {
+      setHoveredRecord(null);
+    }, 100);
   };
 
   const handleTooltipMouseEnter = () => {
-    // No timer needed
+    // Mantener tooltip visible cuando el mouse está sobre él
   };
 
   const handleTooltipMouseLeave = () => {
-    // No timer - tooltip stays visible until another is shown or scroll
+    // Ocultar tooltip cuando el mouse sale del tooltip
+    setHoveredRecord(null);
   };
 
   // Hide tooltip when scrolling
@@ -517,7 +530,11 @@ export const ChartJSRecordsExample: React.FC<ChartJSRecordsExampleProps> = ({ ph
           </RecordsHeader>
           
           {(activeTab === 'fantasy' ? records : participantsData).map((record, index) => (
-            <RecordRow key={index}>
+            <RecordRow 
+              key={index}
+              onMouseEnter={() => activeTab === 'fantasy' && handleRowMouseEnter(index)}
+              onMouseLeave={() => activeTab === 'fantasy' && handleRowMouseLeave()}
+            >
               <RecordType>
                 <RecordIcon>
                   {activeTab === 'fantasy' 
@@ -531,9 +548,7 @@ export const ChartJSRecordsExample: React.FC<ChartJSRecordsExampleProps> = ({ ph
               <RecordValue>
                 {activeTab === 'fantasy' && (
                   <InfoIcon
-                    data-tooltip-trigger="true"
-                    onMouseEnter={(e) => handleMouseEnter(index, e)}
-                    onMouseLeave={handleMouseLeave}
+                    onMouseEnter={(e) => handleIconMouseEnter(index, e)}
                   >
                     ?
                   </InfoIcon>

@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { useIsMobile } from "../../hooks/useIsMobile";
 import { Container } from "../common/Container";
 import { SocialCard } from "../home/cards/Socials";
 import { MainRootContainer } from "../home/MainContent";
@@ -7,7 +6,7 @@ import { DateCard } from "./cards/Dates";
 import { MainCard } from "./cards/Main";
 import { BoxProps, GridBox } from "../common/GridBox";
 import styled from "styled-components";
-import { CURRENT_SEASON_COLORS } from "../../constants/season-colors";
+import { useSeasonTheme } from "../../context/SeasonThemeContext";
 
 type GridElementProps = {
   card: string;
@@ -15,7 +14,7 @@ type GridElementProps = {
   component: ReactNode;
 };
 
-const bentoElements: GridElementProps[] = [
+const getBentoElements = (iconColor: string): GridElementProps[] => [
   {
     card: "MainCard",
     gridProps: {
@@ -27,17 +26,6 @@ const bentoElements: GridElementProps[] = [
     },
     component: <MainCard />,
   },
-  // {
-  //   card: "LookingForTeamCard",
-  //   gridProps: {
-  //     col: "13 / 21",
-  //     row: "3 / 5",
-  //     colTablet: "1 / 13",
-  //     rowTablet: "5 / 7",
-  //     backgroundColor: "inherit",
-  //   },
-  //   component: <LookingForTeamCard />,
-  // },
   {
     card: "SocialCard",
     gridProps: {
@@ -47,7 +35,7 @@ const bentoElements: GridElementProps[] = [
       rowTablet: "6 / 7",
       backgroundColor: "inherit",
     },
-    component: <SocialCard iconColor={CURRENT_SEASON_COLORS.primary} />,
+    component: <SocialCard iconColor={iconColor} />,
   },
   {
     card: "DateCard",
@@ -76,18 +64,11 @@ const MainContentGroup = styled.div`
 `;
 
 export const CurrentSeasonGrid = () => {
-  const isMobile = useIsMobile(720);
-  const backgroundImage = isMobile
-    ? "/mobile-season-5-background.png"
-    : "/images/NewsCardBackgroundImage.png";
+  const theme = useSeasonTheme();
+  const bentoElements = getBentoElements(theme.colors.primary);
 
   return (
-    <MainRootContainer
-      backgroundImage={backgroundImage}
-      backgroundBlendMode="normal"
-      background="rgba(0, 0, 0, 0.3)"
-      backgroundPosition="center"
-    >
+    <MainRootContainer noBackground>
       <Container>
         <MainContentGroup>
           {bentoElements.map((element) => (

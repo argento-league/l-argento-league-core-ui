@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { SEASON6_TOURNAMENT_DATA } from "../../../data/brackets/season6-tournamentData";
 import { TOURNAMENT_DATA } from "../../../data/brackets/tournamentData";
-import season6EventoPrincipal from "../../../data/season-6/evento-principal.json";
-import season6Teams from "../../../data/season-6/teams.json";
+import { getSeasonEventoPrincipal, getSeasonTeams, type SeasonNumber } from "../../../data/season-data";
 
 // Add this declaration to extend the Window interface
 declare global {
@@ -88,23 +87,16 @@ const getTeamLogo = (teamName: string, season: number): string | null => {
     return season5Logos[teamName] || null;
   }
   
-  // For Season 6, use findTeamData with multiple fallbacks
+  // For Season 6/7, use findTeamData con datos de la temporada
   if (teamName === "TBD") return null;
-  
-  const allTeams = Object.values(season6Teams);
-  console.log('Looking for team:', teamName, 'in season6Teams');
-  console.log('Available teams:', allTeams.map((t: any) => t.name));
-  
+  if (season !== 6 && season !== 7) return null;
+
+  const seasonTeams = getSeasonTeams(season as SeasonNumber);
+  const allTeams = Object.values(seasonTeams);
   const teamEntry = findTeamData(teamName, allTeams);
-  console.log('Found team entry:', teamEntry);
-  
   if (teamEntry) {
-    const logoPath = `/images/teams/season-${season}/${teamEntry.logo}`;
-    console.log('Returning logo path:', logoPath);
-    return logoPath;
+    return `/images/teams/season-${season}/${teamEntry.logo}`;
   }
-  
-  console.log('No logo found for:', teamName);
   return null;
 };
 
@@ -254,11 +246,7 @@ const convertEventoPrincipalToBrackets = (eventoData: any) => {
 };
 
 const MainEvent = ({ season = 6 }: MainEventProps) => {
-  const [loaded, setLoaded] = useState(false);
-  
   useEffect(() => {
-    if (loaded) return;
-    
     // Clear any existing brackets-viewer content
     const existingViewer = document.querySelector('.brackets-viewer');
     if (existingViewer) {
@@ -322,7 +310,7 @@ const MainEvent = ({ season = 6 }: MainEventProps) => {
     padding: 8px 16px !important;
     border-radius: 8px !important;
     border: 1px solid #50ff10 !important;
-    box-shadow: 0 4px 8px rgba(80, 255, 16, 0.2) !important;
+    box-shadow: 0 4px 8px color-mix(in srgb, var(--season-primary) 20%, transparent) !important;
   }
   
   /* Add team logos to participants */
@@ -415,13 +403,13 @@ const MainEvent = ({ season = 6 }: MainEventProps) => {
 `;
     document.head.appendChild(style);
     
-    // Select data based on season
+    // Select data based on season (S5 propio; S6/S7 desde season-data)
+    const eventoPrincipal = season === 5 ? null : getSeasonEventoPrincipal(season as SeasonNumber);
     let tournamentData;
     if (season === 5) {
       tournamentData = TOURNAMENT_DATA;
     } else {
-      // Para Season 6, usar el JSON simple
-      tournamentData = convertEventoPrincipalToBrackets(season6EventoPrincipal);
+      tournamentData = convertEventoPrincipalToBrackets(eventoPrincipal);
     }
     
     window.bracketsViewer.render(
@@ -564,12 +552,14 @@ const MainEvent = ({ season = 6 }: MainEventProps) => {
                   const team1Name = team1El.textContent?.trim().replace(/^.*?img.*?>(.*)$/, '$1').trim();
                   const team2Name = team2El.textContent?.trim().replace(/^.*?img.*?>(.*)$/, '$1').trim();
                   
-                  // Find match in event data
-                  const allRounds = [
-                    ...Object.values(season6EventoPrincipal['upper-bracket']),
-                    ...Object.values(season6EventoPrincipal['lower-bracket']),
-                    ...season6EventoPrincipal['grand-final']
-                  ];
+                  // Find match in event data (usar mismo eventoPrincipal que para el bracket)
+                  const allRounds = eventoPrincipal
+                    ? [
+                        ...Object.values(eventoPrincipal['upper-bracket']),
+                        ...Object.values(eventoPrincipal['lower-bracket']),
+                        ...(eventoPrincipal['grand-final'] || [])
+                      ]
+                    : [];
                   
                   for (const round of allRounds) {
                     if (Array.isArray(round)) {
@@ -601,8 +591,7 @@ const MainEvent = ({ season = 6 }: MainEventProps) => {
         }
       });
       
-      setLoaded(true);
-    }, 100);
+      }, 100);
     
     // Cleanup function
     return () => {
@@ -611,7 +600,7 @@ const MainEvent = ({ season = 6 }: MainEventProps) => {
         existingViewer.innerHTML = '';
       }
     };
-  }, []);
+  }, [season]);
 
   return (
     <div 

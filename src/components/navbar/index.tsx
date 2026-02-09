@@ -5,15 +5,16 @@ import { useIsMobile } from "../../hooks/useIsMobile";
 import { Container } from "../common/Container";
 import { StyledSvg } from "../common/StyledSVG";
 import burgerIcon from "../../assets/common/icons/bars-3.svg";
+import { CURRENT_SEASON_COLORS } from "../../constants/season-colors";
 
 const NAV_LINKS = [
   { to: "/", label: "Inicio" },
-  { to: "/current-season", label: "Season 6" },
+  { to: "/current-season", label: "Season 7" },
   { to: "/fantasy", label: "Fantasy" },
-  // { to: "/staff", label: "Staff" },
 ];
 
 const SEASONS_DROPDOWN = [
+  { to: "/season-6", label: "Season 6" },
   { to: "/season-5", label: "Season 5" },
   { to: "/season-4", label: "Season 4" },
 ];
@@ -65,6 +66,8 @@ function DesktopNavbarLinks({ currentPath }: { currentPath: string }) {
         dropdownOpen={dropdownOpen}
         setDropdownOpen={setDropdownOpen}
       />
+      {/* Staff oculto hasta que esté terminada la página */}
+      {/* <HeaderLink to="/staff" active={currentPath === "/staff" ? "true" : undefined}>Staff</HeaderLink> */}
     </DesktopLinkContainer>
   );
 }
@@ -154,6 +157,8 @@ function MobileNavbarLinks({
           {season.label}
         </HeaderLink>
       ))}
+      {/* Staff oculto hasta que esté terminada la página */}
+      {/* <HeaderLink to="/staff" onClick={onNavigate} active={currentPath === "/staff" ? "true" : undefined}>Staff</HeaderLink> */}
     </MobileLinkContainer>
   );
 }
@@ -223,6 +228,9 @@ const MobileLinkContainer = styled.div`
   gap: 8px;
 `;
 
+const navActiveBg = (CURRENT_SEASON_COLORS as { navActiveBg?: string }).navActiveBg ?? "rgba(252, 167, 223, 0.2)";
+const navHoverBg = (CURRENT_SEASON_COLORS as { navHoverBg?: string }).navHoverBg ?? "rgba(252, 167, 223, 0.1)";
+
 const HeaderLink = styled(Link)<{ active?: string | undefined }>`
   display: flex;
   padding: 8px 16px;
@@ -234,10 +242,10 @@ const HeaderLink = styled(Link)<{ active?: string | undefined }>`
   font-size: 16px;
   font-family: "Outfit", sans-serif;
   font-weight: 700;
-  background-color: ${({ active }) => (active ? "rgba(80, 255, 16, 0.2)" : "transparent")};
+  background-color: ${({ active }) => (active ? navActiveBg : "transparent")};
   transition: background 0.2s, color 0.2s;
   &:hover {
-    background-color: ${({ active }) => (active ? "rgba(80, 255, 16, 0.2)" : "rgba(80, 255, 16, 0.1)")};
+    background-color: ${({ active }) => (active ? navActiveBg : navHoverBg)};
     font-weight: 700;
   }
 `;
@@ -321,13 +329,13 @@ const DropdownButton = styled.button<{ active?: string }>`
   font-size: 16px;
   font-family: "Outfit", sans-serif;
   font-weight: 700;
-  background-color: ${({ active }) => (active ? "rgba(80, 255, 16, 0.2)" : "transparent")};
+  background-color: ${({ active }) => (active ? navActiveBg : "transparent")};
   border: none;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
   
   &:hover {
-    background-color: ${({ active }) => (active ? "rgba(80, 255, 16, 0.2)" : "rgba(80, 255, 16, 0.1)")};
+    background-color: ${({ active }) => (active ? navActiveBg : navHoverBg)};
     font-weight: 700;
   }
 `;
@@ -353,11 +361,11 @@ const DropdownItem = styled(Link)<{ active?: string }>`
   font-family: "Outfit", sans-serif;
   font-size: 14px;
   font-weight: 500;
-  background-color: ${({ active }) => (active ? "rgba(80, 255, 16, 0.2)" : "transparent")};
+  background-color: ${({ active }) => (active ? navActiveBg : "transparent")};
   transition: background 0.2s;
   
   &:hover {
-    background-color: ${({ active }) => (active ? "rgba(80, 255, 16, 0.2)" : "rgba(80, 255, 16, 0.1)")};
+    background-color: ${({ active }) => (active ? navActiveBg : navHoverBg)};
   }
   
   &:first-child {

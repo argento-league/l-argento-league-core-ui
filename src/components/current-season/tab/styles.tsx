@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { CURRENT_SEASON_COLORS } from "../../../constants/season-colors";
 
 export const TabsContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(5px);
-  border-bottom: 1px solid rgba(80, 255, 16, 0.2);
+  border-bottom: 1px solid color-mix(in srgb, var(--season-primary) 20%, transparent);
   padding-top: 16px;
   box-sizing: border-box;
   color: white;
@@ -74,9 +73,9 @@ export const Tabs = styled.div<TabsProps>`
     transform: translateX(-50%);
     width: ${({ selected }) => selected ? "100%" : "0%"};
     height: 3px;
-    background: ${CURRENT_SEASON_COLORS.primary};
+    background: var(--season-primary);
     transition: width 0.3s ease;
-    box-shadow: 0 0 10px ${CURRENT_SEASON_COLORS.primary};
+    box-shadow: 0 0 10px var(--season-primary);
   }
 
   @media (max-width: 768px) {

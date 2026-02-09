@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import { GroupTeam, GroupData } from "../../../types/teams";
 import season5Teams from "../../../data/season-5/teams.json";
-import season6Teams from "../../../data/season-6/teams.json";
 import season5Jornadas from "../../../data/season-5/jornadas.json";
-import season6Jornadas from "../../../data/season-6/jornadas.json";
+import { getSeasonTeams, getSeasonJornadas, type SeasonNumber } from "../../../data/season-data";
 import { ReactNode } from "react";
 import { StyledSvg } from "@components/common/StyledSVG";
 import arrowUp from "@assets/common/icons/arrow-up.svg";
@@ -11,7 +10,6 @@ import arrowDown from "@assets/common/icons/arrow-down.svg";
 import close from "@assets/common/icons/close.svg";
 import { MatchScheduleContent } from "./MatchSchedule";
 import { useIsMobile } from "@hooks/useIsMobile";
-import { CURRENT_SEASON_COLORS } from "../../../constants/season-colors";
 
 interface MatchResult {
   team1: string;
@@ -193,8 +191,8 @@ export const GroupStageContent = ({ season = 6 }: GroupStageContentProps) => {
   const isMobile = useIsMobile(768);
   
   // Select data based on season
-  const teamsData = season === 5 ? season5Teams : season6Teams;
-  const jornadasData = season === 5 ? season5Jornadas : season6Jornadas;
+  const teamsData = season === 5 ? season5Teams : getSeasonTeams(season as SeasonNumber);
+  const jornadasData = season === 5 ? season5Jornadas : getSeasonJornadas(season as SeasonNumber);
   
   const groupsData = createGroupData(teamsData, jornadasData);
   
@@ -231,10 +229,14 @@ export const GroupStageContent = ({ season = 6 }: GroupStageContentProps) => {
                     <TeamStatus position={index + 1} isMobile={isMobile} />
                   </PositionCell>
                   <TeamCell>
-                    <TeamLogo
-                      src={`/images/teams/season-${season}/${team.logo}`}
-                      alt={team.name}
-                    />
+                    {team.name === "TBD" || team.name.toUpperCase() === "TBD" ? (
+                      <TbdPlaceholder>TBD</TbdPlaceholder>
+                    ) : (
+                      <TeamLogo
+                        src={`/images/teams/season-${season}/${team.logo}`}
+                        alt={team.name}
+                      />
+                    )}
                     <TeamName>{team.name}</TeamName>
                   </TeamCell>
                   <RecordCell>
@@ -342,7 +344,7 @@ const TableContainer = styled.div`
 const TableHeader = styled.div`
   display: grid;
   grid-template-columns: 40px 1fr 80px 80px;
-  background-color: ${CURRENT_SEASON_COLORS.primary};
+  background-color: var(--season-primary);
   padding: 8px 16px;
   gap: 16px;
   
@@ -415,6 +417,21 @@ const TeamLogo = styled.img`
   height: 32px;
   border-radius: 4px;
   object-fit: cover;
+`;
+
+const TbdPlaceholder = styled.div`
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333;
+  color: #888;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
 `;
 
 const TeamName = styled.span`

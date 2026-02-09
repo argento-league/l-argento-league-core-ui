@@ -4,7 +4,6 @@ import {
   INFORMATION_ENUM,
 } from "../../../constants/current-season/information";
 import { useState } from "react";
-import { CURRENT_SEASON_COLORS } from "../../../constants/season-colors";
 
 export const ContentListItem = styled.li`
   font-size: 16px;
@@ -27,7 +26,7 @@ export const ContentTitle = styled.p`
 
 const ContentContainer = styled.div`
   padding: 24px;
-  border: 1px solid ${CURRENT_SEASON_COLORS.primary};
+  border: 1px solid var(--season-primary);
   border-radius: 16px;
   font-family: Rethink Sans, sans-serif;
   gap: 10px;
@@ -42,8 +41,8 @@ type MenuItemContainerProps = {
 
 const MenuItemContainer = styled.div<MenuItemContainerProps>`
   padding: 16px;
-  background-color: ${(props) => (props.isSelected ? "rgba(80, 255, 16, 0.2)" : "black")};
-  border: ${(props) => (props.hasBorder ? `1px solid ${CURRENT_SEASON_COLORS.primary}` : "none")};
+  background-color: ${(props) => (props.isSelected ? "color-mix(in srgb, var(--season-primary) 20%, transparent)" : "black")};
+  border: ${(props) => (props.hasBorder ? `1px solid var(--season-primary)` : "none")};
   color: "white";
   border-radius: 16px;
   cursor: pointer;
@@ -53,7 +52,7 @@ const MenuItemContainer = styled.div<MenuItemContainerProps>`
   transition: background-color 0.2s ease;
   
   &:hover {
-    background-color: ${(props) => (props.isSelected ? "rgba(80, 255, 16, 0.2)" : "rgba(80, 255, 16, 0.1)")};
+    background-color: ${(props) => (props.isSelected ? "color-mix(in srgb, var(--season-primary) 20%, transparent)" : "color-mix(in srgb, var(--season-primary) 10%, transparent)")};
   }
 `;
 

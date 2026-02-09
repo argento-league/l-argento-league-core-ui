@@ -1,3 +1,8 @@
+:root {
+  --season-primary: rgba(252, 167, 223, 1);
+  --season-secondary: rgba(252, 167, 223, 0.6);
+}
+
 body {
   margin: 0;
   padding: 0;

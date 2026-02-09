@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { CURRENT_SEASON_COLORS } from "../../../constants/season-colors";
 
 const DatesBox = styled.div`
   padding: 24px 32px;
@@ -18,7 +17,7 @@ const DatesBox = styled.div`
 
 const DatesTitle = styled.div`
   padding-bottom: 8px;
-  border-bottom: 1px solid ${CURRENT_SEASON_COLORS.primary};
+  border-bottom: 1px solid var(--season-primary);
   color: #ffffff;
   font-family: "Outfit", sans-serif;
   font-weight: 600;
@@ -57,25 +56,25 @@ export const DateCard = () => {
         <DateText>
           Presentación
         </DateText>
-        <DateText style={{ textAlign: "end" }}>Domingo 05 oct</DateText>
+        <DateText style={{ textAlign: "end" }}>Lunes 09 feb</DateText>
       </DatesRow>
       <DatesRow>
         <DateText>
           Fase de grupos
         </DateText>
-        <DateText style={{ textAlign: "end" }}>06 oct - 26 oct</DateText>
+        <DateText style={{ textAlign: "end" }}>10 feb - 01 mar</DateText>
       </DatesRow>
       <DatesRow>
         <DateText>
           Evento principal
         </DateText>
-        <DateText style={{ textAlign: "end" }}>27 oct - 22 nov</DateText>
+        <DateText style={{ textAlign: "end" }}>02 mar - 28 mar</DateText>
       </DatesRow>
       <DatesRow>
         <DateText>
           Gran final
         </DateText>
-        <DateText style={{ textAlign: "end" }}>Domingo 23 nov</DateText>
+        <DateText style={{ textAlign: "end" }}>Domingo 29 mar</DateText>
       </DatesRow>
     </DatesBox>
   );

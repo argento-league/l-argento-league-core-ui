@@ -1,7 +1,7 @@
 import style from "styled-components";
 import { Badge } from "../badge/badge";
 import season5Teams from "../../../../data/season-5/teams.json";
-import season6Teams from "../../../../data/season-6/teams.json";
+import { getSeasonTeams, type SeasonNumber } from "../../../../data/season-data";
 
 const TeamContainer = style.div`
     display: flex;
@@ -84,7 +84,7 @@ const findTeamData = (teamName: string, teams: any) => {
 
 // Helper function to find team logo
 const findTeamLogo = (teamName: string, season: number = 5): string => {
-  const teams = season === 5 ? season5Teams : season6Teams;
+  const teams = season === 5 ? season5Teams : getSeasonTeams(season as SeasonNumber);
   const teamData = findTeamData(teamName, teams);
   
   if (teamData) {

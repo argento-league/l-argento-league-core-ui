@@ -4,8 +4,7 @@ import { useIsMobile } from "../../../hooks/useIsMobile";
 import { useTeamNavigation } from "../../../hooks/useTeamNavigation";
 import { TeamJsonType } from "../../../types/teams";
 import season5Teams from "../../../data/season-5/teams.json";
-import season6Teams from "../../../data/season-6/teams.json";
-import { CURRENT_SEASON_COLORS } from "../../../constants/season-colors";
+import { getSeasonTeams, type SeasonNumber } from "../../../data/season-data";
 
 type TeamSelectionContentProps = {
   season?: number;
@@ -15,8 +14,8 @@ export const TeamSelectionContent = ({ season = 6 }: TeamSelectionContentProps) 
   const [selectedTeam, setSelectedTeam] = useState("");
   const isMobile = useIsMobile(768);
   
-  // Select team data based on season
-  const teamJson = season === 5 ? season5Teams : season6Teams;
+  // Select team data based on season (S5 propio; S6/S7 desde season-data para no alterar S6)
+  const teamJson = season === 5 ? season5Teams : getSeasonTeams(season as SeasonNumber);
     
   const { goToPreviousTeam, goToNextTeam, teams } = useTeamNavigation(
     selectedTeam,
@@ -210,11 +209,11 @@ const TeamLogoCard = styled.div<TeamLogoCardProps>`
   align-items: center;
   padding: 16px 16px 8px 16px;
   border-radius: 8px;
-  border: 1px solid ${CURRENT_SEASON_COLORS.primary};
+  border: 1px solid var(--season-primary);
   min-width: 200px;
   height: 124px;
   text-align: center;
-  background-color: ${(props) => (props.isSelected ? `${CURRENT_SEASON_COLORS.primary}1A` : "inherit")};
+  background-color: ${(props) => (props.isSelected ? "color-mix(in srgb, var(--season-primary) 10%, transparent)" : "inherit")};
 `;
 
 const TeamInformationContainer = styled.div`
@@ -254,7 +253,7 @@ const ArrowButton = styled.button`
   padding: 4px 8px;
 
   &:hover {
-    color: ${CURRENT_SEASON_COLORS.primary};
+    color: var(--season-primary);
   }
 `;
 
@@ -269,7 +268,7 @@ const PlayerItem = styled.div`
   align-items: center;
   gap: 12px;
   padding: 12px;
-  border-bottom: 1px solid ${CURRENT_SEASON_COLORS.primary};
+  border-bottom: 1px solid var(--season-primary);
 `;
 
 const CountryFlag = styled.img`
@@ -320,14 +319,14 @@ const TeamLogoMobileCard = styled.div<TeamLogoCardProps>`
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  border: 2px solid ${(props) => (props.isSelected ? CURRENT_SEASON_COLORS.primary : "#555")};
+  border: 2px solid ${(props) => (props.isSelected ? "var(--season-primary)" : "#555")};
   padding: 8px;
   min-width: 70px;
   height: 70px;
   flex-shrink: 0;
   cursor: pointer;
   background-color: ${(props) =>
-    props.isSelected ? `${CURRENT_SEASON_COLORS.primary}1A` : "transparent"};
+    props.isSelected ? "color-mix(in srgb, var(--season-primary) 10%, transparent)" : "transparent"};
   transition: all 0.2s ease;
 
   &:active {
@@ -373,7 +372,7 @@ const PlayerItemMobile = styled.div`
   align-items: center;
   gap: 12px;
   padding: 12px;
-  border-bottom: 1px solid ${CURRENT_SEASON_COLORS.primary};
+  border-bottom: 1px solid var(--season-primary);
 
   &:last-child {
     border-bottom: none;

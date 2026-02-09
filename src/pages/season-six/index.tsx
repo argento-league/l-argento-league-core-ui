@@ -4,34 +4,27 @@ import { CurrentSeasonGrid } from "@components/current-season/CurrentSeasonGrid"
 import { TabContent } from "@components/current-season/tab-content";
 import { TabList } from "@components/current-season/tab";
 import { TabsEnum, TABS_CONFIG } from "@constants/current-season/information";
-import { SeasonThemeProvider, SEASON_7_THEME } from "../../context/SeasonThemeContext";
+import { SeasonThemeProvider, SEASON_6_THEME } from "../../context/SeasonThemeContext";
 
-export const CurrentSeasonPage = () => {
+export const SeasonSixPage = () => {
   return (
-    <SeasonThemeProvider theme={SEASON_7_THEME}>
+    <SeasonThemeProvider theme={SEASON_6_THEME}>
       <CurrentSeasonGrid />
-      <CurrentSeasonDetails />
+      <SeasonSixDetails />
     </SeasonThemeProvider>
   );
 };
 
-// Evento Principal deshabilitado (visible pero no clickeable) solo en current-season
-const CURRENT_SEASON_DISABLED_TABS = [TabsEnum.EventoPrincipal];
-
-const CurrentSeasonDetails = () => {
+const SeasonSixDetails = () => {
   const [selectedTab, setSelectedTab] = useState<TabsEnum>(
     TabsEnum.InfoGeneral
   );
 
-  // Si la pestaña seleccionada está deshabilitada para esta página, cambiar a la primera habilitada
   useEffect(() => {
-    const isDisabled = CURRENT_SEASON_DISABLED_TABS.includes(selectedTab);
     const isCurrentTabEnabled = TABS_CONFIG[selectedTab]?.enabled ?? true;
-    if (isDisabled || !isCurrentTabEnabled) {
+    if (!isCurrentTabEnabled) {
       const firstEnabledTab = Object.values(TabsEnum).find(
-        (tab) =>
-          (TABS_CONFIG[tab]?.enabled ?? true) &&
-          !CURRENT_SEASON_DISABLED_TABS.includes(tab)
+        (tab) => TABS_CONFIG[tab]?.enabled ?? true
       );
       if (firstEnabledTab) {
         setSelectedTab(firstEnabledTab);
@@ -44,7 +37,6 @@ const CurrentSeasonDetails = () => {
       <TabList
         selectedTab={selectedTab}
         tabList={Object.values(TabsEnum)}
-        disabledTabs={CURRENT_SEASON_DISABLED_TABS}
         onSelectTab={setSelectedTab}
       />
       <TabContent selectedTab={selectedTab} />

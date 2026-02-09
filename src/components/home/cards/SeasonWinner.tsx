@@ -80,7 +80,7 @@ export const SeasonWinner = () => {
           <WinnerSeason>Campeones Season 6</WinnerSeason>
         </WinnerTextContainer>
       </WinnerInfoContainer>
-      <ViewMore id="ver-mas" to="/current-season">
+      <ViewMore id="ver-mas" to="/season-6">
         Ver season
       </ViewMore>
     </SeasonWinnerContainer>

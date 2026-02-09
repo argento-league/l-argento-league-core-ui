@@ -8,13 +8,16 @@ export const MobileTabList = ({
   selectedTab,
   onSelectTab,
   tabList,
+  disabledTabs,
 }: TabProps) => {
   return (
     <TabsContainer>
       <Container>
         <MobileTabsWrapper>
           {tabList.map((tab) => {
-            const isEnabled = TABS_CONFIG[tab as TabsEnum]?.enabled ?? true;
+            const configEnabled = TABS_CONFIG[tab as TabsEnum]?.enabled ?? true;
+            const isDisabledByPage = disabledTabs?.includes(tab as TabsEnum);
+            const isEnabled = configEnabled && !isDisabledByPage;
             return (
               <MobileTabs
                 key={tab}

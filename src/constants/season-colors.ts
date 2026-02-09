@@ -15,6 +15,8 @@ export const SEASON_COLORS = {
   season7: {
     primary: "rgba(252, 167, 223, 1)", // Rosa (#FCA7DF)
     secondary: "rgba(252, 167, 223, 0.6)", // Rosa con opacidad
+    navActiveBg: "rgba(252, 167, 223, 0.2)",
+    navHoverBg: "rgba(252, 167, 223, 0.1)",
   },
 } as const;
 
@@ -23,5 +25,5 @@ export type SeasonKey = keyof typeof SEASON_COLORS;
 // Helper function to get season colors
 export const getSeasonColors = (season: SeasonKey) => SEASON_COLORS[season];
 
-// Current season colors (Season 6)
-export const CURRENT_SEASON_COLORS = SEASON_COLORS.season6;
+// Current season colors (Season 7)
+export const CURRENT_SEASON_COLORS = SEASON_COLORS.season7;

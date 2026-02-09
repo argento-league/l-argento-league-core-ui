@@ -5,8 +5,7 @@ import {
   MatchType, 
   SVGViewer 
 } from "@g-loot/react-tournament-brackets";
-import season6EventoPrincipal from "../../../data/season-6/evento-principal.json";
-import season6Teams from "../../../data/season-6/teams.json";
+import { getSeasonEventoPrincipal, getSeasonTeams, type SeasonNumber } from "../../../data/season-data";
 import styled from "styled-components";
 
 // Custom Match component to show team logos
@@ -133,14 +132,16 @@ type MainEventGlootProps = {
   season?: number;
 };
 
-// Helper to find team logo
-const getTeamLogo = (teamName: string): string => {
+// Helper to find team logo (por temporada)
+const getTeamLogo = (teamName: string, season: number): string => {
   if (teamName === 'TBD' || teamName === 'tbd') return '';
-  const teamEntry = Object.entries(season6Teams).find(([_, team]: [string, any]) => 
+  if (season !== 6 && season !== 7) return '';
+  const seasonTeams = getSeasonTeams(season as SeasonNumber);
+  const teamEntry = Object.entries(seasonTeams).find(([_, team]: [string, any]) =>
     team.name.toLowerCase() === teamName.toLowerCase()
   );
   if (teamEntry) {
-    return `/images/teams/season-6/${teamEntry[1].logo}`;
+    return `/images/teams/season-${season}/${(teamEntry[1] as { logo: string }).logo}`;
   }
   return '';
 };
@@ -148,7 +149,7 @@ const getTeamLogo = (teamName: string): string => {
 // Exact flow as specified by user:
 // Upper: 1+2 -> 5, 3+4 -> 6, 5+6 -> 7, 7 -> 8
 // Lower: 9->13, 10->14, 11->15, 12->16, 13+14->17, 15+16->18, 17->19, 18->20, 19+20->21, 21->22, 22 -> 8
-const convertToGlootFormat = (data: any): { upper: MatchType[]; lower: MatchType[] } => {
+const convertToGlootFormat = (data: any, season: number): { upper: MatchType[]; lower: MatchType[] } => {
   const upperMatches: MatchType[] = [];
   const lowerMatches: MatchType[] = [];
   
@@ -222,7 +223,7 @@ const convertToGlootFormat = (data: any): { upper: MatchType[]; lower: MatchType
           status: hasScores ? 'DONE' : 'NO_PARTY',
           name: matchData.team1,
           score: matchData.score1,
-          image: getTeamLogo(matchData.team1),
+          image: getTeamLogo(matchData.team1, season),
         },
         {
           id: `team_${matchData.team2}`,
@@ -231,7 +232,7 @@ const convertToGlootFormat = (data: any): { upper: MatchType[]; lower: MatchType
           status: hasScores ? 'DONE' : 'NO_PARTY',
           name: matchData.team2,
           score: matchData.score2,
-          image: getTeamLogo(matchData.team2),
+          image: getTeamLogo(matchData.team2, season),
         },
       ],
     };
@@ -272,8 +273,12 @@ const convertToGlootFormat = (data: any): { upper: MatchType[]; lower: MatchType
   return { upper: upperMatches, lower: lowerMatches };
 };
 
-const MainEventGloot = ({ season: _season = 6 }: MainEventGlootProps) => {
-  const matches = useMemo(() => convertToGlootFormat(season6EventoPrincipal), []);
+const MainEventGloot = ({ season = 6 }: MainEventGlootProps) => {
+  const eventoPrincipal = season === 6 || season === 7 ? getSeasonEventoPrincipal(season as SeasonNumber) : null;
+  const matches = useMemo(
+    () => (eventoPrincipal ? convertToGlootFormat(eventoPrincipal, season) : { upper: [], lower: [] }),
+    [eventoPrincipal, season]
+  );
   
   const canvasWidth = window.innerWidth - 100;
   const canvasHeight = (canvasWidth * 1.5);

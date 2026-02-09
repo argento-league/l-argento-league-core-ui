@@ -1,9 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
 import season5Jornadas from "../../../data/season-5/jornadas.json";
-import season6Jornadas from "../../../data/season-6/jornadas.json";
 import season5Teams from "../../../data/season-5/teams.json";
-import season6Teams from "../../../data/season-6/teams.json";
+import { getSeasonJornadas, getSeasonTeams, type SeasonNumber } from "../../../data/season-data";
 
 interface MatchResult {
   team1: string;
@@ -28,32 +27,33 @@ type MatchScheduleProps = {
   season?: number;
 };
 
-// Helper function to find team logo
-const findTeamLogo = (teamName: string, teams: any[]): string => {
+const isTbd = (teamName: string) =>
+  teamName === "TBD" || teamName.toUpperCase() === "TBD";
+
+// Helper function to find team logo (returns null if TBD para no mostrar icono)
+const findTeamLogo = (teamName: string, teams: any[]): string | null => {
+  if (isTbd(teamName)) return null;
   // First try exact match
   let match = teams.find(team => team.name === teamName);
   if (match) return match.logo || 'default-logo.png';
-
   // Try case-insensitive match
   match = teams.find(team => team.name.toLowerCase() === teamName.toLowerCase());
   if (match) return match.logo || 'default-logo.png';
-
   // Try partial match (contains)
-  match = teams.find(team => 
+  match = teams.find(team =>
     team.name.toLowerCase().includes(teamName.toLowerCase()) ||
     teamName.toLowerCase().includes(team.name.toLowerCase())
   );
   if (match) return match.logo || 'default-logo.png';
-
   return 'default-logo.png';
 };
 
 export const MatchScheduleContent = ({ currentGroup = "grupo-a", season = 6 }: MatchScheduleProps) => {
   const [currentJornada, setCurrentJornada] = useState(1);
   
-  // Select data based on season
-  const jornadasData = season === 5 ? season5Jornadas : season6Jornadas;
-  const teamsData = season === 5 ? season5Teams : season6Teams;
+  // Select data based on season (S5 propio; S6/S7 desde season-data)
+  const jornadasData = season === 5 ? season5Jornadas : getSeasonJornadas(season as SeasonNumber);
+  const teamsData = season === 5 ? season5Teams : getSeasonTeams(season as SeasonNumber);
   
   // Get all jornada keys and sort them
   const jornadaKeys = Object.keys(jornadasData as JornadasData).sort((a, b) => {
@@ -111,15 +111,21 @@ export const MatchScheduleContent = ({ currentGroup = "grupo-a", season = 6 }: M
         {currentMatches.map((match, index) => {
           const team1Logo = findTeamLogo(match.team1, Object.values(teamsData));
           const team2Logo = findTeamLogo(match.team2, Object.values(teamsData));
-          
+          const team1Tbd = isTbd(match.team1);
+          const team2Tbd = isTbd(match.team2);
+
           return (
             <MatchCard key={index}>
               <TeamRow>
                 <TeamInfo>
-                  <TeamLogo
-                    src={`/images/teams/season-${season}/${team1Logo}`}
-                    alt={match.team1}
-                  />
+                  {team1Tbd || team1Logo === null ? (
+                    <TbdPlaceholder>TBD</TbdPlaceholder>
+                  ) : (
+                    <TeamLogo
+                      src={`/images/teams/season-${season}/${team1Logo}`}
+                      alt={match.team1}
+                    />
+                  )}
                   <TeamName>{match.team1}</TeamName>
                 </TeamInfo>
                 <Score isPlayed={match.score1 !== null && match.score1 !== "TBD"}>
@@ -129,10 +135,14 @@ export const MatchScheduleContent = ({ currentGroup = "grupo-a", season = 6 }: M
               <Divider />
               <TeamRow>
                 <TeamInfo>
-                  <TeamLogo
-                    src={`/images/teams/season-${season}/${team2Logo}`}
-                    alt={match.team2}
-                  />
+                  {team2Tbd || team2Logo === null ? (
+                    <TbdPlaceholder>TBD</TbdPlaceholder>
+                  ) : (
+                    <TeamLogo
+                      src={`/images/teams/season-${season}/${team2Logo}`}
+                      alt={match.team2}
+                    />
+                  )}
                   <TeamName>{match.team2}</TeamName>
                 </TeamInfo>
                 <Score isPlayed={match.score2 !== null && match.score2 !== "TBD"}>
@@ -233,6 +243,21 @@ const TeamLogo = styled.img`
   border-radius: 4px;
   object-fit: cover;
   flex-shrink: 0;
+`;
+
+const TbdPlaceholder = styled.div`
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333;
+  color: #888;
+  font-size: 10px;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
 `;
 
 const TeamName = styled.span`

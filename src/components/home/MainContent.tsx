@@ -11,6 +11,8 @@ type MainRootContainerProps = {
   backgroundBlendMode?: string;
   background?: string;
   backgroundPosition?: string;
+  /** Si true, no se muestra imagen de fondo */
+  noBackground?: boolean;
 }
 
 export const MainRootContainer = styled.div<MainRootContainerProps>`
@@ -18,11 +20,11 @@ export const MainRootContainer = styled.div<MainRootContainerProps>`
   padding: 32px;
   box-sizing: border-box;
   gap: 16px;
-  background: ${(props) => props.background || "#3b6377"};
-  background-image: url(${(props) => props.backgroundImage || "/home-background.jpg"});
-  background-blend-mode: ${(props) => props.backgroundBlendMode || "multiply"};
+  background: ${(props) => (props.noBackground ? "transparent" : (props.background || "#3b6377"))};
+  background-image: ${(props) => props.noBackground ? "none" : `url(${props.backgroundImage || "/home-background.jpg"})`};
+  background-blend-mode: ${(props) => props.noBackground ? "normal" : (props.backgroundBlendMode || "multiply")};
   background-size: cover;
-  ${(props) => props.backgroundPosition ? `background-position: ${props.backgroundPosition};` : ""};
+  ${(props) => props.backgroundPosition ? `background-position: ${props.backgroundPosition};` : ""}
 
   @media (max-width: 720px) {
     padding: 16px;

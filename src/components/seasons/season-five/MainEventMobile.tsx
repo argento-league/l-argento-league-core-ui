@@ -5,7 +5,7 @@ import { useState } from "react";
 import { MatchType } from "react-tournament-brackets";
 import { Match } from "../mobile/match";
 import { StyledSvg } from "../../common/StyledSVG";
-import season6EventoPrincipal from "../../../data/season-6/evento-principal.json";
+import { getSeasonEventoPrincipal, type SeasonNumber } from "../../../data/season-data";
 import {
   UPPER_BRACKET_R1_MATCHES,
   UPPER_BRACKET_R2_MATCHES,
@@ -264,8 +264,8 @@ const MainEventMobile = ({ season = 5 }: MainEventMobileProps) => {
       lower_final: transformSeason5MatchesToMobileFormat(LOWER_BRACKET_R7_MATCHES),
     };
   } else {
-    // Use Season 6 JSON data
-    const convertedData = convertEventoPrincipalToMobileFormat(season6EventoPrincipal);
+    // Use Season 6/7 JSON data (desde season-data para no alterar S6)
+    const convertedData = convertEventoPrincipalToMobileFormat(getSeasonEventoPrincipal(season as SeasonNumber));
     upperBracketMatches = convertedData.upperBracketMatches;
     lowerBracketMatches = convertedData.lowerBracketMatches;
   }

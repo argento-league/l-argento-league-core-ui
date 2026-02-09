@@ -16,6 +16,7 @@ import { TeamSelectionContent } from "./TeamSelection";
 import styled from "styled-components";
 import MainEventMobile from "../../seasons/season-five/MainEventMobile";
 import MainEventComponent from "./MainEvent";
+import { useSeasonTheme } from "../../../context/SeasonThemeContext";
 
 type TabContentProps = {
   selectedTab: TabsEnum;
@@ -23,11 +24,17 @@ type TabContentProps = {
 
 export const TabContent = ({ selectedTab }: TabContentProps) => {
   const isMobile = useIsMobile(1000);
+  const theme = useSeasonTheme();
+  // Season 7 usa datos de season-7; Season 6 usa datos de season-6 (no se alteran entre sí)
+  const dataSeason = theme.seasonNumber;
   let children: ReactNode | null = null;
-  
-  // Verificar si la pestaña está habilitada
-  const isTabEnabled = TABS_CONFIG[selectedTab]?.enabled ?? true;
-  
+
+  // Evento Principal deshabilitado solo en current-season (Season 7)
+  const isEventoPrincipalDisabledForSeason7 =
+    dataSeason === 7 && selectedTab === TabsEnum.EventoPrincipal;
+  const isTabEnabled =
+    (TABS_CONFIG[selectedTab]?.enabled ?? true) && !isEventoPrincipalDisabledForSeason7;
+
   if (!isTabEnabled) {
     return (
       <Container>
@@ -38,24 +45,24 @@ export const TabContent = ({ selectedTab }: TabContentProps) => {
       </Container>
     );
   }
-  
+
   switch (selectedTab) {
     case TabsEnum.InfoGeneral:
       children = isMobile ? <InfoTabContentMobile /> : <InfoTabContent />;
       break;
     case TabsEnum.Equipos:
-      children = <TeamSelectionContent />;
+      children = <TeamSelectionContent season={dataSeason} />;
       break;
     case TabsEnum.FaseDeGrupos:
-      children = <GroupStageContent season={6} />;
+      children = <GroupStageContent season={dataSeason} />;
       break;
     case TabsEnum.EventoPrincipal:
       children = (
         <MainEventContainer>
           {isMobile ? (
-            <MainEventMobile season={6} />
+            <MainEventMobile season={dataSeason} />
           ) : (
-            <MainEventComponent season={6} />
+            <MainEventComponent season={dataSeason} />
           )}
         </MainEventContainer>
       );
@@ -84,7 +91,7 @@ const DisabledTabMessage = styled.div`
     font-family: "Outfit", sans-serif;
     font-weight: 600;
     margin: 0 0 16px 0;
-    color: rgba(80, 255, 16, 1);
+    color: var(--season-primary);
   }
   
   p {

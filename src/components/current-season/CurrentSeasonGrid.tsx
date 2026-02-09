@@ -7,6 +7,7 @@ import { MainCard } from "./cards/Main";
 import { BoxProps, GridBox } from "../common/GridBox";
 import styled from "styled-components";
 import { useSeasonTheme } from "../../context/SeasonThemeContext";
+import { useIsMobile } from "../../hooks/useIsMobile";
 
 type GridElementProps = {
   card: string;
@@ -65,10 +66,24 @@ const MainContentGroup = styled.div`
 
 export const CurrentSeasonGrid = () => {
   const theme = useSeasonTheme();
+  const isMobile = useIsMobile(720);
   const bentoElements = getBentoElements(theme.colors.primary);
 
+  // Fondo según temporada: S7 = Season7Wallpaper; S6 = imagen anterior (desktop/mobile)
+  const isSeason7 = theme.seasonKey === "season7";
+  const backgroundImage = isSeason7
+    ? "/images/Season7Wallpaper.jpg"
+    : isMobile
+      ? "/mobile-season-5-background.png"
+      : "/images/NewsCardBackgroundImage.png";
+
   return (
-    <MainRootContainer noBackground>
+    <MainRootContainer
+      backgroundImage={backgroundImage}
+      backgroundBlendMode="normal"
+      background={isSeason7 ? "rgba(0, 0, 0, 0.25)" : "rgba(0, 0, 0, 0.3)"}
+      backgroundPosition="center"
+    >
       <Container>
         <MainContentGroup>
           {bentoElements.map((element) => (

@@ -1,92 +1,96 @@
 {
   "Jornada-1": {
     "grupo-a": [
-      { "team1": "La Gatoneta", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
+      { "team1": "La Gatoneta", "score1": "TBD", "team2": "PUMBA Y SUS AMIGOS", "score2": "TBD" },
+      { "team1": "La Manada", "score1": "TBD", "team2": "FLAME TEAM", "score2": "TBD" }
     ],
     "grupo-b": [
-      { "team1": "Hydra E-sport", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
+      { "team1": "Hydra E-sport", "score1": "TBD", "team2": "Pheronistas", "score2": "TBD" },
+      { "team1": "Dime Lindura", "score1": "TBD", "team2": "Isurus Jujenio", "score2": "TBD" }
     ],
     "grupo-c": [
-      { "team1": "Jingu Mastery", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
+      { "team1": "Jingu Mastery", "score1": "TBD", "team2": "The Secret Weapons", "score2": "TBD" },
+      { "team1": "Papus del Infierno", "score1": "TBD", "team2": "EQUALIZED", "score2": "TBD" }
     ],
     "grupo-d": [
-      { "team1": "The Tether", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
+      { "team1": "The Tether", "score1": "TBD", "team2": "Efecto Divine", "score2": "TBD" },
+      { "team1": "Looney Tunes", "score1": "TBD", "team2": "Epicenter", "score2": "TBD" }
     ]
   },
+
   "Jornada-2": {
     "grupo-a": [
-      { "team1": "The Rats", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
+      { "team1": "The Rats", "score1": "TBD", "team2": "PUMBA Y SUS AMIGOS", "score2": "TBD" },
+      { "team1": "La Gatoneta", "score1": "TBD", "team2": "La Manada", "score2": "TBD" }
     ],
     "grupo-b": [
-      { "team1": "Crime Enjoyers", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
+      { "team1": "Crime Enjoyers", "score1": "TBD", "team2": "Pheronistas", "score2": "TBD" },
+      { "team1": "Hydra E-sport", "score1": "TBD", "team2": "Dime Lindura", "score2": "TBD" }
     ],
     "grupo-c": [
-      { "team1": "Diablos Azules Esport", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
+      { "team1": "Diablos Azules Esport", "score1": "TBD", "team2": "The Secret Weapons", "score2": "TBD" },
+      { "team1": "Jingu Mastery", "score1": "TBD", "team2": "Papus del Infierno", "score2": "TBD" }
     ],
     "grupo-d": [
-      { "team1": "Memento Vetus", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
+      { "team1": "Memento Vetus", "score1": "TBD", "team2": "Efecto Divine", "score2": "TBD" },
+      { "team1": "The Tether", "score1": "TBD", "team2": "Looney Tunes", "score2": "TBD" }
     ]
   },
+
   "Jornada-3": {
     "grupo-a": [
-      { "team1": "La Manada", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
+      { "team1": "La Manada", "score1": "TBD", "team2": "PUMBA Y SUS AMIGOS", "score2": "TBD" },
+      { "team1": "The Rats", "score1": "TBD", "team2": "FLAME TEAM", "score2": "TBD" }
     ],
     "grupo-b": [
-      { "team1": "Dime Lindura", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
+      { "team1": "Dime Lindura", "score1": "TBD", "team2": "Pheronistas", "score2": "TBD" },
+      { "team1": "Crime Enjoyers", "score1": "TBD", "team2": "Isurus Jujenio", "score2": "TBD" }
     ],
     "grupo-c": [
-      { "team1": "Papus del Infierno", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
+      { "team1": "Papus del Infierno", "score1": "TBD", "team2": "The Secret Weapons", "score2": "TBD" },
+      { "team1": "Diablos Azules Esport", "score1": "TBD", "team2": "EQUALIZED", "score2": "TBD" }
     ],
     "grupo-d": [
-      { "team1": "Looney Tunes", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
+      { "team1": "Looney Tunes", "score1": "TBD", "team2": "Efecto Divine", "score2": "TBD" },
+      { "team1": "Memento Vetus", "score1": "TBD", "team2": "Epicenter", "score2": "TBD" }
     ]
   },
+
   "Jornada-4": {
     "grupo-a": [
-      { "team1": "FLAME TEAM", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
+      { "team1": "FLAME TEAM", "score1": "TBD", "team2": "La Gatoneta", "score2": "TBD" },
+      { "team1": "The Rats", "score1": "TBD", "team2": "La Manada", "score2": "TBD" }
     ],
     "grupo-b": [
-      { "team1": "Isurus Jujenio", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
+      { "team1": "Isurus Jujenio", "score1": "TBD", "team2": "Hydra E-sport", "score2": "TBD" },
+      { "team1": "Crime Enjoyers", "score1": "TBD", "team2": "Dime Lindura", "score2": "TBD" }
     ],
     "grupo-c": [
-      { "team1": "EQUALIZED", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
+      { "team1": "EQUALIZED", "score1": "TBD", "team2": "Jingu Mastery", "score2": "TBD" },
+      { "team1": "Diablos Azules Esport", "score1": "TBD", "team2": "Papus del Infierno", "score2": "TBD" }
     ],
     "grupo-d": [
-      { "team1": "Epicenter", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
+      { "team1": "Epicenter", "score1": "TBD", "team2": "The Tether", "score2": "TBD" },
+      { "team1": "Memento Vetus", "score1": "TBD", "team2": "Looney Tunes", "score2": "TBD" }
     ]
   },
+
   "Jornada-5": {
     "grupo-a": [
-      { "team1": "PUMBA Y SUS AMIGOS", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
+      { "team1": "PUMBA Y SUS AMIGOS", "score1": "TBD", "team2": "FLAME TEAM", "score2": "TBD" },
+      { "team1": "The Rats", "score1": "TBD", "team2": "La Gatoneta", "score2": "TBD" }
     ],
     "grupo-b": [
-      { "team1": "Pheronistas", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
+      { "team1": "Pheronistas", "score1": "TBD", "team2": "Isurus Jujenio", "score2": "TBD" },
+      { "team1": "Crime Enjoyers", "score1": "TBD", "team2": "Hydra E-sport", "score2": "TBD" }
     ],
     "grupo-c": [
-      { "team1": "The Secret Weapons", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
+      { "team1": "The Secret Weapons", "score1": "TBD", "team2": "EQUALIZED", "score2": "TBD" },
+      { "team1": "Diablos Azules Esport", "score1": "TBD", "team2": "Jingu Mastery", "score2": "TBD" }
     ],
     "grupo-d": [
-      { "team1": "Efecto Divine", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
+      { "team1": "Efecto Divine", "score1": "TBD", "team2": "Epicenter", "score2": "TBD" },
+      { "team1": "Memento Vetus", "score1": "TBD", "team2": "The Tether", "score2": "TBD" }
     ]
   }
 }

@@ -5,7 +5,7 @@
       { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
     ],
     "grupo-b": [
-      { "team1": "The RATS", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
+      { "team1": "", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
       { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
     ],
     "grupo-c": [
@@ -19,7 +19,7 @@
   },
   "Jornada-2": {
     "grupo-a": [
-      { "team1": "Hydra E-sport", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
+      { "team1": "The RATS", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
       { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
     ],
     "grupo-b": [

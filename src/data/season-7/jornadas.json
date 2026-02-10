@@ -1,11 +1,11 @@
 {
   "Jornada-1": {
     "grupo-a": [
-      { "team1": "LA_GATONETA", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
+      { "team1": "La Gatoneta", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
       { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
     ],
     "grupo-b": [
-      { "team1": "HYDRA_E_SPORT", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
+      { "team1": "The RATS", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
       { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
     ],
     "grupo-c": [
@@ -19,11 +19,11 @@
   },
   "Jornada-2": {
     "grupo-a": [
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
+      { "team1": "Hydra E-sport", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
       { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
     ],
     "grupo-b": [
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
+      { "team1": "Crime Enjoyers", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
       { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
     ],
     "grupo-c": [
@@ -37,11 +37,11 @@
   },
   "Jornada-3": {
     "grupo-a": [
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
+      { "team1": "Jingu Mastery", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
       { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
     ],
     "grupo-b": [
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
+      { "team1": "Diablos Azules Esport", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
       { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
     ],
     "grupo-c": [
@@ -55,11 +55,11 @@
   },
   "Jornada-4": {
     "grupo-a": [
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
+      { "team1": "The Tether", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
       { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
     ],
     "grupo-b": [
-      { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
+      { "team1": "Memento Vetus", "score1": "TBD", "team2": "TBD", "score2": "TBD" },
       { "team1": "TBD", "score1": "TBD", "team2": "TBD", "score2": "TBD" }
     ],
     "grupo-c": [

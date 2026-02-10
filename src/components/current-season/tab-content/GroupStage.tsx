@@ -151,6 +151,11 @@ const createGroupData = (teamsData: any, jornadasData: any): GroupData => {
 
     // Create team objects with calculated stats and find matching logos
     Array.from(teamNames).forEach(teamName => {
+      // Filtrar equipos TBD - no mostrarlos en la tabla
+      if (teamName === "TBD" || teamName.toUpperCase() === "TBD") {
+        return;
+      }
+      
       const stats = teamStats[teamName];
       const teamData = findTeamData(teamName, teams);
       

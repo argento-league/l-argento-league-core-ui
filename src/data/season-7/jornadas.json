@@ -1,11 +1,11 @@
 {
   "Jornada-1": {
     "grupo-a": [
-      { "team1": "La Gatoneta", "score1": "TBD", "team2": "PUMBA Y SUS AMIGOS", "score2": "TBD" },
+      { "team1": "La Gatoneta", "score1": "0", "team2": "PUMBA Y SUS AMIGOS", "score2": "2" },
       { "team1": "La Manada", "score1": "TBD", "team2": "FLAME TEAM", "score2": "TBD" }
     ],
     "grupo-b": [
-      { "team1": "Hydra E-sport", "score1": "TBD", "team2": "Pheronistas", "score2": "TBD" },
+      { "team1": "Hydra E-sport", "score1": "2", "team2": "Pheronistas", "score2": "0" },
       { "team1": "Dime Lindura", "score1": "TBD", "team2": "Isurus Jujenio", "score2": "TBD" }
     ],
     "grupo-c": [
@@ -13,7 +13,7 @@
       { "team1": "Papus del Infierno", "score1": "TBD", "team2": "EQUALIZED", "score2": "TBD" }
     ],
     "grupo-d": [
-      { "team1": "The Tether", "score1": "TBD", "team2": "Efecto Divine", "score2": "TBD" },
+      { "team1": "The Tether", "score1": "0", "team2": "Efecto Divine", "score2": "2" },
       { "team1": "Looney Tunes", "score1": "1", "team2": "Epicenter", "score2": "1" }
     ]
   },

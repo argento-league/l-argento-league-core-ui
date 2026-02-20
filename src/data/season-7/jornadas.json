@@ -13,7 +13,7 @@
       { "team1": "Papus del Infierno", "score1": "TBD", "team2": "EQUALIZED", "score2": "TBD" }
     ],
     "grupo-d": [
-      { "team1": "The Tether", "score1": "TBD", "team2": "Efecto Divine", "score2": "TBD" },
+      { "team1": "The Tether", "score1": "1", "team2": "Efecto Divine", "score2": "1" },
       { "team1": "Looney Tunes", "score1": "1", "team2": "Epicenter", "score2": "1" }
     ]
   },
@@ -28,7 +28,7 @@
       { "team1": "Hydra E-sport", "score1": "TBD", "team2": "Dime Lindura", "score2": "TBD" }
     ],
     "grupo-c": [
-      { "team1": "Diablos Azules Esport", "score1": "TBD", "team2": "The Secret Weapons", "score2": "TBD" },
+      { "team1": "Diablos Azules Esport", "score1": "2", "team2": "The Secret Weapons", "score2": "0" },
       { "team1": "Jingu Mastery", "score1": "TBD", "team2": "Papus del Infierno", "score2": "TBD" }
     ],
     "grupo-d": [

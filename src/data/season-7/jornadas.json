@@ -63,7 +63,7 @@
     ],
     "grupo-b": [
       { "team1": "Isurus Jujenio", "score1": "TBD", "team2": "Hydra E-sport", "score2": "TBD" },
-      { "team1": "Crime Enjoyers", "score1": "TBD", "team2": "Dime Lindura", "score2": "TBD" }
+      { "team1": "Crime Enjoyers", "score1": "1", "team2": "Dime Lindura", "score2": "1" }
     ],
     "grupo-c": [
       { "team1": "EQUALIZED", "score1": "TBD", "team2": "Jingu Mastery", "score2": "TBD" },
@@ -71,7 +71,7 @@
     ],
     "grupo-d": [
       { "team1": "Epicenter", "score1": "2", "team2": "The Tether", "score2": "0" },
-      { "team1": "Memento Vetus", "score1": "TBD", "team2": "Looney Tunes", "score2": "TBD" }
+      { "team1": "Memento Vetus", "score1": "1", "team2": "Looney Tunes", "score2": "1" }
     ]
   },
 

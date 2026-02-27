@@ -39,8 +39,8 @@
 
   "Jornada-3": {
     "grupo-a": [
-      { "team1": "La Manada", "score1": "TBD", "team2": "PUMBA Y SUS AMIGOS", "score2": "TBD" },
-      { "team1": "The Rats", "score1": "TBD", "team2": "FLAME TEAM", "score2": "TBD" }
+      { "team1": "La Manada", "score1": "1", "team2": "PUMBA Y SUS AMIGOS", "score2": "1" },
+      { "team1": "The Rats", "score1": "1", "team2": "FLAME TEAM", "score2": "1" }
     ],
     "grupo-b": [
       { "team1": "Dime Lindura", "score1": "TBD", "team2": "Pheronistas", "score2": "TBD" },
@@ -52,7 +52,7 @@
     ],
     "grupo-d": [
       { "team1": "Looney Tunes", "score1": "2", "team2": "Efecto Divine", "score2": "0" },
-      { "team1": "Memento Vetus", "score1": "TBD", "team2": "Epicenter", "score2": "TBD" }
+      { "team1": "Memento Vetus", "score1": "1", "team2": "Epicenter", "score2": "1" }
     ]
   },
 
@@ -66,8 +66,8 @@
       { "team1": "Crime Enjoyers", "score1": "1", "team2": "Dime Lindura", "score2": "1" }
     ],
     "grupo-c": [
-      { "team1": "EQUALIZED", "score1": "TBD", "team2": "Jingu Mastery", "score2": "TBD" },
-      { "team1": "Diablos Azules Esport", "score1": "TBD", "team2": "Papus del Infierno", "score2": "TBD" }
+      { "team1": "EQUALIZED", "score1": "2", "team2": "Jingu Mastery", "score2": "0" },
+      { "team1": "Diablos Azules Esport", "score1": "2", "team2": "Papus del Infierno", "score2": "0" }
     ],
     "grupo-d": [
       { "team1": "Epicenter", "score1": "2", "team2": "The Tether", "score2": "0" },

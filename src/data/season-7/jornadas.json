@@ -40,10 +40,10 @@
   "Jornada-3": {
     "grupo-a": [
       { "team1": "La Manada", "score1": "1", "team2": "PUMBA Y SUS AMIGOS", "score2": "1" },
-      { "team1": "The Rats", "score1": "1", "team2": "FLAME TEAM", "score2": "1" }
+      { "team1": "The Rats", "score1": "2", "team2": "FLAME TEAM", "score2": "0" }
     ],
     "grupo-b": [
-      { "team1": "Dime Lindura", "score1": "TBD", "team2": "Pheronistas", "score2": "TBD" },
+      { "team1": "Dime Lindura", "score1": "2", "team2": "Pheronistas", "score2": "0" },
       { "team1": "Crime Enjoyers", "score1": "TBD", "team2": "Isurus Jujenio", "score2": "TBD" }
     ],
     "grupo-c": [
@@ -58,7 +58,7 @@
 
   "Jornada-4": {
     "grupo-a": [
-      { "team1": "FLAME TEAM", "score1": "TBD", "team2": "La Gatoneta", "score2": "TBD" },
+      { "team1": "FLAME TEAM", "score1": "2", "team2": "La Gatoneta", "score2": "0" },
       { "team1": "The Rats", "score1": "TBD", "team2": "La Manada", "score2": "TBD" }
     ],
     "grupo-b": [

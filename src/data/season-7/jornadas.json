@@ -44,10 +44,10 @@
     ],
     "grupo-b": [
       { "team1": "Dime Lindura", "score1": "2", "team2": "Pheronistas", "score2": "0" },
-      { "team1": "Crime Enjoyers", "score1": "TBD", "team2": "Isurus Jujenio", "score2": "TBD" }
+      { "team1": "Crime Enjoyers", "score1": "2", "team2": "Isurus Jujenio", "score2": "0" }
     ],
     "grupo-c": [
-      { "team1": "Papus del Infierno", "score1": "TBD", "team2": "The Secret Weapons", "score2": "TBD" },
+      { "team1": "Papus del Infierno", "score1": "2", "team2": "The Secret Weapons", "score2": "0" },
       { "team1": "Diablos Azules Esport", "score1": "1", "team2": "EQUALIZED", "score2": "1" }
     ],
     "grupo-d": [
@@ -59,7 +59,7 @@
   "Jornada-4": {
     "grupo-a": [
       { "team1": "FLAME TEAM", "score1": "0", "team2": "La Gatoneta", "score2": "2" },
-      { "team1": "The Rats", "score1": "TBD", "team2": "La Manada", "score2": "TBD" }
+      { "team1": "The Rats", "score1": "1", "team2": "La Manada", "score2": "1" }
     ],
     "grupo-b": [
       { "team1": "Isurus Jujenio", "score1": "1", "team2": "Hydra E-sport", "score2": "1" },

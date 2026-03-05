@@ -77,7 +77,7 @@
 
   "Jornada-5": {
     "grupo-a": [
-      { "team1": "PUMBA Y SUS AMIGOS", "score1": "TBD", "team2": "FLAME TEAM", "score2": "TBD" },
+      { "team1": "PUMBA Y SUS AMIGOS", "score1": "2", "team2": "FLAME TEAM", "score2": "0" },
       { "team1": "The Rats", "score1": "TBD", "team2": "La Gatoneta", "score2": "TBD" }
     ],
     "grupo-b": [
@@ -86,7 +86,7 @@
     ],
     "grupo-c": [
       { "team1": "The Secret Weapons", "score1": "TBD", "team2": "EQUALIZED", "score2": "TBD" },
-      { "team1": "Diablos Azules Esport", "score1": "TBD", "team2": "Jingu Mastery", "score2": "TBD" }
+      { "team1": "Diablos Azules Esport", "score1": "2", "team2": "Jingu Mastery", "score2": "0" }
     ],
     "grupo-d": [
       { "team1": "Efecto Divine", "score1": "TBD", "team2": "Epicenter", "score2": "TBD" },

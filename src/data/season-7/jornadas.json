@@ -78,11 +78,11 @@
   "Jornada-5": {
     "grupo-a": [
       { "team1": "PUMBA Y SUS AMIGOS", "score1": "2", "team2": "FLAME TEAM", "score2": "0" },
-      { "team1": "The Rats", "score1": "TBD", "team2": "La Gatoneta", "score2": "TBD" }
+      { "team1": "The Rats", "score1": "2", "team2": "La Gatoneta", "score2": "0" }
     ],
     "grupo-b": [
       { "team1": "Pheronistas", "score1": "TBD", "team2": "Isurus Jujenio", "score2": "TBD" },
-      { "team1": "Crime Enjoyers", "score1": "TBD", "team2": "Hydra E-sport", "score2": "TBD" }
+      { "team1": "Crime Enjoyers", "score1": "1", "team2": "Hydra E-sport", "score2": "1" }
     ],
     "grupo-c": [
       { "team1": "The Secret Weapons", "score1": "0", "team2": "EQUALIZED", "score2": "2" },

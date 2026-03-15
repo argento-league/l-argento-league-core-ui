@@ -20,6 +20,7 @@ export function getSeasonTeams(season: SeasonNumber) {
   return season === 6 ? season6Teams : season7Teams;
 }
 
+/** Evento Principal: Season 6 → season-6/evento-principal.json; temporada actual → season-7/evento-principal.json */
 export function getSeasonEventoPrincipal(season: SeasonNumber) {
   return season === 6 ? season6EventoPrincipal : season7EventoPrincipal;
 }

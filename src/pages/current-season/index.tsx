@@ -15,23 +15,17 @@ export const CurrentSeasonPage = () => {
   );
 };
 
-// Evento Principal deshabilitado (visible pero no clickeable) solo en current-season
-const CURRENT_SEASON_DISABLED_TABS = [TabsEnum.EventoPrincipal];
-
 const CurrentSeasonDetails = () => {
   const [selectedTab, setSelectedTab] = useState<TabsEnum>(
     TabsEnum.InfoGeneral
   );
 
-  // Si la pestaña seleccionada está deshabilitada para esta página, cambiar a la primera habilitada
+  // Si la pestaña seleccionada no está habilitada, cambiar a la primera habilitada
   useEffect(() => {
-    const isDisabled = CURRENT_SEASON_DISABLED_TABS.includes(selectedTab);
     const isCurrentTabEnabled = TABS_CONFIG[selectedTab]?.enabled ?? true;
-    if (isDisabled || !isCurrentTabEnabled) {
+    if (!isCurrentTabEnabled) {
       const firstEnabledTab = Object.values(TabsEnum).find(
-        (tab) =>
-          (TABS_CONFIG[tab]?.enabled ?? true) &&
-          !CURRENT_SEASON_DISABLED_TABS.includes(tab)
+        (tab) => TABS_CONFIG[tab]?.enabled ?? true
       );
       if (firstEnabledTab) {
         setSelectedTab(firstEnabledTab);
@@ -44,7 +38,6 @@ const CurrentSeasonDetails = () => {
       <TabList
         selectedTab={selectedTab}
         tabList={Object.values(TabsEnum)}
-        disabledTabs={CURRENT_SEASON_DISABLED_TABS}
         onSelectTab={setSelectedTab}
       />
       <TabContent selectedTab={selectedTab} />

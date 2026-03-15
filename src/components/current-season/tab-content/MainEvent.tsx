@@ -533,57 +533,66 @@ const MainEvent = ({ season = 6 }: MainEventProps) => {
         }
       });
       
-      // Replace W/L with actual scores
+      // Replace W/L with actual scores (o "-" si es TBD / sin resultado)
       const scoreElements = document.querySelectorAll(".participant .result");
       scoreElements.forEach((el) => {
         const scoreEl = el as HTMLElement;
         const parent = el.closest(".participant");
         if (parent) {
           const participantName = parent.querySelector(".name")?.textContent?.trim();
-          if (participantName && participantName !== "TBD") {
-            // Find the match data for this team
-            const matchElement = parent.closest(".match");
-            if (matchElement) {
-              const allParticipants = matchElement.querySelectorAll(".participant");
-              if (allParticipants.length === 2) {
-                const team1El = allParticipants[0].querySelector(".name");
-                const team2El = allParticipants[1].querySelector(".name");
-                if (team1El && team2El) {
-                  const team1Name = team1El.textContent?.trim().replace(/^.*?img.*?>(.*)$/, '$1').trim();
-                  const team2Name = team2El.textContent?.trim().replace(/^.*?img.*?>(.*)$/, '$1').trim();
-                  
-                  // Find match in event data (usar mismo eventoPrincipal que para el bracket)
-                  const allRounds = eventoPrincipal
-                    ? [
-                        ...Object.values(eventoPrincipal['upper-bracket']),
-                        ...Object.values(eventoPrincipal['lower-bracket']),
-                        ...(eventoPrincipal['grand-final'] || [])
-                      ]
-                    : [];
-                  
-                  for (const round of allRounds) {
-                    if (Array.isArray(round)) {
-                      for (const match of round) {
-                        if (
-                          (match.team1 === team1Name && match.team2 === team2Name) ||
-                          (match.team1 === team2Name && match.team2 === team1Name)
-                        ) {
-                          if (match.score1 !== null && match.score2 !== null) {
-                            const isTeam1 = team1Name === participantName;
-                            const score = isTeam1 ? match.score1 : match.score2;
-                            const isWinner = isTeam1 ? match.score1 > match.score2 : match.score2 > match.score1;
-                            scoreEl.textContent = score !== null ? String(score) : '';
-                            
-                            // If this participant won, add green color to the score
-                            if (isWinner) {
-                              scoreEl.style.color = '#50ff10';
-                            }
+          const isTbdParticipant = !participantName || participantName === "TBD";
+          if (isTbdParticipant) {
+            scoreEl.textContent = "-";
+            return;
+          }
+          const matchElement = parent.closest(".match");
+          if (matchElement) {
+            const allParticipants = matchElement.querySelectorAll(".participant");
+            if (allParticipants.length === 2) {
+              const team1El = allParticipants[0].querySelector(".name");
+              const team2El = allParticipants[1].querySelector(".name");
+              if (team1El && team2El) {
+                const team1Name = team1El.textContent?.trim().replace(/^.*?img.*?>(.*)$/, '$1').trim();
+                const team2Name = team2El.textContent?.trim().replace(/^.*?img.*?>(.*)$/, '$1').trim();
+                const allRounds = eventoPrincipal
+                  ? [
+                      ...Object.values(eventoPrincipal['upper-bracket']),
+                      ...Object.values(eventoPrincipal['lower-bracket']),
+                      ...(eventoPrincipal['grand-final'] || [])
+                    ]
+                  : [];
+                let found = false;
+                for (const round of allRounds) {
+                  if (Array.isArray(round)) {
+                    for (const match of round) {
+                      if (
+                        (match.team1 === team1Name && match.team2 === team2Name) ||
+                        (match.team1 === team2Name && match.team2 === team1Name)
+                      ) {
+                        found = true;
+                        const s1 = match.score1;
+                        const s2 = match.score2;
+                        const isTbdScore = s1 === "TBD" || s2 === "TBD" || s1 == null || s2 == null;
+                        if (isTbdScore) {
+                          scoreEl.textContent = "-";
+                        } else {
+                          const isTeam1 = team1Name === participantName;
+                          const score = isTeam1 ? s1 : s2;
+                          const numScore = typeof score === "number" ? score : parseInt(String(score), 10);
+                          const isWinner = isTeam1 ? (Number(s1) > Number(s2)) : (Number(s2) > Number(s1));
+                          scoreEl.textContent = !isNaN(numScore) ? String(numScore) : "-";
+                          if (isWinner) {
+                            scoreEl.style.color = "#50ff10";
                           }
-                          break;
                         }
+                        break;
                       }
                     }
+                    if (found) break;
                   }
+                }
+                if (!found) {
+                  scoreEl.textContent = "-";
                 }
               }
             }

@@ -25,15 +25,11 @@ type TabContentProps = {
 export const TabContent = ({ selectedTab }: TabContentProps) => {
   const isMobile = useIsMobile(1000);
   const theme = useSeasonTheme();
-  // Season 7 usa datos de season-7; Season 6 usa datos de season-6 (no se alteran entre sí)
+  // Season 9 usa datos de season-9; Season 6 usa datos de season-6 (no se alteran entre sí)
   const dataSeason = theme.seasonNumber;
   let children: ReactNode | null = null;
 
-  // Evento Principal deshabilitado solo en current-season (Season 7)
-  const isEventoPrincipalDisabledForSeason7 =
-    dataSeason === 7 && selectedTab === TabsEnum.EventoPrincipal;
-  const isTabEnabled =
-    (TABS_CONFIG[selectedTab]?.enabled ?? true) && !isEventoPrincipalDisabledForSeason7;
+  const isTabEnabled = TABS_CONFIG[selectedTab]?.enabled ?? true;
 
   if (!isTabEnabled) {
     return (
@@ -57,6 +53,7 @@ export const TabContent = ({ selectedTab }: TabContentProps) => {
       children = <GroupStageContent season={dataSeason} />;
       break;
     case TabsEnum.EventoPrincipal:
+      // dataSeason = theme.seasonNumber (7 en current-season) → datos de src/data/season-7/evento-principal.json
       children = (
         <MainEventContainer>
           {isMobile ? (

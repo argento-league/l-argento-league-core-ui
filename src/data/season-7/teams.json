@@ -49,7 +49,7 @@
       { "nick": "AnuloMufa", "nationality": "ar", "mmr": 8587, "id_dota": "94672872" },
       { "nick": "Nope", "nationality": "ar", "mmr": 6900, "id_dota": "121930716" },
       { "nick": "Gintoky", "nationality": "pe", "mmr": 7200, "id_dota": "106686731" },
-      { "nick": "Dizzy", "nationality": "ar", "mmr": 7671, "id_dota": "87907602" },
+      { "nick": "Dizzy", "nationality": "cl", "mmr": 7671, "id_dota": "87907602" },
       { "nick": "NirVaNa", "nationality": "pe", "mmr": 7904, "id_dota": "117081714" }
     ]
   },
@@ -106,7 +106,7 @@
       { "nick": "Makiev", "nationality": "ar", "mmr": 6132, "id_dota": "144980187" },
       { "nick": "iroha``", "nationality": "ar", "mmr": 6500, "id_dota": "454518441" },
       { "nick": "KTZ", "nationality": "ar", "mmr": 7500, "id_dota": "119473376" },
-      { "nick": "hundred", "nationality": "ar", "mmr": 7110, "id_dota": "148089994" }
+      { "nick": "hundred", "nationality": "cl", "mmr": 7110, "id_dota": "148089994" }
     ]
   },
   "ISURUS_JUJENIO": {
@@ -116,7 +116,6 @@
       { "nick": "KANISHKA", "nationality": "ar", "mmr": 5043, "id_dota": "100971733" },
       { "nick": "Riquelme", "nationality": "ar", "mmr": 5880, "id_dota": "52724907" },
       { "nick": "Adachi", "nationality": "ar", "mmr": 10109, "id_dota": "270029316" },
-      { "nick": "iroha``", "nationality": "ar", "mmr": 9459, "id_dota": "865511874" },
       { "nick": "Tbg", "nationality": "ar", "mmr": 7779, "id_dota": "865511874" },
       { "nick": "jota", "nationality": "ar", "mmr": 4582, "id_dota": "1115090240" },
       { "nick": "Black Nikegg", "nationality": "ar", "mmr": 7360, "id_dota": "93344921" }
@@ -180,7 +179,7 @@
       { "nick": "Kabuto", "nationality": "ar", "mmr": 5600, "id_dota": "330124996" },
       { "nick": "Flugel", "nationality": "ar", "mmr": 4513, "id_dota": "201927078" },
       { "nick": "Puntito", "nationality": "ar", "mmr": 6080, "id_dota": "203606840" },
-      { "nick": "marmota", "nationality": "pe", "mmr": 7000, "id_dota": "412215920" },
+      { "nick": "marmota", "nationality": "ar", "mmr": 7000, "id_dota": "412215920" },
       { "nick": "Dtoke", "nationality": "ar", "mmr": 5007, "id_dota": "183756540" },
       { "nick": "Inscripto", "nationality": "ar", "mmr": 3006, "id_dota": "114976109" },
       { "nick": "jul1k", "nationality": "ar", "mmr": 5285, "id_dota": "102733303" }

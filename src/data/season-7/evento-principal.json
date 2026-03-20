@@ -4,11 +4,11 @@
       { "match": 1, "team1": "Dime Lindura", "team2": "Papus del Infierno", "score1": "TBD", "score2": "TBD" },
       { "match": 2, "team1": "PUMBA Y SUS AMIGOS", "team2": "Hydra E-sport", "score1": "TBD", "score2": "TBD" },
       { "match": 3, "team1": "Looney Tunes", "team2": "The RATS", "score1": "TBD", "score2": "TBD" },
-      { "match": 4, "team1": "EQUALIZED", "team2": "Epicenter", "score1": "TBD", "score2": "TBD" }
+      { "match": 4, "team1": "EQUALIZED", "team2": "Epicenter", "score1": "0", "score2": "2" }
     ],
     "round-2": [
       { "match": 5, "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" },
-      { "match": 6, "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" }
+      { "match": 6, "team1": "TBD", "team2": "Epicenter", "score1": "TBD", "score2": "TBD" }
     ],
     "round-3": [
       { "match": 7, "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" }
@@ -21,13 +21,13 @@
     "round-1": [
       { "match": 9, "team1": "Pheronistas", "team2": "Memento Vetus", "score1": "TBD", "score2": "TBD" },
       { "match": 10, "team1": "Diablos Azules Esport", "team2": "Isurus Jujenio", "score1": "2", "score2": "0" },
-      { "match": 11, "team1": "La Manada", "team2": "The Secret Weapons", "score1": "TBD", "score2": "TBD" },
+      { "match": 11, "team1": "La Manada", "team2": "The Secret Weapons", "score1": "2", "score2": "0" },
       { "match": 12, "team1": "Efecto Divine", "team2": "La Gatoneta", "score1": "2", "score2": "1" }
     ],
     "round-2": [
       { "match": 13, "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" },
       { "match": 14, "team1": "TBD", "team2": "Diablos Azules Esport", "score1": "TBD", "score2": "TBD" },
-      { "match": 15, "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" },
+      { "match": 15, "team1": "TBD", "team2": "La Manada", "score1": "TBD", "score2": "TBD" },
       { "match": 16, "team1": "TBD", "team2": "Efecto Divine", "score1": "TBD", "score2": "TBD" }
     ],
     "round-3": [

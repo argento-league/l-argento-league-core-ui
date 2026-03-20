@@ -48,9 +48,9 @@
       { "nick": "SSG", "nationality": "ar", "mmr": 7540, "id_dota": "117102307" },
       { "nick": "AnuloMufa", "nationality": "ar", "mmr": 8587, "id_dota": "94672872" },
       { "nick": "Nope", "nationality": "ar", "mmr": 6900, "id_dota": "121930716" },
-      { "nick": "Reyf", "nationality": "pe", "mmr": 7200, "id_dota": "106686731" },
-      { "nick": "jacktheripper", "nationality": "ar", "mmr": 7671, "id_dota": "87907602" },
-      { "nick": "peruano manco", "nationality": "pe", "mmr": 7904, "id_dota": "117081714" }
+      { "nick": "Gintoky", "nationality": "pe", "mmr": 7200, "id_dota": "106686731" },
+      { "nick": "Dizzy", "nationality": "ar", "mmr": 7671, "id_dota": "87907602" },
+      { "nick": "NirVaNa", "nationality": "pe", "mmr": 7904, "id_dota": "117081714" }
     ]
   },
   "EPICENTER": {
@@ -62,6 +62,7 @@
       { "nick": "Yisus", "nationality": "ar", "mmr": 4174, "id_dota": "1079226241" },
       { "nick": "Julio", "nationality": "cu", "mmr": 4900, "id_dota": "351600006" },
       { "nick": "dker", "nationality": "ar", "mmr": 3800, "id_dota": "28283210" },
+      { "nick": "mte", "nationality": "ar", "mmr": 3800, "id_dota": "28283210" },
       { "nick": "Lionel Dota", "nationality": "ar", "mmr": 2234, "id_dota": "130856536" },
       { "nick": "Argius", "nationality": "pe", "mmr": 13865, "id_dota": "116080282" }
     ]
@@ -87,11 +88,11 @@
       { "nick": "El pango con botas", "nationality": "ar", "mmr": 5662, "id_dota": "1286224283" },
       { "nick": "maraboli", "nationality": "ar", "mmr": 5530, "id_dota": "128766615" },
       { "nick": "RpK", "nationality": "ar", "mmr": 5473, "id_dota": "315860929" },
-      { "nick": "AngelXO", "nationality": "bo", "mmr": 6555, "id_dota": "1120446391" },
+      { "nick": "Manu", "nationality": "ar", "mmr": 6555, "id_dota": "1120446391" },
       { "nick": "Pherom", "nationality": "ar", "mmr": 4470, "id_dota": "97134244" },
-      { "nick": "Yisus", "nationality": "bo", "mmr": 5532, "id_dota": "887735567" },
+      { "nick": "Lobo", "nationality": "ar", "mmr": 5532, "id_dota": "887735567" },
       { "nick": "peace and love", "nationality": "pe", "mmr": 7348, "id_dota": "431683895" },
-      { "nick": "Oli", "nationality": "ar", "mmr": 4913, "id_dota": "120659659" }
+      { "nick": "Sandevistan", "nationality": "ar", "mmr": 4913, "id_dota": "120659659" }
     ]
   },
   "DIABLOS_AZULES_ESPORT": {
@@ -99,13 +100,13 @@
     "logo": "Diablos_Azules_Esports.png",
     "players": [
       { "nick": "Shifu", "nationality": "ar", "mmr": 10550, "id_dota": "121952627" },
-      { "nick": "frizolini", "nationality": "ar", "mmr": 5800, "id_dota": "135450573" },
+      { "nick": "MDFK PIPI", "nationality": "ar", "mmr": 5800, "id_dota": "135450573" },
       { "nick": "kid", "nationality": "ar", "mmr": 5800, "id_dota": "240091805" },
       { "nick": "Tabu", "nationality": "ar", "mmr": 6996, "id_dota": "115267494" },
       { "nick": "Makiev", "nationality": "ar", "mmr": 6132, "id_dota": "144980187" },
-      { "nick": "㊓Ferran Torres⑦", "nationality": "pe", "mmr": 6500, "id_dota": "454518441" },
+      { "nick": "iroha``", "nationality": "ar", "mmr": 6500, "id_dota": "454518441" },
       { "nick": "KTZ", "nationality": "ar", "mmr": 7500, "id_dota": "119473376" },
-      { "nick": "tk", "nationality": "ar", "mmr": 7110, "id_dota": "148089994" }
+      { "nick": "hundred", "nationality": "ar", "mmr": 7110, "id_dota": "148089994" }
     ]
   },
   "ISURUS_JUJENIO": {
@@ -179,7 +180,7 @@
       { "nick": "Kabuto", "nationality": "ar", "mmr": 5600, "id_dota": "330124996" },
       { "nick": "Flugel", "nationality": "ar", "mmr": 4513, "id_dota": "201927078" },
       { "nick": "Puntito", "nationality": "ar", "mmr": 6080, "id_dota": "203606840" },
-      { "nick": "Dreamr", "nationality": "pe", "mmr": 7000, "id_dota": "412215920" },
+      { "nick": "marmota", "nationality": "pe", "mmr": 7000, "id_dota": "412215920" },
       { "nick": "Dtoke", "nationality": "ar", "mmr": 5007, "id_dota": "183756540" },
       { "nick": "Inscripto", "nationality": "ar", "mmr": 3006, "id_dota": "114976109" },
       { "nick": "jul1k", "nationality": "ar", "mmr": 5285, "id_dota": "102733303" }
@@ -208,7 +209,7 @@
       { "nick": "MONOLOCO", "nationality": "pe", "mmr": 8500, "id_dota": "228447731" },
       { "nick": "Who is ari?", "nationality": "ar", "mmr": 7860, "id_dota": "454675942" },
       { "nick": "UNKNOWN", "nationality": "pe", "mmr": 7000, "id_dota": "902238054" },
-      { "nick": "lZø̴lveR", "nationality": "pe", "mmr": 8500, "id_dota": "302787678" },
+      { "nick": "Kiri", "nationality": "pe", "mmr": 8500, "id_dota": "302787678" },
       { "nick": "Moneway", "nationality": "pe", "mmr": 8095, "id_dota": "173199930" }
     ]
   },
@@ -234,7 +235,8 @@
       { "nick": "balones", "nationality": "br", "mmr": 4150, "id_dota": "113660693" },
       { "nick": "ShaMaNz", "nationality": "ar", "mmr": 2200, "id_dota": "1174902476" },
       { "nick": "Rico kaboom", "nationality": "bo", "mmr": 940, "id_dota": "144524794" },
-      { "nick": "ziwar", "nationality": "ar", "mmr": 6465, "id_dota": "124676016" },
+      { "nick": "Robo z", "nationality": "pe", "mmr": 940, "id_dota": "144524794" },
+      { "nick": "Lunfar2", "nationality": "ar", "mmr": 6465, "id_dota": "124676016" },
       { "nick": "Carnicero Gamer", "nationality": "ar", "mmr": 4657, "id_dota": "322086423" }
     ]
   },
@@ -242,13 +244,13 @@
     "name": "The RATS",
     "logo": "The_Rats.png",
     "players": [
-      { "nick": "Vitaly", "nationality": "ar", "mmr": 4086, "id_dota": "1576582037" },
+      { "nick": "iZOLver", "nationality": "pe", "mmr": 4086, "id_dota": "1576582037" },
       { "nick": "MarcE-", "nationality": "ar", "mmr": 5966, "id_dota": "480524562" },
       { "nick": "Eno", "nationality": "ar", "mmr": 7540, "id_dota": "420540542" },
       { "nick": "Tachibana", "nationality": "pe", "mmr": 9145, "id_dota": "1826783049" },
       { "nick": "Mirlacra", "nationality": "ar", "mmr": 5501, "id_dota": "244287223" },
       { "nick": "SHIRO", "nationality": "ar", "mmr": 6374, "id_dota": "1131903679" },
-      { "nick": "NeXus", "nationality": "bo", "mmr": 10209, "id_dota": "197463735" },
+      { "nick": "Sk|DyinG-X", "nationality": "pe", "mmr": 10209, "id_dota": "197463735" },
       { "nick": "Stepham", "nationality": "pe", "mmr": 8047, "id_dota": "416524935" }
     ]
   },
@@ -259,7 +261,8 @@
       { "nick": "dgN la bestia", "nationality": "ar", "mmr": 8068, "id_dota": "40521044" },
       { "nick": "Balenci", "nationality": "ar", "mmr": 11355, "id_dota": "200450157" },
       { "nick": "Meew", "nationality": "ar", "mmr": 8300, "id_dota": "160482724" },
-      { "nick": "LOKURA", "nationality": "ar", "mmr": 2871, "id_dota": "399847437" },
+      { "nick": "benny", "nationality": "ar", "mmr": 2871, "id_dota": "399847437" },
+      { "nick": "frizolini", "nationality": "ar", "mmr": 2871, "id_dota": "399847437" },
       { "nick": "Ricco", "nationality": "ar", "mmr": 4090, "id_dota": "93317034" },
       { "nick": "Innolize", "nationality": "ar", "mmr": 5638, "id_dota": "126498508" },
       { "nick": "GABO", "nationality": "ar", "mmr": 7440, "id_dota": "92241448" }

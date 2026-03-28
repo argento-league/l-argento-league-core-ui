@@ -27,12 +27,12 @@
     "round-2": [
       { "match": 13, "team1": "Memento Vetus", "team2": "Papus del Infierno", "score1": "TBD", "score2": "TBD" },
       { "match": 14, "team1": "PUMBA Y SUS AMIGOS", "team2": "Diablos Azules Esport", "score1": "TBD", "score2": "TBD" },
-      { "match": 15, "team1": "The RATS", "team2": "La Manada", "score1": "TBD", "score2": "TBD" },
+      { "match": 15, "team1": "The RATS", "team2": "La Manada", "score1": "0", "score2": "2" },
       { "match": 16, "team1": "EQUALIZED", "team2": "Efecto Divine", "score1": "0", "score2": "2" }
     ],
     "round-3": [
       { "match": "17", "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" },
-      { "match": "18", "team1": "TBD", "team2": "Efecto Divine", "score1": "TBD", "score2": "TBD" }
+      { "match": "18", "team1": "La Manada", "team2": "Efecto Divine", "score1": "TBD", "score2": "TBD" }
     ],
     "round-4": [
       { "match": 19, "team1": "TBD", "team2": "Epicenter", "score1": "TBD", "score2": "TBD" },

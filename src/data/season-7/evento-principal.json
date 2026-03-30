@@ -7,11 +7,11 @@
       { "match": 4, "team1": "EQUALIZED", "team2": "Epicenter", "score1": "0", "score2": "2" }
     ],
     "round-2": [
-      { "match": 5, "team1": "Dime Lindura", "team2": "Hydra E-sport", "score1": "TBD", "score2": "TBD" },
+      { "match": 5, "team1": "Dime Lindura", "team2": "Hydra E-sport", "score1": "1", "score2": "2" },
       { "match": 6, "team1": "Looney Tunes", "team2": "Epicenter", "score1": "2", "score2": "0" }
     ],
     "round-3": [
-      { "match": 7, "team1": "Looney Tunes", "team2": "TBD", "score1": "TBD", "score2": "TBD" }
+      { "match": 7, "team1": "Looney Tunes", "team2": "Hydra E-sport", "score1": "TBD", "score2": "TBD" }
     ],
     "Gran Final": [
       { "match": 8, "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" }
@@ -26,17 +26,17 @@
     ],
     "round-2": [
       { "match": 13, "team1": "Memento Vetus", "team2": "Papus del Infierno", "score1": "2", "score2": "0" },
-      { "match": 14, "team1": "PUMBA Y SUS AMIGOS", "team2": "Diablos Azules Esport", "score1": "TBD", "score2": "TBD" },
+      { "match": 14, "team1": "PUMBA Y SUS AMIGOS", "team2": "Diablos Azules Esport", "score1": "2", "score2": "0" },
       { "match": 15, "team1": "The RATS", "team2": "La Manada", "score1": "0", "score2": "2" },
       { "match": 16, "team1": "EQUALIZED", "team2": "Efecto Divine", "score1": "0", "score2": "2" }
     ],
     "round-3": [
-      { "match": "17", "team1": "Memento Vetus", "team2": "TBD", "score1": "TBD", "score2": "TBD" },
+      { "match": "17", "team1": "Memento Vetus", "team2": "PUMBA Y SUS AMIGOS", "score1": "TBD", "score2": "TBD" },
       { "match": "18", "team1": "La Manada", "team2": "Efecto Divine", "score1": "TBD", "score2": "TBD" }
     ],
     "round-4": [
       { "match": 19, "team1": "TBD", "team2": "Epicenter", "score1": "TBD", "score2": "TBD" },
-      { "match": 20, "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" }
+      { "match": 20, "team1": "TBD", "team2": "Dime Lindura", "score1": "TBD", "score2": "TBD" }
     ],
     "round-5": [
       { "match": 21, "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" }

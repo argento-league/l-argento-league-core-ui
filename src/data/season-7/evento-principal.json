@@ -14,7 +14,7 @@
       { "match": 7, "team1": "Looney Tunes", "team2": "Hydra E-sport", "score1": "0", "score2": "2" }
     ],
     "Gran Final": [
-      { "match": 8, "team1": "Hydra E-sport", "team2": "TBD", "score1": "TBD", "score2": "TBD" }
+      { "match": 8, "team1": "Hydra E-sport", "team2": "Diablos Azules Esport", "score1": "0", "score2": "3" }
     ]
   },
   "lower-bracket": {
@@ -39,13 +39,13 @@
       { "match": 20, "team1": "Efecto Divine", "team2": "Dime Lindura", "score1": "2", "score2": "0" }
     ],
     "round-5": [
-      { "match": 21, "team1": "Efecto Divine", "team2": "PUMBA Y SUS AMIGOS", "score1": "TBD", "score2": "TBD" }
+      { "match": 21, "team1": "Efecto Divine", "team2": "Diablos Azules Esport", "score1": "0", "score2": "1" }
     ],
     "round-6": [
-      { "match": 22, "team1": "Looney Tunes", "team2": "Diablos Azules Esport", "score1": "TBD", "score2": "TBD" }
+      { "match": 22, "team1": "Looney Tunes", "team2": "Diablos Azules Esport", "score1": "1", "score2": "2" }
     ]
   },
   "grand-final": [
-    { "match": 23, "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" }
+    { "match": 23, "team1": "Hydra E-sport", "team2": "Diablos Azules Esport", "score1": "0", "score2": "3" }
   ]
 }

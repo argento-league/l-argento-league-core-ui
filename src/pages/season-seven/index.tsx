@@ -4,37 +4,27 @@ import { CurrentSeasonGrid } from "@components/current-season/CurrentSeasonGrid"
 import { TabContent } from "@components/current-season/tab-content";
 import { TabList } from "@components/current-season/tab";
 import { TabsEnum, TABS_CONFIG } from "@constants/current-season/information";
-import { SeasonThemeProvider, SEASON_8_THEME } from "../../context/SeasonThemeContext";
+import { SeasonThemeProvider, SEASON_7_THEME } from "../../context/SeasonThemeContext";
 
-export const CurrentSeasonPage = () => {
+export const SeasonSevenPage = () => {
   return (
-    <SeasonThemeProvider theme={SEASON_8_THEME}>
+    <SeasonThemeProvider theme={SEASON_7_THEME}>
       <CurrentSeasonGrid />
-      <CurrentSeasonDetails />
+      <SeasonSevenDetails />
     </SeasonThemeProvider>
   );
 };
 
-// Visibles pero no clickeables hasta que haya datos de Season 8
-const CURRENT_SEASON_DISABLED_TABS = [
-  TabsEnum.Equipos,
-  TabsEnum.FaseDeGrupos,
-  TabsEnum.EventoPrincipal,
-];
-
-const CurrentSeasonDetails = () => {
+const SeasonSevenDetails = () => {
   const [selectedTab, setSelectedTab] = useState<TabsEnum>(
     TabsEnum.InfoGeneral
   );
 
   useEffect(() => {
-    const isDisabled = CURRENT_SEASON_DISABLED_TABS.includes(selectedTab);
     const isCurrentTabEnabled = TABS_CONFIG[selectedTab]?.enabled ?? true;
-    if (isDisabled || !isCurrentTabEnabled) {
+    if (!isCurrentTabEnabled) {
       const firstEnabledTab = Object.values(TabsEnum).find(
-        (tab) =>
-          (TABS_CONFIG[tab]?.enabled ?? true) &&
-          !CURRENT_SEASON_DISABLED_TABS.includes(tab)
+        (tab) => TABS_CONFIG[tab]?.enabled ?? true
       );
       if (firstEnabledTab) {
         setSelectedTab(firstEnabledTab);
@@ -48,7 +38,6 @@ const CurrentSeasonDetails = () => {
         selectedTab={selectedTab}
         tabList={Object.values(TabsEnum)}
         onSelectTab={setSelectedTab}
-        disabledTabs={CURRENT_SEASON_DISABLED_TABS}
       />
       <TabContent selectedTab={selectedTab} />
     </>

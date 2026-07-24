@@ -135,7 +135,7 @@ type MainEventGlootProps = {
 // Helper to find team logo (por temporada)
 const getTeamLogo = (teamName: string, season: number): string => {
   if (teamName === 'TBD' || teamName === 'tbd') return '';
-  if (season !== 6 && season !== 7) return '';
+  if (season !== 6 && season !== 7 && season !== 8) return '';
   const seasonTeams = getSeasonTeams(season as SeasonNumber);
   const teamEntry = Object.entries(seasonTeams).find(([_, team]: [string, any]) =>
     team.name.toLowerCase() === teamName.toLowerCase()
@@ -274,7 +274,7 @@ const convertToGlootFormat = (data: any, season: number): { upper: MatchType[]; 
 };
 
 const MainEventGloot = ({ season = 6 }: MainEventGlootProps) => {
-  const eventoPrincipal = season === 6 || season === 7 ? getSeasonEventoPrincipal(season as SeasonNumber) : null;
+  const eventoPrincipal = season === 6 || season === 7 || season === 8 ? getSeasonEventoPrincipal(season as SeasonNumber) : null;
   const matches = useMemo(
     () => (eventoPrincipal ? convertToGlootFormat(eventoPrincipal, season) : { upper: [], lower: [] }),
     [eventoPrincipal, season]

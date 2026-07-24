@@ -69,19 +69,22 @@ export const CurrentSeasonGrid = () => {
   const isMobile = useIsMobile(720);
   const bentoElements = getBentoElements(theme.colors.primary);
 
-  // Fondo según temporada: S7 = Season7Wallpaper; S6 = imagen anterior (desktop/mobile)
+  // Fondo según temporada: S8 = Season8Wallpaper; S7 = Season7Wallpaper; S6 = imagen anterior
+  const isSeason8 = theme.seasonKey === "season8";
   const isSeason7 = theme.seasonKey === "season7";
-  const backgroundImage = isSeason7
-    ? "/images/Season7Wallpaper.jpg"
-    : isMobile
-      ? "/mobile-season-5-background.png"
-      : "/images/NewsCardBackgroundImage.png";
+  const backgroundImage = isSeason8
+    ? "/images/Season8Wallpaper.jpg"
+    : isSeason7
+      ? "/images/Season7Wallpaper.jpg"
+      : isMobile
+        ? "/mobile-season-5-background.png"
+        : "/images/NewsCardBackgroundImage.png";
 
   return (
     <MainRootContainer
       backgroundImage={backgroundImage}
       backgroundBlendMode="normal"
-      background={isSeason7 ? "rgba(0, 0, 0, 0.25)" : "rgba(0, 0, 0, 0.3)"}
+      background={isSeason8 || isSeason7 ? "rgba(0, 0, 0, 0.25)" : "rgba(0, 0, 0, 0.3)"}
       backgroundPosition="center"
     >
       <Container>

@@ -1,0 +1,30 @@
+{
+  "upper-bracket": {
+    "round-1": [
+      { "match": 1, "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" },
+      { "match": 2, "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" }
+    ],
+    "round-2": [
+      { "match": 3, "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" }
+    ]
+  },
+  "lower-bracket": {
+    "round-1": [
+      { "match": 4, "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" },
+      { "match": 5, "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" }
+    ],
+    "round-2": [
+      { "match": 6, "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" },
+      { "match": 7, "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" }
+    ],
+    "round-3": [
+      { "match": 8, "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" }
+    ],
+    "round-4": [
+      { "match": 9, "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" }
+    ]
+  },
+  "grand-final": [
+    { "match": 10, "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" }
+  ]
+}

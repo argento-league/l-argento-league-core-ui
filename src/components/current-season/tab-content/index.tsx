@@ -25,7 +25,7 @@ type TabContentProps = {
 export const TabContent = ({ selectedTab }: TabContentProps) => {
   const isMobile = useIsMobile(1000);
   const theme = useSeasonTheme();
-  // Season 9 usa datos de season-9; Season 6 usa datos de season-6 (no se alteran entre sí)
+  // Datos según theme.seasonNumber (6, 7 u 8)
   const dataSeason = theme.seasonNumber;
   let children: ReactNode | null = null;
 
@@ -53,7 +53,7 @@ export const TabContent = ({ selectedTab }: TabContentProps) => {
       children = <GroupStageContent season={dataSeason} />;
       break;
     case TabsEnum.EventoPrincipal:
-      // dataSeason = theme.seasonNumber (7 en current-season) → datos de src/data/season-7/evento-principal.json
+      // dataSeason → src/data/season-{N}/evento-principal.json
       children = (
         <MainEventContainer>
           {isMobile ? (

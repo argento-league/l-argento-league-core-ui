@@ -1,0 +1,170 @@
+{
+  "TEAM_A1": {
+    "name": "TBD A1",
+    "logo": "",
+    "players": [
+      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
+    ]
+  },
+  "TEAM_A2": {
+    "name": "TBD A2",
+    "logo": "",
+    "players": [
+      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
+    ]
+  },
+  "TEAM_A3": {
+    "name": "TBD A3",
+    "logo": "",
+    "players": [
+      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
+    ]
+  },
+  "TEAM_A4": {
+    "name": "TBD A4",
+    "logo": "",
+    "players": [
+      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
+    ]
+  },
+  "TEAM_A5": {
+    "name": "TBD A5",
+    "logo": "",
+    "players": [
+      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
+    ]
+  },
+  "TEAM_A6": {
+    "name": "TBD A6",
+    "logo": "",
+    "players": [
+      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
+    ]
+  },
+  "TEAM_B1": {
+    "name": "TBD B1",
+    "logo": "",
+    "players": [
+      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
+    ]
+  },
+  "TEAM_B2": {
+    "name": "TBD B2",
+    "logo": "",
+    "players": [
+      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
+    ]
+  },
+  "TEAM_B3": {
+    "name": "TBD B3",
+    "logo": "",
+    "players": [
+      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
+    ]
+  },
+  "TEAM_B4": {
+    "name": "TBD B4",
+    "logo": "",
+    "players": [
+      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
+    ]
+  },
+  "TEAM_B5": {
+    "name": "TBD B5",
+    "logo": "",
+    "players": [
+      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
+    ]
+  },
+  "TEAM_B6": {
+    "name": "TBD B6",
+    "logo": "",
+    "players": [
+      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
+    ]
+  }
+}

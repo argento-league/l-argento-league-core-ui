@@ -9,11 +9,12 @@ import { CURRENT_SEASON_COLORS } from "../../constants/season-colors";
 
 const NAV_LINKS = [
   { to: "/", label: "Inicio" },
-  { to: "/current-season", label: "Season 7" },
+  { to: "/current-season", label: "Season 8" },
   { to: "/fantasy", label: "Fantasy" },
 ];
 
 const SEASONS_DROPDOWN = [
+  { to: "/season-7", label: "Season 7" },
   { to: "/season-6", label: "Season 6" },
   { to: "/season-5", label: "Season 5" },
   { to: "/season-4", label: "Season 4" },

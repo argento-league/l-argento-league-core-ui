@@ -12,10 +12,11 @@ interface MatchResult {
 }
 
 interface GroupMatches {
-  "grupo-a": MatchResult[];
-  "grupo-b": MatchResult[];
-  "grupo-c": MatchResult[];
-  "grupo-d": MatchResult[];
+  "grupo-a"?: MatchResult[];
+  "grupo-b"?: MatchResult[];
+  "grupo-c"?: MatchResult[];
+  "grupo-d"?: MatchResult[];
+  [key: string]: MatchResult[] | undefined;
 }
 
 interface JornadasData {
@@ -23,7 +24,7 @@ interface JornadasData {
 }
 
 type MatchScheduleProps = {
-  currentGroup?: "grupo-a" | "grupo-b" | "grupo-c" | "grupo-d";
+  currentGroup?: string;
   season?: number;
 };
 

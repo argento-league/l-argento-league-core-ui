@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { CURRENT_SEASON_COLORS } from "../../../constants/season-colors";
+import { SEASON_COLORS } from "../../../constants/season-colors";
 
 const SeasonWinnerContainer = styled.section`
   height: 100%;
-  background: rgba(80, 255, 16, 0.05);
+  background: rgba(252, 167, 223, 0.05);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -13,7 +13,7 @@ const SeasonWinnerContainer = styled.section`
   box-sizing: border-box;
   border-radius: 16px;
   font-family: "Outfit", sans-serif;
-  border: 1px solid ${CURRENT_SEASON_COLORS.primary};
+  border: 1px solid ${SEASON_COLORS.season7.primary};
 
   @media (max-width: 1024px) {
     flex-direction: column;
@@ -56,7 +56,7 @@ const WinnerSeason = styled.p`
 
 const ViewMore = styled(Link)`
   font-size: 16px;
-  color: ${CURRENT_SEASON_COLORS.primary};
+  color: ${SEASON_COLORS.season7.primary};
   text-decoration: none;
   cursor: pointer;
   padding: 8px 16px;
@@ -72,15 +72,15 @@ export const SeasonWinner = () => {
     <SeasonWinnerContainer>
       <WinnerInfoContainer id="contenedor">
         <SeasonWinnerImage
-          src={"/images/teams/season-6/the-royals.png"}
-          aria-label="the-royals-logo"
+          src={"/images/teams/season-7/Hydra_E-Sport.png"}
+          aria-label="hydra-e-sport-logo"
         />
         <WinnerTextContainer>
-          <WinnerTeam>The Royals</WinnerTeam>
-          <WinnerSeason>Campeones Season 6</WinnerSeason>
+          <WinnerTeam>Hydra E-Sport</WinnerTeam>
+          <WinnerSeason>Campeones Season 7</WinnerSeason>
         </WinnerTextContainer>
       </WinnerInfoContainer>
-      <ViewMore id="ver-mas" to="/season-6">
+      <ViewMore id="ver-mas" to="/season-7">
         Ver season
       </ViewMore>
     </SeasonWinnerContainer>

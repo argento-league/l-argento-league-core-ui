@@ -87,9 +87,9 @@ const getTeamLogo = (teamName: string, season: number): string | null => {
     return season5Logos[teamName] || null;
   }
   
-  // For Season 6/7, use findTeamData con datos de la temporada
+  // For Season 6/7/8, use findTeamData con datos de la temporada
   if (teamName === "TBD") return null;
-  if (season !== 6 && season !== 7) return null;
+  if (season !== 6 && season !== 7 && season !== 8) return null;
 
   const seasonTeams = getSeasonTeams(season as SeasonNumber);
   const allTeams = Object.values(seasonTeams);
@@ -106,7 +106,7 @@ type MainEventProps = {
 };
 
 // Función para convertir JSON simple a formato de brackets
-const convertEventoPrincipalToBrackets = (eventoData: any) => {
+const convertEventoPrincipalToBrackets = (eventoData: any, season: number = 6) => {
   const participants: any[] = [];
   const matches: any[] = [];
   
@@ -135,7 +135,7 @@ const convertEventoPrincipalToBrackets = (eventoData: any) => {
     teamMap.set(teamName, participantId);
     participants.push({
       id: participantId++,
-      tournament_id: 6,
+      tournament_id: season,
       name: teamName
     });
   });
@@ -144,16 +144,23 @@ const convertEventoPrincipalToBrackets = (eventoData: any) => {
   const TBD_ID = participantId++;
   participants.push({
     id: TBD_ID,
-    tournament_id: 6,
+    tournament_id: season,
     name: 'TBD'
   });
+
+  const upperRoundEntries = Object.entries(eventoData['upper-bracket'] || {});
+  const lowerRoundEntries = Object.entries(eventoData['lower-bracket'] || {});
+  const upperRoundCount = upperRoundEntries.length;
+  const lowerRoundCount = lowerRoundEntries.length;
+  const ubR1Count = (eventoData['upper-bracket']?.['round-1'] || []).length;
+  const lbR1Count = (eventoData['lower-bracket']?.['round-1'] || []).length;
+  const bracketSize = Math.max(8, ubR1Count * 2 + lbR1Count * 2);
   
   // Crear matches del upper bracket
-  Object.values(eventoData['upper-bracket']).forEach((round, roundIndex) => {
+  upperRoundEntries.forEach(([, round], roundIndex) => {
     if (Array.isArray(round)) {
       round.forEach(match => {
-        // Status: 0 = pending, 2 = finished (siempre pending si no hay scores)
-        const status = match.score1 !== null && match.score2 !== null ? 2 : 0;
+        const status = match.score1 !== null && match.score2 !== null && match.score1 !== 'TBD' && match.score2 !== 'TBD' ? 2 : 0;
         
         matches.push({
           id: matchId++,
@@ -165,28 +172,23 @@ const convertEventoPrincipalToBrackets = (eventoData: any) => {
           status: status,
           opponent1: {
             id: match.team1 === 'TBD' ? TBD_ID : (teamMap.get(match.team1) ?? null),
-            result: match.score1 !== null && match.score2 !== null ? (match.score1 > match.score2 ? 'win' : 'loss') : null,
+            result: status === 2 ? (Number(match.score1) > Number(match.score2) ? 'win' : 'loss') : null,
           },
           opponent2: {
             id: match.team2 === 'TBD' ? TBD_ID : (teamMap.get(match.team2) ?? null),
-            result: match.score1 !== null && match.score2 !== null ? (match.score2 > match.score1 ? 'win' : 'loss') : null,
+            result: status === 2 ? (Number(match.score2) > Number(match.score1) ? 'win' : 'loss') : null,
           }
         });
       });
     }
   });
   
-  // Crear matches del lower bracket
-  // Upper has 4 rounds (0, 1, 2, 3), Lower has 6 rounds (0-5)
-  // Lower rounds start after Upper rounds to align properly
-  Object.values(eventoData['lower-bracket']).forEach((round, roundIndex) => {
+  // Lower bracket: round_id continúa después del upper (S8: 2 upper → lower empieza en 2)
+  lowerRoundEntries.forEach(([, round], roundIndex) => {
     if (Array.isArray(round)) {
       round.forEach(match => {
-        // Status: 0 = pending, 2 = finished (siempre pending si no hay scores)
-        const status = match.score1 !== null && match.score2 !== null ? 2 : 0;
-        
-        // Lower bracket rounds start after Upper (0, 1, 2, 3) so they start at 4
-        const lowerRoundId = roundIndex + 4;
+        const status = match.score1 !== null && match.score2 !== null && match.score1 !== 'TBD' && match.score2 !== 'TBD' ? 2 : 0;
+        const lowerRoundId = roundIndex + upperRoundCount;
         
         matches.push({
           id: matchId++,
@@ -198,46 +200,57 @@ const convertEventoPrincipalToBrackets = (eventoData: any) => {
           status: status,
           opponent1: {
             id: match.team1 === 'TBD' ? TBD_ID : (teamMap.get(match.team1) ?? null),
-            result: match.score1 !== null && match.score2 !== null ? (match.score1 > match.score2 ? 'win' : 'loss') : null,
+            result: status === 2 ? (Number(match.score1) > Number(match.score2) ? 'win' : 'loss') : null,
           },
           opponent2: {
             id: match.team2 === 'TBD' ? TBD_ID : (teamMap.get(match.team2) ?? null),
-            result: match.score1 !== null && match.score2 !== null ? (match.score2 > match.score1 ? 'win' : 'loss') : null,
+            result: status === 2 ? (Number(match.score2) > Number(match.score1) ? 'win' : 'loss') : null,
           }
         });
       });
     }
   });
   
-  // Crear matches del grand final
+  // Grand final
   if (Array.isArray(eventoData['grand-final'])) {
     eventoData['grand-final'].forEach(match => {
-      // Status: 0 = pending, 2 = finished (siempre pending si no hay scores)
-      const status = match.score1 !== null && match.score2 !== null ? 2 : 0;
+      const status = match.score1 !== null && match.score2 !== null && match.score1 !== 'TBD' && match.score2 !== 'TBD' ? 2 : 0;
+      const gfRoundId = upperRoundCount + lowerRoundCount;
       
       matches.push({
         id: matchId++,
         number: match.match,
         stage_id: 0,
         group_id: 2,
-        round_id: 10, // Grand final after both brackets
+        round_id: gfRoundId,
         child_count: 0,
         status: status,
         opponent1: {
           id: match.team1 === 'TBD' ? TBD_ID : (teamMap.get(match.team1) ?? null),
-          result: match.score1 !== null && match.score2 !== null ? (match.score1 > match.score2 ? 'win' : 'loss') : null,
+          result: status === 2 ? (Number(match.score1) > Number(match.score2) ? 'win' : 'loss') : null,
         },
         opponent2: {
           id: match.team2 === 'TBD' ? TBD_ID : (teamMap.get(match.team2) ?? null),
-          result: match.score1 !== null && match.score2 !== null ? (match.score2 > match.score1 ? 'win' : 'loss') : null,
+          result: status === 2 ? (Number(match.score2) > Number(match.score1) ? 'win' : 'loss') : null,
         }
       });
     });
   }
+
+  const stage = [{
+    ...SEASON6_TOURNAMENT_DATA.stage[0],
+    tournament_id: season,
+    name: `Evento Principal Season ${season}`,
+    settings: {
+      ...SEASON6_TOURNAMENT_DATA.stage[0].settings,
+      size: bracketSize,
+      grandFinal: season >= 8 ? "simple" : SEASON6_TOURNAMENT_DATA.stage[0].settings.grandFinal,
+    },
+  }];
   
   return {
     participant: participants,
-    stage: SEASON6_TOURNAMENT_DATA.stage,
+    stage,
     group: SEASON6_TOURNAMENT_DATA.group,
     round: SEASON6_TOURNAMENT_DATA.round,
     match: matches,
@@ -273,13 +286,17 @@ const MainEvent = ({ season = 6 }: MainEventProps) => {
     width: 100% !important;
   }
   
+  .brackets-viewer {
+    --match-width: 260px;
+  }
+
   .match {
-    min-width: 200px !important;
-    width: auto !important;
+    min-width: 260px !important;
+    width: var(--match-width) !important;
   }
   
   .participant {
-    min-width: 180px !important;
+    min-width: 220px !important;
     width: auto !important;
   }
   
@@ -291,26 +308,36 @@ const MainEvent = ({ season = 6 }: MainEventProps) => {
   }
   
   .opponents {
-    min-width: 200px !important;
+    min-width: 260px !important;
     width: auto !important;
   }
   
   .round {
-    min-width: 220px !important;
+    min-width: 260px !important;
   }
   
-  /* Only style the round titles, not the bracket titles */
+  /* Round titles: full text, same width as match column */
   .round-title,
   .round h3,
-  .round h2 {
-    font-size: 14px !important;
+  .round h2,
+  .brackets-viewer h3 {
+    font-size: 13px !important;
     font-weight: 600 !important;
+    line-height: 1.3 !important;
     background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%) !important;
     color: white !important;
-    padding: 8px 16px !important;
+    padding: 10px 12px !important;
     border-radius: 8px !important;
-    border: 1px solid #50ff10 !important;
+    border: 1px solid var(--season-primary, #50ff10) !important;
     box-shadow: 0 4px 8px color-mix(in srgb, var(--season-primary) 20%, transparent) !important;
+    width: var(--match-width) !important;
+    min-width: var(--match-width) !important;
+    max-width: none !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    word-break: break-word !important;
+    box-sizing: border-box !important;
   }
   
   /* Add team logos to participants */
@@ -403,13 +430,12 @@ const MainEvent = ({ season = 6 }: MainEventProps) => {
 `;
     document.head.appendChild(style);
     
-    // Select data based on season (S5 propio; S6/S7 desde season-data)
     const eventoPrincipal = season === 5 ? null : getSeasonEventoPrincipal(season as SeasonNumber);
     let tournamentData;
     if (season === 5) {
       tournamentData = TOURNAMENT_DATA;
     } else {
-      tournamentData = convertEventoPrincipalToBrackets(eventoPrincipal);
+      tournamentData = convertEventoPrincipalToBrackets(eventoPrincipal, season);
     }
     
     window.bracketsViewer.render(
@@ -471,8 +497,28 @@ const MainEvent = ({ season = 6 }: MainEventProps) => {
               return "Ronda 5";
             }
           }
+
+          // Season 8: bracket 8 equipos (2 grupos → 2 upper + 2 lower por grupo)
+          if (season === 8) {
+            if (info.finalType === "grand_final") {
+              return "Grand Final";
+            }
+            if (info.groupType === "winner-bracket") {
+              if (info.roundNumber === 1 || info.fractionOfFinal === 1 / 2) {
+                return "Upper Bracket Semifinals";
+              }
+              return "Upper Bracket Final";
+            }
+            if (info.groupType === "loser-bracket") {
+              if (info.roundNumber === 1) return "Lower Bracket Round 1";
+              if (info.roundNumber === 2) return "Lower Bracket Quarterfinals";
+              if (info.roundNumber === 3) return "Lower Bracket Semifinal";
+              if (info.roundNumber === 4) return "Lower Bracket Final";
+            }
+            return "Grand Final";
+          }
           
-                     // Season 6+ titles
+                     // Season 6/7 titles
            // IMPORTANT: Lower bracket should NOT show "Gran Final" - only the separate grand final stage does
            if (info.finalType === "grand_final") {
              return "Gran Final";

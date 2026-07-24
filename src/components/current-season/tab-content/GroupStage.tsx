@@ -19,15 +19,24 @@ interface MatchResult {
 }
 
 interface GroupMatches {
-  "grupo-a": MatchResult[];
-  "grupo-b": MatchResult[];
-  "grupo-c": MatchResult[];
-  "grupo-d": MatchResult[];
+  "grupo-a"?: MatchResult[];
+  "grupo-b"?: MatchResult[];
+  "grupo-c"?: MatchResult[];
+  "grupo-d"?: MatchResult[];
+  [key: string]: MatchResult[] | undefined;
 }
 
 interface JornadasData {
   [key: string]: GroupMatches;
 }
+
+const GROUP_KEY_ORDER = ["grupo-a", "grupo-b", "grupo-c", "grupo-d"] as const;
+const GROUP_KEY_TO_NAME: Record<string, string> = {
+  "grupo-a": "Grupo A",
+  "grupo-b": "Grupo B",
+  "grupo-c": "Grupo C",
+  "grupo-d": "Grupo D",
+};
 
 // Helper function to find matching team data with specific mappings
 const findTeamData = (teamName: string, teams: any[]) => {
@@ -87,61 +96,56 @@ const createGroupData = (teamsData: any, jornadasData: any): GroupData => {
   const teams = Object.values(teamsData);
   const jornadas = jornadasData as JornadasData;
 
-  // Initialize groups with all teams and zero stats
-  const groups: GroupData = {};
-  const groupNames = ["Grupo A", "Grupo B", "Grupo C", "Grupo D"];
-  const groupKeys: (keyof GroupMatches)[] = ["grupo-a", "grupo-b", "grupo-c", "grupo-d"];
+  // Detectar grupos presentes en las jornadas (S8: A/B; S6/S7: A/B/C/D)
+  const foundKeys = new Set<string>();
+  Object.values(jornadas).forEach((jornada) => {
+    Object.keys(jornada || {}).forEach((key) => {
+      if (GROUP_KEY_TO_NAME[key]) foundKeys.add(key);
+    });
+  });
+  const groupKeys = GROUP_KEY_ORDER.filter((key) => foundKeys.has(key));
 
-  groupNames.forEach((groupName, groupIndex) => {
+  const groups: GroupData = {};
+
+  groupKeys.forEach((groupKey) => {
+    const groupName = GROUP_KEY_TO_NAME[groupKey];
     groups[groupName] = [];
     
-    // Get all unique team names from the jornadas data for this group
-    const groupKey = groupKeys[groupIndex];
     const teamNames = new Set<string>();
     
     Object.values(jornadas).forEach(jornada => {
       jornada[groupKey]?.forEach(match => {
-        // Normalize team names before adding to avoid duplicates
         teamNames.add(normalizeTeamName(match.team1));
         teamNames.add(normalizeTeamName(match.team2));
       });
     });
 
-    // Initialize team stats
     const teamStats: { [teamName: string]: { wins: number; losses: number; draws: number; points: number } } = {};
     
     Array.from(teamNames).forEach(teamName => {
       teamStats[teamName] = { wins: 0, losses: 0, draws: 0, points: 0 };
     });
 
-    // Calculate stats from all jornadas
     Object.values(jornadas).forEach(jornada => {
       jornada[groupKey]?.forEach(match => {
-        // Only process matches with results (not TBD or null)
         if (match.score1 !== null && match.score2 !== null && 
             match.score1 !== "TBD" && match.score2 !== "TBD") {
           const score1 = parseInt(match.score1);
           const score2 = parseInt(match.score2);
           
-          // Normalize team names when calculating stats
           const normalizedTeam1 = normalizeTeamName(match.team1);
           const normalizedTeam2 = normalizeTeamName(match.team2);
           
-          // Each game win gives 1 point, not 3 points per match
           teamStats[normalizedTeam1].points += score1;
           teamStats[normalizedTeam2].points += score2;
           
-          // Calculate wins, losses, draws based on match result
           if (score1 > score2) {
-            // Team1 wins the match
             teamStats[normalizedTeam1].wins++;
             teamStats[normalizedTeam2].losses++;
           } else if (score2 > score1) {
-            // Team2 wins the match
             teamStats[normalizedTeam2].wins++;
             teamStats[normalizedTeam1].losses++;
           } else {
-            // Draw
             teamStats[normalizedTeam1].draws++;
             teamStats[normalizedTeam2].draws++;
           }
@@ -149,7 +153,6 @@ const createGroupData = (teamsData: any, jornadasData: any): GroupData => {
       });
     });
 
-    // Create team objects with calculated stats and find matching logos
     Array.from(teamNames).forEach(teamName => {
       // Filtrar equipos TBD - no mostrarlos en la tabla
       if (teamName === "TBD" || teamName.toUpperCase() === "TBD") {
@@ -159,7 +162,6 @@ const createGroupData = (teamsData: any, jornadasData: any): GroupData => {
       const stats = teamStats[teamName];
       const teamData = findTeamData(teamName, teams);
       
-      // Skip if we already have this team (handle duplicates)
       const teamExists = groups[groupName].some(existingTeam => 
         existingTeam.name === teamName || 
         (teamData && existingTeam.name === teamData.name)
@@ -177,7 +179,6 @@ const createGroupData = (teamsData: any, jornadasData: any): GroupData => {
       }
     });
 
-    // Sort by points descending, then by wins, then by goal difference (wins - losses)
     groups[groupName].sort((a, b) => {
       if (b.points !== a.points) return b.points - a.points;
       if (b.wins !== a.wins) return b.wins - a.wins;
@@ -201,19 +202,11 @@ export const GroupStageContent = ({ season = 6 }: GroupStageContentProps) => {
   
   const groupsData = createGroupData(teamsData, jornadasData);
   
-  const getGroupKey = (groupName: string): "grupo-a" | "grupo-b" | "grupo-c" | "grupo-d" => {
-    switch (groupName) {
-      case "Grupo A":
-        return "grupo-a";
-      case "Grupo B":
-        return "grupo-b";
-      case "Grupo C":
-        return "grupo-c";
-      case "Grupo D":
-        return "grupo-d";
-      default:
-        return "grupo-a";
-    }
+  const getGroupKey = (groupName: string): string => {
+    return (
+      Object.entries(GROUP_KEY_TO_NAME).find(([, name]) => name === groupName)?.[0] ||
+      "grupo-a"
+    );
   };
   
   const renderGroupTable = (data: GroupTeam[], groupName: string) => (

@@ -50,31 +50,31 @@ export const DateCard = () => {
         <DateText>
           Inscripción de equipos
         </DateText>
-        <DateText style={{ textAlign: "end" }}>Finalizada</DateText>
+        <DateText style={{ textAlign: "end" }}>TBD</DateText>
       </DatesRow>
       <DatesRow>
         <DateText>
           Presentación
         </DateText>
-        <DateText style={{ textAlign: "end" }}>Lunes 09 feb</DateText>
+        <DateText style={{ textAlign: "end" }}>TBD</DateText>
       </DatesRow>
       <DatesRow>
         <DateText>
           Fase de grupos
         </DateText>
-        <DateText style={{ textAlign: "end" }}>10 feb - 01 mar</DateText>
+        <DateText style={{ textAlign: "end" }}>TBD</DateText>
       </DatesRow>
       <DatesRow>
         <DateText>
           Evento principal
         </DateText>
-        <DateText style={{ textAlign: "end" }}>02 mar - 28 mar</DateText>
+        <DateText style={{ textAlign: "end" }}>TBD</DateText>
       </DatesRow>
       <DatesRow>
         <DateText>
           Gran final
         </DateText>
-        <DateText style={{ textAlign: "end" }}>Domingo 29 mar</DateText>
+        <DateText style={{ textAlign: "end" }}>TBD</DateText>
       </DatesRow>
     </DatesBox>
   );

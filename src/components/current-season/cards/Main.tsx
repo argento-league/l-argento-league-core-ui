@@ -148,23 +148,32 @@ const DiscordButtonContainer = styled.div`
 export const MainCard = () => {
   const theme = useSeasonTheme();
   const isSeason6 = theme.seasonKey === "season6";
+  const isSeason7 = theme.seasonKey === "season7";
+
+  const championLabel = isSeason6
+    ? "The Royals"
+    : isSeason7
+      ? "Hydra E-Sport"
+      : "Próximamente sorteo";
 
   return (
     <MainGridBoxContent>
       <SeasonTitle> {theme.seasonLabel} </SeasonTitle>
       <MainTextGroup>
         {/* Logo del campeón: descomentar y poner la ruta del logo cuando esté definido.
-            Ej: src="/images/teams/season-7/nombre-equipo.png" alt="Nombre equipo" */}
+            Ej: src="/images/teams/season-8/nombre-equipo.png" alt="Nombre equipo" */}
         {/* <ChampionLogo
           src={
             isSeason6
               ? "/images/teams/season-6/the-royals.png"
-              : "/images/teams/season-7/campeon.png"
+              : isSeason7
+                ? "/images/teams/season-7/Hydra_E-Sport.png"
+                : "/images/teams/season-8/campeon.png"
           }
-          alt={isSeason6 ? "The Royals logo" : "Campeón S7"}
+          alt={championLabel}
         /> */}
-        <ChampionTeam>{isSeason6 ? "The Royals" : "Próximamente sorteo"}</ChampionTeam>
-        {/* <ChampionTitle>{isSeason6 ? "Campeones" : "Campeón S7"}</ChampionTitle> */}
+        <ChampionTeam>{championLabel}</ChampionTeam>
+        {/* <ChampionTitle>{isSeason6 || isSeason7 ? "Campeones" : "Campeón S8"}</ChampionTitle> */}
       </MainTextGroup>
       {/* <Button
         to="https://tally.so/r/mD9dPj"

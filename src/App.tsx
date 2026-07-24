@@ -7,6 +7,7 @@ import { NavBar } from "./components/navbar";
 import { SeasonFour } from "./pages/season-four";
 import { SeasonFive } from "./pages/season-five";
 import { SeasonSixPage } from "./pages/season-six";
+import { SeasonSevenPage } from "./pages/season-seven";
 import { CurrentSeasonPage } from "./pages/current-season";
 import { FantasyPage } from "./pages/fantasy";
 import { StaffPage } from "./pages/staff";
@@ -28,6 +29,7 @@ function App() {
           <Route path="/season-4" element={<SeasonFour />} />
           <Route path="/season-5" element={<SeasonFive />} />
           <Route path="/season-6" element={<SeasonSixPage />} />
+          <Route path="/season-7" element={<SeasonSevenPage />} />
           <Route path="/current-season" element={<CurrentSeasonPage />} />
           <Route path="/fantasy" element={<FantasyPage />} />
           <Route path="/staff" element={<StaffPage />} />

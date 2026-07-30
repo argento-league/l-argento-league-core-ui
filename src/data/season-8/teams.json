@@ -1,38 +1,3 @@
-MessiGoAt En Mode Saksa
-vale9039
-Compartiendo su pantalla
-﻿
-MessiGoAt En Mode Saksa
- inició una llamada. — 12:56
-MessiGoAt En Mode Saksa
- añadió a 
-Dino
- al grupo. — 12:59
-MessiGoAt En Mode Saksa
- añadió a 
-dgN
- al grupo. — 12:59
-MessiGoAt En Mode Saksa — 13:23
-{
-  "TEAM_A1": {
-    "name": "TBD A1",
-    "logo": "",
-    "players": [
-      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
-
-message.txt
-9 KB
-Dino [CZN],  — 13:34
-{
-  "TEAM_A1": {
-    "name": "Ravage Gaming",
-    "logo": "",
-    "players": [
-      { "nick": "Nickbled", "nationality": "cl", "mmr": 7034, "id_dota": "171036855" },
-
-largento-season8-teams.json
-10 KB
-﻿
 {
   "TEAM_A1": {
     "name": "Ravage Gaming",

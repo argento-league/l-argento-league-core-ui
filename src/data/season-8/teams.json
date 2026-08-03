@@ -1,170 +1,170 @@
 {
-  "TBD_A1": {
-    "name": "TBD A1",
-    "logo": "",
+  "RAVAGE_GAMING": {
+    "name": "Ravage Gaming",
+    "logo": "ravage gaming.png",
     "players": [
-      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "Nickbled", "nationality": "cl", "mmr": 7034, "id_dota": "171036855" },
+      { "nick": "Grybus", "nationality": "cl", "mmr": 5159, "id_dota": "113712218" },
+      { "nick": "mamborapino", "nationality": "cl", "mmr": 6253, "id_dota": "203434413" },
+      { "nick": "-easymoneysniper-", "nationality": "cl", "mmr": 8611, "id_dota": "860814988" },
+      { "nick": "Hundred", "nationality": "cl", "mmr": 9652, "id_dota": "101071453" },
+      { "nick": "NoiA", "nationality": "cl", "mmr": 8728, "id_dota": "101800753" },
+      { "nick": "Burbuja", "nationality": "cl", "mmr": 7005, "id_dota": "194733078" },
+      { "nick": "Aleysa", "nationality": "cl", "mmr": 4429, "id_dota": "155100084" }
+    ]
+  },
+  "HYDRA_E_SPORT": {
+    "name": "Hydra E-sport",
+    "logo": "HYDRA.png",
+    "players": [
+      { "nick": "Arielito", "nationality": "ar", "mmr": 8308, "id_dota": "454675942" },
+      { "nick": "humblegod", "nationality": "ar", "mmr": 10306, "id_dota": "454107685" },
+      { "nick": "God Complex", "nationality": "ar", "mmr": 6891, "id_dota": "90449925" },
+      { "nick": "Gssi", "nationality": "bo", "mmr": 9105, "id_dota": "320192546" },
+      { "nick": "Sebas", "nationality": "pe", "mmr": 8850, "id_dota": "173199930" },
+      { "nick": "Hawkeye", "nationality": "ar", "mmr": 5943, "id_dota": "397239765" },
+      { "nick": "Oppie", "nationality": "ar", "mmr": 6012, "id_dota": "135179013" },
+      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
+    ]
+  },
+  "DISBOARD": {
+    "name": "Disboard",
+    "logo": "DISBOARD.png",
+    "players": [
+      { "nick": "Miru", "nationality": "ar", "mmr": 6330, "id_dota": "126460911" },
+      { "nick": "Killer", "nationality": "ar", "mmr": 7016, "id_dota": "1025380339" },
+      { "nick": "3mpty", "nationality": "ar", "mmr": 3953, "id_dota": "139160605" },
+      { "nick": "Innolize", "nationality": "ar", "mmr": 6194, "id_dota": "126498508" },
+      { "nick": "Daxas", "nationality": "ar", "mmr": 6692, "id_dota": "87658175" },
       { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
       { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
       { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
     ]
   },
-  "TBD_A2": {
-    "name": "TBD A2",
-    "logo": "",
+  "WINDINGO": {
+    "name": "Windingo",
+    "logo": "windingo.png",
     "players": [
-      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "SokaDemon", "nationality": "ar", "mmr": 5906, "id_dota": "153524734" },
+      { "nick": "Gorca", "nationality": "ar", "mmr": 11765, "id_dota": "200450157" },
+      { "nick": "dgN", "nationality": "ar", "mmr": 8122, "id_dota": "40521044" },
+      { "nick": "picado", "nationality": "ar", "mmr": 9008, "id_dota": "98780719" },
+      { "nick": "Baldu", "nationality": "ar", "mmr": 3000, "id_dota": "43910179" },
+      { "nick": "meew", "nationality": "ar", "mmr": 9026, "id_dota": "160482724" },
+      { "nick": "wij", "nationality": "ar", "mmr": 10441, "id_dota": "86850560" },
+      { "nick": "FLIPENDO", "nationality": "ar", "mmr": 3094, "id_dota": "308047201" }
+    ]
+  },
+  "MAMBORAPINO_SLAYERS": {
+    "name": "Mamborapino Slayers",
+    "logo": "mamborapino slayers.png",
+    "players": [
+      { "nick": "Junseba", "nationality": "cl", "mmr": 10064, "id_dota": "124040607" },
+      { "nick": "Sans", "nationality": "cl", "mmr": 8010, "id_dota": "99607511" },
+      { "nick": "luchito mario", "nationality": "cl", "mmr": 8055, "id_dota": "340541490" },
+      { "nick": "Sanguito", "nationality": "ar", "mmr": 3419, "id_dota": "112958496" },
+      { "nick": "Zellwow", "nationality": "jp", "mmr": 8434, "id_dota": "102652420" },
+      { "nick": "Doctor Ezio", "nationality": "cl", "mmr": 7764, "id_dota": "203102808" },
+      { "nick": "qqnena", "nationality": "cl", "mmr": 7510, "id_dota": "121113386" },
+      { "nick": "MAE", "nationality": "pe", "mmr": 2309, "id_dota": "284255496" }
+    ]
+  },
+  "ISURUS_JUJENIO": {
+    "name": "Isurus jujenio",
+    "logo": "isurus jujenio.jpeg",
+    "players": [
+      { "nick": "Draco", "nationality": "ar", "mmr": 9459, "id_dota": "865511874" },
+      { "nick": "Shifu", "nationality": "ar", "mmr": 10500, "id_dota": "121952627" },
+      { "nick": "Adachi", "nationality": "ar", "mmr": 10589, "id_dota": "270029316" },
+      { "nick": "MDKpipi", "nationality": "ar", "mmr": 3520, "id_dota": "375817604" },
+      { "nick": "Shana", "nationality": "ar", "mmr": 4921, "id_dota": "106451420" },
+      { "nick": "Mace", "nationality": "ar", "mmr": 3569, "id_dota": "160965060" },
+      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
+    ]
+  },
+  "ROYALS": {
+    "name": "Royals",
+    "logo": "ROYALS.png",
+    "players": [
+      { "nick": "Worlock", "nationality": "ar", "mmr": 7051, "id_dota": "291799648" },
+      { "nick": "MessiGoAT", "nationality": "ar", "mmr": 4508, "id_dota": "363362292" },
+      { "nick": "Fantasyy", "nationality": "pe", "mmr": 11294, "id_dota": "410707457" },
+      { "nick": "Neko", "nationality": "pe", "mmr": 1234, "id_dota": "1874981361" },
+      { "nick": "Lokura", "nationality": "ar", "mmr": 2223, "id_dota": "389847437" },
+      { "nick": "Andino", "nationality": "ar", "mmr": 6178, "id_dota": "121672308" },
+      { "nick": "Sheol", "nationality": "ar", "mmr": 11850, "id_dota": "398747760" },
+      { "nick": "Rena", "nationality": "pe", "mmr": 11000, "id_dota": "427017829" }
+    ]
+  },
+  "WORKING_HARD": {
+    "name": "Working Hard",
+    "logo": "team working hard.png",
+    "players": [
+      { "nick": "Hermit", "nationality": "ar", "mmr": 11730, "id_dota": "145372258" },
+      { "nick": "Roy", "nationality": "ar", "mmr": 7463, "id_dota": "118300246" },
+      { "nick": "Gato", "nationality": "ar", "mmr": 9366, "id_dota": "447471761" },
+      { "nick": "Khantus", "nationality": "ar", "mmr": 6903, "id_dota": "156131630" },
+      { "nick": "Rico kab0om", "nationality": "bo", "mmr": 11311, "id_dota": "44524794" },
+      { "nick": "Tabu", "nationality": "ar", "mmr": 6472, "id_dota": "115267494" },
+      { "nick": "Carnicero", "nationality": "ar", "mmr": 4371, "id_dota": "322086423" },
+      { "nick": "Roboz", "nationality": "pe", "mmr": 11000, "id_dota": "123953528" }
+    ]
+  },
+  "SHIFT": {
+    "name": "Shift",
+    "logo": "SHIFT.png",
+    "players": [
+      { "nick": "Shukker", "nationality": "ar", "mmr": 6796, "id_dota": "129910566" },
+      { "nick": "astronis", "nationality": "ar", "mmr": 4234, "id_dota": "1001127566" },
+      { "nick": "Elfo Shador", "nationality": "ar", "mmr": 5683, "id_dota": "139402543" },
+      { "nick": "awper", "nationality": "pe", "mmr": 7164, "id_dota": "177623488" },
+      { "nick": "Fr4nkgab", "nationality": "ar", "mmr": 6970, "id_dota": "203844501" },
+      { "nick": "z-ta", "nationality": "ar", "mmr": 6504, "id_dota": "849500080" },
+      { "nick": "Snitter", "nationality": "ar", "mmr": 8500, "id_dota": "211257730" },
+      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
+    ]
+  },
+  "RES_NON_VERBA": {
+    "name": "Res Non Verba",
+    "logo": "res non verba.png",
+    "players": [
+      { "nick": "Nirvana", "nationality": "ar", "mmr": 5533, "id_dota": "91467191" },
+      { "nick": "sgg", "nationality": "ar", "mmr": 8386, "id_dota": "117102307" },
+      { "nick": "Baba Yaga", "nationality": "pe", "mmr": 8517, "id_dota": "902238054" },
+      { "nick": "Edu-", "nationality": "ve", "mmr": 8539, "id_dota": "300196119" },
+      { "nick": "Taboo", "nationality": "ar", "mmr": 0, "id_dota": "" },
       { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
       { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
       { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
     ]
   },
-  "TBD_A3": {
-    "name": "TBD A3",
-    "logo": "",
+  "UKUMARI": {
+    "name": "Ukumari",
+    "logo": "ukumariii.png",
     "players": [
-      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
+      { "nick": "Retsu", "nationality": "cl", "mmr": 5988, "id_dota": "460720321" },
+      { "nick": "Kiri", "nationality": "pe", "mmr": 9900, "id_dota": "1114332088" },
+      { "nick": "Boyka", "nationality": "cl", "mmr": 9188, "id_dota": "317262338" },
+      { "nick": "Dm", "nationality": "cl", "mmr": 4833, "id_dota": "73326106" },
+      { "nick": "Mirari", "nationality": "pe", "mmr": 8151, "id_dota": "329589381" },
+      { "nick": "estupenda", "nationality": "cl", "mmr": 6596, "id_dota": "257627749" },
+      { "nick": "cocodota", "nationality": "cl", "mmr": 8623, "id_dota": "367827003" },
       { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
     ]
   },
-  "TBD_A4": {
-    "name": "TBD A4",
-    "logo": "",
+  "VOID_HUNTERS": {
+    "name": "VOID HUNTERS",
+    "logo": "void hunters.png",
     "players": [
-      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
-    ]
-  },
-  "TBD_A5": {
-    "name": "TBD A5",
-    "logo": "",
-    "players": [
-      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
-    ]
-  },
-  "TBD_A6": {
-    "name": "TBD A6",
-    "logo": "",
-    "players": [
-      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
-    ]
-  },
-  "TBD_B1": {
-    "name": "TBD B1",
-    "logo": "",
-    "players": [
-      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
-    ]
-  },
-  "TBD_B2": {
-    "name": "TBD B2",
-    "logo": "",
-    "players": [
-      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
-    ]
-  },
-  "TBD_B3": {
-    "name": "TBD B3",
-    "logo": "",
-    "players": [
-      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
-    ]
-  },
-  "TBD_B4": {
-    "name": "TBD B4",
-    "logo": "",
-    "players": [
-      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
-    ]
-  },
-  "TBD_B5": {
-    "name": "TBD B5",
-    "logo": "",
-    "players": [
-      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
-    ]
-  },
-  "TBD_B6": {
-    "name": "TBD B6",
-    "logo": "",
-    "players": [
-      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
+      { "nick": "Brusel", "nationality": "pe", "mmr": 9181, "id_dota": "343139467" },
+      { "nick": "Klishito", "nationality": "pe", "mmr": 7522, "id_dota": "893218969" },
+      { "nick": "Kaneki", "nationality": "pe", "mmr": 5444, "id_dota": "179429545" },
+      { "nick": "Trouble", "nationality": "pe", "mmr": 9385, "id_dota": "441036394" },
+      { "nick": "Ziwar", "nationality": "ar", "mmr": 6417, "id_dota": "124676016" },
+      { "nick": "Lobo", "nationality": "ar", "mmr": 6444, "id_dota": "68799424" },
+      { "nick": "Zeromercy", "nationality": "pe", "mmr": 5324, "id_dota": "336868350" },
+      { "nick": "eternity", "nationality": "ar", "mmr": 8925, "id_dota": "1125342825" }
     ]
   }
 }

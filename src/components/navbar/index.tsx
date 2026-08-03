@@ -10,7 +10,7 @@ import { CURRENT_SEASON_COLORS } from "../../constants/season-colors";
 const NAV_LINKS = [
   { to: "/", label: "Inicio" },
   { to: "/current-season", label: "Season 8" },
-  { to: "/fantasy", label: "Fantasy" },
+  { to: "/staff", label: "Staff" },
 ];
 
 const SEASONS_DROPDOWN = [
@@ -67,8 +67,6 @@ function DesktopNavbarLinks({ currentPath }: { currentPath: string }) {
         dropdownOpen={dropdownOpen}
         setDropdownOpen={setDropdownOpen}
       />
-      {/* Staff oculto hasta que esté terminada la página */}
-      {/* <HeaderLink to="/staff" active={currentPath === "/staff" ? "true" : undefined}>Staff</HeaderLink> */}
     </DesktopLinkContainer>
   );
 }
@@ -158,8 +156,6 @@ function MobileNavbarLinks({
           {season.label}
         </HeaderLink>
       ))}
-      {/* Staff oculto hasta que esté terminada la página */}
-      {/* <HeaderLink to="/staff" onClick={onNavigate} active={currentPath === "/staff" ? "true" : undefined}>Staff</HeaderLink> */}
     </MobileLinkContainer>
   );
 }

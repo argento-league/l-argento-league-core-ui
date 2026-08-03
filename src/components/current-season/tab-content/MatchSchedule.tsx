@@ -163,8 +163,11 @@ const MatchScheduleContainer = styled.div`
   font-family: "Outfit", sans-serif;
   max-width: 400px;
   min-width: 300px;
-	width: 100%;
-	box-sizing: border-box;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
 
   @media (max-width: 768px) {
     max-width: 100%;
@@ -177,7 +180,8 @@ const NavigationContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin-bottom: 24px;
+  margin: 0 0 16px 0;
+  min-height: 28px;
 `;
 
 const NavButton = styled.button`
@@ -187,7 +191,9 @@ const NavButton = styled.button`
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
-  padding: 8px;
+  padding: 0 8px;
+  line-height: 28px;
+  height: 28px;
   transition: color 0.2s ease;
 
   &:hover:not(:disabled) {
@@ -208,6 +214,7 @@ const JornadaTitle = styled.h2`
   margin: 0;
   min-width: 100px;
   text-align: center;
+  line-height: 28px;
 `;
 
 const MatchesContainer = styled.div`
@@ -220,7 +227,7 @@ const MatchCard = styled.div`
   background-color: #000;
   border: 1px solid #333;
   border-radius: 8px;
-  padding: 20px;
+  padding: 12px 16px;
   min-width: 300px;
 `;
 
@@ -228,7 +235,7 @@ const TeamRow = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 0;
+  padding: 6px 0;
 `;
 
 const TeamInfo = styled.div`

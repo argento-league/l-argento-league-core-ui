@@ -208,6 +208,7 @@ export const GroupStageContent = ({ season = 6 }: GroupStageContentProps) => {
   const renderGroupTable = (data: GroupTeam[], groupName: string) => (
     <GroupSection>
       <GroupTableContainer>
+        <ColumnTitle>{groupName}</ColumnTitle>
         <GroupTable>
           <TableContainer>
             <TableHeader>
@@ -251,28 +252,9 @@ export const GroupStageContent = ({ season = 6 }: GroupStageContentProps) => {
   return (
     <GroupStageContainer>
       {Object.entries(groupsData).map(([groupName, teams]) => (
-        <div
-          key={groupName}
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: "column",
-          }}
-        >
-          <h1
-            style={{
-              color: "white",
-              fontFamily: "Outfit, sans-serif",
-              fontSize: "20px",
-              fontWeight: 600,
-              marginBottom: "16px",
-            }}
-          >
-            {groupName}
-          </h1>
+        <GroupBlock key={groupName}>
           {renderGroupTable(teams, groupName)}
-        </div>
+        </GroupBlock>
       ))}
     </GroupStageContainer>
   );
@@ -291,13 +273,30 @@ const GroupStageContainer = styled.div`
   }
 `;
 
+const GroupBlock = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
+
+const ColumnTitle = styled.h1`
+  color: white;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  text-align: center;
+  min-height: 28px;
+  line-height: 28px;
+`;
+
 const GroupSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
-	width: 100%;
-	justify-content: center;
-	align-items: center;
+  width: 100%;
+  justify-content: center;
+  align-items: stretch;
 
   @media (min-width: 1024px) {
     flex-direction: row;
@@ -309,7 +308,6 @@ const GroupSection = styled.div`
 const GroupTableContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 16px;
   flex: 1;
   max-width: 700px;
 `;
@@ -372,7 +370,7 @@ const TableBody = styled.div`
 const TableRow = styled.div`
   display: grid;
   grid-template-columns: 40px 1fr 80px 80px;
-  padding: 16px;
+  padding: 12px 16px;
   gap: 16px;
   border-bottom: 1px solid #333;
   align-items: center;
@@ -384,7 +382,7 @@ const TableRow = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: 30px 1fr 60px 60px;
     gap: 8px;
-    padding: 12px;
+    padding: 10px 12px;
   }
 `;
 

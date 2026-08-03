@@ -344,16 +344,6 @@ const streamers = [
     featured: false,
   },
   {
-    name: "Worlock",
-    platform: "kick.com/w0rlock",
-    platformUrl: "https://kick.com/w0rlock",
-    image: null,
-    socials: [
-      { type: "instagram", url: "https://www.instagram.com/worlock1", handle: "@worlock1" },
-    ],
-    featured: false,
-  },
-  {
     name: "Sandevistan",
     platform: "twitch.tv/sandevistanr",
     platformUrl: "https://www.twitch.tv/sandevistanr",
@@ -367,7 +357,7 @@ const streamers = [
     name: "dgN",
     platform: "twitch.tv/dgndota",
     platformUrl: "https://www.twitch.tv/dgndota",
-    image: null,
+    image: "/images/staff/dgn.png",
     socials: [
       { type: "instagram", url: "https://www.instagram.com/dgn.dota", handle: "@dgn.dota" },
     ],
@@ -398,7 +388,7 @@ const streamers = [
     name: "ChariLive",
     platform: "twitch.tv/ChariLive",
     platformUrl: "https://www.twitch.tv/charlive",
-    image: null,
+    image: "/images/staff/chari-live.png",
     socials: [
       { type: "instagram", url: "https://www.instagram.com/augustochiarito", handle: "@augustochiarito" },
       { type: "twitter", url: "https://twitter.com/augustochiarito", handle: "@augustochiarito" },
@@ -439,14 +429,28 @@ const streamers = [
     ],
     featured: false,
   },
+  {
+    name: "Clancys",
+    platform: "twitch.tv/clancys",
+    platformUrl: "https://www.twitch.tv/clancys",
+    image: "/images/staff/clancys.png",
+    socials: [],
+    featured: false,
+  },
 ];
 
 // Staff data
 const staff = [
   {
+    name: "Valentín Vignolo",
+    role: "CEO",
+    image: "/images/staff/valentin-vignolo.png",
+    contacts: [],
+  },
+  {
     name: "Juan Rettori",
     role: "Fullstack & Game Developer",
-    image: null,
+    image: "/images/staff/juan-rettori.png",
     contacts: [
       { type: "linkedin", url: "https://www.linkedin.com/in/juan-rettori", label: "in Juan Rettori" },
       { type: "instagram", url: "https://www.instagram.com/juanrettori", label: "@juanrettori" },
@@ -456,7 +460,7 @@ const staff = [
   {
     name: "Soff Schneider",
     role: "Web & Graphic Designer",
-    image: null,
+    image: "/images/staff/soff-schneider.png",
     contacts: [
       { type: "linkedin", url: "https://www.linkedin.com/in/sofia-schneider-de-haro", label: "in Sofia Schneider de Haro" },
       { type: "website", url: "https://sofiasch.com", label: "sofiasch.com" },
@@ -473,12 +477,18 @@ const staff = [
     ],
   },
   {
-    name: "Jorgelina Rios",
-    role: "Manager Assistant",
-    image: null,
+    name: "Mariano J Maidana",
+    role: "Community Manager",
+    image: "/images/staff/mariano-j-maidana.png",
+    contacts: [],
+  },
+  {
+    name: "Worlock",
+    role: "External consultant",
+    image: "/images/staff/worlock.png",
     contacts: [
-      { type: "discord", url: "#", label: "sanguito" },
-      { type: "instagram", url: "https://www.instagram.com/sanguito.sc", label: "@sanguito.sc" },
+      { type: "instagram", url: "https://www.instagram.com/worlock1", label: "@worlock1" },
+      { type: "kick", url: "https://kick.com/w0rlock", label: "kick.com/w0rlock" },
     ],
   },
 ];

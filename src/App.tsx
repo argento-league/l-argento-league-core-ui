@@ -9,7 +9,6 @@ import { SeasonFive } from "./pages/season-five";
 import { SeasonSixPage } from "./pages/season-six";
 import { SeasonSevenPage } from "./pages/season-seven";
 import { CurrentSeasonPage } from "./pages/current-season";
-import { FantasyPage } from "./pages/fantasy";
 import { StaffPage } from "./pages/staff";
 import { Footer } from "@components/footer";
 
@@ -31,7 +30,7 @@ function App() {
           <Route path="/season-6" element={<SeasonSixPage />} />
           <Route path="/season-7" element={<SeasonSevenPage />} />
           <Route path="/current-season" element={<CurrentSeasonPage />} />
-          <Route path="/fantasy" element={<FantasyPage />} />
+          <Route path="/fantasy" element={<Navigate to="/" replace />} />
           <Route path="/staff" element={<StaffPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

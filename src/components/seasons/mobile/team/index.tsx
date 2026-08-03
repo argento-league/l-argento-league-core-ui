@@ -113,7 +113,9 @@ export const Team = ({
   season = 5,
 }: TeamProps) => {
   // Don't show logo for TBD teams
-  const shouldShowLogo = teamName !== 'TBD' && teamName !== 'tbd';
+  const shouldShowLogo =
+    !!teamName &&
+    !teamName.trim().toUpperCase().startsWith("TBD");
   
   return (
     <TeamContainer id="team-1">

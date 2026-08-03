@@ -78,30 +78,52 @@ const TeamSelectionDesktop = ({
   teams,
   season,
 }: TeamSelectionProps) => {
+  const selectedLogo = typedTeamJson[selectedTeam]?.logo;
+  const selectedName = typedTeamJson[selectedTeam]?.name ?? selectedTeam;
+  const selectedIsTbd = !selectedName || selectedName.trim().toUpperCase().startsWith("TBD") || !selectedLogo;
+
   return (
     <FaseDeGruposContainer>
       <TeamLogoContainer>
-        {teams.map((teamName: string) => (
-          <TeamLogoCard key={teamName} isSelected={teamName === selectedTeam}>
-            <TeamLogo
-              src={`/images/teams/season-${season}/${typedTeamJson[teamName].logo}`}
-              alt={teamName}
-              onClick={() => setSelectedTeam(teamName)}
-            />
-          </TeamLogoCard>
-        ))}
+        {teams.map((teamName: string) => {
+          const logo = typedTeamJson[teamName].logo;
+          const displayName = typedTeamJson[teamName].name ?? teamName;
+          const isTbd = !displayName || displayName.trim().toUpperCase().startsWith("TBD") || !logo;
+          return (
+            <TeamLogoCard key={teamName} isSelected={teamName === selectedTeam}>
+              {isTbd ? (
+                <TeamLogoPlaceholder
+                  onClick={() => setSelectedTeam(teamName)}
+                  title={displayName}
+                >
+                  TBD
+                </TeamLogoPlaceholder>
+              ) : (
+                <TeamLogo
+                  src={`/images/teams/season-${season}/${logo}`}
+                  alt={displayName}
+                  onClick={() => setSelectedTeam(teamName)}
+                />
+              )}
+            </TeamLogoCard>
+          );
+        })}
       </TeamLogoContainer>
       <TeamInformationContainer>
         <TeamHeader>
           <ArrowButton onClick={goToPreviousTeam}>{"<"}</ArrowButton>
-          <TeamName>{typedTeamJson[selectedTeam]?.name}</TeamName>
+          <TeamName>{selectedName}</TeamName>
           <ArrowButton onClick={goToNextTeam}>{">"}</ArrowButton>
         </TeamHeader>
-        <TeamLogo
-          src={`/images/teams/season-${season}/${typedTeamJson[selectedTeam]?.logo}`}
-          alt="Team Logo"
-          style={{ width: "120px", height: "120px" }}
-        />
+        {selectedIsTbd ? (
+          <TeamLogoPlaceholderLarge>TBD</TeamLogoPlaceholderLarge>
+        ) : (
+          <TeamLogo
+            src={`/images/teams/season-${season}/${selectedLogo}`}
+            alt="Team Logo"
+            style={{ width: "120px", height: "120px" }}
+          />
+        )}
         <PlayersList>
           {typedTeamJson[selectedTeam]?.players.map((player) => (
             <PlayerItem key={player.nick}>
@@ -127,34 +149,53 @@ const TeamSelectionMobile = ({
   teams,
   season,
 }: TeamSelectionProps) => {
+  const selectedLogo = typedTeamJson[selectedTeam]?.logo;
+  const selectedName = typedTeamJson[selectedTeam]?.name ?? selectedTeam;
+  const selectedIsTbd = !selectedName || selectedName.trim().toUpperCase().startsWith("TBD") || !selectedLogo;
+
   return (
     <MobileContainer>
       <TeamLogoMobileContainer>
-        {teams.map((teamName: string) => (
-          <TeamLogoMobileCard
-            key={teamName}
-            isSelected={teamName === selectedTeam}
-            onClick={() => setSelectedTeam(teamName)}
-          >
-            <TeamLogoMobile
-              src={`/images/teams/season-${season}/${typedTeamJson[teamName].logo}`}
-              alt={teamName}
-            />
-          </TeamLogoMobileCard>
-        ))}
+        {teams.map((teamName: string) => {
+          const logo = typedTeamJson[teamName].logo;
+          const displayName = typedTeamJson[teamName].name ?? teamName;
+          const isTbd = !displayName || displayName.trim().toUpperCase().startsWith("TBD") || !logo;
+          return (
+            <TeamLogoMobileCard
+              key={teamName}
+              isSelected={teamName === selectedTeam}
+              onClick={() => setSelectedTeam(teamName)}
+            >
+              {isTbd ? (
+                <TeamLogoPlaceholderMobile title={displayName}>
+                  TBD
+                </TeamLogoPlaceholderMobile>
+              ) : (
+                <TeamLogoMobile
+                  src={`/images/teams/season-${season}/${logo}`}
+                  alt={displayName}
+                />
+              )}
+            </TeamLogoMobileCard>
+          );
+        })}
       </TeamLogoMobileContainer>
 
       <TeamInformationMobileContainer>
         <TeamHeader>
           <ArrowButton onClick={goToPreviousTeam}>{"<"}</ArrowButton>
-          <TeamName>{typedTeamJson[selectedTeam]?.name}</TeamName>
+          <TeamName>{selectedName}</TeamName>
           <ArrowButton onClick={goToNextTeam}>{">"}</ArrowButton>
         </TeamHeader>
 
-        <TeamLogoSelected
-          src={`/images/teams/season-${season}/${typedTeamJson[selectedTeam]?.logo}`}
-          alt="Team Logo"
-        />
+        {selectedIsTbd ? (
+          <TeamLogoPlaceholderLarge>TBD</TeamLogoPlaceholderLarge>
+        ) : (
+          <TeamLogoSelected
+            src={`/images/teams/season-${season}/${selectedLogo}`}
+            alt="Team Logo"
+          />
+        )}
 
         <PlayersListMobile>
           {typedTeamJson[selectedTeam]?.players.map((player) => (
@@ -196,6 +237,49 @@ const TeamLogo = styled.img`
   object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+`;
+
+const TeamLogoPlaceholder = styled.div`
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #666;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+  cursor: pointer;
+`;
+
+const TeamLogoPlaceholderLarge = styled.div`
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #666;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+`;
+
+const TeamLogoPlaceholderMobile = styled.div`
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #666;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
 `;
 
 type TeamLogoCardProps = {

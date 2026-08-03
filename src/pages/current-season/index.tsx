@@ -15,26 +15,16 @@ export const CurrentSeasonPage = () => {
   );
 };
 
-// Visibles pero no clickeables hasta que haya datos de Season 8
-const CURRENT_SEASON_DISABLED_TABS = [
-  TabsEnum.Equipos,
-  TabsEnum.FaseDeGrupos,
-  TabsEnum.EventoPrincipal,
-];
-
 const CurrentSeasonDetails = () => {
   const [selectedTab, setSelectedTab] = useState<TabsEnum>(
     TabsEnum.InfoGeneral
   );
 
   useEffect(() => {
-    const isDisabled = CURRENT_SEASON_DISABLED_TABS.includes(selectedTab);
     const isCurrentTabEnabled = TABS_CONFIG[selectedTab]?.enabled ?? true;
-    if (isDisabled || !isCurrentTabEnabled) {
+    if (!isCurrentTabEnabled) {
       const firstEnabledTab = Object.values(TabsEnum).find(
-        (tab) =>
-          (TABS_CONFIG[tab]?.enabled ?? true) &&
-          !CURRENT_SEASON_DISABLED_TABS.includes(tab)
+        (tab) => TABS_CONFIG[tab]?.enabled ?? true
       );
       if (firstEnabledTab) {
         setSelectedTab(firstEnabledTab);
@@ -48,7 +38,6 @@ const CurrentSeasonDetails = () => {
         selectedTab={selectedTab}
         tabList={Object.values(TabsEnum)}
         onSelectTab={setSelectedTab}
-        disabledTabs={CURRENT_SEASON_DISABLED_TABS}
       />
       <TabContent selectedTab={selectedTab} />
     </>

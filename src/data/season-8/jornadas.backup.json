@@ -1,0 +1,62 @@
+{
+  "Jornada-1": {
+    "grupo-a": [
+      { "team1": "TBD A1", "score1": "TBD", "team2": "TBD A2", "score2": "TBD" },
+      { "team1": "TBD A3", "score1": "TBD", "team2": "TBD A4", "score2": "TBD" },
+      { "team1": "TBD A5", "score1": "TBD", "team2": "TBD A6", "score2": "TBD" }
+    ],
+    "grupo-b": [
+      { "team1": "TBD B1", "score1": "TBD", "team2": "TBD B2", "score2": "TBD" },
+      { "team1": "TBD B3", "score1": "TBD", "team2": "TBD B4", "score2": "TBD" },
+      { "team1": "TBD B5", "score1": "TBD", "team2": "TBD B6", "score2": "TBD" }
+    ]
+  },
+  "Jornada-2": {
+    "grupo-a": [
+      { "team1": "TBD A1", "score1": "TBD", "team2": "TBD A3", "score2": "TBD" },
+      { "team1": "TBD A2", "score1": "TBD", "team2": "TBD A5", "score2": "TBD" },
+      { "team1": "TBD A4", "score1": "TBD", "team2": "TBD A6", "score2": "TBD" }
+    ],
+    "grupo-b": [
+      { "team1": "TBD B1", "score1": "TBD", "team2": "TBD B3", "score2": "TBD" },
+      { "team1": "TBD B2", "score1": "TBD", "team2": "TBD B5", "score2": "TBD" },
+      { "team1": "TBD B4", "score1": "TBD", "team2": "TBD B6", "score2": "TBD" }
+    ]
+  },
+  "Jornada-3": {
+    "grupo-a": [
+      { "team1": "TBD A1", "score1": "TBD", "team2": "TBD A4", "score2": "TBD" },
+      { "team1": "TBD A2", "score1": "TBD", "team2": "TBD A6", "score2": "TBD" },
+      { "team1": "TBD A3", "score1": "TBD", "team2": "TBD A5", "score2": "TBD" }
+    ],
+    "grupo-b": [
+      { "team1": "TBD B1", "score1": "TBD", "team2": "TBD B4", "score2": "TBD" },
+      { "team1": "TBD B2", "score1": "TBD", "team2": "TBD B6", "score2": "TBD" },
+      { "team1": "TBD B3", "score1": "TBD", "team2": "TBD B5", "score2": "TBD" }
+    ]
+  },
+  "Jornada-4": {
+    "grupo-a": [
+      { "team1": "TBD A1", "score1": "TBD", "team2": "TBD A5", "score2": "TBD" },
+      { "team1": "TBD A2", "score1": "TBD", "team2": "TBD A4", "score2": "TBD" },
+      { "team1": "TBD A3", "score1": "TBD", "team2": "TBD A6", "score2": "TBD" }
+    ],
+    "grupo-b": [
+      { "team1": "TBD B1", "score1": "TBD", "team2": "TBD B5", "score2": "TBD" },
+      { "team1": "TBD B2", "score1": "TBD", "team2": "TBD B4", "score2": "TBD" },
+      { "team1": "TBD B3", "score1": "TBD", "team2": "TBD B6", "score2": "TBD" }
+    ]
+  },
+  "Jornada-5": {
+    "grupo-a": [
+      { "team1": "TBD A1", "score1": "TBD", "team2": "TBD A6", "score2": "TBD" },
+      { "team1": "TBD A2", "score1": "TBD", "team2": "TBD A3", "score2": "TBD" },
+      { "team1": "TBD A4", "score1": "TBD", "team2": "TBD A5", "score2": "TBD" }
+    ],
+    "grupo-b": [
+      { "team1": "TBD B1", "score1": "TBD", "team2": "TBD B6", "score2": "TBD" },
+      { "team1": "TBD B2", "score1": "TBD", "team2": "TBD B3", "score2": "TBD" },
+      { "team1": "TBD B4", "score1": "TBD", "team2": "TBD B5", "score2": "TBD" }
+    ]
+  }
+}

@@ -134,13 +134,13 @@ type MainEventGlootProps = {
 
 // Helper to find team logo (por temporada)
 const getTeamLogo = (teamName: string, season: number): string => {
-  if (teamName === 'TBD' || teamName === 'tbd') return '';
+  if (!teamName || teamName.trim().toUpperCase().startsWith("TBD")) return '';
   if (season !== 6 && season !== 7 && season !== 8) return '';
   const seasonTeams = getSeasonTeams(season as SeasonNumber);
   const teamEntry = Object.entries(seasonTeams).find(([_, team]: [string, any]) =>
     team.name.toLowerCase() === teamName.toLowerCase()
   );
-  if (teamEntry) {
+  if (teamEntry && (teamEntry[1] as { logo: string }).logo) {
     return `/images/teams/season-${season}/${(teamEntry[1] as { logo: string }).logo}`;
   }
   return '';

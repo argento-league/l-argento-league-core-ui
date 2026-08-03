@@ -88,13 +88,13 @@ const getTeamLogo = (teamName: string, season: number): string | null => {
   }
   
   // For Season 6/7/8, use findTeamData con datos de la temporada
-  if (teamName === "TBD") return null;
+  if (!teamName || teamName.trim().toUpperCase().startsWith("TBD")) return null;
   if (season !== 6 && season !== 7 && season !== 8) return null;
 
   const seasonTeams = getSeasonTeams(season as SeasonNumber);
   const allTeams = Object.values(seasonTeams);
   const teamEntry = findTeamData(teamName, allTeams);
-  if (teamEntry) {
+  if (teamEntry?.logo) {
     return `/images/teams/season-${season}/${teamEntry.logo}`;
   }
   return null;

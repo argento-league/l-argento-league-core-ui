@@ -29,24 +29,24 @@ type MatchScheduleProps = {
 };
 
 const isTbd = (teamName: string) =>
-  teamName === "TBD" || teamName.toUpperCase() === "TBD";
+  !teamName || teamName.trim().toUpperCase().startsWith("TBD");
 
-// Helper function to find team logo (returns null if TBD para no mostrar icono)
+// Helper function to find team logo (returns null if TBD / sin logo)
 const findTeamLogo = (teamName: string, teams: any[]): string | null => {
   if (isTbd(teamName)) return null;
   // First try exact match
   let match = teams.find(team => team.name === teamName);
-  if (match) return match.logo || 'default-logo.png';
+  if (match) return match.logo || null;
   // Try case-insensitive match
   match = teams.find(team => team.name.toLowerCase() === teamName.toLowerCase());
-  if (match) return match.logo || 'default-logo.png';
+  if (match) return match.logo || null;
   // Try partial match (contains)
   match = teams.find(team =>
     team.name.toLowerCase().includes(teamName.toLowerCase()) ||
     teamName.toLowerCase().includes(team.name.toLowerCase())
   );
-  if (match) return match.logo || 'default-logo.png';
-  return 'default-logo.png';
+  if (match) return match.logo || null;
+  return null;
 };
 
 export const MatchScheduleContent = ({ currentGroup = "grupo-a", season = 6 }: MatchScheduleProps) => {
@@ -119,8 +119,8 @@ export const MatchScheduleContent = ({ currentGroup = "grupo-a", season = 6 }: M
             <MatchCard key={index}>
               <TeamRow>
                 <TeamInfo>
-                  {team1Tbd || team1Logo === null ? (
-                    <TbdPlaceholder>TBD</TbdPlaceholder>
+                  {team1Tbd || !team1Logo ? (
+                    <LogoSpacer />
                   ) : (
                     <TeamLogo
                       src={`/images/teams/season-${season}/${team1Logo}`}
@@ -136,8 +136,8 @@ export const MatchScheduleContent = ({ currentGroup = "grupo-a", season = 6 }: M
               <Divider />
               <TeamRow>
                 <TeamInfo>
-                  {team2Tbd || team2Logo === null ? (
-                    <TbdPlaceholder>TBD</TbdPlaceholder>
+                  {team2Tbd || !team2Logo ? (
+                    <LogoSpacer />
                   ) : (
                     <TeamLogo
                       src={`/images/teams/season-${season}/${team2Logo}`}
@@ -246,19 +246,10 @@ const TeamLogo = styled.img`
   flex-shrink: 0;
 `;
 
-const TbdPlaceholder = styled.div`
+const LogoSpacer = styled.div`
   width: 24px;
   height: 24px;
-  border-radius: 4px;
   flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #333;
-  color: #888;
-  font-size: 10px;
-  font-weight: 600;
-  font-family: "Outfit", sans-serif;
 `;
 
 const TeamName = styled.span`

@@ -154,13 +154,9 @@ const createGroupData = (teamsData: any, jornadasData: any): GroupData => {
     });
 
     Array.from(teamNames).forEach(teamName => {
-      // Filtrar equipos TBD - no mostrarlos en la tabla
-      if (teamName === "TBD" || teamName.toUpperCase() === "TBD") {
-        return;
-      }
-      
       const stats = teamStats[teamName];
       const teamData = findTeamData(teamName, teams);
+      const isTbdTeam = !teamName || teamName.trim().toUpperCase().startsWith("TBD");
       
       const teamExists = groups[groupName].some(existingTeam => 
         existingTeam.name === teamName || 
@@ -170,7 +166,7 @@ const createGroupData = (teamsData: any, jornadasData: any): GroupData => {
       if (!teamExists) {
         groups[groupName].push({
           name: teamName,
-          logo: teamData?.logo || 'default-logo.png',
+          logo: isTbdTeam ? "" : (teamData?.logo || ""),
           wins: stats.wins,
           losses: stats.losses,
           draws: stats.draws,
@@ -227,13 +223,13 @@ export const GroupStageContent = ({ season = 6 }: GroupStageContentProps) => {
                     <TeamStatus position={index + 1} isMobile={isMobile} />
                   </PositionCell>
                   <TeamCell>
-                    {team.name === "TBD" || team.name.toUpperCase() === "TBD" ? (
-                      <TbdPlaceholder>TBD</TbdPlaceholder>
-                    ) : (
+                    {team.logo ? (
                       <TeamLogo
                         src={`/images/teams/season-${season}/${team.logo}`}
                         alt={team.name}
                       />
+                    ) : (
+                      <LogoSpacer />
                     )}
                     <TeamName>{team.name}</TeamName>
                   </TeamCell>
@@ -417,19 +413,10 @@ const TeamLogo = styled.img`
   object-fit: cover;
 `;
 
-const TbdPlaceholder = styled.div`
+const LogoSpacer = styled.div`
   width: 32px;
   height: 32px;
-  border-radius: 4px;
   flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #333;
-  color: #888;
-  font-size: 11px;
-  font-weight: 600;
-  font-family: "Outfit", sans-serif;
 `;
 
 const TeamName = styled.span`

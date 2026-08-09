@@ -469,7 +469,7 @@ const staff = [
   {
     name: "SyndraMoon",
     role: "Discord Manager",
-    image: null,
+    image: "/images/staff/syndramoon.png",
     contacts: [
       { type: "discord", url: "#", label: "syndramoon12" },
       { type: "instagram", url: "https://www.instagram.com/syndramoon", label: "@syndramoon" },

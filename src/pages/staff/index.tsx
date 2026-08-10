@@ -321,49 +321,6 @@ const ContactButton = styled.a`
 // Streamers data
 const streamers = [
   {
-    name: "iluleh",
-    platform: "twitch.tv/iluleh",
-    platformUrl: "https://www.twitch.tv/iluleh",
-    image: null,
-    socials: [
-      { type: "instagram", url: "https://www.instagram.com/luleh.recap", handle: "@luleh.recap" },
-      { type: "tiktok", url: "https://www.tiktok.com/@soyluleh", handle: "@soyluleh" },
-      { type: "youtube", url: "https://www.youtube.com/@Imluleh", handle: "@Imluleh" },
-    ],
-    featured: false,
-  },
-  {
-    name: "El AleSsi",
-    platform: "twitch.tv/elalessipah",
-    platformUrl: "https://www.twitch.tv/elalessipah",
-    image: null,
-    socials: [
-      { type: "instagram", url: "https://www.instagram.com/alexisramirez", handle: "@alexisramirez" },
-      { type: "steam", url: "#", handle: "El AleSsi™" },
-    ],
-    featured: false,
-  },
-  {
-    name: "Sandevistan",
-    platform: "twitch.tv/sandevistanr",
-    platformUrl: "https://www.twitch.tv/sandevistanr",
-    image: null,
-    socials: [
-      { type: "twitch", url: "https://www.twitch.tv/sandevistanr", handle: "twitch.tv/sandevistanr" },
-    ],
-    featured: false,
-  },
-  {
-    name: "dgN",
-    platform: "twitch.tv/dgndota",
-    platformUrl: "https://www.twitch.tv/dgndota",
-    image: "/images/staff/dgn.png",
-    socials: [
-      { type: "instagram", url: "https://www.instagram.com/dgn.dota", handle: "@dgn.dota" },
-    ],
-    featured: false,
-  },
-  {
     name: "3mpty",
     platform: "twitch.tv/3mpty_dota",
     platformUrl: "https://www.twitch.tv/3mpty_dota",
@@ -371,16 +328,6 @@ const streamers = [
     socials: [
       { type: "instagram", url: "https://www.instagram.com/soff.sch", handle: "@soff.sch" },
       { type: "steam", url: "#", handle: "3mpty" },
-    ],
-    featured: false,
-  },
-  {
-    name: "FeliPapá",
-    platform: "twitch.tv/felipadre",
-    platformUrl: "https://www.twitch.tv/felipadre",
-    image: null,
-    socials: [
-      { type: "twitch", url: "https://www.twitch.tv/felipadre", handle: "twitch.tv/felipadre" },
     ],
     featured: false,
   },
@@ -489,6 +436,15 @@ const staff = [
     contacts: [
       { type: "instagram", url: "https://www.instagram.com/worlock1", label: "@worlock1" },
       { type: "kick", url: "https://kick.com/w0rlock", label: "kick.com/w0rlock" },
+    ],
+  },
+  {
+    name: "Maximiliano Barreira",
+    role: "Administrador",
+    image: "/images/staff/dgn.png",
+    contacts: [
+      { type: "instagram", url: "https://www.instagram.com/dgn.dota", label: "@dgn.dota" },
+      { type: "twitch", url: "https://www.twitch.tv/dgndota", label: "dgndota" },
     ],
   },
 ];

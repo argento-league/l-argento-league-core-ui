@@ -26,19 +26,19 @@
   "Jornada-3": {
     "grupo-a": [
       { "team1": "Disboard", "score1": "TBD", "team2": "Void Hunters", "score2": "TBD" },
-      { "team1": "Isurus Jujenio", "score1": "TBD", "team2": "Mamborapino Slayers", "score2": "TBD" },
+      { "team1": "Isurus Jujenio", "score1": "1", "team2": "Mamborapino Slayers", "score2": "1" },
       { "team1": "Ukumari", "score1": "TBD", "team2": "Ravage Gaming", "score2": "TBD" }
     ],
     "grupo-b": [
       { "team1": "Windingo", "score1": "TBD", "team2": "Hydra E-Sport", "score2": "TBD" },
-      { "team1": "Res Non Verba", "score1": "TBD", "team2": "Shift", "score2": "TBD" },
-      { "team1": "Royals", "score1": "TBD", "team2": "Working Hard", "score2": "TBD" }
+      { "team1": "Res Non Verba", "score1": "2", "team2": "Shift", "score2": "0" },
+      { "team1": "Royals", "score1": "2", "team2": "Working Hard", "score2": "2" }
     ]
   },
   "Jornada-4": {
     "grupo-a": [
       { "team1": "Disboard", "score1": "TBD", "team2": "Mamborapino Slayers", "score2": "TBD" },
-      { "team1": "Void Hunters", "score1": "TBD", "team2": "Ravage Gaming", "score2": "TBD" },
+      { "team1": "Void Hunters", "score1": "1", "team2": "Ravage Gaming", "score2": "1" },
       { "team1": "Isurus Jujenio", "score1": "TBD", "team2": "Ukumari", "score2": "TBD" }
     ],
     "grupo-b": [

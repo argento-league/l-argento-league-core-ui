@@ -7,7 +7,7 @@
     ],
     "grupo-b": [
       { "team1": "Windingo", "score1": "1", "team2": "Working Hard", "score2": "1" },
-      { "team1": "Shift", "score1": "0", "team2": "Royals", "score2": "2" },
+      { "team1": "Shift", "score1": "0", "team2": "Club Olimpo Esports", "score2": "2" },
       { "team1": "Hydra E-Sport", "score1": "1", "team2": "Res Non Verba", "score2": "1" }
     ]
   },
@@ -19,7 +19,7 @@
     ],
     "grupo-b": [
       { "team1": "Windingo", "score1": "2", "team2": "Res Non Verba", "score2": "0" },
-      { "team1": "Royals", "score1": "1", "team2": "Hydra E-Sport", "score2": "1" },
+      { "team1": "Club Olimpo Esports", "score1": "1", "team2": "Hydra E-Sport", "score2": "1" },
       { "team1": "Working Hard", "score1": "2", "team2": "Shift", "score2": "0" }
     ]
   },
@@ -32,7 +32,7 @@
     "grupo-b": [
       { "team1": "Windingo", "score1": "1", "team2": "Hydra E-Sport", "score2": "1" },
       { "team1": "Res Non Verba", "score1": "2", "team2": "Shift", "score2": "0" },
-      { "team1": "Royals", "score1": "2", "team2": "Working Hard", "score2": "0" }
+      { "team1": "Club Olimpo Esports", "score1": "2", "team2": "Working Hard", "score2": "0" }
     ]
   },
   "Jornada-4": {
@@ -44,7 +44,7 @@
     "grupo-b": [
       { "team1": "Windingo", "score1": "TBD", "team2": "Shift", "score2": "TBD" },
       { "team1": "Hydra E-Sport", "score1": "TBD", "team2": "Working Hard", "score2": "TBD" },
-      { "team1": "Res Non Verba", "score1": "2", "team2": "Royals", "score2": "0" }
+      { "team1": "Res Non Verba", "score1": "2", "team2": "Club Olimpo Esports", "score2": "0" }
     ]
   },
   "Jornada-5": {
@@ -54,7 +54,7 @@
       { "team1": "Void Hunters", "score1": "TBD", "team2": "Isurus Jujenio", "score2": "TBD" }
     ],
     "grupo-b": [
-      { "team1": "Windingo", "score1": "TBD", "team2": "Royals", "score2": "TBD" },
+      { "team1": "Windingo", "score1": "TBD", "team2": "Club Olimpo Esports", "score2": "TBD" },
       { "team1": "Working Hard", "score1": "TBD", "team2": "Res Non Verba", "score2": "TBD" },
       { "team1": "Shift", "score1": "TBD", "team2": "Hydra E-Sport", "score2": "TBD" }
     ]

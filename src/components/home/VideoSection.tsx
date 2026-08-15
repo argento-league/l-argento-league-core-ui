@@ -97,8 +97,10 @@ const Video = styled.iframe`
 
 export const VideoSection = () => {
   // Convertir URL de YouTube a embed
-  const youtubeUrl = "https://www.youtube.com/watch?v=9KfnffkVKGU";
-  const videoId = youtubeUrl.split('v=')[1]?.split('&')[0];
+  const youtubeUrl = "https://youtu.be/uM2_VO4knuQ";
+  const videoId = youtubeUrl.includes("youtu.be/")
+    ? youtubeUrl.split("youtu.be/")[1]?.split("?")[0]
+    : youtubeUrl.split("v=")[1]?.split("&")[0];
   const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=0&rel=0&modestbranding=1`;
 
   return (

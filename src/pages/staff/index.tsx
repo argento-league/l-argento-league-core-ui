@@ -419,15 +419,19 @@ const staff = [
     image: "/images/staff/syndramoon.png",
     contacts: [
       { type: "discord", url: "#", label: "syndramoon12" },
-      { type: "instagram", url: "https://www.instagram.com/syndramoon", label: "@syndramoon" },
-      { type: "twitch", url: "https://www.twitch.tv/syndramoon", label: "syndramoon" },
+      { type: "instagram", url: "https://www.instagram.com/syndramoon.tv/", label: "@syndramoon.tv" },
+      { type: "twitch", url: "https://www.twitch.tv/syndramoon12", label: "syndramoon12" },
+      { type: "youtube", url: "https://www.youtube.com/@syndramoon", label: "@syndramoon" },
     ],
   },
   {
     name: "Mariano J Maidana",
     role: "Community Manager",
     image: "/images/staff/mariano-j-maidana.png",
-    contacts: [],
+    contacts: [
+      { type: "instagram", url: "https://www.instagram.com/marian_mda/", label: "@marian_mda" },
+      { type: "twitch", url: "https://www.twitch.tv/correnta", label: "correnta" },
+    ],
   },
   {
     name: "Worlock",

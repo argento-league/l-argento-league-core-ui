@@ -5,6 +5,8 @@ import { useTeamNavigation } from "../../../hooks/useTeamNavigation";
 import { TeamJsonType } from "../../../types/teams";
 import season5Teams from "../../../data/season-5/teams.json";
 import { getSeasonTeams, type SeasonNumber } from "../../../data/season-data";
+import { StyledSvg } from "../../common/StyledSVG";
+import trophyIcon from "../../../assets/fantasy-icons/trophy-option-c.svg";
 
 type TeamSelectionContentProps = {
   season?: number;
@@ -125,15 +127,34 @@ const TeamSelectionDesktop = ({
           />
         )}
         <PlayersList>
-          {typedTeamJson[selectedTeam]?.players.map((player) => (
-            <PlayerItem key={player.nick}>
-              <CountryFlag
-                src={`/images/countries/${player.nationality}.svg`}
-                alt={player.nationality.toUpperCase()}
-              />
-              <PlayerName>{player.nick}</PlayerName>
-            </PlayerItem>
-          ))}
+          {typedTeamJson[selectedTeam]?.players.map((player) => {
+            const championships = player.championships ?? 0;
+            return (
+              <PlayerItem key={player.nick}>
+                <PlayerLeft>
+                  <CountryFlag
+                    src={`/images/countries/${player.nationality}.svg`}
+                    alt={player.nationality.toUpperCase()}
+                  />
+                  <PlayerName>{player.nick}</PlayerName>
+                </PlayerLeft>
+                {championships > 0 && (
+                  <Championships title={`${championships}x campeón`}>
+                    {Array.from({ length: Math.min(championships, 5) }).map((_, i) => (
+                      <StyledSvg
+                        key={i}
+                        src={trophyIcon}
+                        width="14px"
+                        height="14px"
+                        color="#9a9a9a"
+                      />
+                    ))}
+                    <ChampionshipCount>{championships}</ChampionshipCount>
+                  </Championships>
+                )}
+              </PlayerItem>
+            );
+          })}
         </PlayersList>
       </TeamInformationContainer>
     </FaseDeGruposContainer>
@@ -198,15 +219,34 @@ const TeamSelectionMobile = ({
         )}
 
         <PlayersListMobile>
-          {typedTeamJson[selectedTeam]?.players.map((player) => (
-            <PlayerItemMobile key={player.nick}>
-              <CountryFlag
-                src={`/images/countries/${player.nationality}.svg`}
-                alt={player.nationality.toUpperCase()}
-              />
-              <PlayerName>{player.nick}</PlayerName>
-            </PlayerItemMobile>
-          ))}
+          {typedTeamJson[selectedTeam]?.players.map((player) => {
+            const championships = player.championships ?? 0;
+            return (
+              <PlayerItemMobile key={player.nick}>
+                <PlayerLeft>
+                  <CountryFlag
+                    src={`/images/countries/${player.nationality}.svg`}
+                    alt={player.nationality.toUpperCase()}
+                  />
+                  <PlayerName>{player.nick}</PlayerName>
+                </PlayerLeft>
+                {championships > 0 && (
+                  <Championships title={`${championships}x campeón`}>
+                    {Array.from({ length: Math.min(championships, 5) }).map((_, i) => (
+                      <StyledSvg
+                        key={i}
+                        src={trophyIcon}
+                        width="14px"
+                        height="14px"
+                        color="#9a9a9a"
+                      />
+                    ))}
+                    <ChampionshipCount>{championships}</ChampionshipCount>
+                  </Championships>
+                )}
+              </PlayerItemMobile>
+            );
+          })}
         </PlayersListMobile>
       </TeamInformationMobileContainer>
     </MobileContainer>
@@ -350,9 +390,40 @@ const PlayersList = styled.div`
 const PlayerItem = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 12px;
   padding: 12px;
   border-bottom: 1px solid var(--season-primary);
+`;
+
+const PlayerLeft = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  flex: 1;
+`;
+
+const Championships = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+`;
+
+const ChampionshipCount = styled.span`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 4px;
+  background: #2a2a2a;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
 `;
 
 const CountryFlag = styled.img`
@@ -454,6 +525,7 @@ const PlayersListMobile = styled.div`
 const PlayerItemMobile = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 12px;
   padding: 12px;
   border-bottom: 1px solid var(--season-primary);

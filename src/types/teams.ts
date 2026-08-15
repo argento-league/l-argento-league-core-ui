@@ -4,6 +4,10 @@ export interface TeamData {
   players: {
     nick: string;
     nationality: string;
+    mmr?: number;
+    id_dota?: string;
+    /** Veces campeón de L'Argento (muestra trofeo + número en UI) */
+    championships?: number;
   }[];
 }
 

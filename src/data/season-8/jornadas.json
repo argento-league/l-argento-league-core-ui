@@ -49,14 +49,14 @@
   },
   "Jornada-5": {
     "grupo-a": [
-      { "team1": "Disboard", "score1": "TBD", "team2": "Ravage Gaming", "score2": "TBD" },
+      { "team1": "Disboard", "score1": "0", "team2": "Ravage Gaming", "score2": "2" },
       { "team1": "Mamborapino Slayers", "score1": "1", "team2": "Ukumari", "score2": "1" },
       { "team1": "Void Hunters", "score1": "TBD", "team2": "Isurus Jujenio", "score2": "TBD" }
     ],
     "grupo-b": [
       { "team1": "Windingo", "score1": "1", "team2": "Club Olimpo Esports", "score2": "1" },
-      { "team1": "Working Hard", "score1": "TBD", "team2": "Res Non Verba", "score2": "TBD" },
-      { "team1": "Shift", "score1": "TBD", "team2": "Hydra E-Sport", "score2": "TBD" }
+      { "team1": "Working Hard", "score1": "2", "team2": "Res Non Verba", "score2": "0" },
+      { "team1": "Shift", "score1": "0", "team2": "Hydra E-Sport", "score2": "2" }
     ]
   }
 }

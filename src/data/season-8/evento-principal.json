@@ -1,8 +1,8 @@
 {
   "upper-bracket": {
     "round-1": [
-      { "match": 1, "Void Hunter": "TBD", "team2": "Hydra E-Sport", "score1": "TBD", "score2": "TBD" },
-      { "match": 2, "Windingo": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" }
+      { "match": 1, "team1": "Ukumari", "team2": "Windingo", "score1": "TBD", "score2": "TBD" },
+      { "match": 2, "team1": "Mamborapino Slayers", "team2": "Hydra E-Sport", "score1": "TBD", "score2": "TBD" }
     ],
     "round-2": [
       { "match": 3, "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" }
@@ -10,8 +10,8 @@
   },
   "lower-bracket": {
     "round-1": [
-      { "match": 4, "Ukumari": "TBD", "Working Hard": "TBD", "score1": "TBD", "score2": "TBD" },
-      { "match": 5, "Club Olimpo Esports": "TBD", "Isurus Jujenio": "TBD", "score1": "TBD", "score2": "TBD" }
+      { "match": 4, "team1": "Disboard", "team2": "Working Hard", "score1": "TBD", "score2": "TBD" },
+      { "match": 5, "team1": "Club Olimpo Esports", "team2": "Isurus Jujenio", "score1": "TBD", "score2": "TBD" }
     ],
     "round-2": [
       { "match": 6, "team1": "TBD", "team2": "TBD", "score1": "TBD", "score2": "TBD" },

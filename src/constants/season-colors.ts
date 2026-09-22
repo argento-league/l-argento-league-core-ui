@@ -24,6 +24,12 @@ export const SEASON_COLORS = {
     navActiveBg: "rgba(100, 220, 255, 0.2)",
     navHoverBg: "rgba(100, 220, 255, 0.1)",
   },
+  season9: {
+    primary: "rgba(255, 138, 61, 1)", // Naranja (#FF8A3D)
+    secondary: "rgba(255, 138, 61, 0.6)",
+    navActiveBg: "rgba(255, 138, 61, 0.2)",
+    navHoverBg: "rgba(255, 138, 61, 0.1)",
+  },
 } as const;
 
 export type SeasonKey = keyof typeof SEASON_COLORS;
@@ -31,5 +37,5 @@ export type SeasonKey = keyof typeof SEASON_COLORS;
 // Helper function to get season colors
 export const getSeasonColors = (season: SeasonKey) => SEASON_COLORS[season];
 
-// Current season colors (Season 8)
-export const CURRENT_SEASON_COLORS = SEASON_COLORS.season8;
+// Current season colors (Season 9)
+export const CURRENT_SEASON_COLORS = SEASON_COLORS.season9;

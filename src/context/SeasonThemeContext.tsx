@@ -14,9 +14,9 @@ export type SeasonTheme = {
 
 const defaultTheme: SeasonTheme = {
   colors: CURRENT_SEASON_COLORS,
-  seasonLabel: "Season 8",
-  seasonKey: "season8",
-  seasonNumber: 8,
+  seasonLabel: "Season 9",
+  seasonKey: "season9",
+  seasonNumber: 9,
 };
 
 const SeasonThemeContext = createContext<SeasonTheme>(defaultTheme);
@@ -62,4 +62,11 @@ export const SEASON_7_THEME: SeasonTheme = {
   seasonNumber: 7,
 };
 
-export const SEASON_8_THEME: SeasonTheme = defaultTheme;
+export const SEASON_8_THEME: SeasonTheme = {
+  colors: SEASON_COLORS.season8,
+  seasonLabel: "Season 8",
+  seasonKey: "season8",
+  seasonNumber: 8,
+};
+
+export const SEASON_9_THEME: SeasonTheme = defaultTheme;

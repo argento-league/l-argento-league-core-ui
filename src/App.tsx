@@ -8,6 +8,7 @@ import { SeasonFour } from "./pages/season-four";
 import { SeasonFive } from "./pages/season-five";
 import { SeasonSixPage } from "./pages/season-six";
 import { SeasonSevenPage } from "./pages/season-seven";
+import { SeasonEightPage } from "./pages/season-eight";
 import { CurrentSeasonPage } from "./pages/current-season";
 import { StaffPage } from "./pages/staff";
 import { Footer } from "@components/footer";
@@ -29,6 +30,7 @@ function App() {
           <Route path="/season-5" element={<SeasonFive />} />
           <Route path="/season-6" element={<SeasonSixPage />} />
           <Route path="/season-7" element={<SeasonSevenPage />} />
+          <Route path="/season-8" element={<SeasonEightPage />} />
           <Route path="/current-season" element={<CurrentSeasonPage />} />
           <Route path="/fantasy" element={<Navigate to="/" replace />} />
           <Route path="/staff" element={<StaffPage />} />

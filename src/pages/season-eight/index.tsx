@@ -4,18 +4,18 @@ import { CurrentSeasonGrid } from "@components/current-season/CurrentSeasonGrid"
 import { TabContent } from "@components/current-season/tab-content";
 import { TabList } from "@components/current-season/tab";
 import { TabsEnum, TABS_CONFIG } from "@constants/current-season/information";
-import { SeasonThemeProvider, SEASON_9_THEME } from "../../context/SeasonThemeContext";
+import { SeasonThemeProvider, SEASON_8_THEME } from "../../context/SeasonThemeContext";
 
-export const CurrentSeasonPage = () => {
+export const SeasonEightPage = () => {
   return (
-    <SeasonThemeProvider theme={SEASON_9_THEME}>
+    <SeasonThemeProvider theme={SEASON_8_THEME}>
       <CurrentSeasonGrid />
-      <CurrentSeasonDetails />
+      <SeasonEightDetails />
     </SeasonThemeProvider>
   );
 };
 
-const CurrentSeasonDetails = () => {
+const SeasonEightDetails = () => {
   const [selectedTab, setSelectedTab] = useState<TabsEnum>(
     TabsEnum.InfoGeneral
   );

@@ -149,31 +149,36 @@ export const MainCard = () => {
   const theme = useSeasonTheme();
   const isSeason6 = theme.seasonKey === "season6";
   const isSeason7 = theme.seasonKey === "season7";
+  const isSeason8 = theme.seasonKey === "season8";
 
   const championLabel = isSeason6
     ? "The Royals"
     : isSeason7
       ? "Hydra E-Sport"
-      : "Próximamente sorteo";
+      : isSeason8
+        ? "Isurus Jujenio"
+        : "Próximamente Season 9";
 
   return (
     <MainGridBoxContent>
       <SeasonTitle> {theme.seasonLabel} </SeasonTitle>
       <MainTextGroup>
         {/* Logo del campeón: descomentar y poner la ruta del logo cuando esté definido.
-            Ej: src="/images/teams/season-8/nombre-equipo.png" alt="Nombre equipo" */}
+            Ej: src="/images/teams/season-9/nombre-equipo.png" alt="Nombre equipo" */}
         {/* <ChampionLogo
           src={
             isSeason6
               ? "/images/teams/season-6/the-royals.png"
               : isSeason7
                 ? "/images/teams/season-7/Hydra_E-Sport.png"
-                : "/images/teams/season-8/campeon.png"
+                : isSeason8
+                  ? "/images/teams/season-8/isurus jujenio.jpeg"
+                  : "/images/teams/season-9/campeon.png"
           }
           alt={championLabel}
         /> */}
         <ChampionTeam>{championLabel}</ChampionTeam>
-        {/* <ChampionTitle>{isSeason6 || isSeason7 ? "Campeones" : "Campeón S8"}</ChampionTitle> */}
+        {/* <ChampionTitle>{isSeason6 || isSeason7 || isSeason8 ? "Campeones" : "Campeón S9"}</ChampionTitle> */}
       </MainTextGroup>
       {/* <Button
         to="https://tally.so/r/mD9dPj"

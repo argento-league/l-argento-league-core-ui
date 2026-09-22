@@ -19,8 +19,8 @@ const NewsCardContainer = styled.section`
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
   font-weight: 600;
-  background: rgba(100, 220, 255, 0.1);
-  border: 1px solid ${SEASON_COLORS.season8.primary};
+  background: rgba(255, 138, 61, 0.1);
+  border: 1px solid ${SEASON_COLORS.season9.primary};
 `;
 
 const NewsTitleContainer = styled.div`
@@ -34,7 +34,7 @@ const NewsTitle = styled.h2`
   font-weight: 500;
   font-family: "Outfit", sans-serif;
   text-align: center;
-  color: ${SEASON_COLORS.season8.primary};
+  color: ${SEASON_COLORS.season9.primary};
   margin: 0;
 `;
 
@@ -42,7 +42,7 @@ const NewsSeason = styled.h1`
   font-size: 36px;
   font-weight: 700;
   font-family: "Outfit", sans-serif;
-  color: ${SEASON_COLORS.season8.primary};
+  color: ${SEASON_COLORS.season9.primary};
   margin: 0;
 `;
 
@@ -63,7 +63,7 @@ const NewsButtonsContainer = styled.div`
 `;
 
 export const RegisterButton = styled(Button)`
-  background-color: ${SEASON_COLORS.season8.primary};
+  background-color: ${SEASON_COLORS.season9.primary};
   color: #000000;
   display: none;
 `;
@@ -72,8 +72,8 @@ export const NewsCard = () => {
   return (
     <NewsCardContainer>
       <NewsTitleContainer id="container-title">
-        <NewsTitle>Proximamente</NewsTitle>
-        <NewsSeason>SEASON 8</NewsSeason>
+        <NewsTitle>Próximamente</NewsTitle>
+        <NewsSeason>SEASON 9</NewsSeason>
       </NewsTitleContainer>
       <NewsDescriptionContainer id="container-description">
         {/*<NewsDescription>Inscripciones de equipos abiertas.</NewsDescription>
@@ -85,7 +85,7 @@ export const NewsCard = () => {
 
       <NewsButtonsContainer id="container-buttons">
         <JoinDiscordButton 
-          color={SEASON_COLORS.season8.primary}
+          color={SEASON_COLORS.season9.primary}
           backgroundColor="#000000"
         />
         <RegisterButton to="/current-season" target="_self">

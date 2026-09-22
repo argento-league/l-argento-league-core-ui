@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useSeasonTheme } from "../../../context/SeasonThemeContext";
 
 const DatesBox = styled.div`
   padding: 24px 32px;
@@ -40,42 +41,37 @@ const DateText = styled.p`
   font-size: 16px;
   font-weight: 500;
   max-width: 15ch;
-`
+`;
+
+const SEASON_8_DATES = [
+  { label: "Inscripción de equipos", date: "13 julio" },
+  { label: "Presentación", date: "02 agosto" },
+  { label: "Fase de grupos", date: "03 agosto" },
+  { label: "Evento principal", date: "24 agosto" },
+  { label: "Gran final", date: "06 septiembre" },
+];
+
+const UPCOMING_DATES = [
+  { label: "Inscripción de equipos", date: "Próximamente" },
+  { label: "Presentación", date: "Próximamente" },
+  { label: "Fase de grupos", date: "Próximamente" },
+  { label: "Evento principal", date: "Próximamente" },
+  { label: "Gran final", date: "Próximamente" },
+];
 
 export const DateCard = () => {
+  const theme = useSeasonTheme();
+  const dates = theme.seasonNumber === 9 ? UPCOMING_DATES : SEASON_8_DATES;
+
   return (
     <DatesBox>
       <DatesTitle>Calendario</DatesTitle>
-      <DatesRow>
-        <DateText>
-          Inscripción de equipos
-        </DateText>
-        <DateText style={{ textAlign: "end" }}>13 julio</DateText>
-      </DatesRow>
-      <DatesRow>
-        <DateText>
-          Presentación
-        </DateText>
-        <DateText style={{ textAlign: "end" }}>02 agosto</DateText>
-      </DatesRow>
-      <DatesRow>
-        <DateText>
-          Fase de grupos
-        </DateText>
-        <DateText style={{ textAlign: "end" }}>03 agosto</DateText>
-      </DatesRow>
-      <DatesRow>
-        <DateText>
-          Evento principal
-        </DateText>
-        <DateText style={{ textAlign: "end" }}>24 agosto</DateText>
-      </DatesRow>
-      <DatesRow>
-        <DateText>
-          Gran final
-        </DateText>
-        <DateText style={{ textAlign: "end" }}>06 septiembre</DateText>
-      </DatesRow>
+      {dates.map((row) => (
+        <DatesRow key={row.label}>
+          <DateText>{row.label}</DateText>
+          <DateText style={{ textAlign: "end" }}>{row.date}</DateText>
+        </DatesRow>
+      ))}
     </DatesBox>
   );
 };

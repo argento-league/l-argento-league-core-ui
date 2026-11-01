@@ -25,7 +25,7 @@ type TabContentProps = {
 export const TabContent = ({ selectedTab }: TabContentProps) => {
   const isMobile = useIsMobile(1000);
   const theme = useSeasonTheme();
-  // Datos según theme.seasonNumber (6, 7 u 8)
+  // Datos según theme.seasonNumber (6, 7, 8 o 9)
   const dataSeason = theme.seasonNumber;
   let children: ReactNode | null = null;
 

@@ -1,0 +1,32 @@
+{
+  "currentRecords": [],
+  "classification": [],
+  "rankings": {
+    "kills": [],
+    "assists": [],
+    "deaths": [],
+    "gpm": [],
+    "netWorth": {
+      "timePoints": [
+        {"minute": 0, "time": "0:00"},
+        {"minute": 5, "time": "5:00"},
+        {"minute": 10, "time": "10:00"},
+        {"minute": 15, "time": "15:00"},
+        {"minute": 20, "time": "20:00"},
+        {"minute": 25, "time": "25:00"},
+        {"minute": 30, "time": "30:00"},
+        {"minute": 35, "time": "35:00"},
+        {"minute": 40, "time": "40:00"},
+        {"minute": 45, "time": "45:00"},
+        {"minute": 50, "time": "50:00"},
+        {"minute": 55, "time": "55:00"},
+        {"minute": 60, "time": "60:00"},
+        {"minute": 65, "time": "65:00"},
+        {"minute": 70, "time": "70:00"}
+      ],
+      "players": []
+    },
+    "lastHits": [],
+    "wards": []
+  }
+}

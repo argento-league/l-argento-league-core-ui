@@ -274,7 +274,7 @@ const convertToGlootFormat = (data: any, season: number): { upper: MatchType[]; 
 };
 
 const MainEventGloot = ({ season = 6 }: MainEventGlootProps) => {
-  const eventoPrincipal = season === 6 || season === 7 || season === 8 ? getSeasonEventoPrincipal(season as SeasonNumber) : null;
+  const eventoPrincipal = season === 6 || season === 7 || season === 8 || season === 9 ? getSeasonEventoPrincipal(season as SeasonNumber) : null;
   const matches = useMemo(
     () => (eventoPrincipal ? convertToGlootFormat(eventoPrincipal, season) : { upper: [], lower: [] }),
     [eventoPrincipal, season]

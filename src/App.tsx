@@ -11,6 +11,7 @@ import { SeasonSevenPage } from "./pages/season-seven";
 import { SeasonEightPage } from "./pages/season-eight";
 import { CurrentSeasonPage } from "./pages/current-season";
 import { StaffPage } from "./pages/staff";
+import { AdminPage } from "./pages/admin";
 import { Footer } from "@components/footer";
 
 const AppContainer = styled.div`
@@ -34,6 +35,7 @@ function App() {
           <Route path="/current-season" element={<CurrentSeasonPage />} />
           <Route path="/fantasy" element={<Navigate to="/" replace />} />
           <Route path="/staff" element={<StaffPage />} />
+          <Route path="/admin" element={<AdminPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       }

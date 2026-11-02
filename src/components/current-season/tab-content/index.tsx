@@ -29,10 +29,7 @@ export const TabContent = ({ selectedTab }: TabContentProps) => {
   const dataSeason = theme.seasonNumber;
   let children: ReactNode | null = null;
 
-  const isUpcomingSeason = theme.seasonNumber === 9;
-  const isTabEnabled = isUpcomingSeason
-    ? selectedTab === TabsEnum.InfoGeneral
-    : (TABS_CONFIG[selectedTab]?.enabled ?? true);
+  const isTabEnabled = TABS_CONFIG[selectedTab]?.enabled ?? true;
 
   if (!isTabEnabled) {
     return (

@@ -56,17 +56,17 @@
     ]
   },
   "TBD_A5": {
-    "name": "TBD A5",
-    "logo": "",
+    "name": "SadBoyS",
+    "logo": "sad-boys.png",
     "players": [
-      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
+      { "nick": "qqnena", "nationality": "cl", "mmr": 0, "id_dota": "121113386" },
+      { "nick": "555", "nationality": "cl", "mmr": 0, "id_dota": "283629288" },
+      { "nick": "7", "nationality": "cl", "mmr": 0, "id_dota": "203596299" },
+      { "nick": "Aricat", "nationality": "cl", "mmr": 0, "id_dota": "173357253" },
+      { "nick": "Lezard", "nationality": "cl", "mmr": 0, "id_dota": "101706199" },
+      { "nick": "Clover", "nationality": "cl", "mmr": 0, "id_dota": "113277539" },
+      { "nick": "Alonegx", "nationality": "cl", "mmr": 0, "id_dota": "163391398" },
+      { "nick": "shevchenko", "nationality": "cl", "mmr": 0, "id_dota": "257627749" }
     ]
   },
   "TBD_A6": {

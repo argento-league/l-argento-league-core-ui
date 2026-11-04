@@ -3,14 +3,14 @@
     "name": "Team Mafia",
     "logo": "team-mafia.png",
     "players": [
-      { "nick": "Rena", "nationality": "pe", "mmr": 4566, "id_dota": "12121212", "championships": 2 },
-      { "nick": "SHEOL", "nationality": "pe", "mmr": 0, "id_dota": "" },
-      { "nick": "AOMINE", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "mitrozon", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "messiPRIME", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "Hanzama", "nationality": "pe", "mmr": 0, "id_dota": "" },
-      { "nick": "Murasaki", "nationality": "pe", "mmr": 0, "id_dota": "" },
-      { "nick": "SyndramooN", "nationality": "ar", "mmr": 0, "id_dota": "" }
+      { "nick": "Rena", "nationality": "pe", "mmr": 0, "id_dota": "427017829", "championships": 0 },
+      { "nick": "SHEOL", "nationality": "pe", "mmr": 0, "id_dota": "398747760" },
+      { "nick": "AOMINE", "nationality": "ar", "mmr": 0, "id_dota": "218667050" },
+      { "nick": "mitrozon", "nationality": "ar", "mmr": 0, "id_dota": "121672308" },
+      { "nick": "messiPRIME", "nationality": "ar", "mmr": 0, "id_dota": "363362292" },
+      { "nick": "Hanzama", "nationality": "pe", "mmr": 0, "id_dota": "133958007" },
+      { "nick": "Murasaki", "nationality": "pe", "mmr": 0, "id_dota": "327034837" },
+      { "nick": "SyndramooN", "nationality": "ar", "mmr": 0, "id_dota": "146322819" }
     ]
   },
   "TBD_A2": {

@@ -31,11 +31,11 @@
     "name": "WINDINGO",
     "logo": "logo_windingo_circular.png",
     "players": [
-      { "nick": "Balenci", "nationality": "ar", "mmr": 0, "id_dota": "200450157" },
-      { "nick": "Shifu", "nationality": "ar", "mmr": 0, "id_dota": "121952627" },
+      { "nick": "Balenci", "nationality": "ar", "mmr": 0, "id_dota": "200450157", "championships": 1 },
+      { "nick": "Shifu", "nationality": "ar", "mmr": 0, "id_dota": "121952627", "championships": 3 },
       { "nick": "Baldu", "nationality": "ar", "mmr": 0, "id_dota": "43910179" },
       { "nick": "Dino", "nationality": "ar", "mmr": 0, "id_dota": "112151472" },
-      { "nick": "dgN", "nationality": "ar", "mmr": 0, "id_dota": "40521044" },
+      { "nick": "dgN", "nationality": "ar", "mmr": 0, "id_dota": "40521044", "championships": 1 },
       { "nick": "FLIPENDIOS", "nationality": "ar", "mmr": 0, "id_dota": "308047201" }
     ]
   },
@@ -43,13 +43,13 @@
     "name": "Royals",
     "logo": "royals.jpeg",
     "players": [
-      { "nick": "picado", "nationality": "ar", "mmr": 0, "id_dota": "98780719" },
+      { "nick": "picado", "nationality": "ar", "mmr": 0, "id_dota": "98780719", "championships": 1 },
       { "nick": "Runaway", "nationality": "ar", "mmr": 0, "id_dota": "193490297" },
-      { "nick": "adachi", "nationality": "ar", "mmr": 0, "id_dota": "270029316" },
-      { "nick": "mdfk pipi", "nationality": "ar", "mmr": 0, "id_dota": "375817604" },
-      { "nick": "worlocK", "nationality": "ar", "mmr": 0, "id_dota": "291799648" },
+      { "nick": "adachi", "nationality": "ar", "mmr": 0, "id_dota": "270029316", "championships": 3 },
+      { "nick": "mdfk pipi", "nationality": "ar", "mmr": 0, "id_dota": "375817604", "championships": 4 },
+      { "nick": "worlocK", "nationality": "ar", "mmr": 0, "id_dota": "291799648", "championships": 1 },
       { "nick": "Jona", "nationality": "ar", "mmr": 0, "id_dota": "276844770" },
-      { "nick": "irohha", "nationality": "ar", "mmr": 0, "id_dota": "865511874" },
+      { "nick": "irohha", "nationality": "ar", "mmr": 0, "id_dota": "865511874", "championships": 3 },
       { "nick": "Toto", "nationality": "ar", "mmr": 0, "id_dota": "125459671" }
     ]
   },
@@ -71,7 +71,7 @@
     "name": "Frizolini y su favela",
     "logo": "frizolini-y-su-favela-1-.png",
     "players": [
-      { "nick": "Frizolini", "nationality": "ar", "mmr": 0, "id_dota": "135450573" },
+      { "nick": "Frizolini", "nationality": "ar", "mmr": 0, "id_dota": "135450573", "championships": 1 },
       { "nick": "Poochpop_ttv", "nationality": "br", "mmr": 0, "id_dota": "363855410" },
       { "nick": "Escanor", "nationality": "br", "mmr": 0, "id_dota": "337680884" },
       { "nick": "kakaroto is back", "nationality": "br", "mmr": 0, "id_dota": "171794969" },

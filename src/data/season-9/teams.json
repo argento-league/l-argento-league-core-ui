@@ -182,7 +182,7 @@
       { "nick": "AMZ", "nationality": "ar", "mmr": 0, "id_dota": "225494054" },
       { "nick": "3mpty", "nationality": "ar", "mmr": 0, "id_dota": "139160605" },
       { "nick": "Daxas", "nationality": "ar", "mmr": 0, "id_dota": "87658175" },
-      { "nick": "Meew", "nationality": "ar", "mmr": 0, "id_dota": "160482724" }
+      { "nick": "Meew", "nationality": "ar", "mmr": 0, "id_dota": "160482724", "championships": 1 }
     ]
   }
 }

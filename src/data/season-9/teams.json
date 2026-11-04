@@ -42,17 +42,17 @@
     ]
   },
   "TBD_A4": {
-    "name": "TBD A4",
-    "logo": "",
+    "name": "Royals",
+    "logo": "royals.jpeg",
     "players": [
-      { "nick": "TBD 1", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 2", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 3", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 4", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 5", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 6", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 7", "nationality": "ar", "mmr": 0, "id_dota": "" },
-      { "nick": "TBD 8", "nationality": "ar", "mmr": 0, "id_dota": "" }
+      { "nick": "picado", "nationality": "ar", "mmr": 0, "id_dota": "98780719" },
+      { "nick": "Runaway", "nationality": "ar", "mmr": 0, "id_dota": "193490297" },
+      { "nick": "adachi", "nationality": "ar", "mmr": 0, "id_dota": "270029316" },
+      { "nick": "mdfk pipi", "nationality": "ar", "mmr": 0, "id_dota": "375817604" },
+      { "nick": "worlocK", "nationality": "ar", "mmr": 0, "id_dota": "291799648" },
+      { "nick": "Jona", "nationality": "ar", "mmr": 0, "id_dota": "276844770" },
+      { "nick": "irohha", "nationality": "ar", "mmr": 0, "id_dota": "865511874" },
+      { "nick": "Toto", "nationality": "ar", "mmr": 0, "id_dota": "125459671" }
     ]
   },
   "TBD_A5": {

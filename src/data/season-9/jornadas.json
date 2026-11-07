@@ -1,86 +1,86 @@
 {
   "Jornada-1": {
     "grupo-a": [
-      { "team1": "Editeds", "score1": "TBD", "team2": "Royals", "score2": "TBD" },
-      { "team1": "Windingo", "score1": "TBD", "team2": "La Manada", "score2": "TBD" },
-      { "team1": "Moag", "score1": "TBD", "team2": "Ravage Gaming", "score2": "TBD" }
+      { "team1": "EDITEDS", "score1": "TBD", "team2": "Royals", "score2": "TBD" },
+      { "team1": "WINDINGO", "score1": "TBD", "team2": "La Manada", "score2": "TBD" },
+      { "team1": "moaG", "score1": "TBD", "team2": "Ravage Gaming", "score2": "TBD" }
     ],
     "grupo-b": [
-      { "team1": "Inferyx", "score1": "0", "team2": "Hydra E-Sport", "score2": "2" },
-      { "team1": "Team Agentes", "score1": "TBD", "team2": "Sadoys", "score2": "TBD" },
-      { "team1": "Porco House", "score1": "TBD", "team2": "Frizolini y su Favela", "score2": "TBD" }
+      { "team1": "Infernyx", "score1": "0", "team2": "Hydra e-Sports", "score2": "2" },
+      { "team1": "Team Agentes", "score1": "TBD", "team2": "SadBoyS", "score2": "TBD" },
+      { "team1": "Porco House", "score1": "TBD", "team2": "Frizolini y su favela", "score2": "TBD" }
     ]
   },
   "Jornada-2": {
     "grupo-a": [
-      { "team1": "UNMSM Tempest", "score1": "TBD", "team2": "Royals", "score2": "TBD" },
-      { "team1": "Editeds", "score1": "TBD", "team2": "Ravage Gaming", "score2": "TBD" },
-      { "team1": "Windingo", "score1": "TBD", "team2": "Moag", "score2": "TBD" }
+      { "team1": "UNMSM TEMPEST", "score1": "TBD", "team2": "Royals", "score2": "TBD" },
+      { "team1": "EDITEDS", "score1": "TBD", "team2": "Ravage Gaming", "score2": "TBD" },
+      { "team1": "WINDINGO", "score1": "TBD", "team2": "moaG", "score2": "TBD" }
     ],
     "grupo-b": [
-      { "team1": "Por la Wawa", "score1": "TBD", "team2": "Hydra E-Sport", "score2": "TBD" },
-      { "team1": "Inferyx", "score1": "TBD", "team2": "Frizolini y su Favela", "score2": "TBD" },
+      { "team1": "Por la Wawa", "score1": "TBD", "team2": "Hydra e-Sports", "score2": "TBD" },
+      { "team1": "Infernyx", "score1": "TBD", "team2": "Frizolini y su favela", "score2": "TBD" },
       { "team1": "Team Agentes", "score1": "TBD", "team2": "Porco House", "score2": "TBD" }
     ]
   },
   "Jornada-3": {
     "grupo-a": [
-      { "team1": "UNMSM Tempest", "score1": "TBD", "team2": "La Manada", "score2": "TBD" },
+      { "team1": "UNMSM TEMPEST", "score1": "TBD", "team2": "La Manada", "score2": "TBD" },
       { "team1": "Royals", "score1": "TBD", "team2": "Ravage Gaming", "score2": "TBD" },
-      { "team1": "Editeds", "score1": "TBD", "team2": "Windingo", "score2": "TBD" }
+      { "team1": "EDITEDS", "score1": "TBD", "team2": "WINDINGO", "score2": "TBD" }
     ],
     "grupo-b": [
-      { "team1": "Por la Wawa", "score1": "TBD", "team2": "Sadoys", "score2": "TBD" },
-      { "team1": "Hydra E-Sport", "score1": "TBD", "team2": "Frizolini y su Favela", "score2": "TBD" },
-      { "team1": "Inferyx", "score1": "TBD", "team2": "Team Agentes", "score2": "TBD" }
+      { "team1": "Por la Wawa", "score1": "TBD", "team2": "SadBoyS", "score2": "TBD" },
+      { "team1": "Hydra e-Sports", "score1": "TBD", "team2": "Frizolini y su favela", "score2": "TBD" },
+      { "team1": "Infernyx", "score1": "TBD", "team2": "Team Agentes", "score2": "TBD" }
     ]
   },
   "Jornada-4": {
     "grupo-a": [
-      { "team1": "UNMSM Tempest", "score1": "TBD", "team2": "Ravage Gaming", "score2": "TBD" },
-      { "team1": "La Manada", "score1": "TBD", "team2": "Moag", "score2": "TBD" },
-      { "team1": "Royals", "score1": "TBD", "team2": "Windingo", "score2": "TBD" }
+      { "team1": "UNMSM TEMPEST", "score1": "TBD", "team2": "Ravage Gaming", "score2": "TBD" },
+      { "team1": "La Manada", "score1": "TBD", "team2": "moaG", "score2": "TBD" },
+      { "team1": "Royals", "score1": "TBD", "team2": "WINDINGO", "score2": "TBD" }
     ],
     "grupo-b": [
-      { "team1": "Por la Wawa", "score1": "TBD", "team2": "Frizolini y su Favela", "score2": "TBD" },
-      { "team1": "Sadoys", "score1": "TBD", "team2": "Porco House", "score2": "TBD" },
-      { "team1": "Hydra E-Sport", "score1": "TBD", "team2": "Team Agentes", "score2": "TBD" }
+      { "team1": "Por la Wawa", "score1": "TBD", "team2": "Frizolini y su favela", "score2": "TBD" },
+      { "team1": "SadBoyS", "score1": "TBD", "team2": "Porco House", "score2": "TBD" },
+      { "team1": "Hydra e-Sports", "score1": "TBD", "team2": "Team Agentes", "score2": "TBD" }
     ]
   },
   "Jornada-5": {
     "grupo-a": [
-      { "team1": "UNMSM Tempest", "score1": "TBD", "team2": "Moag", "score2": "TBD" },
-      { "team1": "Ravage Gaming", "score1": "TBD", "team2": "Windingo", "score2": "TBD" },
-      { "team1": "La Manada", "score1": "TBD", "team2": "Editeds", "score2": "TBD" }
+      { "team1": "UNMSM TEMPEST", "score1": "TBD", "team2": "moaG", "score2": "TBD" },
+      { "team1": "Ravage Gaming", "score1": "TBD", "team2": "WINDINGO", "score2": "TBD" },
+      { "team1": "La Manada", "score1": "TBD", "team2": "EDITEDS", "score2": "TBD" }
     ],
     "grupo-b": [
       { "team1": "Por la Wawa", "score1": "TBD", "team2": "Porco House", "score2": "TBD" },
-      { "team1": "Frizolini y su Favela", "score1": "TBD", "team2": "Team Agentes", "score2": "TBD" },
-      { "team1": "Sadoys", "score1": "TBD", "team2": "Inferyx", "score2": "TBD" }
+      { "team1": "Frizolini y su favela", "score1": "TBD", "team2": "Team Agentes", "score2": "TBD" },
+      { "team1": "SadBoyS", "score1": "TBD", "team2": "Infernyx", "score2": "TBD" }
     ]
   },
   "Jornada-6": {
     "grupo-a": [
-      { "team1": "UNMSM Tempest", "score1": "TBD", "team2": "Windingo", "score2": "TBD" },
-      { "team1": "Moag", "score1": "TBD", "team2": "Editeds", "score2": "TBD" },
+      { "team1": "UNMSM TEMPEST", "score1": "TBD", "team2": "WINDINGO", "score2": "TBD" },
+      { "team1": "moaG", "score1": "TBD", "team2": "EDITEDS", "score2": "TBD" },
       { "team1": "La Manada", "score1": "TBD", "team2": "Royals", "score2": "TBD" }
     ],
     "grupo-b": [
       { "team1": "Por la Wawa", "score1": "TBD", "team2": "Team Agentes", "score2": "TBD" },
-      { "team1": "Porco House", "score1": "TBD", "team2": "Inferyx", "score2": "TBD" },
-      { "team1": "Sadoys", "score1": "TBD", "team2": "Hydra E-Sport", "score2": "TBD" }
+      { "team1": "Porco House", "score1": "TBD", "team2": "Infernyx", "score2": "TBD" },
+      { "team1": "SadBoyS", "score1": "TBD", "team2": "Hydra e-Sports", "score2": "TBD" }
     ]
   },
   "Jornada-7": {
     "grupo-a": [
-      { "team1": "UNMSM Tempest", "score1": "TBD", "team2": "Editeds", "score2": "TBD" },
-      { "team1": "Moag", "score1": "TBD", "team2": "Royals", "score2": "TBD" },
+      { "team1": "UNMSM TEMPEST", "score1": "TBD", "team2": "EDITEDS", "score2": "TBD" },
+      { "team1": "moaG", "score1": "TBD", "team2": "Royals", "score2": "TBD" },
       { "team1": "Ravage Gaming", "score1": "TBD", "team2": "La Manada", "score2": "TBD" }
     ],
     "grupo-b": [
-      { "team1": "Por la Wawa", "score1": "TBD", "team2": "Inferyx", "score2": "TBD" },
-      { "team1": "Porco House", "score1": "TBD", "team2": "Hydra E-Sport", "score2": "TBD" },
-      { "team1": "Frizolini y su Favela", "score1": "TBD", "team2": "Sadoys", "score2": "TBD" }
+      { "team1": "Por la Wawa", "score1": "TBD", "team2": "Infernyx", "score2": "TBD" },
+      { "team1": "Porco House", "score1": "TBD", "team2": "Hydra e-Sports", "score2": "TBD" },
+      { "team1": "Frizolini y su favela", "score1": "TBD", "team2": "SadBoyS", "score2": "TBD" }
     ]
   }
 }

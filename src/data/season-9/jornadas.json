@@ -31,8 +31,8 @@
     ],
     "grupo-b": [
       { "team1": "UNMSM TEMPEST", "score1": "TBD", "team2": "La Manada", "score2": "TBD" },
-      { "team1": "Royals", "score1": "TBD", "team2": "Ravage Gaming", "score2": "TBD" },
-      { "team1": "EDITEDS", "score1": "TBD", "team2": "WINDINGO", "score2": "TBD" }
+      { "team1": "Royals", "score1": "2", "team2": "Ravage Gaming", "score2": "0" },
+      { "team1": "EDITEDS", "score1": "2", "team2": "WINDINGO", "score2": "0" }
     ]
   },
   "Jornada-4": {

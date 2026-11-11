@@ -19,13 +19,13 @@
     ],
     "grupo-b": [
       { "team1": "UNMSM TEMPEST", "score1": "TBD", "team2": "Royals", "score2": "TBD" },
-      { "team1": "EDITEDS", "score1": "TBD", "team2": "Ravage Gaming", "score2": "TBD" },
+      { "team1": "EDITEDS", "score1": "2", "team2": "Ravage Gaming", "score2": "0" },
       { "team1": "WINDINGO", "score1": "TBD", "team2": "moaG", "score2": "TBD" }
     ]
   },
   "Jornada-3": {
     "grupo-a": [
-      { "team1": "Por la Wawa", "score1": "TBD", "team2": "SadBoyS", "score2": "TBD" },
+      { "team1": "Por la Wawa", "score1": "0", "team2": "SadBoyS", "score2": "2" },
       { "team1": "Hydra e-Sports", "score1": "TBD", "team2": "Frizolini y su favela", "score2": "TBD" },
       { "team1": "Infernyx", "score1": "0", "team2": "Team Agentes", "score2": "2" }
     ],

@@ -38,7 +38,7 @@
   "Jornada-4": {
     "grupo-a": [
       { "team1": "Por la Wawa", "score1": "TBD", "team2": "Frizolini y su favela", "score2": "TBD" },
-      { "team1": "SadBoyS", "score1": "TBD", "team2": "Porco House", "score2": "TBD" },
+      { "team1": "SadBoyS", "score1": "2", "team2": "Porco House", "score2": "0" },
       { "team1": "Hydra e-Sports", "score1": "TBD", "team2": "Team Agentes", "score2": "TBD" }
     ],
     "grupo-b": [
@@ -56,7 +56,7 @@
     "grupo-b": [
       { "team1": "UNMSM TEMPEST", "score1": "TBD", "team2": "moaG", "score2": "TBD" },
       { "team1": "Ravage Gaming", "score1": "TBD", "team2": "WINDINGO", "score2": "TBD" },
-      { "team1": "La Manada", "score1": "TBD", "team2": "EDITEDS", "score2": "TBD" }
+      { "team1": "La Manada", "score1": "2", "team2": "EDITEDS", "score2": "0" }
     ]
   },
   "Jornada-6": {

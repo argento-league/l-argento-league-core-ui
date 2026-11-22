@@ -37,7 +37,8 @@
       { "nick": "Dino", "nationality": "ar", "mmr": 0, "id_dota": "112151472" },
       { "nick": "dgN", "nationality": "ar", "mmr": 0, "id_dota": "40521044", "championships": 1 },
       { "nick": "FLIPENDIOS", "nationality": "ar", "mmr": 0, "id_dota": "308047201" },
-      { "nick": "Daxas", "nationality": "ar", "mmr": 0, "id_dota": "87658175", "championships": 0 }
+      { "nick": "Daxas", "nationality": "ar", "mmr": 0, "id_dota": "87658175", "championships": 0 },
+      { "nick": "Shana", "nationality": "ar", "mmr": 0, "id_dota": "106451420", "championships": 0 }
     ]
   },
   "TBD_A4": {
@@ -157,7 +158,7 @@
       { "nick": "^^ (aldo)", "nationality": "pe", "mmr": 0, "id_dota": "246008056" },
       { "nick": "Baba Yaga", "nationality": "pe", "mmr": 0, "id_dota": "902238054" },
       { "nick": "FeMof^", "nationality": "ar", "mmr": 0, "id_dota": "148089994" },
-      { "nick": "Cold", "nationality": "ar", "mmr": 0, "id_dota": "1057981960" }
+      { "nick": "Synergy", "nationality": "pe", "mmr": 0, "id_dota": "313433186" }
     ]
   },
   "TBD_B6": {
@@ -182,7 +183,8 @@
       { "nick": "Miru", "nationality": "ar", "mmr": 0, "id_dota": "126460911" },
       { "nick": "AMZ", "nationality": "ar", "mmr": 0, "id_dota": "225494054" },
       { "nick": "3mpty", "nationality": "ar", "mmr": 0, "id_dota": "139160605" },
-      { "nick": "Meew", "nationality": "ar", "mmr": 0, "id_dota": "160482724", "championships": 1 }
+      { "nick": "Meew", "nationality": "ar", "mmr": 0, "id_dota": "160482724", "championships": 1 },
+      { "nick": "Eternity", "nationality": "ar", "mmr": 0, "id_dota": "238830165", "championships": 0 }
     ]
   }
 }
